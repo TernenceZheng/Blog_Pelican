@@ -5,7 +5,9 @@ certifi==2020.12.5
 docutils==0.16
 feedgenerator==1.9.1
 importlib-metadata==3.4.0
+invoke==1.5.0
 Jinja2==2.11.3
+livereload==2.6.3
 Markdown==3.2.2
 MarkupSafe==1.1.1
 pelican==4.5.4
@@ -16,6 +18,7 @@ pytz==2020.5
 six==1.15.0
 smartypants==2.0.1
 soupsieve==2.2
+tornado==6.1
 typing-extensions==3.7.4.3
 typogrify==2.0.7
 Unidecode==1.2.0
