@@ -34,3 +34,5 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 THEME = 'Flex'
+
+DISQUS_SITENAME = 'jarvissui-shou-bi-ji'
