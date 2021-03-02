@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 
 AUTHOR = 'Jarvis'
-SITENAME = 'Jarvis Blog'
-SITEURL = ''
+SITENAME = 'Jarvis隨手筆記'
+SITEURL = 'https://blog.godtable.top/'
 
 PATH = 'content'
 
