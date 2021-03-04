@@ -39,3 +39,4 @@ DISQUS_SITENAME = 'jarvissui-shou-bi-ji'
 
 GOOGLE_ANALYTICS = 'G-3S6MFBGXNT'
 
+DATEISH_PROPERTIES  = [ 'idea_date','important_dates' ]
