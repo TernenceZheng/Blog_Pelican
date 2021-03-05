@@ -12,9 +12,16 @@
 
     <link rel="stylesheet" type="text/css" href="https://godtable.top/theme/stylesheet/style.min.css">
 
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="https://godtable.top/theme/stylesheet/dark-theme.min.css">
 
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="https://godtable.top/theme/pygments/monokai.min.css">
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
-          href="https://godtable.top/theme/pygments/friendly.min.css">
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="https://godtable.top/theme/pygments/emacs.min.css">
 
 
   <link rel="stylesheet" type="text/css" href="https://godtable.top/theme/font-awesome/css/fontawesome.css">
@@ -29,7 +36,16 @@
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
   
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+<!-- End of Global site tag (gtag.js) - Google Analytics -->
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#66a29c">
     <!-- Windows Phone -->
@@ -67,7 +83,7 @@
     });
   </script>
 </head>
-<body class="light-theme">
+<body >
   <aside>
     <div>
       <a href="https://godtable.top">
@@ -80,6 +96,19 @@
 
 
 
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://godtable.top" >Jarvis隨手筆記</a>
+            </li>
+            <li>
+              <a target="_self" href="#" >紙上得來終覺淺，絕知此事要躬行</a>
+            </li>
+        </ul>
+      </nav>
 
       <ul class="social">
           <li>
@@ -115,7 +144,7 @@
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <ins class="adsbygoogle ads-responsive"
            data-ad-client="ca-pub-4119678220307625"
-           data-ad-slot="1234562"></ins>
+           data-ad-slot="4119678220307625"></ins>
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
@@ -124,8 +153,8 @@
       <a href="https://godtable.top">Home</a>
 
       <a href="/archives">Archives</a>
-      <a href="/categories">Categories</a>
-      <a href="/tags">Tags</a>
+      <a href="/categories">類別</a>
+      <a href="/tags">標籤</a>
 
       <a href="https://godtable.top/feeds/all.atom.xml">Atom</a>
 
@@ -151,20 +180,50 @@
     </p>
   </div>
 
+  <div class="center social-share">
+    <p>Like this article? Share it with your friends!</p>
+    <div class="addthis_native_toolbox"></div>
+    <div class="addthis_sharing_toolbox"></div>
+    <div class="addthis_inline_share_toolbox"></div>
+  </div>
 
 
+    <div class="addthis_relatedposts_inline"></div>
 
 
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jarvissui-shou-bi-ji';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
 </article>
 
     <footer>
 <p>&copy;  </p>
 <p>
 Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="https://godtable.top/theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
 </p>    </footer>
   </main>
 
 
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6041ec511f4e3460" async="async"></script>
 
 
 <script type="application/ld+json">

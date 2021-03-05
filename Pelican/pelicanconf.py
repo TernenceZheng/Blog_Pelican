@@ -15,11 +15,16 @@ GOOGLE_ADSENSE = {
     'ca_id': 'ca-pub-4119678220307625',    # Your AdSense ID
     'page_level_ads': True,          # Allow Page Level Ads (mobile)
     'ads': {
-        'main_menu': '1234562',      # Banner before main menu (all pages)
-        'index_bottom': '1234564',   # Banner before footer (index only)
+        'main_menu': '4119678220307625',      # Banner before main menu (all pages)
+        'index_bottom': '4119678220307625',   # Banner before footer (index only)
     }
 }
 
+GOOGLE_GLOBAL_SITE_TAG = 'G-Q3D0B7D25R' # Your Google Analytics 4 Property ID
+
+DISQUS_SITENAME = "jarvissui-shou-bi-ji"
+
+ADD_THIS_ID = "ra-6041ec511f4e3460"
 
 
 SITEMAP = {
@@ -42,6 +47,10 @@ TIMEZONE = 'Asia/Taipei'
 
 DEFAULT_LANG = 'zh_TW'
 
+LINKS = (
+    ("隨手筆記", "https://godtable.top"),
+    ("紙上得來終覺淺，絕知此事要躬行")
+)
 
 # Social widget
 # Add a link to your social media accounts
@@ -68,7 +77,7 @@ STATIC_PATHS = ['images', 'extra']
 
 # Main Menu Items
 MAIN_MENU = True
-MENUITEMS = (('Archives', '/archives'),('Categories', '/categories'),('Tags', '/tags'))
+MENUITEMS = (('Archives', '/archives'),('類別', '/categories'),('標籤', '/tags'))
 
 # Code highlighting the theme
 PYGMENTS_STYLE = 'friendly'
@@ -94,3 +103,10 @@ AUTHOR_FEED_RSS = None
 # HOME_HIDE_TAGS = True
 FEED_USE_SUMMARY = True
 
+
+THEME_COLOR = 'light'
+THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE = True
+THEME_COLOR_ENABLE_USER_OVERRIDE = True
+
+PYGMENTS_STYLE = 'emacs'
+PYGMENTS_STYLE_DARK = 'monokai'
