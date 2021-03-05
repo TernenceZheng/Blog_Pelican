@@ -3,7 +3,7 @@
 
 AUTHOR = 'Jarvis'
 SITENAME = 'Jarvis Blog'
-SITEURL = 'https://blog.godtable.top'
+SITEURL = 'https://godtable.top'
 SITELOGO = '/images/profile.png'
 FAVICON = '/images/favicon.ico'
 
