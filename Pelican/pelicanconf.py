@@ -7,6 +7,21 @@ SITEURL = 'https://blog.godtable.top'
 SITELOGO = '/images/profile.png'
 FAVICON = '/images/favicon.ico'
 
+BROWSER_COLOR = "#66a29c"
+
+ROBOTS = "index, follow"
+
+GOOGLE_ADSENSE = {
+    'ca_id': 'ca-pub-4119678220307625',    # Your AdSense ID
+    'page_level_ads': True,          # Allow Page Level Ads (mobile)
+    'ads': {
+        'main_menu': '1234562',      # Banner before main menu (all pages)
+        'index_bottom': '1234564',   # Banner before footer (index only)
+    }
+}
+
+
+
 SITEMAP = {
     "format": "xml",
     "priorities": {
