@@ -79,9 +79,13 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['./pelican-plugins']
 
-PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image']#,'disqus_static'
+PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','category_order']#,'disqus_static'
 
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
+
+CATEGORIES_ORDER_BY = 'alphabetic'
+
+TAGS_ORDER_BY = 'alphabetic'
 
 THEME = 'pelican-themes/Flex'
 

@@ -5,14 +5,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://godtable.top/</loc>
-<lastmod>2021-03-06T20:18:33-00:00</lastmod>
+<lastmod>2021-03-06T20:44:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://godtable.top/archives.html</loc>
-<lastmod>2021-03-06T20:18:33-00:00</lastmod>
+<lastmod>2021-03-06T20:44:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -102,8 +102,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://godtable.top/tag/python.html</loc>
-<lastmod>2021-03-06T20:13:00+08:06</lastmod>
+<loc>https://godtable.top/tag/google-cloud-platform.html</loc>
+<lastmod>2021-03-01T22:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://godtable.top/tag/maths.html</loc>
+<lastmod>2020-03-21T16:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -123,8 +130,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://godtable.top/tag/google-cloud-platform.html</loc>
-<lastmod>2021-03-01T22:00:00+08:06</lastmod>
+<loc>https://godtable.top/tag/python.html</loc>
+<lastmod>2021-03-06T20:13:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -132,13 +139,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://godtable.top/tag/ssl.html</loc>
 <lastmod>2021-03-01T22:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://godtable.top/tag/maths.html</loc>
-<lastmod>2020-03-21T16:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
