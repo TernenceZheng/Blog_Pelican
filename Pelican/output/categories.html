@@ -16,6 +16,12 @@
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
           href="https://godtable.top/theme/pygments/monokai.min.css">
 
+    <script src="https://godtable.top/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://godtable.top/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://godtable.top/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://godtable.top/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://godtable.top/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://godtable.top/theme/tipuesearch/tipuesearch.min.css" />
 
   <link rel="stylesheet" type="text/css" href="https://godtable.top/theme/font-awesome/css/fontawesome.css">
   <link rel="stylesheet" type="text/css" href="https://godtable.top/theme/font-awesome/css/brands.css">
@@ -82,7 +88,32 @@
       </h1>
 
 <p>紙上得來終覺淺，絕知此事要躬行</p>
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
 
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://godtable.top" >網路概論</a>
+            </li>
+            <li>
+              <a target="_self" href="https://godtable.top" >程式語言</a>
+            </li>
+            <li>
+              <a target="_self" href="https://godtable.top" >微軟筆記</a>
+            </li>
+            <li>
+              <a target="_self" href="https://godtable.top" >Python筆記</a>
+            </li>
+            <li>
+              <a target="_self" href="https://godtable.top" >雜記</a>
+            </li>
+        </ul>
+      </nav>
 
       <ul class="social">
           <li>
@@ -130,6 +161,9 @@
         <a href="https://godtable.top/category/maths.html">maths</a> (1)
       </li>
       <li>
+        <a href="https://godtable.top/category/others.html">Others</a> (1)
+      </li>
+      <li>
         <a href="https://godtable.top/category/python.html">Python</a> (3)
       </li>
     </ul>
@@ -157,6 +191,11 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
 }
 </script>
 
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
 
 </body>
 </html>

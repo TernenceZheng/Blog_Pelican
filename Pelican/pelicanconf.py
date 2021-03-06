@@ -46,6 +46,14 @@ SITEMAP = {
     }
 }
 
+LINKS = (
+    ("網路概論", "https://godtable.top"),
+    ("程式語言", "https://godtable.top"),
+    ("微軟筆記", "https://godtable.top"),
+    ("Python筆記", "https://godtable.top"),
+    ("雜記", "https://godtable.top")
+)
+
 PATH = 'content'
 
 TIMEZONE = 'Asia/Taipei'
@@ -69,7 +77,7 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['./pelican-plugins']
 
-PLUGINS = ['sitemap', 'neighbors']
+PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','disqus_static']
 
 THEME = 'pelican-themes/Flex'
 
@@ -113,3 +121,8 @@ EXTRA_PATH_METADATA = {
 }
 
 CUSTOM_CSS = "static/custom.css"
+
+
+RELATED_POSTS_MAX = 5
+
+RELATED_POSTS_SKIP_SAME_CATEGORY = True
