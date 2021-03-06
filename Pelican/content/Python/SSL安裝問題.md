@@ -1,7 +1,7 @@
 Title: 利用 Let’s Encrypt 來自動簽署並更新 SSL 憑證
 Date: 2021-03-01 22:00
 Tags: python ,google cloud platform,ssl
-Category: Paython
+Category: Python
 Authors: Jarvis
 Summary: 安裝流程的錯誤除錯
 
@@ -11,7 +11,6 @@ Summary: 安裝流程的錯誤除錯
 1.https://medium.com/learn-or-die/%E5%88%A9%E7%94%A8-lets-encrypt-%E4%BE%86%E8%87%AA%E5%8B%95%E7%B0%BD%E7%BD%B2%E4%B8%A6%E6%9B%B4%E6%96%B0-ssl-%E6%86%91%E8%AD%89-wildcard-26b49114bf73
 
 
-### Algorithm
 
 出現錯誤：
         An unexpected error occurred:
@@ -21,26 +20,6 @@ Summary: 安裝流程的錯誤除錯
         詳細錯誤的訊息
         2021-03-01 11:18:59,249:DEBUG:certbot._internal.log:Exiting abnormally:
         Traceback (most recent call last):
-        File "/home/andy711023/.local/bin/certbot", line 8, in <module>
-            sys.exit(main())
-        File "/home/andy711023/.local/lib/python3.5/site-packages/certbot/main.py", line 15, in main
-            return internal_main.main(cli_args)
-        File "/home/andy711023/.local/lib/python3.5/site-packages/certbot/_internal/main.py", line 1323, in main
-            plugins = plugins_disco.PluginsRegistry.find_all()
-        File "/home/andy711023/.local/lib/python3.5/site-packages/certbot/_internal/plugins/disco.py", line 236, in fin
-        d_all
-            plugin_ep = cls._load_entry_point(entry_point, plugins, with_prefix=False)
-        File "/home/andy711023/.local/lib/python3.5/site-packages/certbot/_internal/plugins/disco.py", line 251, in _lo
-        ad_entry_point
-            plugin_ep = PluginEntryPoint(entry_point, with_prefix)
-        File "/home/andy711023/.local/lib/python3.5/site-packages/certbot/_internal/plugins/disco.py", line 56, in __in
-        it__
-            self.plugin_cls = entry_point.load()
-        File "/home/andy711023/.local/lib/python3.5/site-packages/pkg_resources/__init__.py", line 2447, in load
-            return self.resolve()
-        File "/home/andy711023/.local/lib/python3.5/site-packages/pkg_resources/__init__.py", line 2453, in resolve
-            module = __import__(self.module_name, fromlist=['__name__'], level=0)
-        File "/usr/lib/python3/dist-packages/certbot_nginx/configurator.py", line 16, in <module>
             from certbot import constants as core_constants
         ImportError: cannot import name 'constants'
         2021-03-01 11:18:59,249:ERROR:certbot._internal.log:An unexpected error occurred:

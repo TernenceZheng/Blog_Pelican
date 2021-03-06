@@ -7,7 +7,8 @@ SITENAME = 'Jarvis隨手筆記'
 SITESUBTITLE = "紙上得來終覺淺，絕知此事要躬行"
 
 
-SITEURL = 'https://godtable.top'
+#SITEURL = 'https://godtable.top'
+SITEURL = 'http://127.0.0.1:8000'
 SITELOGO = '/images/profile.png'
 FAVICON = '/images/favicon.ico'
 
@@ -27,7 +28,7 @@ GOOGLE_GLOBAL_SITE_TAG = 'G-Q3D0B7D25R' # Your Google Analytics 4 Property ID
 
 DISQUS_SITENAME = "jarvissui-shou-bi-ji"
 
-ADD_THIS_ID = "ra-6041ec511f4e3460"
+#ADD_THIS_ID = "ra-6041ec511f4e3460"
 
 COPYRIGHT_YEAR = 2021
 
@@ -55,9 +56,10 @@ DEFAULT_LANG = 'zh_TW'
 # Social widget
 # Add a link to your social media accounts
 SOCIAL = (
+    ('linkedin','https://www.linkedin.com/in/jarvis-zheng-13a2b990'),
     ('github', 'https://github.com/TernenceZheng'),
     ('envelope','mailto:andy711023@gmail.com'),
-    ('linkedin','https://www.linkedin.com/in/jarvis-zheng-13a2b990')
+
 )
 
 DEFAULT_PAGINATION = 10
@@ -104,3 +106,10 @@ AUTHOR_FEED_RSS = None
 FEED_USE_SUMMARY = True
 
 PYGMENTS_STYLE  =  "monokai"
+
+
+EXTRA_PATH_METADATA = {
+    "extra/custom.css": {"path": "static/custom.css"},
+}
+
+CUSTOM_CSS = "static/custom.css"
