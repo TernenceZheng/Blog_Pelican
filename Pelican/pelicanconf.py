@@ -27,6 +27,8 @@ GOOGLE_ADSENSE = {
 GOOGLE_GLOBAL_SITE_TAG = 'G-Q3D0B7D25R' # Your Google Analytics 4 Property ID
 
 DISQUS_SITENAME = "jarvissui-shou-bi-ji"
+#DISQUS_SECRET_KEY = u'YOUR_SECRET_KEY'
+#DISQUS_PUBLIC_KEY = u'YOUR_PUBLIC_KEY'
 
 #ADD_THIS_ID = "ra-6041ec511f4e3460"
 
@@ -77,7 +79,9 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['./pelican-plugins']
 
-PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','disqus_static']
+PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image']#,'disqus_static'
+
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
 
 THEME = 'pelican-themes/Flex'
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記 - Python/Markdown</title><link href="https://godtable.top/" rel="alternate"></link><link href="https://godtable.top/feeds/pythonmarkdown.atom.xml" rel="self"></link><id>https://godtable.top/</id><updated>2021-03-06T20:13:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Markdown語法學習</title><link href="https://godtable.top/2021/03/markdownyu-fa-xue-xi/" rel="alternate"></link><published>2021-03-06T20:13:00+08:00</published><updated>2021-03-06T20:13:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-03-06:/2021/03/markdownyu-fa-xue-xi/</id><summary type="html">&lt;p&gt;測試了25款Markdown編輯器，推薦兩個最好用的&lt;/p&gt;</summary><content type="html">&lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建。Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。&lt;/p&gt;
+&lt;p&gt;VScode
+推薦指數：☆☆☆☆☆&lt;/p&gt;
+&lt;p&gt;程序猿一族們最常用的編輯器，而且VScode原生支持markdown語法，非常絲滑，需要安裝以下幾個插件就可以了。&lt;/p&gt;
+&lt;p&gt;markdown all in one&lt;/p&gt;
+&lt;p&gt;原文網址：https://kknews.cc/n/j2yorzy.html&lt;/p&gt;</content><category term="Python/Markdown"></category><category term="python"></category><category term="pelican"></category></entry></feed>
