@@ -4,9 +4,8 @@
 AUTHOR = 'Jarvis'
 SITENAME = 'Jarvis隨手筆記'
 
-SITESUBTITLE = "Web Developer"
+SITESUBTITLE = "紙上得來終覺淺，絕知此事要躬行"
 
-SITEDESCRIPTION = "紙上得來終覺淺，絕知此事要躬行"
 
 SITEURL = 'https://godtable.top'
 SITELOGO = '/images/profile.png'
@@ -104,3 +103,4 @@ AUTHOR_FEED_RSS = None
 # HOME_HIDE_TAGS = True
 FEED_USE_SUMMARY = True
 
+PYGMENTS_STYLE  =  "monokai"
