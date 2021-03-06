@@ -1,120 +1,44 @@
-
 <!DOCTYPE html>
-<html lang="zh_tw">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="https://blog.godtable.top/theme/stylesheet/style.min.css">
-
-
-    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
-          href="https://blog.godtable.top/theme/pygments/github.min.css">
-
-
-  <link rel="stylesheet" type="text/css" href="https://blog.godtable.top/theme/font-awesome/css/fontawesome.css">
-  <link rel="stylesheet" type="text/css" href="https://blog.godtable.top/theme/font-awesome/css/brands.css">
-  <link rel="stylesheet" type="text/css" href="https://blog.godtable.top/theme/font-awesome/css/solid.css">
-
-
-
-
-
-  
-
-
-<meta name="author" content="Jarvis" />
-<meta name="description" content="安裝流程的錯誤除錯" />
-<meta name="keywords" content="python, google cloud platform, ssl">
-
-
-<meta property="og:site_name" content="Jarvis Blog"/>
-<meta property="og:title" content="利用 Let’s Encrypt 來自動簽署並更新 SSL 憑證"/>
-<meta property="og:description" content="安裝流程的錯誤除錯"/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://blog.godtable.top/li-yong-lets-encrypt-lai-zi-dong-qian-shu-bing-geng-xin-ssl-ping-zheng.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2021-03-01 22:00:00+08:00"/>
-<meta property="article:modified_time" content=""/>
-<meta property="article:author" content="https://blog.godtable.top/author/jarvis.html">
-<meta property="article:section" content="Paython"/>
-<meta property="article:tag" content="python"/>
-<meta property="article:tag" content="google cloud platform"/>
-<meta property="article:tag" content="ssl"/>
-<meta property="og:image" content="">
-
-  <title>Jarvis Blog &ndash; 利用 Let’s Encrypt 來自動簽署並更新 SSL 憑證</title>
-
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <title>利用 Let’s Encrypt 來自動簽署並更新 SSL 憑證</title>
+        <link rel="stylesheet" href="https://godtable.top/theme/css/main.css" />
+        <link href="https://godtable.top/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jarvis Blog Atom Feed" />
+        <meta name="description" content="安裝流程的錯誤除錯" />
 </head>
-<body class="light-theme">
-  <aside>
-    <div>
-      <a href="https://blog.godtable.top">
-        <img src="https://blog.godtable.top/theme/img/profile.png" alt="" title="">
-      </a>
 
-      <h1>
-        <a href="https://blog.godtable.top"></a>
-      </h1>
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://godtable.top/">Jarvis Blog</a></h1>
+                <nav><ul>
+                    <li><a href="https://godtable.top/category/c.html">C#</a></li>
+                    <li><a href="https://godtable.top/category/maths.html">maths</a></li>
+                    <li class="active"><a href="https://godtable.top/category/paython.html">Paython</a></li>
+                    <li><a href="https://godtable.top/category/python.html">Python</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://godtable.top/li-yong-lets-encrypt-lai-zi-dong-qian-shu-bing-geng-xin-ssl-ping-zheng.html" rel="bookmark"
+           title="Permalink to 利用 Let’s Encrypt 來自動簽署並更新 SSL 憑證">利用 Let’s Encrypt 來自動簽署並更新 SSL 憑證</a></h1>
+    </header>
 
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2021-03-01T22:00:00+00:00">
+                Published: 週一 01 三月 2021
+        </abbr>
 
-
-      <nav>
-        <ul class="list">
-
-
-
-            <li>
-              <a target="_self" href="https://getpelican.com/" >Pelican</a>
-            </li>
-            <li>
-              <a target="_self" href="https://www.python.org/" >Python.org</a>
-            </li>
-            <li>
-              <a target="_self" href="https://palletsprojects.com/p/jinja/" >Jinja2</a>
-            </li>
-            <li>
-              <a target="_self" href="#" >You can modify those links in your config file</a>
-            </li>
-        </ul>
-      </nav>
-
-      <ul class="social">
-          <li>
-            <a  class="sc-You can add links in your config file" href="#" target="_blank">
-              <i class="fab fa-You can add links in your config file"></i>
-            </a>
-          </li>
-          <li>
-            <a  class="sc-Another social link" href="#" target="_blank">
-              <i class="fab fa-Another social link"></i>
-            </a>
-          </li>
-      </ul>
-    </div>
-
-  </aside>
-  <main>
-
-
-<article class="single">
-  <header>
-      
-    <h1 id="li-yong-lets-encrypt-lai-zi-dong-qian-shu-bing-geng-xin-ssl-ping-zheng">利用 Let’s Encrypt 來自動簽署並更新 SSL 憑證</h1>
-    <p>
-      Posted on 週一 01 三月 2021 in <a href="https://blog.godtable.top/category/paython.html">Paython</a>
-
-    </p>
-  </header>
-
-
-  <div>
-    <h2>記錄一下使用自動簽署的除錯流程</h2>
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://godtable.top/author/jarvis.html">Jarvis</a>
+        </address>
+<p>In <a href="https://godtable.top/category/paython.html">Paython</a>.</p>
+<p>tags: <a href="https://godtable.top/tag/python.html">python</a> <a href="https://godtable.top/tag/google-cloud-platform.html">google cloud platform</a> <a href="https://godtable.top/tag/ssl.html">ssl</a> </p>
+</footer><!-- /.post-info -->      <h2>記錄一下使用自動簽署的除錯流程</h2>
 <p>參考如下Blog流程
 1.https://medium.com/learn-or-die/%E5%88%A9%E7%94%A8-lets-encrypt-%E4%BE%86%E8%87%AA%E5%8B%95%E7%B0%BD%E7%BD%B2%E4%B8%A6%E6%9B%B4%E6%96%B0-ssl-%E6%86%91%E8%AD%89-wildcard-26b49114bf73</p>
 <h3>Algorithm</h3>
@@ -178,42 +102,27 @@
 
 <p>參考Blog,直接全自動 sudo certbot --nginx
 3.https://andyyou.github.io/2019/04/13/how-to-use-certbot/</p>
-  </div>
-  <div class="tag-cloud">
-    <p>
-      <a href="https://blog.godtable.top/tag/python.html">python</a>
-      <a href="https://blog.godtable.top/tag/google-cloud-platform.html">google cloud platform</a>
-      <a href="https://blog.godtable.top/tag/ssl.html">ssl</a>
-    </p>
-  </div>
+    </div><!-- /.entry-content -->
 
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://godtable.top/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
 
-
-</article>
-
-    <footer>
-<p>&copy;  </p>
-<p>
-Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
-</p>    </footer>
-  </main>
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Jarvis Blog ",
-  "url" : "https://blog.godtable.top",
-  "image": "",
-  "description": ""
-}
-</script>
-
+                <p>The theme is by <a href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
 
 </body>
 </html>

@@ -7,7 +7,7 @@ SITEURL = 'https://godtable.top'
 SITELOGO = '/images/profile.png'
 FAVICON = '/images/favicon.ico'
 
-BROWSER_COLOR = "#66a29c"
+BROWSER_COLOR = "#66A29C"
 
 ROBOTS = "index, follow"
 
@@ -15,8 +15,8 @@ GOOGLE_ADSENSE = {
     'ca_id': 'ca-pub-4119678220307625',    # Your AdSense ID
     'page_level_ads': True,          # Allow Page Level Ads (mobile)
     'ads': {
-        'main_menu': '4119678220307625',      # Banner before main menu (all pages)
-        'index_bottom': '4119678220307625',   # Banner before footer (index only)
+        'main_menu': '1234562',      # Banner before main menu (all pages)
+        'index_bottom': '1234564',   # Banner before footer (index only)
     }
 }
 
@@ -49,7 +49,7 @@ DEFAULT_LANG = 'zh_TW'
 
 LINKS = (
     ("隨手筆記", "https://godtable.top"),
-    ("紙上得來終覺淺，絕知此事要躬行")
+    ("紙上得來終覺淺，絕知此事要躬行","")
 )
 
 # Social widget
@@ -57,9 +57,7 @@ LINKS = (
 SOCIAL = (
     ('github', 'https://github.com/TernenceZheng'),
     ('envelope','mailto:andy711023@gmail.com'),
-    ('linkedin','https://www.linkedin.com/in/jarvis-zheng-13a2b990'),
-    ('twitter','https://twitter.com/Jarvis_Zheng'),
-    ('facebook','https://www.facebook.com/andy.zheng.7967')
+    ('linkedin','https://www.linkedin.com/in/jarvis-zheng-13a2b990')
 )
 
 DEFAULT_PAGINATION = 10
@@ -77,10 +75,12 @@ STATIC_PATHS = ['images', 'extra']
 
 # Main Menu Items
 MAIN_MENU = True
-MENUITEMS = (('Archives', '/archives'),('類別', '/categories'),('標籤', '/tags'))
+MENUITEMS = (
+            ('文章時間軸', '/archives'),
+            ('類別', '/categories'),
+            ('標籤', '/tags')
+        )
 
-# Code highlighting the theme
-PYGMENTS_STYLE = 'friendly'
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/'
 ARTICLE_SAVE_AS = ARTICLE_URL + 'index.html'
