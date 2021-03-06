@@ -7,8 +7,8 @@ SITENAME = 'Jarvis隨手筆記'
 SITESUBTITLE = "紙上得來終覺淺，絕知此事要躬行"
 
 
-#SITEURL = 'https://godtable.top'
-SITEURL = 'http://127.0.0.1:8000'
+SITEURL = 'https://godtable.top'
+#SITEURL = 'http://127.0.0.1:8000'
 SITELOGO = '/images/profile.png'
 FAVICON = '/images/favicon.ico'
 
