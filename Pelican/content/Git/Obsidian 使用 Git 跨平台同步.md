@@ -9,9 +9,9 @@ topics: [[Obsidian 使用 Git 跨平台同步]]
 第一步
 先在Windows本機的建立一個資料夾，是拿來開啟Obsidian的Vault
 
-![[Pasted image 20210914152609.png]]
+![Pasted image 20210914152609.png]
 像上面的資料路徑我新開了一個 ObsidianNote資料夾，然後Obisdian設定這個資料夾就會有一些設定檔
-![[Pasted image 20210914152831.png]]
+![Pasted image 20210914152831.png]
 
 第二步
 在GitHub建立一個repository，然後取名同樣的名稱ObsidianNote
@@ -23,12 +23,12 @@ topics: [[Obsidian 使用 Git 跨平台同步]]
 ``git commit -m "first commit" ``
 ``git remote add origin https://github.com/TernenceZheng/ObsidianNote.git``
 
-![[Pasted image 20210914153508.png]]
+![Pasted image 20210914153508.png]
 
 
 第四步
 安裝第三方外掛套件 Obsidian Git
-![[Pasted image 20210914161351.png]]
+![Pasted image 20210914161351.png]
 
 安裝及啟用後，左方將出現 Obsidian Git 的設定，我有以下的建議：
 

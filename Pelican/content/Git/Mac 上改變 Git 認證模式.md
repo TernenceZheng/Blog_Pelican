@@ -24,10 +24,10 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 
 
 看了文章原來要去用GitHub的Token驗證方式才可以，舊的帳號密碼已經不行了，下面是Github產生的Token
-![[Pasted image 20210914164331.png]]
+![Pasted image 20210914164331.png]
 
 把拿到的Token註冊在MacOS的鑰匙圈如下圖
-![[Pic2021-09-144.54.10.png]]
+![Pic2021-09-144.54.10.png]
 
 就完成Token的驗證註冊，然後git clone就OK了
 
