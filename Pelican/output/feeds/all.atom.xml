@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記</title><link href="https://godtable.top/" rel="alternate"></link><link href="https://godtable.top/feeds/all.atom.xml" rel="self"></link><id>https://godtable.top/</id><updated>2021-09-16T17:55:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Obsidian 使用 Git 跨平台同步</title><link href="https://godtable.top/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/" rel="alternate"></link><published>2021-09-16T17:55:00+08:00</published><updated>2021-09-16T17:55:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/</id><summary type="html">&lt;p&gt;第一步
 先在Windows本機的建立一個資料夾，是拿來開啟Obsidian的Vault&lt;/p&gt;
-&lt;p&gt;![[Pasted image 20210914152609.png]]
+&lt;p&gt;&lt;img alt="Pasted image 20210914152609.png" src="https://godtable.top/images/Pasted image 20210914152609.png"&gt;
 像上面的資料路徑我新開了一個 ObsidianNote資料夾，然後Obisdian設定這個資料夾就會有一些設定檔
-![[Pasted image 20210914152831.png]]&lt;/p&gt;
+&lt;img alt="Pasted image 20210914152831.png" src="https://godtable.top/images/Pasted image 20210914152831.png"&gt;&lt;/p&gt;
 &lt;p&gt;第二步
 在GitHub建立一個repository，然後取名同樣的名稱ObsidianNote&lt;/p&gt;
 &lt;p&gt;第三步
@@ -11,14 +11,18 @@
 &lt;p&gt;&lt;code&gt;git init&lt;/code&gt;
 &lt;code&gt;git commit -m "first commit"&lt;/code&gt;
 &lt;code&gt;git remote add origin https://github.com/TernenceZheng/ObsidianNote.git&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;![[Pasted image 20210914153508.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210914153508.png" src="https://godtable.top/images/Pasted image 20210914153508.png"&gt;&lt;/p&gt;
 &lt;p&gt;第四步
 安裝第三方外掛套件 Obsidian Git
-![[Pasted image 20210914161351.png …&lt;/p&gt;</summary><content type="html">&lt;p&gt;第一步
+&lt;img alt="Pasted image 20210914161351.png" src="https://godtable.top/images/Pasted image 20210914161351.png"&gt;&lt;/p&gt;
+&lt;p&gt;安裝及啟用後，左方將出現 Obsidian Git 的設定，我有以下的建議：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;將 Vault 備份時間改為 5 分鐘 (Backup Interval: 5)&lt;/li&gt;
+&lt;li&gt;每次打開軟件也從 Github …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;第一步
 先在Windows本機的建立一個資料夾，是拿來開啟Obsidian的Vault&lt;/p&gt;
-&lt;p&gt;![[Pasted image 20210914152609.png]]
+&lt;p&gt;&lt;img alt="Pasted image 20210914152609.png" src="https://godtable.top/images/Pasted image 20210914152609.png"&gt;
 像上面的資料路徑我新開了一個 ObsidianNote資料夾，然後Obisdian設定這個資料夾就會有一些設定檔
-![[Pasted image 20210914152831.png]]&lt;/p&gt;
+&lt;img alt="Pasted image 20210914152831.png" src="https://godtable.top/images/Pasted image 20210914152831.png"&gt;&lt;/p&gt;
 &lt;p&gt;第二步
 在GitHub建立一個repository，然後取名同樣的名稱ObsidianNote&lt;/p&gt;
 &lt;p&gt;第三步
@@ -26,10 +30,10 @@
 &lt;p&gt;&lt;code&gt;git init&lt;/code&gt;
 &lt;code&gt;git commit -m "first commit"&lt;/code&gt;
 &lt;code&gt;git remote add origin https://github.com/TernenceZheng/ObsidianNote.git&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;![[Pasted image 20210914153508.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210914153508.png" src="https://godtable.top/images/Pasted image 20210914153508.png"&gt;&lt;/p&gt;
 &lt;p&gt;第四步
 安裝第三方外掛套件 Obsidian Git
-![[Pasted image 20210914161351.png]]&lt;/p&gt;
+&lt;img alt="Pasted image 20210914161351.png" src="https://godtable.top/images/Pasted image 20210914161351.png"&gt;&lt;/p&gt;
 &lt;p&gt;安裝及啟用後，左方將出現 Obsidian Git 的設定，我有以下的建議：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;將 Vault 備份時間改為 5 分鐘 (Backup Interval: 5)&lt;/li&gt;
@@ -57,7 +61,7 @@ remote: Support for password authentication was removed on August 13, 2021. Plea
 remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
 fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.git/'&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;看了文章原來要去用GitHub的Token驗證方式才可以，舊的帳號密碼已經不行了，下面是Github產生的Token
-![[Pasted image 20210914164331.png]]&lt;/p&gt;
+&lt;img alt="Pasted image 20210914164331.png" src="https://godtable.top/images/Pasted image 20210914164331.png"&gt;&lt;/p&gt;
 &lt;p&gt;把拿到的Token註冊在MacOS的鑰匙圈如下圖
 ![[Pic2021-09-144.54.10.png]]&lt;/p&gt;
 &lt;p&gt;就完成Token的驗證註冊，然後git clone就OK了&lt;/p&gt;
