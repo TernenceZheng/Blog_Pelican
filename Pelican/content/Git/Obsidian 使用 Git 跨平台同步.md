@@ -1,9 +1,12 @@
 ---
 title: Obsidian 使用 Git 跨平台同步
 date: 2021-09-16 17:55
-aliases: 心得 
-tags: [Obsidian,Git]
-topics: [[Obsidian 使用 Git 跨平台同步]]
+aliases: 部落格 
+tags: Obsidian,Git
+category: Git
+summary: 
+image: /images/Pasted image 20210914152609.png
+status: published
 ---
 
 第一步
