@@ -2,17 +2,14 @@
 title: SourceTree權限問題
 date: 2021-09-29 17:58
 aliases: 心得 
-tags: Git,SourceTree
-category: Git
-summary: Sourcetree出現Permission denied (publickey)
-image: /images/2021-09-29-5.06.52.png
-status: published
+tags: Git
+category: SourceTree
+image: /images/截圖 2021-09-29 下午5.06.52.png
 ---
 
 ### Sourcetree出現Permission denied (publickey)
----
 
-![[2021-09-29-5.06.52.png]]
+![[截圖 2021-09-29 下午5.06.52.png]]
 
 ---
 
@@ -28,11 +25,8 @@ Google以後參考資料部落格：
 
 就去找出當初用GitHub產生的PrivateKey在哪如下圖左紅框，就執行一下以下語法就可以了
 
----
-
 ![[Pasted image 20210929180643.png]]
 
----
 
 ==語法：==
 

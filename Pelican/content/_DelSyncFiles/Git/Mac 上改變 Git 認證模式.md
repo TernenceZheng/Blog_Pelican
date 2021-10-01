@@ -5,7 +5,7 @@ aliases: 心得
 tags: Git,Mac
 category: Git
 summary: Mac 上改變 Git 認證模式
-image: /images/git_2021-10-01_8.50.40.png
+image: /images/截圖 2021-10-01 上午8.50.40.png
 status: published
 ---
 
@@ -14,11 +14,9 @@ status: published
 
 2021/09/14 今天在mac 上面在 git clone https://github.com/TernenceZheng/ObsidianNote.git
 
----
 
-![[git_2021-10-01_8.50.40.png]]
+![[截圖 2021-10-01 上午8.50.40.png]]
 
----
 
 結果我的mac顯示無法用使用者帳號密碼去登入驗證
 
@@ -36,13 +34,7 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 ![[Pasted image 20210914164331.png]]
 
 把拿到的Token註冊在MacOS的鑰匙圈如下圖
-
----
-
 ![[Pic2021-09-144.54.10.png]]
-
----
-
 
 就完成Token的驗證註冊，然後git clone就OK了
 
