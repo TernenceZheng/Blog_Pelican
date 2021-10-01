@@ -42,5 +42,5 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 &lt;p&gt;就完成Token的驗證註冊，然後git clone就OK了&lt;/p&gt;
 &lt;p&gt;參考資料：&lt;a href="https://myctw.github.io/post/bd72.html"&gt;Mac 上改變 Git 認證模式&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;相關主題：
-&lt;a href="https://godtable.top/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/"&gt;Obsidian 使用 Git 跨平台同步&lt;/a&gt;
-&lt;a href="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="Git"></category><category term="Git"></category><category term="Mac"></category></entry></feed>
+&lt;a href="//Users/{filename}//Users/jarvis.zheng/Blog_Pelican/Pelican/content/Obsidian 使用 Git 跨平台同步.md"&gt;Obsidian 使用 Git 跨平台同步&lt;/a&gt;
+&lt;a href="//Users/{filename}//Users/jarvis.zheng/Blog_Pelican/Pelican/content/SourceTree權限問題.md"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="Git"></category><category term="Git"></category><category term="Mac"></category></entry></feed>
