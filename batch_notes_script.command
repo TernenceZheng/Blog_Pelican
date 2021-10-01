@@ -2,9 +2,7 @@
 
 cd /Users/jarvis.zheng/Blog_Pelican/
 
-conda activate pelican
-
-pelican content
+/Users/jarvis.zheng/miniforge3/envs/Pelican/bin/pelican content
 
 git add .
 
