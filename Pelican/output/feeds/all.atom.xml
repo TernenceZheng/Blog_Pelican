@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記</title><link href="https://godtable.top/" rel="alternate"></link><link href="https://godtable.top/feeds/all.atom.xml" rel="self"></link><id>https://godtable.top/</id><updated>2021-10-01T11:47:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>副檔名command無法執行</title><link href="https://godtable.top/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-10-01:/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/</id><summary type="html"></summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記</title><link href="https://godtable.top/" rel="alternate"></link><link href="https://godtable.top/feeds/all.atom.xml" rel="self"></link><id>https://godtable.top/</id><updated>2021-10-01T11:47:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>副檔名command無法執行</title><link href="https://godtable.top/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-10-01:/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/</id><summary type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;</summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
 &lt;p&gt;![[截圖 2021-10-01 上午10.55.15.png]]&lt;/p&gt;
 &lt;p&gt;需要另外給予權限：&lt;code&gt;chmod +x batch_notes_script.command&lt;/code&gt;&lt;/p&gt;</content><category term="MacOS"></category><category term="權限問題"></category></entry><entry><title>SourceTree權限問題</title><link href="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/" rel="alternate"></link><published>2021-09-29T17:58:00+08:00</published><updated>2021-09-29T17:58:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-29:/2021/09/sourcetreequan-xian-wen-ti/</id><summary type="html">&lt;p&gt;Sourcetree出現Permission denied (publickey)&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Sourcetree出現Permission denied (publickey)&lt;/h3&gt;
 &lt;hr&gt;
@@ -106,22 +106,7 @@
 &lt;p&gt;此語法會產生一個臨時的站臺 127.0.0.1:8000 可以預覽頁面
 &lt;code&gt;pelican --listen&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;查看外掛套件清單：
-&lt;code&gt;pelican-plugins&lt;/code&gt;&lt;/p&gt;</content><category term="程式語言,Python"></category><category term="Pelican"></category></entry><entry><title>插入圖片</title><link href="https://godtable.top/2021/09/cha-ru-tu-pian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/cha-ru-tu-pian/</id><summary type="html">&lt;hr&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &amp;quot;這個文字會滑鼠滑上會出現POPup&amp;quot;)&lt;/span&gt;
-
-
-&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;這裡是要寫圖片說明&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//這個是要填圖片路徑.jpg)&lt;/span&gt;
-
-
-&lt;span class="err"&gt;使用代碼重複利用相同圖片方式：&lt;/span&gt;
-
-&lt;span class="err"&gt;最近在看的新書：&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Google教我的101個工作最佳化&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;google101&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="err"&gt;最近在看的新書：&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Google教我的101個工作最佳化&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;google101&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="err"&gt;最近在看的新書：&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Google教我的101個工作最佳化&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;google101&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;google101&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;hr&gt;
+&lt;code&gt;pelican-plugins&lt;/code&gt;&lt;/p&gt;</content><category term="程式語言,Python"></category><category term="Pelican"></category></entry><entry><title>插入圖片</title><link href="https://godtable.top/2021/09/cha-ru-tu-pian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/cha-ru-tu-pian/</id><summary type="html">&lt;p&gt;顯示插入圖片&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &amp;quot;這個文字會滑鼠滑上會出現POPup&amp;quot;)&lt;/span&gt;
 
 
@@ -145,7 +130,7 @@
 &lt;p&gt;&lt;img alt="企業正在進行AI前導測試，並將人工智慧投入生產。以下是業界菁英對AI的投資方向，且已見到初步成果" src="https://www.cio.com.tw/wp-content/uploads/1200-AdobeStock_178319041-750x394.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;
 &lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;
-&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>程式代碼或語法高亮</title><link href="https://godtable.top/2021/09/cheng-shi-dai-ma-huo-yu-fa-gao-liang/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/cheng-shi-dai-ma-huo-yu-fa-gao-liang/</id><content type="html">&lt;hr&gt;
+&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>程式代碼或語法高亮</title><link href="https://godtable.top/2021/09/cheng-shi-dai-ma-huo-yu-fa-gao-liang/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/cheng-shi-dai-ma-huo-yu-fa-gao-liang/</id><summary type="html">&lt;p&gt;顯示程式代碼或語法高亮&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;直接展示：每個三個` 符號 後面直接寫程式語言名稱如：sql C# java python  等等的&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;JavaScript syntax highlighting&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
 &lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
@@ -159,7 +144,7 @@
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;No language indicated, so no syntax highlighting.  
 But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&gt;tag&lt;span class="nt"&gt;&amp;lt;/b&amp;gt;&lt;/span&gt;.  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>連結設定</title><link href="https://godtable.top/2021/09/lian-jie-she-ding/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/lian-jie-she-ding/</id><content type="html">&lt;hr&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>連結設定</title><link href="https://godtable.top/2021/09/lian-jie-she-ding/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/lian-jie-she-ding/</id><summary type="html">&lt;p&gt;顯示連結設定&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tw&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 
 
@@ -188,24 +173,7 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;p&gt;&lt;a href="https://www.google.com.tw"&gt;來看看這個網址&lt;/a&gt;
 &lt;a href="https://www.google.com.tw"&gt;去看看這個網址&lt;/a&gt;
 &lt;a href="https://www.google.com.tw"&gt;檢查這個網址&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo 標題文字範例一"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown語法學習</title><link href="https://godtable.top/2021/09/markdownyu-fa-xue-xi/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/markdownyu-fa-xue-xi/</id><summary type="html">&lt;hr&gt;
-&lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建。Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://markdown.tw/"&gt;Markdown&lt;/a&gt;是一種簡易的標記語言，能讓我們在最短的時間裡製作一份易讀易懂的文字檔案，當有需要輸出到網站時，也能使用許多線上轉換網站或軟體，將Markdown格式的內容轉換成HTML格式，瞬間由文字格式變身美觀的網頁格式。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="https://godtable.top/2021/09/fen-duan-biao-ti/"&gt;分段標題&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;以一到六個井字表示標題一至標題六&lt;code&gt;（&amp;lt;h1&amp;gt;到&amp;lt;h6&amp;gt;）&lt;/code&gt;，亦即井號越少顯示的字體越大。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://godtable.top/2021/09/xiang-mu-qing-dan/"&gt;項目清單&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;列舉式的項目清單是很常用的表達語法，在HTML網頁的定義裡主要有兩種：有順序編號的&lt;code&gt;（&amp;lt;ol&amp;gt;+&amp;lt;li&amp;gt;）&lt;/code&gt;和沒有順序編號的 &lt;code&gt;（&amp;lt;ul&amp;gt;+&amp;lt;li&amp;gt;）&lt;/code&gt;，Markdown的表示方法很簡單:&lt;/p&gt;
-&lt;p&gt;1.有順序編號的清單：每列開頭是「數字.一個空白」
-2.沒有順序編號的清單：就是以項目符號開頭的清單，以「*一個空白」或「減號一個空白」來表示
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://godtable.top/2021/09/wen-zi-bian-hua/"&gt;文字變化&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一段文字裡需要特別注意或要有不同變化時 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;&lt;img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo 標題文字範例一"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown語法學習</title><link href="https://godtable.top/2021/09/markdownyu-fa-xue-xi/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/markdownyu-fa-xue-xi/</id><summary type="html">&lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建。Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://markdown.tw/"&gt;Markdown&lt;/a&gt;是一種簡易的標記語言，能讓我們在最短的時間裡製作一份易讀易懂的文字檔案，當有需要輸出到網站時，也能使用許多線上轉換網站或軟體，將Markdown格式的內容轉換成HTML格式，瞬間由文字格式變身美觀的網頁格式。&lt;/p&gt;
 &lt;hr&gt;
@@ -258,20 +226,20 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;p&gt;&lt;a href="https://godtable.top/2021/09/qi-ta-de-fu-hao/"&gt;其他的符號&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;剩下少用的東西有 &lt;code&gt;代辦事項&lt;/code&gt;  &lt;code&gt;列表縮進&lt;/code&gt; &lt;code&gt;跳脫字元&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>其他的符號</title><link href="https://godtable.top/2021/09/qi-ta-de-fu-hao/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/qi-ta-de-fu-hao/</id><content type="html">&lt;hr&gt;
+&lt;/blockquote&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>其他的符號</title><link href="https://godtable.top/2021/09/qi-ta-de-fu-hao/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/qi-ta-de-fu-hao/</id><summary type="html">&lt;p&gt;顯示其他的符號&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;[ ] 代辦事項  &lt;/li&gt;
 &lt;li&gt;[x] 已完成事項&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;跳脫字元
-加上反引號 \&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>水平分隔線</title><link href="https://godtable.top/2021/09/shui-ping-fen-ge-xian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/shui-ping-fen-ge-xian/</id><content type="html">&lt;hr&gt;
+加上反引號 \&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>水平分隔線</title><link href="https://godtable.top/2021/09/shui-ping-fen-ge-xian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/shui-ping-fen-ge-xian/</id><summary type="html">&lt;p&gt;顯示水平分隔線&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;語法：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;---短橫線（Hyphens）&lt;/span&gt;
 
 &lt;span class="o"&gt;***&lt;/span&gt;&lt;span class="err"&gt;半形星號（&lt;/span&gt;&lt;span class="n"&gt;Asterisks&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;
 
 &lt;span class="n"&gt;___下底線&lt;/span&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="n"&gt;Underscores&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>文字變化</title><link href="https://godtable.top/2021/09/wen-zi-bian-hua/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/wen-zi-bian-hua/</id><content type="html">&lt;hr&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>文字變化</title><link href="https://godtable.top/2021/09/wen-zi-bian-hua/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/wen-zi-bian-hua/</id><summary type="html">&lt;p&gt;顯示文字變化&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;asterisks&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;斜體&lt;/span&gt;  
 &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;asterisks&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;粗體&lt;/span&gt;
 
@@ -282,7 +250,7 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;p&gt;實際展示：&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;我是斜體字&lt;/em&gt; &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;我是粗體字測試&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;==螢光強調==&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>項目清單</title><link href="https://godtable.top/2021/09/xiang-mu-qing-dan/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/xiang-mu-qing-dan/</id><content type="html">&lt;hr&gt;
+&lt;p&gt;==螢光強調==&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>項目清單</title><link href="https://godtable.top/2021/09/xiang-mu-qing-dan/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/xiang-mu-qing-dan/</id><summary type="html">&lt;p&gt;顯示清單的語法&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;* 無序列表一 //可以使用星號建立無序清單  &lt;/span&gt;
 &lt;span class="err"&gt;- 無序列表二 //或是短橫線（負號）  &lt;/span&gt;
 &lt;span class="err"&gt;+ 無序列表三 //使用半形加號也可以  &lt;/span&gt;
@@ -318,7 +286,7 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;/li&gt;
 &lt;li&gt;有序號列表二&lt;/li&gt;
 &lt;li&gt;有序號列表三&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>分段標題</title><link href="https://godtable.top/2021/09/fen-duan-biao-ti/" rel="alternate"></link><published>2021-09-16T17:58:00+08:00</published><updated>2021-09-16T17:58:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/fen-duan-biao-ti/</id><content type="html">&lt;hr&gt;
+&lt;/ul&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>分段標題</title><link href="https://godtable.top/2021/09/fen-duan-biao-ti/" rel="alternate"></link><published>2021-09-16T17:58:00+08:00</published><updated>2021-09-16T17:58:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/fen-duan-biao-ti/</id><summary type="html">&lt;p&gt;顯示分段標題&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;h1&gt;標題&lt;/h1&gt;
 &lt;p&gt;```'語法顯示'&lt;/p&gt;
 &lt;h1&gt;H1&lt;/h1&gt;
@@ -363,7 +331,7 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;h1&gt;Git&lt;/h1&gt;</content><category term="Git"></category><category term="Obsidian"></category><category term="Git"></category></entry><entry><title>Mac 上改變 Git 認證模式</title><link href="https://godtable.top/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/" rel="alternate"></link><published>2021-09-16T17:53:00+08:00</published><updated>2021-09-16T17:53:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/</id><summary type="html">&lt;p&gt;Mac 上改變 Git 認證模式&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;2021/09/14 今天在mac 上面在 git clone https://github.com/TernenceZheng/ObsidianNote.git&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;![[git_2021-10-01_8.50.40.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Mac上改變Git認證模式.png" src="https://godtable.top/images/Mac上改變Git認證模式.png"&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;結果我的mac顯示無法用使用者帳號密碼去登入驗證&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;'Mac上面錯誤訊息'
@@ -383,28 +351,7 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 &lt;p&gt;參考資料：&lt;a href="https://myctw.github.io/post/bd72.html"&gt;Mac 上改變 Git 認證模式&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;相關主題：
 &lt;a href="https://godtable.top/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/"&gt;Obsidian 使用 Git 跨平台同步&lt;/a&gt;
-&lt;a href="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="Git"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>Obsidian快捷鍵設定</title><link href="https://godtable.top/2021/09/obsidiankuai-jie-jian-she-ding/" rel="alternate"></link><published>2021-09-16T17:40:00+08:00</published><updated>2021-09-16T17:40:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/obsidiankuai-jie-jian-she-ding/</id><content type="html">&lt;h1&gt;&lt;a href="{filename}/Obsidian/Obsidian.md"&gt;Obsidian&lt;/a&gt; 快捷鍵設定&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;[ ] 設定快捷鍵 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;參考網址：&lt;a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/obsidian-%E4%BD%BF%E7%94%A8%E6%95%99%E5%AD%B8-%E7%AD%86%E8%A8%98%E7%AF%87-08-%E5%80%8D%E9%80%9F%E6%8F%90%E5%8D%87%E4%BD%A0%E7%9A%84%E6%93%8D%E4%BD%9C%E9%80%9F%E5%BA%A6-14-%E5%80%8B-obsidian-%E5%BF%AB%E6%8D%B7%E9%8D%B5%E8%A8%AD%E5%AE%9A%E5%BB%BA%E8%AD%B0-adc2d025c6d1"&gt;14個Obsidian快捷鍵設定建議&lt;/a&gt;&lt;/p&gt;</content><category term="Obsidian"></category><category term="[Obsidian快捷鍵"></category><category term="]"></category></entry><entry><title>暸解使用Metadata</title><link href="https://godtable.top/2021/09/liao-jie-shi-yong-metadata/" rel="alternate"></link><published>2021-09-15T13:20:00+08:00</published><updated>2021-09-15T13:20:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-15:/2021/09/liao-jie-shi-yong-metadata/</id><summary type="html">&lt;p&gt;暸解使用&lt;a href="{filename}/Obsidian/Obsidian.md"&gt;Obsidian&lt;/a&gt;的Metadata架構&lt;/p&gt;
-&lt;p&gt;一般在做筆記的時候，常常要回顧一下當初寫的內容，然後就開始尋找，但是卻沒有有效的尋找，所以需要一個索引來去管理筆記，常常會出現的問題點：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;標題難辨識 — 很難從標題知道筆記的確切內容&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;沒有脈絡 — 很難記起當初為何會寫下這些內容&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;沒有狀態—很難重新利用筆記內容&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;上方提到的 3 個問題，根本原因是「沒有一套有效的筆記內容紀錄系統」。這個系統並不是說筆記該如何分類、該如何使用標籤…等，而是描述「這份筆記本身」的內容。&lt;/p&gt;
-&lt;p&gt;這些內容如果用專業的術語講叫做「Metadata」，中文也翻譯成「&lt;code&gt;元資料&lt;/code&gt;」，也就是資料的資料。&lt;/p&gt;
-&lt;p&gt;範例：&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;title:這個是標題
-date:2021-09-15_Thu 13:20
-aliases:[這個是別名] 
-Status：筆記狀態
-Source Type：筆記資訊來源
-Source URL：[筆記資訊來源連結]
-Author：[@資訊作者 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;暸解使用&lt;a href="{filename}/Obsidian/Obsidian.md"&gt;Obsidian&lt;/a&gt;的Metadata架構&lt;/p&gt;
+&lt;a href="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="Git"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>認識Metadata</title><link href="https://godtable.top/2021/09/ren-shi-metadata/" rel="alternate"></link><published>2021-09-15T13:20:00+08:00</published><updated>2021-09-15T13:20:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-15:/2021/09/ren-shi-metadata/</id><summary type="html">&lt;p&gt;暸解使用Obsidian的Metadata架構&lt;/p&gt;</summary><content type="html">&lt;p&gt;暸解使用&lt;a href="{filename}/Obsidian/Obsidian.md"&gt;Obsidian&lt;/a&gt;的Metadata架構&lt;/p&gt;
 &lt;p&gt;一般在做筆記的時候，常常要回顧一下當初寫的內容，然後就開始尋找，但是卻沒有有效的尋找，所以需要一個索引來去管理筆記，常常會出現的問題點：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;標題難辨識 — 很難從標題知道筆記的確切內容&lt;/strong&gt;&lt;/li&gt;
@@ -428,7 +375,7 @@ Parent Link：父連結&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;img alt="1_aSEikk5zLaM8RfYMLyJETQ.png" src="https://godtable.top/images/1_aSEikk5zLaM8RfYMLyJETQ.png"&gt;
 參考資料：&lt;a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/obsidian-%E4%BD%BF%E7%94%A8%E6%95%99%E5%AD%B8-%E7%AD%86%E8%A8%98%E7%AF%87-01-%E4%BA%86%E8%A7%A3-obsidian-%E7%9A%84-metadata-f8602bbddade"&gt;了解 Obsidian 的 Metadata，建立一套可持續迭代的筆記系統&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/obsidian-%E4%BD%BF%E7%94%A8%E6%95%99%E5%AD%B8-%E7%AD%86%E8%A8%98%E7%AF%87-02-%E4%BD%BF%E7%94%A8-%E6%BC%B8%E9%80%B2%E5%BC%8F%E7%B8%BD%E7%B5%90-%E4%BE%86%E5%AF%AB%E7%AD%86%E8%A8%98-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%A5%97%E5%8F%AF%E6%8C%81%E7%BA%8C%E8%BF%AD%E4%BB%A3%E7%9A%84%E7%AD%86%E8%A8%98%E7%B3%BB%E7%B5%B1-f34f069f99a"&gt;使用「漸進式總結」來寫筆記，逐步萃取出高含金量的知識內容&lt;/a&gt;&lt;/p&gt;</content><category term="Obsidian"></category><category term="Metadata"></category></entry><entry><title>VS 常用內建快速鍵</title><link href="https://godtable.top/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/obsidian-%E4%BD%BF%E7%94%A8%E6%95%99%E5%AD%B8-%E7%AD%86%E8%A8%98%E7%AF%87-02-%E4%BD%BF%E7%94%A8-%E6%BC%B8%E9%80%B2%E5%BC%8F%E7%B8%BD%E7%B5%90-%E4%BE%86%E5%AF%AB%E7%AD%86%E8%A8%98-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%A5%97%E5%8F%AF%E6%8C%81%E7%BA%8C%E8%BF%AD%E4%BB%A3%E7%9A%84%E7%AD%86%E8%A8%98%E7%B3%BB%E7%B5%B1-f34f069f99a"&gt;使用「漸進式總結」來寫筆記，逐步萃取出高含金量的知識內容&lt;/a&gt;&lt;/p&gt;</content><category term="Obsidian"></category><category term="Obsidian"></category><category term="Metadata"></category></entry><entry><title>VS 常用內建快速鍵</title><link href="https://godtable.top/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;hr&gt;
 &lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://godtable.top/images/Pasted image 20210917172329.png"&gt;&lt;/p&gt;
 &lt;h1&gt;環境&lt;/h1&gt;
 &lt;hr&gt;

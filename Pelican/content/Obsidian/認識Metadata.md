@@ -1,10 +1,14 @@
 ---
-title: 暸解使用Metadata
+title: 認識Metadata
 date: 2021-09-15 13:20
 aliases: 別名 
-tags: Metadata
-topics: 主題
+tags: Obsidian,Metadata
+category: Obsidian
+summary: 暸解使用Obsidian的Metadata架構
+image: 
+status: published
 ---
+
 
 
 

@@ -1,9 +1,15 @@
 
 ---
-title:Obsidian
-date:2021-09-16 15:54
-aliases:[] 
+title: Obsidian
+date: 2021-09-16 15:54
+aliases: 別名 
+tags: Obsidian
+category: Obsidian
+summary: 直接引用Youtube影片說明
+image: 
+status: published
 ---
+
 參考網址：
 筆記類別：#心得
 主題：[[Obsidian]]

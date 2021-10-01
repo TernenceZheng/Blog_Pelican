@@ -5,7 +5,7 @@ aliases: 心得
 tags: Git,Mac
 category: Git
 summary: Mac 上改變 Git 認證模式
-image: /images/git_2021-10-01_8.50.40.png
+image: /images/Mac上改變Git認證模式.png
 status: published
 ---
 
@@ -16,7 +16,7 @@ status: published
 
 ---
 
-![[git_2021-10-01_8.50.40.png]]
+![[Mac上改變Git認證模式.png]]
 
 ---
 

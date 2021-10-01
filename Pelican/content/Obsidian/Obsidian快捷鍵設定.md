@@ -2,8 +2,11 @@
 title: Obsidian快捷鍵設定
 date: 2021-09-16 17:40
 aliases: 記錄 
-tags: [Obsidian快捷鍵,]
-topics: [[Obsidian]]
+tags: Obsidian
+category: Obsidian
+summary: Obsidian快捷鍵設定
+image: 
+status: hidden
 ---
 
 

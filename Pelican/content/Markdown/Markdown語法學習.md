@@ -3,8 +3,12 @@ title: Markdown語法學習
 date: 2021-09-16 17:59
 aliases: 記錄 
 tags: Markdown
-topics: [[主題]]
+category: Markdown
+summary: Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔
+image: 
+status: published
 ---
+
 
 ---
 

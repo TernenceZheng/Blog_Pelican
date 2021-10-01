@@ -5,14 +5,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://godtable.top/</loc>
-<lastmod>2021-10-01T17:36:49-00:00</lastmod>
+<lastmod>2021-10-01T17:54:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://godtable.top/archives.html</loc>
-<lastmod>2021-10-01T17:36:49-00:00</lastmod>
+<lastmod>2021-10-01T17:54:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -123,14 +123,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://godtable.top/2021/09/obsidiankuai-jie-jian-she-ding/</loc>
-<lastmod>2021-09-16T17:40:00+08:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://godtable.top/2021/09/liao-jie-shi-yong-metadata/</loc>
+<loc>https://godtable.top/2021/09/ren-shi-metadata/</loc>
 <lastmod>2021-09-15T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -173,7 +166,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://godtable.top/category/obsidian.html</loc>
-<lastmod>2021-09-16T17:40:00+08:06</lastmod>
+<lastmod>2021-09-15T13:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -181,13 +174,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://godtable.top/category/wei-ruan.html</loc>
 <lastmod>2016-03-08T12:43:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://godtable.top/tag/.html</loc>
-<lastmod>2021-09-16T17:40:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -223,13 +209,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://godtable.top/tag/obsidian.html</loc>
 <lastmod>2021-09-16T17:55:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://godtable.top/tag/obsidiankuai-jie-jian.html</loc>
-<lastmod>2021-09-16T17:40:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

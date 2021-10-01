@@ -4,10 +4,11 @@ date: 2021-10-01 11:47
 aliases: 部落格 
 tags: 權限問題
 category: MacOS
-summary: 
+summary: 寫好了可以執行的發佈語法，點擊執行卻出現這個
 image: /images/截圖 2021-10-01 上午10.55.15.png
 status: published
 ---
+
 
 寫好了可以執行的發佈語法，點擊執行卻出現這個
 
