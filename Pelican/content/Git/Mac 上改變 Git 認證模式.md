@@ -2,14 +2,19 @@
 title: Mac 上改變 Git 認證模式
 date: 2021-09-16 17:53
 aliases: 心得 
-tags: [Git,Mac]
-topics: [[Mac 上改變 Git 認證模式]]
+tags: Git,Mac
+category: Git
+summary: Mac 上改變 Git 認證模式
+image: /images/截圖 2021-10-01 上午8.50.40.png
+status: published
 ---
 
 
 ---
 
 2021/09/14 今天在mac 上面在 git clone https://github.com/TernenceZheng/ObsidianNote.git
+![[截圖 2021-10-01 上午8.50.40.png]]
+
 
 結果我的mac顯示無法用使用者帳號密碼去登入驗證
 
@@ -33,4 +38,6 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 
 參考資料：[Mac 上改變 Git 認證模式](https://myctw.github.io/post/bd72.html)
 
-#Git
+相關主題：
+[[Obsidian 使用 Git 跨平台同步]]
+[[SourceTree權限問題]]
