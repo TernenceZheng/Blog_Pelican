@@ -5,14 +5,14 @@ aliases: 心得
 tags: Git,SourceTree
 category: Git
 summary: Sourcetree出現Permission denied (publickey)
-image: /images/Sourcetree出現Permissiondenied.png
+image: /images/2021-09-29-5.06.52.png
 status: published
 ---
 
 ### Sourcetree出現Permission denied (publickey)
 ---
 
-![[Sourcetree出現Permissiondenied.png]]
+![[2021-09-29-5.06.52.png]]
 
 ---
 
