@@ -56,26 +56,17 @@
     <!-- Microsoft EDGE -->
     <meta name="msapplication-TileColor" content="#66A29C">
 
-<meta name="author" content="Jarvis" />
-<meta name="description" content="Sourcetree出現Permission denied (publickey)" />
-<meta name="keywords" content="Git, SourceTree">
-
-
+    <meta name="author" content="Jarvis" />
+    <meta name="description" content="" />
 <meta property="og:site_name" content="Jarvis隨手筆記"/>
-<meta property="og:title" content="SourceTree權限問題"/>
-<meta property="og:description" content="Sourcetree出現Permission denied (publickey)"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Jarvis隨手筆記"/>
+<meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2021-09-29 17:58:00+08:00"/>
-<meta property="article:modified_time" content=""/>
-<meta property="article:author" content="https://godtable.top/author/jarvis.html">
-<meta property="article:section" content="Git"/>
-<meta property="article:tag" content="Git"/>
-<meta property="article:tag" content="SourceTree"/>
+<meta property="og:url" content="https://godtable.top"/>
 <meta property="og:image" content="/images/profile.png">
 
-  <title>Jarvis隨手筆記 &ndash; SourceTree權限問題</title>
+  <title>Jarvis隨手筆記 &ndash; Tag VS快速鍵]</title>
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
@@ -157,76 +148,52 @@
 
     </nav>
 
-<article class="single">
-  <header>
-      
-    <h1 id="sourcetreequan-xian-wen-ti">SourceTree權限問題</h1>
-    <p>
-      Posted on 三 29 9月 2021 in <a href="https://godtable.top/category/git.html">Git</a>
 
+
+<article>
+  <header>
+    <h2><a href="https://godtable.top/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/#vs-chang-yong-nei-jian-kuai-su-jian">VS 常用內建快速鍵</a></h2>
+    <p>
+      Posted on 二 08 3月 2016 in <a href="https://godtable.top/category/wei-ruan.html">微軟</a>
+
+          &#8226; Tagged with
+              <a href="https://godtable.top/tag/vsmi-ji-visualstudio.html">[VS祕技.VisualStudio</a>,              <a href="https://godtable.top/tag/vskuai-su-jian.html">VS快速鍵]</a>
     </p>
   </header>
-
-
   <div>
-    <h3>Sourcetree出現Permission denied (publickey)</h3>
+        <img src="https://godtable.top/images/Pasted image 20210917172329.png">
+      <hr>
+<p><img alt="Pasted image 20210917172329.png" src="https://godtable.top/images/Pasted image 20210917172329.png"></p>
+<h1>環境</h1>
 <hr>
-<p>![[2021-09-29-5.06.52.png]]</p>
+<p>程式碼編輯器分頁切換 ：Ctrl+TAB 
+存檔：Ctrl + S 
+執行(debug)：F5
+==執行(non debug)==：<code>Ctrl + F5</code>
+全部儲存：Ctrl + Shift + S 
+ 單步執行：F11 (F10) 
+切換斷點：F9 
+==啟用/停用斷點==：<code>Ctrl + F9</code>
+==刪除所有斷點==：<code>Ctrl + Shift + F9</code></p>
+<h1>編輯</h1>
 <hr>
-<p>這個問題的產生可能是程式問題，已經透過SourceTree的UI界面功能去產生SSH的KEY
-做法來源<a href="https://godtable.top/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/">Mac 上改變 Git 認證模式</a> ，也已經至GitHub去註冊KEY</p>
-<p><img alt="Pasted image 20210929180241.png" src="https://godtable.top/images/Pasted image 20210929180241.png"></p>
-<p>Google以後參考資料部落格：</p>
-<blockquote>
-<p><a href="https://medium.com/@wade30191/macos%E6%9B%B4%E6%96%B0%E5%BE%8C%E4%BD%BF%E7%94%A8sourcetree%E5%87%BA%E7%8F%BEpermission-denied-publickey-c226a85c0a3a">MacOS更新後使用Sourcetree出現Permission denied (publickey)</a></p>
-</blockquote>
-<p>就去找出當初用GitHub產生的PrivateKey在哪如下圖左紅框，就執行一下以下語法就可以了</p>
-<hr>
-<p><img alt="Pasted image 20210929180643.png" src="https://godtable.top/images/Pasted image 20210929180643.png"></p>
-<hr>
-<p>==語法：==</p>
-<p>執行新增</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh</span><span class="o">-</span><span class="n">add</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">-</span><span class="n">GitHub</span>
-</code></pre></div>
-
-
-<p>檢查語法</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span>
-</code></pre></div>
+<p>==註解選取範圍==：<code>Ctrl+K,C</code> 
+==取消註解選取範圍==：<code>Ctrl+K,U</code>
+ ==自動縮排==：<code>選取範圍後，Alt + F8</code></p>
+<p>選取文字改小寫：Ctrl + U 
+選取文字改大寫：Ctrl …</p>
+        <br>
+        <a class="btn"
+           href="https://godtable.top/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/#vs-chang-yong-nei-jian-kuai-su-jian">
+          Continue reading
+        </a>
   </div>
-  <div class="tag-cloud">
-    <p>
-      <a href="https://godtable.top/tag/git.html">Git</a>
-      <a href="https://godtable.top/tag/sourcetree.html">SourceTree</a>
-    </p>
-  </div>
-
-
-
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle ads-responsive"
-         data-ad-client="ca-pub-4119678220307625"
-         data-ad-slot="1234566"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-<!-- Disqus -->
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'jarvissui-shou-bi-ji';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>
-    Please enable JavaScript to view comments.
-</noscript>
-<!-- End Disqus -->
 </article>
+
+  <div class="pagination">
+  </div>
+
+
 
     <footer>
 <p>&copy; 2021 </p>

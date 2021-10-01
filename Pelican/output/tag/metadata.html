@@ -56,26 +56,17 @@
     <!-- Microsoft EDGE -->
     <meta name="msapplication-TileColor" content="#66A29C">
 
-<meta name="author" content="Jarvis" />
-<meta name="description" content="Sourcetree出現Permission denied (publickey)" />
-<meta name="keywords" content="Git, SourceTree">
-
-
+    <meta name="author" content="Jarvis" />
+    <meta name="description" content="" />
 <meta property="og:site_name" content="Jarvis隨手筆記"/>
-<meta property="og:title" content="SourceTree權限問題"/>
-<meta property="og:description" content="Sourcetree出現Permission denied (publickey)"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Jarvis隨手筆記"/>
+<meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2021-09-29 17:58:00+08:00"/>
-<meta property="article:modified_time" content=""/>
-<meta property="article:author" content="https://godtable.top/author/jarvis.html">
-<meta property="article:section" content="Git"/>
-<meta property="article:tag" content="Git"/>
-<meta property="article:tag" content="SourceTree"/>
+<meta property="og:url" content="https://godtable.top"/>
 <meta property="og:image" content="/images/profile.png">
 
-  <title>Jarvis隨手筆記 &ndash; SourceTree權限問題</title>
+  <title>Jarvis隨手筆記 &ndash; Tag Metadata</title>
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
@@ -157,76 +148,50 @@
 
     </nav>
 
-<article class="single">
-  <header>
-      
-    <h1 id="sourcetreequan-xian-wen-ti">SourceTree權限問題</h1>
-    <p>
-      Posted on 三 29 9月 2021 in <a href="https://godtable.top/category/git.html">Git</a>
 
+
+<article>
+  <header>
+    <h2><a href="https://godtable.top/2021/09/liao-jie-shi-yong-metadata/#liao-jie-shi-yong-metadata">暸解使用Metadata</a></h2>
+    <p>
+      Posted on 三 15 9月 2021 in <a href="https://godtable.top/category/obsidian.html">Obsidian</a>
+
+          &#8226; Tagged with
+              <a href="https://godtable.top/tag/metadata.html">Metadata</a>
     </p>
   </header>
-
-
   <div>
-    <h3>Sourcetree出現Permission denied (publickey)</h3>
+        <img src="{static}/images/1_aSEikk5zLaM8RfYMLyJETQ.png">
+      <p>暸解使用<a href="{filename}/Obsidian/Obsidian.md">Obsidian</a>的Metadata架構</p>
+<p>一般在做筆記的時候，常常要回顧一下當初寫的內容，然後就開始尋找，但是卻沒有有效的尋找，所以需要一個索引來去管理筆記，常常會出現的問題點：</p>
+<ul>
+<li><strong>標題難辨識 — 很難從標題知道筆記的確切內容</strong></li>
+<li><strong>沒有脈絡 — 很難記起當初為何會寫下這些內容</strong></li>
+<li><strong>沒有狀態—很難重新利用筆記內容</strong></li>
+</ul>
+<p>上方提到的 3 個問題，根本原因是「沒有一套有效的筆記內容紀錄系統」。這個系統並不是說筆記該如何分類、該如何使用標籤…等，而是描述「這份筆記本身」的內容。</p>
+<p>這些內容如果用專業的術語講叫做「Metadata」，中文也翻譯成「<code>元資料</code>」，也就是資料的資料。</p>
+<p>範例：</p>
 <hr>
-<p>![[2021-09-29-5.06.52.png]]</p>
-<hr>
-<p>這個問題的產生可能是程式問題，已經透過SourceTree的UI界面功能去產生SSH的KEY
-做法來源<a href="https://godtable.top/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/">Mac 上改變 Git 認證模式</a> ，也已經至GitHub去註冊KEY</p>
-<p><img alt="Pasted image 20210929180241.png" src="https://godtable.top/images/Pasted image 20210929180241.png"></p>
-<p>Google以後參考資料部落格：</p>
-<blockquote>
-<p><a href="https://medium.com/@wade30191/macos%E6%9B%B4%E6%96%B0%E5%BE%8C%E4%BD%BF%E7%94%A8sourcetree%E5%87%BA%E7%8F%BEpermission-denied-publickey-c226a85c0a3a">MacOS更新後使用Sourcetree出現Permission denied (publickey)</a></p>
-</blockquote>
-<p>就去找出當初用GitHub產生的PrivateKey在哪如下圖左紅框，就執行一下以下語法就可以了</p>
-<hr>
-<p><img alt="Pasted image 20210929180643.png" src="https://godtable.top/images/Pasted image 20210929180643.png"></p>
-<hr>
-<p>==語法：==</p>
-<p>執行新增</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh</span><span class="o">-</span><span class="n">add</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">-</span><span class="n">GitHub</span>
-</code></pre></div>
-
-
-<p>檢查語法</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span>
-</code></pre></div>
+<p>title:這個是標題
+date:2021-09-15_Thu 13:20
+aliases:[這個是別名] 
+Status：筆記狀態
+Source Type：筆記資訊來源
+Source URL：[筆記資訊來源連結]
+Author：[@資訊作者 …</p>
+        <br>
+        <a class="btn"
+           href="https://godtable.top/2021/09/liao-jie-shi-yong-metadata/#liao-jie-shi-yong-metadata">
+          Continue reading
+        </a>
   </div>
-  <div class="tag-cloud">
-    <p>
-      <a href="https://godtable.top/tag/git.html">Git</a>
-      <a href="https://godtable.top/tag/sourcetree.html">SourceTree</a>
-    </p>
-  </div>
-
-
-
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle ads-responsive"
-         data-ad-client="ca-pub-4119678220307625"
-         data-ad-slot="1234566"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-<!-- Disqus -->
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'jarvissui-shou-bi-ji';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>
-    Please enable JavaScript to view comments.
-</noscript>
-<!-- End Disqus -->
 </article>
+
+  <div class="pagination">
+  </div>
+
+
 
     <footer>
 <p>&copy; 2021 </p>

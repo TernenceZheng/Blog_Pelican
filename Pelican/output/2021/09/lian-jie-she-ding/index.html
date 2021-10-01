@@ -57,25 +57,24 @@
     <meta name="msapplication-TileColor" content="#66A29C">
 
 <meta name="author" content="Jarvis" />
-<meta name="description" content="Sourcetree出現Permission denied (publickey)" />
-<meta name="keywords" content="Git, SourceTree">
+<meta name="description" content="&lt;http://markdown.tw&gt; [這是一個帶有標題的行內連結](https://www.google.com &#34;Google&#39;s Homepage&#34;) [中文版的Markdown語法說明](http://markdown.tw) 使用代碼去重複使用： [來看看這個網址][我是網址] [去看看這個網址][我是網址] [檢查這個網址][我是網址] [我是網址]:https://www.google.com.tw 實例展示： http://markdown.tw 這是一個帶有標題的行內連結 中文版的Markdown語法說明 來看看這個網址 去看看這個網址 檢查這個網址" />
+<meta name="keywords" content="Markdown">
 
 
 <meta property="og:site_name" content="Jarvis隨手筆記"/>
-<meta property="og:title" content="SourceTree權限問題"/>
-<meta property="og:description" content="Sourcetree出現Permission denied (publickey)"/>
+<meta property="og:title" content="連結設定"/>
+<meta property="og:description" content="&lt;http://markdown.tw&gt; [這是一個帶有標題的行內連結](https://www.google.com &#34;Google&#39;s Homepage&#34;) [中文版的Markdown語法說明](http://markdown.tw) 使用代碼去重複使用： [來看看這個網址][我是網址] [去看看這個網址][我是網址] [檢查這個網址][我是網址] [我是網址]:https://www.google.com.tw 實例展示： http://markdown.tw 這是一個帶有標題的行內連結 中文版的Markdown語法說明 來看看這個網址 去看看這個網址 檢查這個網址"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/"/>
+<meta property="og:url" content="https://godtable.top/2021/09/lian-jie-she-ding/"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2021-09-29 17:58:00+08:00"/>
+<meta property="article:published_time" content="2021-09-16 17:59:00+08:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://godtable.top/author/jarvis.html">
-<meta property="article:section" content="Git"/>
-<meta property="article:tag" content="Git"/>
-<meta property="article:tag" content="SourceTree"/>
+<meta property="article:section" content="Markdown"/>
+<meta property="article:tag" content="Markdown"/>
 <meta property="og:image" content="/images/profile.png">
 
-  <title>Jarvis隨手筆記 &ndash; SourceTree權限問題</title>
+  <title>Jarvis隨手筆記 &ndash; 連結設定</title>
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
@@ -160,44 +159,49 @@
 <article class="single">
   <header>
       
-    <h1 id="sourcetreequan-xian-wen-ti">SourceTree權限問題</h1>
+    <h1 id="lian-jie-she-ding">連結設定</h1>
     <p>
-      Posted on 三 29 9月 2021 in <a href="https://godtable.top/category/git.html">Git</a>
+      Posted on 四 16 9月 2021 in <a href="https://godtable.top/category/markdown.html">Markdown</a>
 
     </p>
   </header>
 
 
   <div>
-    <h3>Sourcetree出現Permission denied (publickey)</h3>
-<hr>
-<p>![[2021-09-29-5.06.52.png]]</p>
-<hr>
-<p>這個問題的產生可能是程式問題，已經透過SourceTree的UI界面功能去產生SSH的KEY
-做法來源<a href="https://godtable.top/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/">Mac 上改變 Git 認證模式</a> ，也已經至GitHub去註冊KEY</p>
-<p><img alt="Pasted image 20210929180241.png" src="https://godtable.top/images/Pasted image 20210929180241.png"></p>
-<p>Google以後參考資料部落格：</p>
-<blockquote>
-<p><a href="https://medium.com/@wade30191/macos%E6%9B%B4%E6%96%B0%E5%BE%8C%E4%BD%BF%E7%94%A8sourcetree%E5%87%BA%E7%8F%BEpermission-denied-publickey-c226a85c0a3a">MacOS更新後使用Sourcetree出現Permission denied (publickey)</a></p>
-</blockquote>
-<p>就去找出當初用GitHub產生的PrivateKey在哪如下圖左紅框，就執行一下以下語法就可以了</p>
-<hr>
-<p><img alt="Pasted image 20210929180643.png" src="https://godtable.top/images/Pasted image 20210929180643.png"></p>
-<hr>
-<p>==語法：==</p>
-<p>執行新增</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh</span><span class="o">-</span><span class="n">add</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">-</span><span class="n">GitHub</span>
+    <hr>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">markdown</span><span class="p">.</span><span class="n">tw</span><span class="o">&gt;</span>
+
+
+<span class="p">[</span><span class="err">這是一個帶有標題的行內連結</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">google</span><span class="p">.</span><span class="n">com</span> <span class="ss">&quot;Google&#39;s Homepage&quot;</span><span class="p">)</span>
+
+
+<span class="p">[</span><span class="err">中文版的</span><span class="n">Markdown語法說明</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">markdown</span><span class="p">.</span><span class="n">tw</span><span class="p">)</span>
+
+
+
+<span class="err">使用代碼去重複使用：</span>
+
+<span class="p">[</span><span class="err">來看看這個網址</span><span class="p">][</span><span class="err">我是網址</span><span class="p">]</span>
+<span class="p">[</span><span class="err">去看看這個網址</span><span class="p">][</span><span class="err">我是網址</span><span class="p">]</span>
+<span class="p">[</span><span class="err">檢查這個網址</span><span class="p">][</span><span class="err">我是網址</span><span class="p">]</span>
+
+
+<span class="p">[</span><span class="err">我是網址</span><span class="p">]:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">google</span><span class="p">.</span><span class="n">com</span><span class="p">.</span><span class="n">tw</span>
 </code></pre></div>
 
 
-<p>檢查語法</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span>
-</code></pre></div>
+<p>實例展示：</p>
+<p><a href="http://markdown.tw">http://markdown.tw</a></p>
+<p><a href="https://www.google.com" title="Google's Homepage">這是一個帶有標題的行內連結</a></p>
+<p><a href="http://markdown.tw">中文版的Markdown語法說明</a></p>
+<p><a href="https://www.google.com.tw">來看看這個網址</a>
+<a href="https://www.google.com.tw">去看看這個網址</a>
+<a href="https://www.google.com.tw">檢查這個網址</a></p>
+<p><img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo 標題文字範例一"></p>
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="https://godtable.top/tag/git.html">Git</a>
-      <a href="https://godtable.top/tag/sourcetree.html">SourceTree</a>
+      <a href="https://godtable.top/tag/markdown.html">Markdown</a>
     </p>
   </div>
 

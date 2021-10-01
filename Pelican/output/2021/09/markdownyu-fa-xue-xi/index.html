@@ -57,25 +57,24 @@
     <meta name="msapplication-TileColor" content="#66A29C">
 
 <meta name="author" content="Jarvis" />
-<meta name="description" content="Sourcetree出現Permission denied (publickey)" />
-<meta name="keywords" content="Git, SourceTree">
+<meta name="description" content="Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建。Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。 Markdown是一種簡易的標記語言，能讓我們在最短的時間裡製作一份易讀易懂的文字檔案，當有需要輸出到網站時，也能使用許多線上轉換網站或軟體，將Markdown格式的內容轉換成HTML格式，瞬間由文字格式變身美觀的網頁格式。 分段標題 以一到六個井字表示標題一至標題六（&lt;h1&gt;到&lt;h6&gt;），亦即井號越少顯示的字體越大。 項目清單 列舉式的項目清單是很常用的表達語法，在HTML網頁的定義裡主要有兩種：有順序編號的（&lt;ol&gt;+&lt;li&gt;）和沒有順序編號的 （&lt;ul&gt;+&lt;li&gt;），Markdown的表示方法很簡單: 1.有順序編號的清單：每列開頭是「數字.一個空白」 2.沒有順序編號的清單：就是以項目符號開頭的清單，以「*一個空白」或「減號一個空白」來表示 文字變化 一段文字裡需要特別注意或要有不同變化時 …" />
+<meta name="keywords" content="Markdown">
 
 
 <meta property="og:site_name" content="Jarvis隨手筆記"/>
-<meta property="og:title" content="SourceTree權限問題"/>
-<meta property="og:description" content="Sourcetree出現Permission denied (publickey)"/>
+<meta property="og:title" content="Markdown語法學習"/>
+<meta property="og:description" content="Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建。Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。 Markdown是一種簡易的標記語言，能讓我們在最短的時間裡製作一份易讀易懂的文字檔案，當有需要輸出到網站時，也能使用許多線上轉換網站或軟體，將Markdown格式的內容轉換成HTML格式，瞬間由文字格式變身美觀的網頁格式。 分段標題 以一到六個井字表示標題一至標題六（&lt;h1&gt;到&lt;h6&gt;），亦即井號越少顯示的字體越大。 項目清單 列舉式的項目清單是很常用的表達語法，在HTML網頁的定義裡主要有兩種：有順序編號的（&lt;ol&gt;+&lt;li&gt;）和沒有順序編號的 （&lt;ul&gt;+&lt;li&gt;），Markdown的表示方法很簡單: 1.有順序編號的清單：每列開頭是「數字.一個空白」 2.沒有順序編號的清單：就是以項目符號開頭的清單，以「*一個空白」或「減號一個空白」來表示 文字變化 一段文字裡需要特別注意或要有不同變化時 …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/"/>
+<meta property="og:url" content="https://godtable.top/2021/09/markdownyu-fa-xue-xi/"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2021-09-29 17:58:00+08:00"/>
+<meta property="article:published_time" content="2021-09-16 17:59:00+08:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://godtable.top/author/jarvis.html">
-<meta property="article:section" content="Git"/>
-<meta property="article:tag" content="Git"/>
-<meta property="article:tag" content="SourceTree"/>
+<meta property="article:section" content="Markdown"/>
+<meta property="article:tag" content="Markdown"/>
 <meta property="og:image" content="/images/profile.png">
 
-  <title>Jarvis隨手筆記 &ndash; SourceTree權限問題</title>
+  <title>Jarvis隨手筆記 &ndash; Markdown語法學習</title>
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
@@ -160,44 +159,73 @@
 <article class="single">
   <header>
       
-    <h1 id="sourcetreequan-xian-wen-ti">SourceTree權限問題</h1>
+    <h1 id="markdownyu-fa-xue-xi">Markdown語法學習</h1>
     <p>
-      Posted on 三 29 9月 2021 in <a href="https://godtable.top/category/git.html">Git</a>
+      Posted on 四 16 9月 2021 in <a href="https://godtable.top/category/markdown.html">Markdown</a>
 
     </p>
   </header>
 
 
   <div>
-    <h3>Sourcetree出現Permission denied (publickey)</h3>
+    <hr>
+<p>Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建。Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。</p>
+<p><a href="http://markdown.tw/">Markdown</a>是一種簡易的標記語言，能讓我們在最短的時間裡製作一份易讀易懂的文字檔案，當有需要輸出到網站時，也能使用許多線上轉換網站或軟體，將Markdown格式的內容轉換成HTML格式，瞬間由文字格式變身美觀的網頁格式。</p>
 <hr>
-<p>![[2021-09-29-5.06.52.png]]</p>
-<hr>
-<p>這個問題的產生可能是程式問題，已經透過SourceTree的UI界面功能去產生SSH的KEY
-做法來源<a href="https://godtable.top/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/">Mac 上改變 Git 認證模式</a> ，也已經至GitHub去註冊KEY</p>
-<p><img alt="Pasted image 20210929180241.png" src="https://godtable.top/images/Pasted image 20210929180241.png"></p>
-<p>Google以後參考資料部落格：</p>
+<p><a href="https://godtable.top/2021/09/fen-duan-biao-ti/">分段標題</a></p>
 <blockquote>
-<p><a href="https://medium.com/@wade30191/macos%E6%9B%B4%E6%96%B0%E5%BE%8C%E4%BD%BF%E7%94%A8sourcetree%E5%87%BA%E7%8F%BEpermission-denied-publickey-c226a85c0a3a">MacOS更新後使用Sourcetree出現Permission denied (publickey)</a></p>
+<p>以一到六個井字表示標題一至標題六<code>（&lt;h1&gt;到&lt;h6&gt;）</code>，亦即井號越少顯示的字體越大。</p>
 </blockquote>
-<p>就去找出當初用GitHub產生的PrivateKey在哪如下圖左紅框，就執行一下以下語法就可以了</p>
-<hr>
-<p><img alt="Pasted image 20210929180643.png" src="https://godtable.top/images/Pasted image 20210929180643.png"></p>
-<hr>
-<p>==語法：==</p>
-<p>執行新增</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh</span><span class="o">-</span><span class="n">add</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">-</span><span class="n">GitHub</span>
-</code></pre></div>
-
-
-<p>檢查語法</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span>
-</code></pre></div>
+<p><a href="https://godtable.top/2021/09/xiang-mu-qing-dan/">項目清單</a></p>
+<blockquote>
+<p>列舉式的項目清單是很常用的表達語法，在HTML網頁的定義裡主要有兩種：有順序編號的<code>（&lt;ol&gt;+&lt;li&gt;）</code>和沒有順序編號的 <code>（&lt;ul&gt;+&lt;li&gt;）</code>，Markdown的表示方法很簡單:</p>
+<p>1.有順序編號的清單：每列開頭是「數字.一個空白」
+2.沒有順序編號的清單：就是以項目符號開頭的清單，以「*一個空白」或「減號一個空白」來表示
+</p>
+</blockquote>
+<p><a href="https://godtable.top/2021/09/wen-zi-bian-hua/">文字變化</a></p>
+<blockquote>
+<p>一段文字裡需要特別注意或要有不同變化時</p>
+</blockquote>
+<p><a href="https://godtable.top/2021/09/lian-jie-she-ding/">連結設定</a></p>
+<blockquote>
+<p>快速超連結：只要把超連結用「&lt;」、「&gt;」括住即可，被括住的網址會形成可點擊的超連結</p>
+<p>完整超連結：上面快速超連結直接用網址來顯示，我們可以用</p>
+<p><code>[顯示文字](http://jdev.tw/blog/3504/test)</code></p>
+<p>的語法在網頁顯示指定的文字與其使用的超連結。Markdown插入超連結的語法很簡單，但無法指示開啟在新視窗或新分頁。</p>
+</blockquote>
+<p><a href="https://godtable.top/2021/09/cha-ru-tu-pian/">插入圖片</a></p>
+<blockquote>
+<p>比照超連結的寫法再於開頭加上<code>半形驚嘆號</code>就可以了
+語法： <code>![顯示文字](圖片網址)</code></p>
+</blockquote>
+<p><a href="https://godtable.top/2021/09/cheng-shi-dai-ma-huo-yu-fa-gao-liang/">程式代碼或語法高亮</a></p>
+<blockquote>
+<p>在一般文字中直接用 <code>這個樣子</code> ，若是要包整段的要三個 ``` 符號前後包起來</p>
+</blockquote>
+<p>引言</p>
+<blockquote>
+<p>用一個 小於符號  <code>&gt;</code>  放在最前面就可以外面有框線包起來的樣子</p>
+</blockquote>
+<p>行內HTML</p>
+<blockquote>
+<p>因為 Markdown 本來就預設要轉換成 HTML 網頁格式，所以你當然可以直接寫入正確的 HTML 代碼   <code>&lt;H1&gt;ttt&lt;/H1&gt;</code></p>
+</blockquote>
+<p><a href="https://godtable.top/2021/09/shui-ping-fen-ge-xian/">水平分隔線</a></p>
+<blockquote>
+<p>三個或三個以上的符號，必須在獨立的一行，前後不能有其他文字。</p>
+<p>---短橫線（Hyphens）</p>
+<p>***半形星號（Asterisks）</p>
+<p>___下底線（Underscores）</p>
+</blockquote>
+<p><a href="https://godtable.top/2021/09/qi-ta-de-fu-hao/">其他的符號</a></p>
+<blockquote>
+<p>剩下少用的東西有 <code>代辦事項</code>  <code>列表縮進</code> <code>跳脫字元</code></p>
+</blockquote>
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="https://godtable.top/tag/git.html">Git</a>
-      <a href="https://godtable.top/tag/sourcetree.html">SourceTree</a>
+      <a href="https://godtable.top/tag/markdown.html">Markdown</a>
     </p>
   </div>
 

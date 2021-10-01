@@ -1,0 +1,29 @@
+a {
+    color:#003060;
+    cursor: pointer;
+    font-weight: 500;
+}
+a.btn
+{
+    background-color:#3C3C3C;
+    padding: .6em;
+    font-size: .8em;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border: none;
+    border-radius: .25em;
+}
+
+main nav {
+    color:#808080;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+    font-size: inherit;
+    font-weight: 600;
+    font-family: 'Roboto Condensed', 'Microsoft Yahei', sans-serif;
+}
