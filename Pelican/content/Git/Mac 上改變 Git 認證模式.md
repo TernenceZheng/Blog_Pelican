@@ -13,6 +13,8 @@ status: published
 ---
 
 2021/09/14 今天在mac 上面在 git clone https://github.com/TernenceZheng/ObsidianNote.git
+
+
 ![[截圖 2021-10-01 上午8.50.40.png]]
 
 

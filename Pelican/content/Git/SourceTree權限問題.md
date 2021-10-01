@@ -4,9 +4,11 @@ date: 2021-09-29 17:58
 aliases: 心得 
 tags: Git
 category: SourceTree
+image: /images/截圖 2021-09-29 下午5.06.52.png
 ---
 
 ### Sourcetree出現Permission denied (publickey)
+
 ![[截圖 2021-09-29 下午5.06.52.png]]
 
 ---
