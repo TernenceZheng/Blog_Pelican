@@ -4,8 +4,6 @@ cd /Users/jarvis.zheng/Blog_Pelican/Pelican
 
 /Users/jarvis.zheng/miniforge3/envs/Pelican/bin/pelican content
 
-cd /Users/jarvis.zheng/Blog_Pelican/
-
 git add .
 
 git commit -m " git PUSH Pelican 頁面 "
