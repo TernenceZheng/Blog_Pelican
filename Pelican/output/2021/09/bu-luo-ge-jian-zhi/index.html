@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="zh_tw">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://godtable.top/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://godtable.top/theme/pygments/monokai.min.css">
+
+    <script src="https://godtable.top/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://godtable.top/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://godtable.top/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://godtable.top/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://godtable.top/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://godtable.top/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://godtable.top/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://godtable.top/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://godtable.top/theme/font-awesome/css/solid.css">
+
+    <link href="https://godtable.top/static/custom.css" rel="stylesheet">
+
+    <link href="https://godtable.top/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jarvis隨手筆記 Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+<!-- End of Global site tag (gtag.js) - Google Analytics -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#66A29C">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#66A29C">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#66A29C">
+
+<meta name="author" content="Jarvis" />
+<meta name="description" content="用Pelican套件建置部落格在GitHub Pages 上，首先需要安裝Pelican的環境 建立python的虛擬環境 conda create -n Pelican 啓動虛擬環境 conda activate Pelican CD 到新開的資料夾， 當初已經在GitHub上建立好了Repository，所以就在本機建立資料夾然後Clone，在Pelican資料夾下，需要安裝pelican的相關套件，需要創建一個requirements.txt文件 touch requirements.txt 接下來安裝所有套件： pip install -r requirements.txt 若是還沒建立好預設開始環境需要執行以下語法，Pelican會建立基本的程式與資料夾，若是執行以下語法會需要回答一些預設環境的設定值 pelican-quickstart 資料夾架構如下 每個文件的用途： content/ - 存儲所有網站內容的目錄 task.py - 幫助我們自動化網站生成和發布的腳本 output/ - 存儲生成的靜態網站的 HTML 文件的目錄 pelicanconf.py - 包含網站所有配置的文件 生成網站 此語法會在 …" />
+<meta name="keywords" content="Pelican">
+
+
+<meta property="og:site_name" content="Jarvis隨手筆記"/>
+<meta property="og:title" content="部落格建置"/>
+<meta property="og:description" content="用Pelican套件建置部落格在GitHub Pages 上，首先需要安裝Pelican的環境 建立python的虛擬環境 conda create -n Pelican 啓動虛擬環境 conda activate Pelican CD 到新開的資料夾， 當初已經在GitHub上建立好了Repository，所以就在本機建立資料夾然後Clone，在Pelican資料夾下，需要安裝pelican的相關套件，需要創建一個requirements.txt文件 touch requirements.txt 接下來安裝所有套件： pip install -r requirements.txt 若是還沒建立好預設開始環境需要執行以下語法，Pelican會建立基本的程式與資料夾，若是執行以下語法會需要回答一些預設環境的設定值 pelican-quickstart 資料夾架構如下 每個文件的用途： content/ - 存儲所有網站內容的目錄 task.py - 幫助我們自動化網站生成和發布的腳本 output/ - 存儲生成的靜態網站的 HTML 文件的目錄 pelicanconf.py - 包含網站所有配置的文件 生成網站 此語法會在 …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://godtable.top/2021/09/bu-luo-ge-jian-zhi/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-09-28 17:44:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://godtable.top/author/jarvis.html">
+<meta property="article:section" content="程式語言,Python"/>
+<meta property="article:tag" content="Pelican"/>
+<meta property="og:image" content="/images/profile.png">
+
+  <title>Jarvis隨手筆記 &ndash; 部落格建置</title>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-4119678220307625",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://godtable.top">
+        <img src="/images/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="https://godtable.top"></a>
+      </h1>
+
+<p>紙上得來終覺淺，絕知此事要躬行</p>
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://godtable.top" >網路概論</a>
+            </li>
+            <li>
+              <a target="_self" href="https://godtable.top" >程式語言</a>
+            </li>
+            <li>
+              <a target="_self" href="https://godtable.top" >微軟筆記</a>
+            </li>
+            <li>
+              <a target="_self" href="https://godtable.top" >Python筆記</a>
+            </li>
+            <li>
+              <a target="_self" href="https://godtable.top" >雜記</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/TernenceZheng" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-envelope" href="mailto:andy711023@gmail.com" target="_blank">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://godtable.top">Home</a>
+
+      <a href="/archives">文章時間軸</a>
+      <a href="/categories">類別</a>
+      <a href="/tags">標籤</a>
+
+      <a href="https://godtable.top/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="bu-luo-ge-jian-zhi">部落格建置</h1>
+    <p>
+      Posted on 二 28 9月 2021 in <a href="https://godtable.top/category/cheng-shi-yu-yan-python.html">程式語言,Python</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h4>用Pelican套件建置部落格在GitHub Pages 上，首先需要安裝Pelican的環境</h4>
+<p>建立python的虛擬環境
+<code>conda create -n Pelican</code></p>
+<p>啓動虛擬環境
+<code>conda activate Pelican</code></p>
+<p>CD 到新開的資料夾，</p>
+<p>當初已經在GitHub上建立好了Repository，所以就在本機建立資料夾然後Clone，在Pelican資料夾下，需要安裝pelican的相關套件，需要創建一個requirements.txt文件</p>
+<p><code>touch requirements.txt</code></p>
+<p>接下來安裝所有套件：
+<code>pip install -r requirements.txt</code></p>
+<p>若是還沒建立好預設開始環境需要執行以下語法，Pelican會建立基本的程式與資料夾，若是執行以下語法會需要回答一些預設環境的設定值
+<code>pelican-quickstart</code></p>
+<p>資料夾架構如下
+<img alt="Pasted image 20210929144934.png" src="https://godtable.top/images/Pasted image 20210929144934.png">
+每個文件的用途：</p>
+<ul>
+<li>content/ - 存儲所有網站內容的目錄</li>
+<li>task.py - 幫助我們自動化網站生成和發布的腳本</li>
+<li>output/ - 存儲生成的靜態網站的 HTML 文件的目錄</li>
+<li>pelicanconf.py - 包含網站所有配置的文件</li>
+</ul>
+<h3>生成網站</h3>
+<p>此語法會在 output/ 目錄產生所有html 的頁面
+<code>pelican content</code></p>
+<p>此語法會產生一個臨時的站臺 127.0.0.1:8000 可以預覽頁面
+<code>pelican --listen</code></p>
+<p>查看外掛套件清單：
+<code>pelican-plugins</code></p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://godtable.top/tag/pelican.html">Pelican</a>
+    </p>
+  </div>
+
+
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="https://godtable.top/2021/09/sitmapwai-gua-tao-jian-de-shi-yong/">Sitmap外掛套件的使用</a></li>
+    </ul>
+  </div>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-4119678220307625"
+         data-ad-slot="1234566"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jarvissui-shou-bi-ji';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy; 2021 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Jarvis隨手筆記 ",
+  "url" : "https://godtable.top",
+  "image": "/images/profile.png",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>
