@@ -2,14 +2,17 @@
 title: Pelican說明Metadata
 date: 2021-09-30 14:21
 aliases: 部落格 
-tags: 標籤
-category: 類別
-Summary: 標題
-Image: /images/圖片名稱
+tags: Pelican
+category: python
+summary: 整理一個表格來方便查看Pelican的Metadata
+image: /images/2021-10-01_PM4.46.58.png
+status: hidden
+---
 ---
 
+![[2021-10-01_PM4.46.58.png]]
 
-
+---
 您還可以在模板中使用自己的元數據鍵（只要它們不與保留的元數據關鍵字衝突）。下表包含保留的元數據關鍵字列表：
 
 | Metadata    | Description                                                     |

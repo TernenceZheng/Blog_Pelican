@@ -5,7 +5,7 @@ aliases: 部落格
 tags: Obsidian,Pelican
 category: python
 summary: 這個記錄着我製作Obsidian筆記同步到blog的語法
-image: 
+image: /images/圖片名稱
 status: hidden
 ---
 
