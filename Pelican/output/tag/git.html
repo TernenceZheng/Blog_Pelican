@@ -152,63 +152,6 @@
 
 <article>
   <header>
-    <h2><a href="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/#sourcetreequan-xian-wen-ti">SourceTree權限問題</a></h2>
-    <p>
-      Posted on 三 29 9月 2021 in <a href="https://godtable.top/category/sourcetree.html">SourceTree</a>
-
-          &#8226; Tagged with
-              <a href="https://godtable.top/tag/git.html">Git</a>
-    </p>
-  </header>
-  <div>
-        <img src="/images/截圖 2021-09-29 下午5.06.52.png">
-      <h3>Sourcetree出現Permission denied (publickey)</h3>
-<p>![[截圖 2021-09-29 下午5.06.52.png]]</p>
-<hr>
-<p>這個問題的產生可能是程式問題，已經透過SourceTree的UI界面功能去產生SSH的KEY
-做法來源<a href="//Users/{filename}//Users/jarvis.zheng/Blog_Pelican/Pelican/content/Mac 上改變 Git 認證模式.md">Mac 上改變 Git 認證模式</a> ，也已經至GitHub去註冊KEY</p>
-<p><img alt="Pasted image 20210929180241.png" src="https://godtable.top/images/Pasted image 20210929180241.png"></p>
-<p>Google以後參考資料部落格：</p>
-<blockquote>
-<p><a href="https://medium.com/@wade30191/macos%E6%9B%B4%E6%96%B0%E5%BE%8C%E4%BD%BF%E7%94%A8sourcetree%E5%87%BA%E7%8F%BEpermission-denied-publickey-c226a85c0a3a">MacOS更新後使用Sourcetree出現Permission denied (publickey)</a></p>
-</blockquote>
-<p>就去找出當初用GitHub產生的PrivateKey在哪如下圖左紅框，就執行一下以下語法就可以了</p>
-<p><img alt="Pasted image 20210929180643.png" src="https://godtable.top/images/Pasted image 20210929180643.png"></p>
-<p>==語法：==</p>
-<p>執行新增</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh</span><span class="o">-</span><span class="n">add</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">-</span><span class="n">GitHub</span>
-</code></pre></div>
-
-
-<p>檢查語法</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span>
-</code></pre></div>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://godtable.top/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/#obsidian-shi-yong-git-kua-ping-tai-tong-bu">Obsidian 使用 Git 跨平台同步</a></h2>
-    <p>
-      Posted on 四 16 9月 2021 in <a href="https://godtable.top/category/git.html">Git</a>
-
-          &#8226; Tagged with
-              <a href="https://godtable.top/tag/obsidian.html">Obsidian</a>,              <a href="https://godtable.top/tag/git.html">Git</a>
-    </p>
-  </header>
-  <div>
-        <img src="/images/Pasted image 20210914152609.png">
-      
-        <br>
-        <a class="btn"
-           href="https://godtable.top/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/#obsidian-shi-yong-git-kua-ping-tai-tong-bu">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
     <h2><a href="https://godtable.top/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/#mac-shang-gai-bian-git-ren-zheng-mo-shi">Mac 上改變 Git 認證模式</a></h2>
     <p>
       Posted on 四 16 9月 2021 in <a href="https://godtable.top/category/git.html">Git</a>
