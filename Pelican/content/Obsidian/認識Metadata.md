@@ -5,7 +5,7 @@ aliases: 別名
 tags: Obsidian,Metadata
 category: Obsidian
 summary: 暸解使用Obsidian的Metadata架構
-image: 
+image: /images/default_preview_image.png
 status: published
 ---
 
