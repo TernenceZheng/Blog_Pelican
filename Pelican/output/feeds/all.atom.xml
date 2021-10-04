@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記</title><link href="https://godtable.top/" rel="alternate"></link><link href="https://godtable.top/feeds/all.atom.xml" rel="self"></link><id>https://godtable.top/</id><updated>2021-10-01T11:47:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>副檔名command無法執行</title><link href="https://godtable.top/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-10-01:/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/</id><summary type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;</summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
-&lt;p&gt;&lt;img alt="副檔名command無法執行.png" src="https://godtable.top/images/副檔名command無法執行.png"&gt;&lt;/p&gt;
-&lt;p&gt;需要另外給予權限：&lt;code&gt;chmod +x batch_notes_script.command&lt;/code&gt;&lt;/p&gt;</content><category term="MacOS"></category><category term="權限問題"></category></entry><entry><title>SourceTree權限問題</title><link href="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/" rel="alternate"></link><published>2021-09-29T17:58:00+08:00</published><updated>2021-09-29T17:58:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-29:/2021/09/sourcetreequan-xian-wen-ti/</id><summary type="html">&lt;p&gt;Sourcetree出現Permission denied (publickey)&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Sourcetree出現Permission denied (publickey)&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記</title><link href="https://blog.richardrobot.xyz/" rel="alternate"></link><link href="https://blog.richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://blog.richardrobot.xyz/</id><updated>2021-10-01T11:47:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>副檔名command無法執行</title><link href="https://blog.richardrobot.xyz/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-10-01:/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/</id><summary type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;</summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
+&lt;p&gt;&lt;img alt="副檔名command無法執行.png" src="https://blog.richardrobot.xyz/images/副檔名command無法執行.png"&gt;&lt;/p&gt;
+&lt;p&gt;需要另外給予權限：&lt;code&gt;chmod +x batch_notes_script.command&lt;/code&gt;&lt;/p&gt;</content><category term="MacOS"></category><category term="權限問題"></category></entry><entry><title>SourceTree權限問題</title><link href="https://blog.richardrobot.xyz/2021/09/sourcetreequan-xian-wen-ti/" rel="alternate"></link><published>2021-09-29T17:58:00+08:00</published><updated>2021-09-29T17:58:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-29:/2021/09/sourcetreequan-xian-wen-ti/</id><summary type="html">&lt;p&gt;Sourcetree出現Permission denied (publickey)&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Sourcetree出現Permission denied (publickey)&lt;/h3&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt="Sourcetree出現Permissiondenied.png" src="https://godtable.top/images/Sourcetree出現Permissiondenied.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sourcetree出現Permissiondenied.png" src="https://blog.richardrobot.xyz/images/Sourcetree出現Permissiondenied.png"&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;這個問題的產生可能是程式問題，已經透過SourceTree的UI界面功能去產生SSH的KEY
-做法來源&lt;a href="https://godtable.top/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/"&gt;Mac 上改變 Git 認證模式&lt;/a&gt; ，也已經至GitHub去註冊KEY&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210929180241.png" src="https://godtable.top/images/Pasted image 20210929180241.png"&gt;&lt;/p&gt;
+做法來源&lt;a href="https://blog.richardrobot.xyz/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/"&gt;Mac 上改變 Git 認證模式&lt;/a&gt; ，也已經至GitHub去註冊KEY&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210929180241.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210929180241.png"&gt;&lt;/p&gt;
 &lt;p&gt;Google以後參考資料部落格：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="https://medium.com/@wade30191/macos%E6%9B%B4%E6%96%B0%E5%BE%8C%E4%BD%BF%E7%94%A8sourcetree%E5%87%BA%E7%8F%BEpermission-denied-publickey-c226a85c0a3a"&gt;MacOS更新後使用Sourcetree出現Permission denied (publickey)&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;就去找出當初用GitHub產生的PrivateKey在哪如下圖左紅框，就執行一下以下語法就可以了&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210929180643.png" src="https://godtable.top/images/Pasted image 20210929180643.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210929180643.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210929180643.png"&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;==語法：==&lt;/p&gt;
 &lt;p&gt;執行新增&lt;/p&gt;
@@ -24,14 +24,14 @@
 
 &lt;p&gt;檢查語法&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="nd"&gt;@github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Git"></category><category term="Git"></category><category term="SourceTree"></category></entry><entry><title>部落格建置-套件</title><link href="https://godtable.top/2021/09/bu-luo-ge-jian-zhi-tao-jian/" rel="alternate"></link><published>2021-09-29T15:50:00+08:00</published><updated>2021-09-29T15:50:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-29:/2021/09/bu-luo-ge-jian-zhi-tao-jian/</id><summary type="html">&lt;p&gt;要使用Pelican的外掛套件，目前套件的來源有兩種&lt;/p&gt;</summary><content type="html">&lt;p&gt;要使用Pelican的外掛套件，目前套件的來源有兩種：&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Git"></category><category term="Git"></category><category term="SourceTree"></category></entry><entry><title>部落格建置-套件</title><link href="https://blog.richardrobot.xyz/2021/09/bu-luo-ge-jian-zhi-tao-jian/" rel="alternate"></link><published>2021-09-29T15:50:00+08:00</published><updated>2021-09-29T15:50:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-29:/2021/09/bu-luo-ge-jian-zhi-tao-jian/</id><summary type="html">&lt;p&gt;要使用Pelican的外掛套件，目前套件的來源有兩種&lt;/p&gt;</summary><content type="html">&lt;p&gt;要使用Pelican的外掛套件，目前套件的來源有兩種：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在命名空間之下的Git，&lt;a href="https://github.com/pelican-plugins"&gt;新版pelican-plugins&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;舊版的套件集合的Git，&lt;a href="https://github.com/getpelican/pelican-plugins"&gt;舊版pelican-plugins&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;導入套件的方式有兩種：
 如果您的插件不在可導入路徑中，您可以通過PLUGIN_PATHS設置指定路徑列表。如以下示例所示，PLUGIN_PATHS列表中的路徑可以是相對於設置文件的絕對路徑或相對路徑：&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210929155953.png" src="https://godtable.top/images/Pasted image 20210929155953.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210929155953.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210929155953.png"&gt;&lt;/p&gt;
 &lt;p&gt;若是沒有依照設定的套件名稱放置程式會出現錯誤訊息：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Pelican&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;jarvis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;zheng&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nx"&gt;zhengruichangdeMac&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;mini&lt;/span&gt; &lt;span class="nx"&gt;Pelican&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="nx"&gt;pelican&lt;/span&gt; &lt;span class="nx"&gt;content&lt;/span&gt;
 &lt;span class="nx"&gt;WARNING&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="nx"&gt;usage&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;CATEGORY_FEED_ATOM&lt;/span&gt; &lt;span class="nx"&gt;is&lt;/span&gt; &lt;span class="nx"&gt;deprecated&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;use&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;instead&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
@@ -44,7 +44,7 @@
 &lt;h3&gt;總結&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;套件的使用，在命名空間下的，要執行安裝語法，會直接搜尋環境下的套件程式，若是用舊版的，要去舊版git 去clone下來，並且對照名稱放程式資料夾在/pelican-plugins&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="Python"></category><category term="Pelican"></category></entry><entry><title>部落格建置</title><link href="https://godtable.top/2021/09/bu-luo-ge-jian-zhi/" rel="alternate"></link><published>2021-09-28T17:44:00+08:00</published><updated>2021-09-28T17:44:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-28:/2021/09/bu-luo-ge-jian-zhi/</id><summary type="html">&lt;p&gt;用Pelican套件建置部落格在GitHub Pages 上，首先需要安裝Pelican的環境&lt;/p&gt;</summary><content type="html">&lt;h4&gt;用Pelican套件建置部落格在GitHub Pages 上，首先需要安裝Pelican的環境&lt;/h4&gt;
+&lt;/blockquote&gt;</content><category term="Python"></category><category term="Pelican"></category></entry><entry><title>部落格建置</title><link href="https://blog.richardrobot.xyz/2021/09/bu-luo-ge-jian-zhi/" rel="alternate"></link><published>2021-09-28T17:44:00+08:00</published><updated>2021-09-28T17:44:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-28:/2021/09/bu-luo-ge-jian-zhi/</id><summary type="html">&lt;p&gt;用Pelican套件建置部落格在GitHub Pages 上，首先需要安裝Pelican的環境&lt;/p&gt;</summary><content type="html">&lt;h4&gt;用Pelican套件建置部落格在GitHub Pages 上，首先需要安裝Pelican的環境&lt;/h4&gt;
 &lt;p&gt;建立python的虛擬環境
 &lt;code&gt;conda create -n Pelican&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;啓動虛擬環境
@@ -57,7 +57,7 @@
 &lt;p&gt;若是還沒建立好預設開始環境需要執行以下語法，Pelican會建立基本的程式與資料夾，若是執行以下語法會需要回答一些預設環境的設定值
 &lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;資料夾架構如下
-&lt;img alt="Pasted image 20210929144934.png" src="https://godtable.top/images/Pasted image 20210929144934.png"&gt;
+&lt;img alt="Pasted image 20210929144934.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210929144934.png"&gt;
 每個文件的用途：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;content/ - 存儲所有網站內容的目錄&lt;/li&gt;
@@ -71,7 +71,7 @@
 &lt;p&gt;此語法會產生一個臨時的站臺 127.0.0.1:8000 可以預覽頁面
 &lt;code&gt;pelican --listen&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;查看外掛套件清單：
-&lt;code&gt;pelican-plugins&lt;/code&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Pelican"></category></entry><entry><title>Markdown-插入圖片</title><link href="https://godtable.top/2021/09/markdown-cha-ru-tu-pian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/markdown-cha-ru-tu-pian/</id><summary type="html">&lt;p&gt;顯示插入圖片&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;code&gt;pelican-plugins&lt;/code&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Pelican"></category></entry><entry><title>Markdown-插入圖片</title><link href="https://blog.richardrobot.xyz/2021/09/markdown-cha-ru-tu-pian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/markdown-cha-ru-tu-pian/</id><summary type="html">&lt;p&gt;顯示插入圖片&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &amp;quot;這個文字會滑鼠滑上會出現POPup&amp;quot;)&lt;/span&gt;
 
 
@@ -95,7 +95,7 @@
 &lt;p&gt;&lt;img alt="企業正在進行AI前導測試，並將人工智慧投入生產。以下是業界菁英對AI的投資方向，且已見到初步成果" src="https://www.cio.com.tw/wp-content/uploads/1200-AdobeStock_178319041-750x394.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;
 &lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;
-&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-程式代碼或語法高亮</title><link href="https://godtable.top/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/</id><summary type="html">&lt;p&gt;顯示程式代碼或語法高亮&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-程式代碼或語法高亮</title><link href="https://blog.richardrobot.xyz/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/</id><summary type="html">&lt;p&gt;顯示程式代碼或語法高亮&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;直接展示：每個三個` 符號 後面直接寫程式語言名稱如：sql C# java python  等等的&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;JavaScript syntax highlighting&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
 &lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
@@ -109,7 +109,7 @@
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;No language indicated, so no syntax highlighting.  
 But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&gt;tag&lt;span class="nt"&gt;&amp;lt;/b&amp;gt;&lt;/span&gt;.  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-連結設定</title><link href="https://godtable.top/2021/09/markdown-lian-jie-she-ding/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/markdown-lian-jie-she-ding/</id><summary type="html">&lt;p&gt;顯示連結設定&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-連結設定</title><link href="https://blog.richardrobot.xyz/2021/09/markdown-lian-jie-she-ding/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/markdown-lian-jie-she-ding/</id><summary type="html">&lt;p&gt;顯示連結設定&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tw&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 
 
@@ -138,20 +138,20 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;p&gt;&lt;a href="https://www.google.com.tw"&gt;來看看這個網址&lt;/a&gt;
 &lt;a href="https://www.google.com.tw"&gt;去看看這個網址&lt;/a&gt;
 &lt;a href="https://www.google.com.tw"&gt;檢查這個網址&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo 標題文字範例一"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-其他的符號</title><link href="https://godtable.top/2021/09/markdown-qi-ta-de-fu-hao/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/markdown-qi-ta-de-fu-hao/</id><summary type="html">&lt;p&gt;顯示其他的符號&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;&lt;img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo 標題文字範例一"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-其他的符號</title><link href="https://blog.richardrobot.xyz/2021/09/markdown-qi-ta-de-fu-hao/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/markdown-qi-ta-de-fu-hao/</id><summary type="html">&lt;p&gt;顯示其他的符號&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;[ ] 代辦事項  &lt;/li&gt;
 &lt;li&gt;[x] 已完成事項&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;跳脫字元
-加上反引號 \&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-水平分隔線</title><link href="https://godtable.top/2021/09/markdown-shui-ping-fen-ge-xian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/markdown-shui-ping-fen-ge-xian/</id><summary type="html">&lt;p&gt;顯示水平分隔線&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+加上反引號 \&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-水平分隔線</title><link href="https://blog.richardrobot.xyz/2021/09/markdown-shui-ping-fen-ge-xian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/markdown-shui-ping-fen-ge-xian/</id><summary type="html">&lt;p&gt;顯示水平分隔線&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;語法：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;---短橫線（Hyphens）&lt;/span&gt;
 
 &lt;span class="o"&gt;***&lt;/span&gt;&lt;span class="err"&gt;半形星號（&lt;/span&gt;&lt;span class="n"&gt;Asterisks&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;
 
 &lt;span class="n"&gt;___下底線&lt;/span&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="n"&gt;Underscores&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-文字變化</title><link href="https://godtable.top/2021/09/markdown-wen-zi-bian-hua/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/markdown-wen-zi-bian-hua/</id><summary type="html">&lt;p&gt;顯示文字變化&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-文字變化</title><link href="https://blog.richardrobot.xyz/2021/09/markdown-wen-zi-bian-hua/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/markdown-wen-zi-bian-hua/</id><summary type="html">&lt;p&gt;顯示文字變化&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;asterisks&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;斜體&lt;/span&gt;  
 &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;asterisks&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;粗體&lt;/span&gt;
 
@@ -162,7 +162,7 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;p&gt;實際展示：&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;我是斜體字&lt;/em&gt; &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;我是粗體字測試&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;==螢光強調==&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-項目清單</title><link href="https://godtable.top/2021/09/markdown-xiang-mu-qing-dan/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/markdown-xiang-mu-qing-dan/</id><summary type="html">&lt;p&gt;顯示清單的語法&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;==螢光強調==&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-項目清單</title><link href="https://blog.richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/markdown-xiang-mu-qing-dan/</id><summary type="html">&lt;p&gt;顯示清單的語法&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;* 無序列表一 //可以使用星號建立無序清單  &lt;/span&gt;
 &lt;span class="err"&gt;- 無序列表二 //或是短橫線（負號）  &lt;/span&gt;
 &lt;span class="err"&gt;+ 無序列表三 //使用半形加號也可以  &lt;/span&gt;
@@ -198,38 +198,38 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;/li&gt;
 &lt;li&gt;有序號列表二&lt;/li&gt;
 &lt;li&gt;有序號列表三&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-語法學習</title><link href="https://godtable.top/2021/09/markdown-yu-fa-xue-xi/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/markdown-yu-fa-xue-xi/</id><summary type="html">&lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;/ul&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-語法學習</title><link href="https://blog.richardrobot.xyz/2021/09/markdown-yu-fa-xue-xi/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/markdown-yu-fa-xue-xi/</id><summary type="html">&lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建。Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://markdown.tw/"&gt;Markdown&lt;/a&gt;是一種簡易的標記語言，能讓我們在最短的時間裡製作一份易讀易懂的文字檔案，當有需要輸出到網站時，也能使用許多線上轉換網站或軟體，將Markdown格式的內容轉換成HTML格式，瞬間由文字格式變身美觀的網頁格式。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;a href="https://godtable.top/2021/09/markdown-fen-duan-biao-ti/"&gt;分段標題&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.richardrobot.xyz/2021/09/markdown-fen-duan-biao-ti/"&gt;分段標題&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;以一到六個井字表示標題一至標題六&lt;code&gt;（&amp;lt;h1&amp;gt;到&amp;lt;h6&amp;gt;）&lt;/code&gt;，亦即井號越少顯示的字體越大。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://godtable.top/2021/09/markdown-xiang-mu-qing-dan/"&gt;項目清單&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/"&gt;項目清單&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;列舉式的項目清單是很常用的表達語法，在HTML網頁的定義裡主要有兩種：有順序編號的&lt;code&gt;（&amp;lt;ol&amp;gt;+&amp;lt;li&amp;gt;）&lt;/code&gt;和沒有順序編號的 &lt;code&gt;（&amp;lt;ul&amp;gt;+&amp;lt;li&amp;gt;）&lt;/code&gt;，Markdown的表示方法很簡單:&lt;/p&gt;
 &lt;p&gt;1.有順序編號的清單：每列開頭是「數字.一個空白」
 2.沒有順序編號的清單：就是以項目符號開頭的清單，以「*一個空白」或「減號一個空白」來表示
 &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://godtable.top/2021/09/markdown-wen-zi-bian-hua/"&gt;文字變化&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.richardrobot.xyz/2021/09/markdown-wen-zi-bian-hua/"&gt;文字變化&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;一段文字裡需要特別注意或要有不同變化時&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://godtable.top/2021/09/markdown-lian-jie-she-ding/"&gt;連結設定&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.richardrobot.xyz/2021/09/markdown-lian-jie-she-ding/"&gt;連結設定&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;快速超連結：只要把超連結用「&amp;lt;」、「&amp;gt;」括住即可，被括住的網址會形成可點擊的超連結&lt;/p&gt;
 &lt;p&gt;完整超連結：上面快速超連結直接用網址來顯示，我們可以用&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[顯示文字](http://jdev.tw/blog/3504/test)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;的語法在網頁顯示指定的文字與其使用的超連結。Markdown插入超連結的語法很簡單，但無法指示開啟在新視窗或新分頁。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://godtable.top/2021/09/markdown-cha-ru-tu-pian/"&gt;插入圖片&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.richardrobot.xyz/2021/09/markdown-cha-ru-tu-pian/"&gt;插入圖片&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;比照超連結的寫法再於開頭加上&lt;code&gt;半形驚嘆號&lt;/code&gt;就可以了
 語法： &lt;code&gt;![顯示文字](圖片網址)&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://godtable.top/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/"&gt;程式代碼或語法高亮&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.richardrobot.xyz/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/"&gt;程式代碼或語法高亮&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在一般文字中直接用 &lt;code&gt;這個樣子&lt;/code&gt; ，若是要包整段的要三個 ``` 符號前後包起來&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -241,17 +241,17 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;blockquote&gt;
 &lt;p&gt;因為 Markdown 本來就預設要轉換成 HTML 網頁格式，所以你當然可以直接寫入正確的 HTML 代碼   &lt;code&gt;&amp;lt;H1&amp;gt;ttt&amp;lt;/H1&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://godtable.top/2021/09/markdown-shui-ping-fen-ge-xian/"&gt;水平分隔線&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.richardrobot.xyz/2021/09/markdown-shui-ping-fen-ge-xian/"&gt;水平分隔線&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;三個或三個以上的符號，必須在獨立的一行，前後不能有其他文字。&lt;/p&gt;
 &lt;p&gt;---短橫線（Hyphens）&lt;/p&gt;
 &lt;p&gt;***半形星號（Asterisks）&lt;/p&gt;
 &lt;p&gt;___下底線（Underscores）&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://godtable.top/2021/09/markdown-qi-ta-de-fu-hao/"&gt;其他的符號&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.richardrobot.xyz/2021/09/markdown-qi-ta-de-fu-hao/"&gt;其他的符號&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;剩下少用的東西有 &lt;code&gt;代辦事項&lt;/code&gt;  &lt;code&gt;列表縮進&lt;/code&gt; &lt;code&gt;跳脫字元&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-分段標題</title><link href="https://godtable.top/2021/09/markdown-fen-duan-biao-ti/" rel="alternate"></link><published>2021-09-16T17:58:00+08:00</published><updated>2021-09-16T17:58:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/markdown-fen-duan-biao-ti/</id><summary type="html">&lt;p&gt;顯示分段標題&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;/blockquote&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-分段標題</title><link href="https://blog.richardrobot.xyz/2021/09/markdown-fen-duan-biao-ti/" rel="alternate"></link><published>2021-09-16T17:58:00+08:00</published><updated>2021-09-16T17:58:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/markdown-fen-duan-biao-ti/</id><summary type="html">&lt;p&gt;顯示分段標題&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;h1&gt;標題&lt;/h1&gt;
 &lt;p&gt;```'語法顯示'&lt;/p&gt;
 &lt;h1&gt;H1&lt;/h1&gt;
@@ -268,11 +268,11 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;h1&gt;標題&lt;/h1&gt;
 &lt;h6&gt;標題&lt;/h6&gt;
 &lt;h1&gt;鮮明的標題&lt;/h1&gt;
-&lt;h2&gt;鮮明的標題&lt;/h2&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Obsidian 使用 Git 跨平台同步</title><link href="https://godtable.top/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/" rel="alternate"></link><published>2021-09-16T17:55:00+08:00</published><updated>2021-09-16T17:55:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/</id><summary type="html">&lt;p&gt;使用Obsidian搭配Git達成可以跨越系統的同步&lt;/p&gt;</summary><content type="html">&lt;p&gt;第一步
+&lt;h2&gt;鮮明的標題&lt;/h2&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Obsidian 使用 Git 跨平台同步</title><link href="https://blog.richardrobot.xyz/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/" rel="alternate"></link><published>2021-09-16T17:55:00+08:00</published><updated>2021-09-16T17:55:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/</id><summary type="html">&lt;p&gt;使用Obsidian搭配Git達成可以跨越系統的同步&lt;/p&gt;</summary><content type="html">&lt;p&gt;第一步
 先在Windows本機的建立一個資料夾，是拿來開啟Obsidian的Vault&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210914152609.png" src="https://godtable.top/images/Pasted image 20210914152609.png"&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210914152609.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210914152609.png"&gt;
 像上面的資料路徑我新開了一個 ObsidianNote資料夾，然後Obisdian設定這個資料夾就會有一些設定檔
-&lt;img alt="Pasted image 20210914152831.png" src="https://godtable.top/images/Pasted image 20210914152831.png"&gt;&lt;/p&gt;
+&lt;img alt="Pasted image 20210914152831.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210914152831.png"&gt;&lt;/p&gt;
 &lt;p&gt;第二步
 在GitHub建立一個repository，然後取名同樣的名稱ObsidianNote&lt;/p&gt;
 &lt;p&gt;第三步
@@ -280,10 +280,10 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;p&gt;&lt;code&gt;git init&lt;/code&gt;
 &lt;code&gt;git commit -m "first commit"&lt;/code&gt;
 &lt;code&gt;git remote add origin https://github.com/TernenceZheng/ObsidianNote.git&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210914153508.png" src="https://godtable.top/images/Pasted image 20210914153508.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210914153508.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210914153508.png"&gt;&lt;/p&gt;
 &lt;p&gt;第四步
 安裝第三方外掛套件 Obsidian Git
-&lt;img alt="Pasted image 20210914161351.png" src="https://godtable.top/images/Pasted image 20210914161351.png"&gt;&lt;/p&gt;
+&lt;img alt="Pasted image 20210914161351.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210914161351.png"&gt;&lt;/p&gt;
 &lt;p&gt;安裝及啟用後，左方將出現 Obsidian Git 的設定，我有以下的建議：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;將 Vault 備份時間改為 5 分鐘 (Backup Interval: 5)&lt;/li&gt;
@@ -293,10 +293,10 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;/ul&gt;
 &lt;p&gt;參考鏈接：&lt;a href="https://notes.desktopofsamuel.com/posts/Obsidian%E4%B8%8A%E6%89%8B%E5%8F%8A%E4%BD%BF%E7%94%A8Git%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%90%8C%E6%AD%A5/"&gt;Obsidian上手及使用Git跨平台同步&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;另外的手機版本同步參考：&lt;a href="https://forum.obsidian.md/t/mobile-setting-up-ios-git-based-syncing-with-mobile-app-using-working-copy/16499"&gt;[移動] 設置 iOS 與移動應用程序基於 git 的同步（使用工作副本）&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;Git&lt;/h1&gt;</content><category term="Git"></category><category term="Obsidian"></category><category term="Git"></category></entry><entry><title>Mac 上改變 Git 認證模式</title><link href="https://godtable.top/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/" rel="alternate"></link><published>2021-09-16T17:53:00+08:00</published><updated>2021-09-16T17:53:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/</id><summary type="html">&lt;p&gt;Mac 上改變 Git 認證模式&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;h1&gt;Git&lt;/h1&gt;</content><category term="Git"></category><category term="Obsidian"></category><category term="Git"></category></entry><entry><title>Mac 上改變 Git 認證模式</title><link href="https://blog.richardrobot.xyz/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/" rel="alternate"></link><published>2021-09-16T17:53:00+08:00</published><updated>2021-09-16T17:53:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/</id><summary type="html">&lt;p&gt;Mac 上改變 Git 認證模式&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;2021/09/14 今天在mac 上面在 git clone https://github.com/TernenceZheng/ObsidianNote.git&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt="Mac上改變Git認證模式.png" src="https://godtable.top/images/Mac上改變Git認證模式.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Mac上改變Git認證模式.png" src="https://blog.richardrobot.xyz/images/Mac上改變Git認證模式.png"&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;結果我的mac顯示無法用使用者帳號密碼去登入驗證&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;'Mac上面錯誤訊息'
@@ -307,7 +307,7 @@ remote: Support for password authentication was removed on August 13, 2021. Plea
 remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
 fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.git/'&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;看了文章原來要去用GitHub的Token驗證方式才可以，舊的帳號密碼已經不行了，下面是Github產生的Token
-&lt;img alt="Pasted image 20210914164331.png" src="https://godtable.top/images/Pasted image 20210914164331.png"&gt;&lt;/p&gt;
+&lt;img alt="Pasted image 20210914164331.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210914164331.png"&gt;&lt;/p&gt;
 &lt;p&gt;把拿到的Token註冊在MacOS的鑰匙圈如下圖&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;![[Pic2021-09-144.54.10.png]]&lt;/p&gt;
@@ -315,8 +315,8 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 &lt;p&gt;就完成Token的驗證註冊，然後git clone就OK了&lt;/p&gt;
 &lt;p&gt;參考資料：&lt;a href="https://myctw.github.io/post/bd72.html"&gt;Mac 上改變 Git 認證模式&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;相關主題：
-&lt;a href="https://godtable.top/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/"&gt;Obsidian 使用 Git 跨平台同步&lt;/a&gt;
-&lt;a href="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="Git"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>認識Metadata</title><link href="https://godtable.top/2021/09/ren-shi-metadata/" rel="alternate"></link><published>2021-09-15T13:20:00+08:00</published><updated>2021-09-15T13:20:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-15:/2021/09/ren-shi-metadata/</id><summary type="html">&lt;p&gt;暸解使用Obsidian的Metadata架構&lt;/p&gt;</summary><content type="html">&lt;p&gt;暸解使用&lt;a href="{filename}/Obsidian/Obsidian.md"&gt;Obsidian&lt;/a&gt;的Metadata架構&lt;/p&gt;
+&lt;a href="https://blog.richardrobot.xyz/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/"&gt;Obsidian 使用 Git 跨平台同步&lt;/a&gt;
+&lt;a href="https://blog.richardrobot.xyz/2021/09/sourcetreequan-xian-wen-ti/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="Git"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>認識Metadata</title><link href="https://blog.richardrobot.xyz/2021/09/ren-shi-metadata/" rel="alternate"></link><published>2021-09-15T13:20:00+08:00</published><updated>2021-09-15T13:20:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-15:/2021/09/ren-shi-metadata/</id><summary type="html">&lt;p&gt;暸解使用Obsidian的Metadata架構&lt;/p&gt;</summary><content type="html">&lt;p&gt;暸解使用&lt;a href="{filename}/Obsidian/Obsidian.md"&gt;Obsidian&lt;/a&gt;的Metadata架構&lt;/p&gt;
 &lt;p&gt;一般在做筆記的時候，常常要回顧一下當初寫的內容，然後就開始尋找，但是卻沒有有效的尋找，所以需要一個索引來去管理筆記，常常會出現的問題點：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;標題難辨識 — 很難從標題知道筆記的確切內容&lt;/strong&gt;&lt;/li&gt;
@@ -338,11 +338,11 @@ Note Type：筆記類型
 Topics：筆記主題,練習
 Parent Link：父連結&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt="1_aSEikk5zLaM8RfYMLyJETQ.png" src="https://godtable.top/images/1_aSEikk5zLaM8RfYMLyJETQ.png"&gt;
+&lt;p&gt;&lt;img alt="1_aSEikk5zLaM8RfYMLyJETQ.png" src="https://blog.richardrobot.xyz/images/1_aSEikk5zLaM8RfYMLyJETQ.png"&gt;
 參考資料：&lt;a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/obsidian-%E4%BD%BF%E7%94%A8%E6%95%99%E5%AD%B8-%E7%AD%86%E8%A8%98%E7%AF%87-01-%E4%BA%86%E8%A7%A3-obsidian-%E7%9A%84-metadata-f8602bbddade"&gt;了解 Obsidian 的 Metadata，建立一套可持續迭代的筆記系統&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/obsidian-%E4%BD%BF%E7%94%A8%E6%95%99%E5%AD%B8-%E7%AD%86%E8%A8%98%E7%AF%87-02-%E4%BD%BF%E7%94%A8-%E6%BC%B8%E9%80%B2%E5%BC%8F%E7%B8%BD%E7%B5%90-%E4%BE%86%E5%AF%AB%E7%AD%86%E8%A8%98-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%A5%97%E5%8F%AF%E6%8C%81%E7%BA%8C%E8%BF%AD%E4%BB%A3%E7%9A%84%E7%AD%86%E8%A8%98%E7%B3%BB%E7%B5%B1-f34f069f99a"&gt;使用「漸進式總結」來寫筆記，逐步萃取出高含金量的知識內容&lt;/a&gt;&lt;/p&gt;</content><category term="Obsidian"></category><category term="Obsidian"></category><category term="Metadata"></category></entry><entry><title>VS 常用內建快速鍵</title><link href="https://godtable.top/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;p&gt;VS 常用內建快速鍵&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/obsidian-%E4%BD%BF%E7%94%A8%E6%95%99%E5%AD%B8-%E7%AD%86%E8%A8%98%E7%AF%87-02-%E4%BD%BF%E7%94%A8-%E6%BC%B8%E9%80%B2%E5%BC%8F%E7%B8%BD%E7%B5%90-%E4%BE%86%E5%AF%AB%E7%AD%86%E8%A8%98-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%A5%97%E5%8F%AF%E6%8C%81%E7%BA%8C%E8%BF%AD%E4%BB%A3%E7%9A%84%E7%AD%86%E8%A8%98%E7%B3%BB%E7%B5%B1-f34f069f99a"&gt;使用「漸進式總結」來寫筆記，逐步萃取出高含金量的知識內容&lt;/a&gt;&lt;/p&gt;</content><category term="Obsidian"></category><category term="Obsidian"></category><category term="Metadata"></category></entry><entry><title>VS 常用內建快速鍵</title><link href="https://blog.richardrobot.xyz/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;p&gt;VS 常用內建快速鍵&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://godtable.top/images/Pasted image 20210917172329.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210917172329.png"&gt;&lt;/p&gt;
 &lt;h1&gt;環境&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;程式碼編輯器分頁切換 ：Ctrl+TAB 

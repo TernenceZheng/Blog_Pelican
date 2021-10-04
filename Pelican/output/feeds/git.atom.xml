@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記 - Git</title><link href="https://godtable.top/" rel="alternate"></link><link href="https://godtable.top/feeds/git.atom.xml" rel="self"></link><id>https://godtable.top/</id><updated>2021-09-29T17:58:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>SourceTree權限問題</title><link href="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/" rel="alternate"></link><published>2021-09-29T17:58:00+08:00</published><updated>2021-09-29T17:58:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-29:/2021/09/sourcetreequan-xian-wen-ti/</id><summary type="html">&lt;p&gt;Sourcetree出現Permission denied (publickey)&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Sourcetree出現Permission denied (publickey)&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記 - Git</title><link href="https://blog.richardrobot.xyz/" rel="alternate"></link><link href="https://blog.richardrobot.xyz/feeds/git.atom.xml" rel="self"></link><id>https://blog.richardrobot.xyz/</id><updated>2021-09-29T17:58:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>SourceTree權限問題</title><link href="https://blog.richardrobot.xyz/2021/09/sourcetreequan-xian-wen-ti/" rel="alternate"></link><published>2021-09-29T17:58:00+08:00</published><updated>2021-09-29T17:58:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-29:/2021/09/sourcetreequan-xian-wen-ti/</id><summary type="html">&lt;p&gt;Sourcetree出現Permission denied (publickey)&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Sourcetree出現Permission denied (publickey)&lt;/h3&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt="Sourcetree出現Permissiondenied.png" src="https://godtable.top/images/Sourcetree出現Permissiondenied.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sourcetree出現Permissiondenied.png" src="https://blog.richardrobot.xyz/images/Sourcetree出現Permissiondenied.png"&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;這個問題的產生可能是程式問題，已經透過SourceTree的UI界面功能去產生SSH的KEY
-做法來源&lt;a href="https://godtable.top/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/"&gt;Mac 上改變 Git 認證模式&lt;/a&gt; ，也已經至GitHub去註冊KEY&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210929180241.png" src="https://godtable.top/images/Pasted image 20210929180241.png"&gt;&lt;/p&gt;
+做法來源&lt;a href="https://blog.richardrobot.xyz/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/"&gt;Mac 上改變 Git 認證模式&lt;/a&gt; ，也已經至GitHub去註冊KEY&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210929180241.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210929180241.png"&gt;&lt;/p&gt;
 &lt;p&gt;Google以後參考資料部落格：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="https://medium.com/@wade30191/macos%E6%9B%B4%E6%96%B0%E5%BE%8C%E4%BD%BF%E7%94%A8sourcetree%E5%87%BA%E7%8F%BEpermission-denied-publickey-c226a85c0a3a"&gt;MacOS更新後使用Sourcetree出現Permission denied (publickey)&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;就去找出當初用GitHub產生的PrivateKey在哪如下圖左紅框，就執行一下以下語法就可以了&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210929180643.png" src="https://godtable.top/images/Pasted image 20210929180643.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210929180643.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210929180643.png"&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;==語法：==&lt;/p&gt;
 &lt;p&gt;執行新增&lt;/p&gt;
@@ -22,11 +22,11 @@
 
 &lt;p&gt;檢查語法&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="nd"&gt;@github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Git"></category><category term="Git"></category><category term="SourceTree"></category></entry><entry><title>Obsidian 使用 Git 跨平台同步</title><link href="https://godtable.top/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/" rel="alternate"></link><published>2021-09-16T17:55:00+08:00</published><updated>2021-09-16T17:55:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/</id><summary type="html">&lt;p&gt;使用Obsidian搭配Git達成可以跨越系統的同步&lt;/p&gt;</summary><content type="html">&lt;p&gt;第一步
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Git"></category><category term="Git"></category><category term="SourceTree"></category></entry><entry><title>Obsidian 使用 Git 跨平台同步</title><link href="https://blog.richardrobot.xyz/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/" rel="alternate"></link><published>2021-09-16T17:55:00+08:00</published><updated>2021-09-16T17:55:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/</id><summary type="html">&lt;p&gt;使用Obsidian搭配Git達成可以跨越系統的同步&lt;/p&gt;</summary><content type="html">&lt;p&gt;第一步
 先在Windows本機的建立一個資料夾，是拿來開啟Obsidian的Vault&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210914152609.png" src="https://godtable.top/images/Pasted image 20210914152609.png"&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210914152609.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210914152609.png"&gt;
 像上面的資料路徑我新開了一個 ObsidianNote資料夾，然後Obisdian設定這個資料夾就會有一些設定檔
-&lt;img alt="Pasted image 20210914152831.png" src="https://godtable.top/images/Pasted image 20210914152831.png"&gt;&lt;/p&gt;
+&lt;img alt="Pasted image 20210914152831.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210914152831.png"&gt;&lt;/p&gt;
 &lt;p&gt;第二步
 在GitHub建立一個repository，然後取名同樣的名稱ObsidianNote&lt;/p&gt;
 &lt;p&gt;第三步
@@ -34,10 +34,10 @@
 &lt;p&gt;&lt;code&gt;git init&lt;/code&gt;
 &lt;code&gt;git commit -m "first commit"&lt;/code&gt;
 &lt;code&gt;git remote add origin https://github.com/TernenceZheng/ObsidianNote.git&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210914153508.png" src="https://godtable.top/images/Pasted image 20210914153508.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210914153508.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210914153508.png"&gt;&lt;/p&gt;
 &lt;p&gt;第四步
 安裝第三方外掛套件 Obsidian Git
-&lt;img alt="Pasted image 20210914161351.png" src="https://godtable.top/images/Pasted image 20210914161351.png"&gt;&lt;/p&gt;
+&lt;img alt="Pasted image 20210914161351.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210914161351.png"&gt;&lt;/p&gt;
 &lt;p&gt;安裝及啟用後，左方將出現 Obsidian Git 的設定，我有以下的建議：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;將 Vault 備份時間改為 5 分鐘 (Backup Interval: 5)&lt;/li&gt;
@@ -47,10 +47,10 @@
 &lt;/ul&gt;
 &lt;p&gt;參考鏈接：&lt;a href="https://notes.desktopofsamuel.com/posts/Obsidian%E4%B8%8A%E6%89%8B%E5%8F%8A%E4%BD%BF%E7%94%A8Git%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%90%8C%E6%AD%A5/"&gt;Obsidian上手及使用Git跨平台同步&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;另外的手機版本同步參考：&lt;a href="https://forum.obsidian.md/t/mobile-setting-up-ios-git-based-syncing-with-mobile-app-using-working-copy/16499"&gt;[移動] 設置 iOS 與移動應用程序基於 git 的同步（使用工作副本）&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;Git&lt;/h1&gt;</content><category term="Git"></category><category term="Obsidian"></category><category term="Git"></category></entry><entry><title>Mac 上改變 Git 認證模式</title><link href="https://godtable.top/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/" rel="alternate"></link><published>2021-09-16T17:53:00+08:00</published><updated>2021-09-16T17:53:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2021-09-16:/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/</id><summary type="html">&lt;p&gt;Mac 上改變 Git 認證模式&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;h1&gt;Git&lt;/h1&gt;</content><category term="Git"></category><category term="Obsidian"></category><category term="Git"></category></entry><entry><title>Mac 上改變 Git 認證模式</title><link href="https://blog.richardrobot.xyz/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/" rel="alternate"></link><published>2021-09-16T17:53:00+08:00</published><updated>2021-09-16T17:53:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2021-09-16:/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/</id><summary type="html">&lt;p&gt;Mac 上改變 Git 認證模式&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;2021/09/14 今天在mac 上面在 git clone https://github.com/TernenceZheng/ObsidianNote.git&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt="Mac上改變Git認證模式.png" src="https://godtable.top/images/Mac上改變Git認證模式.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Mac上改變Git認證模式.png" src="https://blog.richardrobot.xyz/images/Mac上改變Git認證模式.png"&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;結果我的mac顯示無法用使用者帳號密碼去登入驗證&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;'Mac上面錯誤訊息'
@@ -61,7 +61,7 @@ remote: Support for password authentication was removed on August 13, 2021. Plea
 remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
 fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.git/'&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;看了文章原來要去用GitHub的Token驗證方式才可以，舊的帳號密碼已經不行了，下面是Github產生的Token
-&lt;img alt="Pasted image 20210914164331.png" src="https://godtable.top/images/Pasted image 20210914164331.png"&gt;&lt;/p&gt;
+&lt;img alt="Pasted image 20210914164331.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210914164331.png"&gt;&lt;/p&gt;
 &lt;p&gt;把拿到的Token註冊在MacOS的鑰匙圈如下圖&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;![[Pic2021-09-144.54.10.png]]&lt;/p&gt;
@@ -69,5 +69,5 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 &lt;p&gt;就完成Token的驗證註冊，然後git clone就OK了&lt;/p&gt;
 &lt;p&gt;參考資料：&lt;a href="https://myctw.github.io/post/bd72.html"&gt;Mac 上改變 Git 認證模式&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;相關主題：
-&lt;a href="https://godtable.top/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/"&gt;Obsidian 使用 Git 跨平台同步&lt;/a&gt;
-&lt;a href="https://godtable.top/2021/09/sourcetreequan-xian-wen-ti/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="Git"></category><category term="Git"></category><category term="Mac"></category></entry></feed>
+&lt;a href="https://blog.richardrobot.xyz/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/"&gt;Obsidian 使用 Git 跨平台同步&lt;/a&gt;
+&lt;a href="https://blog.richardrobot.xyz/2021/09/sourcetreequan-xian-wen-ti/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="Git"></category><category term="Git"></category><category term="Mac"></category></entry></feed>

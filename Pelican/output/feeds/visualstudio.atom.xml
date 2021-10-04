@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記 - VisualStudio</title><link href="https://godtable.top/" rel="alternate"></link><link href="https://godtable.top/feeds/visualstudio.atom.xml" rel="self"></link><id>https://godtable.top/</id><updated>2016-03-08T12:43:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>VS 常用內建快速鍵</title><link href="https://godtable.top/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Jarvis</name></author><id>tag:godtable.top,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;p&gt;VS 常用內建快速鍵&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記 - VisualStudio</title><link href="https://blog.richardrobot.xyz/" rel="alternate"></link><link href="https://blog.richardrobot.xyz/feeds/visualstudio.atom.xml" rel="self"></link><id>https://blog.richardrobot.xyz/</id><updated>2016-03-08T12:43:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>VS 常用內建快速鍵</title><link href="https://blog.richardrobot.xyz/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Jarvis</name></author><id>tag:blog.richardrobot.xyz,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;p&gt;VS 常用內建快速鍵&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://godtable.top/images/Pasted image 20210917172329.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://blog.richardrobot.xyz/images/Pasted image 20210917172329.png"&gt;&lt;/p&gt;
 &lt;h1&gt;環境&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;程式碼編輯器分頁切換 ：Ctrl+TAB 
