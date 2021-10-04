@@ -5,14 +5,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://godtable.top/</loc>
-<lastmod>2021-10-01T17:54:31-00:00</lastmod>
+<lastmod>2021-10-04T09:52:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://godtable.top/archives.html</loc>
-<lastmod>2021-10-01T17:54:31-00:00</lastmod>
+<lastmod>2021-10-04T09:52:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -46,63 +46,63 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://godtable.top/2021/09/cha-ru-tu-pian/</loc>
+<loc>https://godtable.top/2021/09/markdown-cha-ru-tu-pian/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://godtable.top/2021/09/cheng-shi-dai-ma-huo-yu-fa-gao-liang/</loc>
+<loc>https://godtable.top/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://godtable.top/2021/09/lian-jie-she-ding/</loc>
+<loc>https://godtable.top/2021/09/markdown-lian-jie-she-ding/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://godtable.top/2021/09/markdownyu-fa-xue-xi/</loc>
+<loc>https://godtable.top/2021/09/markdown-qi-ta-de-fu-hao/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://godtable.top/2021/09/qi-ta-de-fu-hao/</loc>
+<loc>https://godtable.top/2021/09/markdown-shui-ping-fen-ge-xian/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://godtable.top/2021/09/shui-ping-fen-ge-xian/</loc>
+<loc>https://godtable.top/2021/09/markdown-wen-zi-bian-hua/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://godtable.top/2021/09/wen-zi-bian-hua/</loc>
+<loc>https://godtable.top/2021/09/markdown-xiang-mu-qing-dan/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://godtable.top/2021/09/xiang-mu-qing-dan/</loc>
+<loc>https://godtable.top/2021/09/markdown-yu-fa-xue-xi/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://godtable.top/2021/09/fen-duan-biao-ti/</loc>
+<loc>https://godtable.top/2021/09/markdown-fen-duan-biao-ti/</loc>
 <lastmod>2021-09-16T17:58:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -137,13 +137,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://godtable.top/category/cheng-shi-yu-yan-python.html</loc>
-<lastmod>2021-09-29T15:50:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://godtable.top/category/git.html</loc>
 <lastmod>2021-09-29T17:58:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -172,7 +165,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://godtable.top/category/wei-ruan.html</loc>
+<loc>https://godtable.top/category/python.html</loc>
+<lastmod>2021-09-29T15:50:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://godtable.top/category/visualstudio.html</loc>
 <lastmod>2016-03-08T12:43:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -235,6 +235,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://godtable.top/tag/visualstudio.html</loc>
+<lastmod>2016-03-08T12:43:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://godtable.top/tag/vskuai-su-jian.html</loc>
 <lastmod>2016-03-08T12:43:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -242,7 +249,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://godtable.top/tag/vsmi-ji-visualstudio.html</loc>
+<loc>https://godtable.top/tag/vsmi-ji.html</loc>
 <lastmod>2016-03-08T12:43:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
