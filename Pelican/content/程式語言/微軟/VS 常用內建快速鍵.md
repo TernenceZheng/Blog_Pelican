@@ -1,8 +1,14 @@
 ---
 title: VS 常用內建快速鍵
 date: 2016-03-08 12:43
-aliases: 心得 
-tags: [VS祕技.VisualStudio,VS快速鍵]
+aliases: 部落格 
+tags: VisualStudio,VS祕技,VS快速鍵
+category: VisualStudio
+summary: VS 常用內建快速鍵
+image: /images/Pasted image 20210917172329.png
+status: published
+
+---
 
 ---
 
