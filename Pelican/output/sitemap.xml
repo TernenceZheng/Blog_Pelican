@@ -5,15 +5,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/</loc>
-<lastmod>2021-10-05T17:21:30-00:00</lastmod>
+<lastmod>2021-10-05T20:26:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://richardrobot.xyz/archives.html</loc>
-<lastmod>2021-10-05T17:21:30-00:00</lastmod>
+<lastmod>2021-10-05T20:26:01-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2021/10/supervisor/</loc>
+<lastmod>2021-10-05T19:22:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -158,6 +165,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/category/mac.html</loc>
+<lastmod>2021-10-05T19:22:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/category/macos.html</loc>
 <lastmod>2021-10-01T11:47:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -201,14 +215,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/tag/git.html</loc>
-<lastmod>2021-09-29T17:58:00+08:06</lastmod>
+<lastmod>2021-10-05T16:36:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://richardrobot.xyz/tag/mac.html</loc>
-<lastmod>2021-09-16T17:53:00+08:06</lastmod>
+<lastmod>2021-10-05T19:22:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -237,6 +251,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://richardrobot.xyz/tag/netlify.html</loc>
 <lastmod>2021-10-05T16:36:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/tag/nginx.html</loc>
+<lastmod>2021-10-05T19:22:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -277,6 +298,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/tag/supervisor.html</loc>
+<lastmod>2021-10-05T19:22:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/tag/visualstudio.html</loc>
 <lastmod>2016-03-08T12:43:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -299,7 +327,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/author/jarvis.html</loc>
-<lastmod>2021-10-05T16:36:00+08:06</lastmod>
+<lastmod>2021-10-05T19:22:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

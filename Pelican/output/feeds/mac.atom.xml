@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記 - Mac</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/mac.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-10-05T19:22:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Supervisor</title><link href="https://richardrobot.xyz/2021/10/supervisor/" rel="alternate"></link><published>2021-10-05T19:22:00+08:00</published><updated>2021-10-05T19:22:00+08:00</updated><author><name>Jarvis</name></author><id>tag:richardrobot.xyz,2021-10-05:/2021/10/supervisor/</id><summary type="html">&lt;p&gt;在Mac上使用supervisor來啓動服務&lt;/p&gt;</summary><content type="html">&lt;p&gt;在 Linux上可以使用systemctl 這個服務來開機就能自動啓動寫好的網站服務，等等其他的，但是在Mac上卻無法，使用supervisor還有Web畫面可以查看&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Supervisor服務畫面.png" src="https://richardrobot.xyz/images/Supervisor服務畫面.png"&gt;&lt;/p&gt;
+&lt;h2&gt;透過brew來安裝：&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;brew install supervisor&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;設定檔路徑：&lt;/h3&gt;
+&lt;p&gt;由於是Mac M1 的系統，homebrew已經將設定的路徑放在 &lt;code&gt;/opt/homebrew/etc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如下圖，開啓 supervisor.conf 檔案&lt;/p&gt;
+&lt;p&gt;&lt;img alt="supervisor的ini設定畫面.png" src="https://richardrobot.xyz/images/supervisor的ini設定畫面.png"&gt;&lt;/p&gt;
+&lt;p&gt;可以註解前面的 &lt;code&gt;;&lt;/code&gt; 符號來啓用設定 :&lt;/p&gt;
+&lt;p&gt;可以開啓 Web的畫面 啓用 登入帳號密碼&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;inet_http_server&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;          &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;inet&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TCP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="n"&gt;disabled&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt;
+&lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;9001&lt;/span&gt;         &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;ip_address&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="n"&gt;specifier&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nb"&gt;all&lt;/span&gt; &lt;span class="n"&gt;iface&lt;/span&gt;
+&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;               &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;123&lt;/span&gt;                &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在最後加入客製化的設定檔：
+加入下面的設定，可以在/Process/  資料夾底下設定需要的Service檔，並且用 .ini 爲副檔名&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;include&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Process&lt;/span&gt;&lt;span class="o"&gt;/*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;ini&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;已django網站爲例：&lt;/p&gt;
+&lt;p&gt;command 程序啓動命令：使用gunicorn來當WebServer，使用參數檔 gunicorn.conf.py &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;django_server&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;miniforge3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;envs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;finlab&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gunicorn&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="n"&gt;gunicorn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;StockSecretary&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;
+&lt;span class="n"&gt;process_name&lt;/span&gt;&lt;span class="o"&gt;=%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;program_name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
+&lt;span class="n"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;StockWeb&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;啓動服務：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;services&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="n"&gt;supervisor&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hoohoo.top/blog/supervisor-instructions-for-use/"&gt;SUPERVISOR 介紹與使用方式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://aptro.github.io/server/architecture/2016/06/21/Jupyter-Notebook-Nginx-Setup.html"&gt;Jupyter Notebook and Nginx Setup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.gushiciku.cn/pl/2MVd/zh-tw"&gt;Mac OSX 開機啟動應用 (supervisor)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.twblogs.net/a/5d6115a6bd9eee541c32bb6f"&gt;Python Tricks —— 使用 Supervisor 控制 Linux 進程&lt;/a&gt;&lt;/p&gt;</content><category term="Mac"></category><category term="Mac"></category><category term="Supervisor"></category><category term="Nginx"></category></entry></feed>
