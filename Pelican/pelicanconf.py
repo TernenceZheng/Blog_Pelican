@@ -7,7 +7,7 @@ SITENAME = 'Jarvis隨手筆記'
 SITESUBTITLE = "紙上得來終覺淺，絕知此事要躬行"
 
 
-SITEURL = 'https://blog.richardrobot.xyz'
+SITEURL = 'https://richardrobot.xyz'
 #SITEURL = 'http://127.0.0.1:8000'
 SITELOGO = '/images/head_icon.jpg'
 FAVICON = '/images/favicon.ico'
@@ -49,11 +49,11 @@ SITEMAP = {
 }
 
 LINKS = (
-    ("網路概論", "https://blog.richardrobot.xyz"),
-    ("程式語言", "https://blog.richardrobot.xyz"),
-    ("微軟筆記", "https://blog.richardrobot.xyz"),
-    ("Python筆記", "https://blog.richardrobot.xyz"),
-    ("雜記", "https://blog.richardrobot.xyz")
+    ("網路概論", "https://richardrobot.xyz"),
+    ("程式語言", "https://richardrobot.xyz"),
+    ("微軟筆記", "https://richardrobot.xyz"),
+    ("Python筆記", "https://richardrobot.xyz"),
+    ("雜記", "https://richardrobot.xyz")
 )
 
 PATH = 'content'
