@@ -4,259 +4,259 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://blog.richardrobot.xyz/</loc>
-<lastmod>2021-10-04T21:24:34-00:00</lastmod>
+<loc>https://richardrobot.xyz/</loc>
+<lastmod>2021-10-05T16:27:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/archives.html</loc>
-<lastmod>2021-10-04T21:24:34-00:00</lastmod>
+<loc>https://richardrobot.xyz/archives.html</loc>
+<lastmod>2021-10-05T16:27:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/</loc>
+<loc>https://richardrobot.xyz/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/</loc>
 <lastmod>2021-10-01T11:47:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/sourcetreequan-xian-wen-ti/</loc>
+<loc>https://richardrobot.xyz/2021/09/sourcetreequan-xian-wen-ti/</loc>
 <lastmod>2021-09-29T17:58:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/bu-luo-ge-jian-zhi-tao-jian/</loc>
+<loc>https://richardrobot.xyz/2021/09/bu-luo-ge-jian-zhi-tao-jian/</loc>
 <lastmod>2021-09-29T15:50:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/bu-luo-ge-jian-zhi/</loc>
+<loc>https://richardrobot.xyz/2021/09/bu-luo-ge-jian-zhi/</loc>
 <lastmod>2021-09-28T17:44:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/markdown-cha-ru-tu-pian/</loc>
+<loc>https://richardrobot.xyz/2021/09/markdown-cha-ru-tu-pian/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/</loc>
+<loc>https://richardrobot.xyz/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/markdown-lian-jie-she-ding/</loc>
+<loc>https://richardrobot.xyz/2021/09/markdown-lian-jie-she-ding/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/markdown-qi-ta-de-fu-hao/</loc>
+<loc>https://richardrobot.xyz/2021/09/markdown-qi-ta-de-fu-hao/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/markdown-shui-ping-fen-ge-xian/</loc>
+<loc>https://richardrobot.xyz/2021/09/markdown-shui-ping-fen-ge-xian/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/markdown-wen-zi-bian-hua/</loc>
+<loc>https://richardrobot.xyz/2021/09/markdown-wen-zi-bian-hua/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/</loc>
+<loc>https://richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/markdown-yu-fa-xue-xi/</loc>
+<loc>https://richardrobot.xyz/2021/09/markdown-yu-fa-xue-xi/</loc>
 <lastmod>2021-09-16T17:59:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/markdown-fen-duan-biao-ti/</loc>
+<loc>https://richardrobot.xyz/2021/09/markdown-fen-duan-biao-ti/</loc>
 <lastmod>2021-09-16T17:58:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/</loc>
+<loc>https://richardrobot.xyz/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/</loc>
 <lastmod>2021-09-16T17:55:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/</loc>
+<loc>https://richardrobot.xyz/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/</loc>
 <lastmod>2021-09-16T17:53:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2021/09/ren-shi-metadata/</loc>
+<loc>https://richardrobot.xyz/2021/09/ren-shi-metadata/</loc>
 <lastmod>2021-09-15T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</loc>
+<loc>https://richardrobot.xyz/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</loc>
 <lastmod>2016-03-08T12:43:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/category/git.html</loc>
+<loc>https://richardrobot.xyz/category/git.html</loc>
 <lastmod>2021-09-29T17:58:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/category/macos.html</loc>
+<loc>https://richardrobot.xyz/category/macos.html</loc>
 <lastmod>2021-10-01T11:47:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/category/markdown.html</loc>
+<loc>https://richardrobot.xyz/category/markdown.html</loc>
 <lastmod>2021-09-16T17:59:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/category/obsidian.html</loc>
+<loc>https://richardrobot.xyz/category/obsidian.html</loc>
 <lastmod>2021-09-15T13:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/category/python.html</loc>
+<loc>https://richardrobot.xyz/category/python.html</loc>
 <lastmod>2021-09-29T15:50:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/category/visualstudio.html</loc>
+<loc>https://richardrobot.xyz/category/visualstudio.html</loc>
 <lastmod>2016-03-08T12:43:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/tag/git.html</loc>
+<loc>https://richardrobot.xyz/tag/git.html</loc>
 <lastmod>2021-09-29T17:58:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/tag/mac.html</loc>
+<loc>https://richardrobot.xyz/tag/mac.html</loc>
 <lastmod>2021-09-16T17:53:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/tag/markdown.html</loc>
+<loc>https://richardrobot.xyz/tag/markdown.html</loc>
 <lastmod>2021-09-16T17:59:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/tag/metadata.html</loc>
+<loc>https://richardrobot.xyz/tag/metadata.html</loc>
 <lastmod>2021-09-15T13:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/tag/obsidian.html</loc>
+<loc>https://richardrobot.xyz/tag/obsidian.html</loc>
 <lastmod>2021-09-16T17:55:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/tag/pelican.html</loc>
+<loc>https://richardrobot.xyz/tag/pelican.html</loc>
 <lastmod>2021-09-29T15:50:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/tag/quan-xian-wen-ti.html</loc>
+<loc>https://richardrobot.xyz/tag/quan-xian-wen-ti.html</loc>
 <lastmod>2021-10-01T11:47:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/tag/sourcetree.html</loc>
+<loc>https://richardrobot.xyz/tag/sourcetree.html</loc>
 <lastmod>2021-09-29T17:58:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/tag/visualstudio.html</loc>
+<loc>https://richardrobot.xyz/tag/visualstudio.html</loc>
 <lastmod>2016-03-08T12:43:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/tag/vskuai-su-jian.html</loc>
+<loc>https://richardrobot.xyz/tag/vskuai-su-jian.html</loc>
 <lastmod>2016-03-08T12:43:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/tag/vsmi-ji.html</loc>
+<loc>https://richardrobot.xyz/tag/vsmi-ji.html</loc>
 <lastmod>2016-03-08T12:43:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.richardrobot.xyz/author/jarvis.html</loc>
+<loc>https://richardrobot.xyz/author/jarvis.html</loc>
 <lastmod>2021-10-01T11:47:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
