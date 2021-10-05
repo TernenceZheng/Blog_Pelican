@@ -5,15 +5,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/</loc>
-<lastmod>2021-10-05T16:27:40-00:00</lastmod>
+<lastmod>2021-10-05T16:28:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://richardrobot.xyz/archives.html</loc>
-<lastmod>2021-10-05T16:27:40-00:00</lastmod>
+<lastmod>2021-10-05T16:28:23-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2021/10/maczhong-xin-kai-ji-ssh-tokenshi-xiao/</loc>
+<lastmod>2021-10-05T16:09:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -138,7 +145,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/category/git.html</loc>
-<lastmod>2021-09-29T17:58:00+08:06</lastmod>
+<lastmod>2021-10-05T16:09:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -235,6 +242,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/tag/ssh.html</loc>
+<lastmod>2021-10-05T16:09:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/tag/visualstudio.html</loc>
 <lastmod>2016-03-08T12:43:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -257,7 +271,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/author/jarvis.html</loc>
-<lastmod>2021-10-01T11:47:00+08:06</lastmod>
+<lastmod>2021-10-05T16:09:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
