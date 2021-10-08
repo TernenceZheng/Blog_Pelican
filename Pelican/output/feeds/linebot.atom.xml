@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記 - LineBot</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/linebot.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-10-08T08:38:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>LineLogin串接</title><link href="https://richardrobot.xyz/2021/10/lineloginchuan-jie/" rel="alternate"></link><published>2021-10-08T08:38:00+08:00</published><updated>2021-10-08T08:38:00+08:00</updated><author><name>Jarvis</name></author><id>tag:richardrobot.xyz,2021-10-08:/2021/10/lineloginchuan-jie/</id><summary type="html">&lt;p&gt;Django串街LineLogin API 流程簡單教學&lt;/p&gt;</summary><content type="html">&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://jerrynest.io/django-allauth/"&gt;使用 Django Allauth 套件&lt;/a&gt;
+&lt;a href="https://wreadit.com/@wwwlearncodewithmikecom/post/50134"&gt;[Django教學13]Django Allauth套件整合Google登入驗證實作教學&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先安裝django-allauth&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip install django-allauth&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在Django站臺的Settings設定相關的參數設定&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在&lt;code&gt;INSTALLED_APPS&lt;/code&gt; 裏面新增 allauth allauth.account ...以下的資料&lt;/li&gt;
+&lt;li&gt;新增設定&lt;code&gt;AUTHENTICATION_BACKENDS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;新增設定&lt;code&gt;SITE_ID&lt;/code&gt; ,數值要比對Django資料表內的  django_site 的ID值&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SOCIALACCOUNT_PROVIDERS&lt;/code&gt;這是要設定讀取使用者的資料&lt;/li&gt;
+&lt;li&gt;在站臺的url.py設定路徑&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="settings設定參數1.png" src="https://richardrobot.xyz/images/settings設定參數1.png"&gt;
+&lt;img alt="settings設定參數二.png" src="https://richardrobot.xyz/images/settings設定參數二.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.contrib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;admin&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.urls&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;include&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.conf.urls&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;
+
+&lt;span class="n"&gt;urlpatterns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;admin/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;admin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+
+    &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;accounts/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;include&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;allauth.urls&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;p&gt;以上設定完成要執行Django語法來產生資料表：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python manage.py makemigrations&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python manage.py migrate&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python manage.py runserver&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;以上就是Django的設定部分，另外LineLogin的設定需要注意的細節，因爲django-allauth已經將送LineLogin授權路徑參數自動拼裝好了，裏面有些規範需要注意&lt;/p&gt;
+&lt;p&gt;在送授權的部分，django-allauth定義的callbackURL已經規範，如下圖
+&lt;img alt="djangoallauth.png" src="https://richardrobot.xyz/images/djangoallauth.png"&gt;
+&lt;a href="https://django-allauth.readthedocs.io/en/latest/providers.html#line"&gt;https://django-allauth.readthedocs.io/en/latest/providers.html#line&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;上面的 Callback URL 必須與LINE Login 內的設定相同
+&lt;img alt="lineloginapi的設定.png" src="https://richardrobot.xyz/images/lineloginapi的設定.png"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;另外剩下的就是要設定KEY與ClientID:&lt;/p&gt;
+&lt;p&gt;去內部後臺設定LINE SecrtKEY
+&lt;img alt="linelogin內部後臺設定.png" src="https://richardrobot.xyz/images/linelogin內部後臺設定.png"&gt;&lt;/p&gt;
+&lt;p&gt;回到頁面去，雖然沒有寫什麼頁面，可是 django-allauth已經內建了許多頁面可以直接查看
+&lt;img alt="linelogin預設路徑頁面.png" src="https://richardrobot.xyz/images/linelogin預設路徑頁面.png"&gt;
+&lt;img alt="linelogin預設登入畫面.png" src="https://richardrobot.xyz/images/linelogin預設登入畫面.png"&gt;&lt;/p&gt;
+&lt;p&gt;以上就是完成初步的串街，內容套版需要再詳細實做與修改，另外在串街流程中發生的錯誤在導向到LineLogin畫面時出現 400 錯誤：
+&lt;img alt="linelogin400錯誤情況.png" src="https://richardrobot.xyz/images/linelogin400錯誤情況.png"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;這個問題的發生原因先查看了LineLogin的文件說明&lt;/p&gt;
+&lt;h2&gt;要求授權&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;為進行使用者認證，並為 app 要求權限，請透過所需的 query parameter，如下面例子所示將使用者重新導向授權 URL。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//access.line.me/oauth2/v2.1/authorize?&lt;/span&gt;
+&lt;span class="n"&gt;response_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;
+&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;client_id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1234567890&lt;/span&gt;
+&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;redirect_uri&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mf"&gt;2F&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mf"&gt;2F&lt;/span&gt;&lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mf"&gt;2F&lt;/span&gt;&lt;span class="n"&gt;auth&lt;/span&gt;
+&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;12345&lt;/span&gt;&lt;span class="n"&gt;abcde&lt;/span&gt;
+&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;scope&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;profile&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="n"&gt;openid&lt;/span&gt;
+&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;nonce&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;09876&lt;/span&gt;&lt;span class="n"&gt;xyz&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="linelogin串街參數.png" src="https://richardrobot.xyz/images/linelogin串街參數.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://developers.line.biz/zh-hant/docs/line-login/integrate-line-login/#making-an-authorization-request"&gt;URL 的查詢屬性&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我的參數：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="k"&gt;access&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;me&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;oauth2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;v2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;authorize&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
+
+&lt;span class="n"&gt;client_id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;U2c2bde960c5d7723082f2b9a491f51e1&lt;/span&gt;
+&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;redirect_uri&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;linebot&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;richardrobot&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xyz&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;accounts&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;callback&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="k"&gt;scope&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;response_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;
+&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="k"&gt;state&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;BBwcp2EEdqnJ&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;錯誤問題1：client_id不對
+client_id ：LINE Login Channel 的 Channel ID
+錯誤問題2：scope沒有值
+scope：向用戶請求授予權限，也就是要求取得使用者的資料&lt;/p&gt;
+&lt;p&gt;修正：
+1.在admin後臺修改設定
+2.在settings.py新增如下參數：
+&lt;img alt="linelogin新增參數.png" src="https://richardrobot.xyz/images/linelogin新增參數.png"&gt;&lt;/p&gt;</content><category term="LineBot"></category><category term="LineLoginAPI"></category><category term="Django"></category></entry></feed>

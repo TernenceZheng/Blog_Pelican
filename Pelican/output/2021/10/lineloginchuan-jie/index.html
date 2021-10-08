@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="zh_tw">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://richardrobot.xyz/theme/pygments/monokai.min.css">
+
+    <script src="https://richardrobot.xyz/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://richardrobot.xyz/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://richardrobot.xyz/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://richardrobot.xyz/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://richardrobot.xyz/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://richardrobot.xyz/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/font-awesome/css/solid.css">
+
+    <link href="https://richardrobot.xyz/static/custom.css" rel="stylesheet">
+
+    <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jarvis隨手筆記 Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+<!-- End of Global site tag (gtag.js) - Google Analytics -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#66A29C">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#66A29C">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#66A29C">
+
+<meta name="author" content="Jarvis" />
+<meta name="description" content="Django串街LineLogin API 流程簡單教學" />
+<meta name="keywords" content="LineLoginAPI, Django">
+
+
+<meta property="og:site_name" content="Jarvis隨手筆記"/>
+<meta property="og:title" content="LineLogin串接"/>
+<meta property="og:description" content="Django串街LineLogin API 流程簡單教學"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://richardrobot.xyz/2021/10/lineloginchuan-jie/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-10-08 08:38:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://richardrobot.xyz/author/jarvis.html">
+<meta property="article:section" content="LineBot"/>
+<meta property="article:tag" content="LineLoginAPI"/>
+<meta property="article:tag" content="Django"/>
+<meta property="og:image" content="/images/head_icon.jpg">
+
+  <title>Jarvis隨手筆記 &ndash; LineLogin串接</title>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-4119678220307625",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://richardrobot.xyz">
+        <img src="/images/head_icon.jpg" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="https://richardrobot.xyz"></a>
+      </h1>
+
+<p>紙上得來終覺淺，絕知此事要躬行</p>
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://richardrobot.xyz" >網路概論</a>
+            </li>
+            <li>
+              <a target="_self" href="https://richardrobot.xyz" >程式語言</a>
+            </li>
+            <li>
+              <a target="_self" href="https://richardrobot.xyz" >微軟筆記</a>
+            </li>
+            <li>
+              <a target="_self" href="https://richardrobot.xyz" >Python筆記</a>
+            </li>
+            <li>
+              <a target="_self" href="https://richardrobot.xyz" >雜記</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/TernenceZheng" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-envelope" href="mailto:andy711023@gmail.com" target="_blank">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://richardrobot.xyz">Home</a>
+
+      <a href="/archives">文章時間軸</a>
+      <a href="/categories">類別</a>
+      <a href="/tags">標籤</a>
+
+      <a href="https://richardrobot.xyz/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="lineloginchuan-jie">LineLogin串接</h1>
+    <p>
+      Posted on 五 08 10月 2021 in <a href="https://richardrobot.xyz/category/linebot.html">LineBot</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>參考資料：</p>
+<blockquote>
+<p><a href="https://jerrynest.io/django-allauth/">使用 Django Allauth 套件</a>
+<a href="https://wreadit.com/@wwwlearncodewithmikecom/post/50134">[Django教學13]Django Allauth套件整合Google登入驗證實作教學</a></p>
+</blockquote>
+<p>首先安裝django-allauth</p>
+<p><code>pip install django-allauth</code></p>
+<p>在Django站臺的Settings設定相關的參數設定</p>
+<ol>
+<li>在<code>INSTALLED_APPS</code> 裏面新增 allauth allauth.account ...以下的資料</li>
+<li>新增設定<code>AUTHENTICATION_BACKENDS</code></li>
+<li>新增設定<code>SITE_ID</code> ,數值要比對Django資料表內的  django_site 的ID值</li>
+<li><code>SOCIALACCOUNT_PROVIDERS</code>這是要設定讀取使用者的資料</li>
+<li>在站臺的url.py設定路徑</li>
+</ol>
+<p><img alt="settings設定參數1.png" src="https://richardrobot.xyz/images/settings設定參數1.png">
+<img alt="settings設定參數二.png" src="https://richardrobot.xyz/images/settings設定參數二.png"></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span><span class="n">include</span>
+
+<span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">url</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;accounts/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;allauth.urls&#39;</span><span class="p">)),</span>
+<span class="p">]</span>
+</code></pre></div>
+
+
+<hr>
+<p>以上設定完成要執行Django語法來產生資料表：</p>
+<p><code>python manage.py makemigrations</code></p>
+<p><code>python manage.py migrate</code></p>
+<p><code>python manage.py runserver</code></p>
+<hr>
+<p>以上就是Django的設定部分，另外LineLogin的設定需要注意的細節，因爲django-allauth已經將送LineLogin授權路徑參數自動拼裝好了，裏面有些規範需要注意</p>
+<p>在送授權的部分，django-allauth定義的callbackURL已經規範，如下圖
+<img alt="djangoallauth.png" src="https://richardrobot.xyz/images/djangoallauth.png">
+<a href="https://django-allauth.readthedocs.io/en/latest/providers.html#line">https://django-allauth.readthedocs.io/en/latest/providers.html#line</a></p>
+<p>上面的 Callback URL 必須與LINE Login 內的設定相同
+<img alt="lineloginapi的設定.png" src="https://richardrobot.xyz/images/lineloginapi的設定.png"></p>
+<hr>
+<p>另外剩下的就是要設定KEY與ClientID:</p>
+<p>去內部後臺設定LINE SecrtKEY
+<img alt="linelogin內部後臺設定.png" src="https://richardrobot.xyz/images/linelogin內部後臺設定.png"></p>
+<p>回到頁面去，雖然沒有寫什麼頁面，可是 django-allauth已經內建了許多頁面可以直接查看
+<img alt="linelogin預設路徑頁面.png" src="https://richardrobot.xyz/images/linelogin預設路徑頁面.png">
+<img alt="linelogin預設登入畫面.png" src="https://richardrobot.xyz/images/linelogin預設登入畫面.png"></p>
+<p>以上就是完成初步的串街，內容套版需要再詳細實做與修改，另外在串街流程中發生的錯誤在導向到LineLogin畫面時出現 400 錯誤：
+<img alt="linelogin400錯誤情況.png" src="https://richardrobot.xyz/images/linelogin400錯誤情況.png"></p>
+<hr>
+<p>這個問題的發生原因先查看了LineLogin的文件說明</p>
+<h2>要求授權</h2>
+<hr>
+<p>為進行使用者認證，並為 app 要求權限，請透過所需的 query parameter，如下面例子所示將使用者重新導向授權 URL。</p>
+<div class="highlight"><pre><span></span><code><span class="nl">https</span><span class="p">:</span><span class="c1">//access.line.me/oauth2/v2.1/authorize?</span>
+<span class="n">response_type</span><span class="o">=</span><span class="n">code</span>
+<span class="o">&amp;</span><span class="n">client_id</span><span class="o">=</span><span class="mi">1234567890</span>
+<span class="o">&amp;</span><span class="n">redirect_uri</span><span class="o">=</span><span class="n">https</span><span class="o">%</span><span class="mi">3</span><span class="n">A</span><span class="o">%</span><span class="mf">2F</span><span class="o">%</span><span class="mf">2F</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">%</span><span class="mf">2F</span><span class="n">auth</span>
+<span class="o">&amp;</span><span class="n">state</span><span class="o">=</span><span class="mi">12345</span><span class="n">abcde</span>
+<span class="o">&amp;</span><span class="n">scope</span><span class="o">=</span><span class="n">profile</span><span class="o">%</span><span class="mi">20</span><span class="n">openid</span>
+<span class="o">&amp;</span><span class="n">nonce</span><span class="o">=</span><span class="mi">09876</span><span class="n">xyz</span>
+</code></pre></div>
+
+
+<p><img alt="linelogin串街參數.png" src="https://richardrobot.xyz/images/linelogin串街參數.png"></p>
+<p><a href="https://developers.line.biz/zh-hant/docs/line-login/integrate-line-login/#making-an-authorization-request">URL 的查詢屬性</a></p>
+<p>我的參數：</p>
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="k">access</span><span class="p">.</span><span class="n">line</span><span class="p">.</span><span class="n">me</span><span class="o">/</span><span class="n">oauth2</span><span class="o">/</span><span class="n">v2</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">authorize</span><span class="o">?</span>
+
+<span class="n">client_id</span><span class="o">=</span><span class="n">U2c2bde960c5d7723082f2b9a491f51e1</span>
+<span class="o">&amp;</span><span class="n">redirect_uri</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">linebot</span><span class="p">.</span><span class="n">richardrobot</span><span class="p">.</span><span class="n">xyz</span><span class="o">/</span><span class="n">accounts</span><span class="o">/</span><span class="n">line</span><span class="o">/</span><span class="n">login</span><span class="o">/</span><span class="n">callback</span><span class="o">/</span>
+<span class="o">&amp;</span><span class="k">scope</span><span class="o">=</span>
+<span class="o">&amp;</span><span class="n">response_type</span><span class="o">=</span><span class="n">code</span>
+<span class="o">&amp;</span><span class="k">state</span><span class="o">=</span><span class="n">BBwcp2EEdqnJ</span>
+</code></pre></div>
+
+
+<p>錯誤問題1：client_id不對
+client_id ：LINE Login Channel 的 Channel ID
+錯誤問題2：scope沒有值
+scope：向用戶請求授予權限，也就是要求取得使用者的資料</p>
+<p>修正：
+1.在admin後臺修改設定
+2.在settings.py新增如下參數：
+<img alt="linelogin新增參數.png" src="https://richardrobot.xyz/images/linelogin新增參數.png"></p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://richardrobot.xyz/tag/lineloginapi.html">LineLoginAPI</a>
+      <a href="https://richardrobot.xyz/tag/django.html">Django</a>
+    </p>
+  </div>
+
+
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-4119678220307625"
+         data-ad-slot="1234566"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jarvissui-shou-bi-ji';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy; 2021 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Jarvis隨手筆記 ",
+  "url" : "https://richardrobot.xyz",
+  "image": "/images/head_icon.jpg",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>
