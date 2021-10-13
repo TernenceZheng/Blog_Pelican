@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-10-13T13:27:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>本益比</title><link href="https://richardrobot.xyz/2021/10/ben-yi-bi/" rel="alternate"></link><published>2021-10-13T13:27:00+08:00</published><updated>2021-10-13T13:27:00+08:00</updated><author><name>Jarvis</name></author><id>tag:richardrobot.xyz,2021-10-13:/2021/10/ben-yi-bi/</id><summary type="html">&lt;p&gt;用來衡量股價的『投資回本的速度』&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="stocklogo.jpg" src="https://richardrobot.xyz/images/stocklogo.jpg"&gt;
-$$ 本益比 = 股價 / 每股盈餘(EPS) $$&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-10-13T13:27:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>本益比</title><link href="https://richardrobot.xyz/2021/10/ben-yi-bi/" rel="alternate"></link><published>2021-10-13T13:27:00+08:00</published><updated>2021-10-13T13:27:00+08:00</updated><author><name>Jarvis</name></author><id>tag:richardrobot.xyz,2021-10-13:/2021/10/ben-yi-bi/</id><summary type="html">&lt;p&gt;用來衡量股價的『投資回本的速度』&lt;/p&gt;</summary><content type="html">&lt;p&gt;$$ 本益比 = 股價 / 每股盈餘(EPS) $$&lt;/p&gt;
+&lt;p&gt;.. math::&lt;/p&gt;
+&lt;p&gt;α_t(i) = P(O_1, O_2, … O_t, q_t = S_i λ)&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;以投資的角度來看，股價則是投資1股所需要的成本(購買成本)，而每股獲利意思是投資1股所得到的獲利，因此本益比就是投資該股票1股的成本與獲利的比值，即為報酬率的倒數。在合理本益比接近的條件下，較低的本益比通常代表著投資的潛在報酬較大。&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3&gt;心得：本益比的高低是相對的，主要要察覺這家公司的獲利能力與EPS再來對比本益比是否過高&lt;/h3&gt;
