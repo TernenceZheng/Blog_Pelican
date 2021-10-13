@@ -3,7 +3,7 @@ title: 副檔名command無法執行
 date: 2021-10-01 11:47
 aliases: 部落格 
 tags: 權限問題
-category: MacOS
+category: Mac
 summary: 寫好了可以執行的發佈語法，點擊執行卻出現這個
 image: /images/副檔名command無法執行.png
 status: published
