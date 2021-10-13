@@ -2,12 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 投資學習</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/tou-zi-xue-xi.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-10-13T13:27:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>本益比</title><link href="https://richardrobot.xyz/2021/10/ben-yi-bi/" rel="alternate"></link><published>2021-10-13T13:27:00+08:00</published><updated>2021-10-13T13:27:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-13:/2021/10/ben-yi-bi/</id><summary type="html">&lt;p&gt;用來衡量股價的『投資回本的速度』&lt;/p&gt;</summary><content type="html">&lt;div class="math"&gt;$$ 本益比 = 股價 / 每股盈餘(EPS) $$&lt;/div&gt;
 &lt;p&gt;&lt;em&gt;以投資的角度來看，股價則是投資1股所需要的成本(購買成本)，而每股獲利意思是投資1股所得到的獲利，因此本益比就是投資該股票1股的成本與獲利的比值，即為報酬率的倒數。在合理本益比接近的條件下，較低的本益比通常代表著投資的潛在報酬較大。&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;心得：本益比的高低是相對的，主要要察覺這家公司的獲利能力與EPS再來對比本益比是否過高&lt;/h3&gt;
-&lt;p&gt;參考資料：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a href="https://statementdog.com/analysis/2392/pe"&gt;財報狗&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://stockstore-tw.medium.com/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E6%9C%AC%E7%9B%8A%E6%AF%94-13dfdf5922b4"&gt;深入理解本益比&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;心得：本益比的高低是相對的，主要要察覺這家公司的獲利能力與EPS再來對比本益比是否過高&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://statementdog.com/analysis/2392/pe"&gt;財報狗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://stockstore-tw.medium.com/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E6%9C%AC%E7%9B%8A%E6%AF%94-13dfdf5922b4"&gt;深入理解本益比&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
