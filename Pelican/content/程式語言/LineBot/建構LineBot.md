@@ -25,3 +25,5 @@ status: hidden
 `pip install line-bot-sdk`
 
 `python manage.py createsuperuser`
+
+`pip install matplotlib`
