@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-10-08T18:45:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>安裝Let's Encrypt電子證書</title><link href="https://richardrobot.xyz/2021/10/an-zhuang-lets-encryptdian-zi-zheng-shu/" rel="alternate"></link><published>2021-10-08T18:45:00+08:00</published><updated>2021-10-08T18:45:00+08:00</updated><author><name>Jarvis</name></author><id>tag:richardrobot.xyz,2021-10-08:/2021/10/an-zhuang-lets-encryptdian-zi-zheng-shu/</id><summary type="html">&lt;p&gt;在Mac本機安裝SSL與驗證流程記錄&lt;/p&gt;</summary><content type="html">&lt;p&gt;參考資料：&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jarvis隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-10-13T13:27:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>本益比</title><link href="https://richardrobot.xyz/2021/10/ben-yi-bi/" rel="alternate"></link><published>2021-10-13T13:27:00+08:00</published><updated>2021-10-13T13:27:00+08:00</updated><author><name>Jarvis</name></author><id>tag:richardrobot.xyz,2021-10-13:/2021/10/ben-yi-bi/</id><summary type="html">&lt;p&gt;用來衡量股價的『投資回本的速度』&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="stocklogo.jpg" src="https://richardrobot.xyz/images/stocklogo.jpg"&gt;
+$$ 本益比 = 股價 / 每股盈餘(EPS) $$&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;以投資的角度來看，股價則是投資1股所需要的成本(購買成本)，而每股獲利意思是投資1股所得到的獲利，因此本益比就是投資該股票1股的成本與獲利的比值，即為報酬率的倒數。在合理本益比接近的條件下，較低的本益比通常代表著投資的潛在報酬較大。&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;心得：本益比的高低是相對的，主要要察覺這家公司的獲利能力與EPS再來對比本益比是否過高&lt;/h3&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://statementdog.com/analysis/2392/pe"&gt;財報狗&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://stockstore-tw.medium.com/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E6%9C%AC%E7%9B%8A%E6%AF%94-13dfdf5922b4"&gt;深入理解本益比&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="投資學習"></category><category term="本益比"></category><category term="價值評估分析"></category></entry><entry><title>安裝Let's Encrypt電子證書</title><link href="https://richardrobot.xyz/2021/10/an-zhuang-lets-encryptdian-zi-zheng-shu/" rel="alternate"></link><published>2021-10-08T18:45:00+08:00</published><updated>2021-10-08T18:45:00+08:00</updated><author><name>Jarvis</name></author><id>tag:richardrobot.xyz,2021-10-08:/2021/10/an-zhuang-lets-encryptdian-zi-zheng-shu/</id><summary type="html">&lt;p&gt;在Mac本機安裝SSL與驗證流程記錄&lt;/p&gt;</summary><content type="html">&lt;p&gt;參考資料：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="https://yinlei.org/x-plane10/big5.php?p=2017/01/lets-encrypt.html"&gt;安裝Let's Encrypt電子證書&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://jerry.thesolarsystems.net/?p=885"&gt;如何在NGINX+DJANGO平台設置SSL連線&lt;/a&gt;&lt;/p&gt;
@@ -585,7 +594,19 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 &lt;p&gt;參考資料：&lt;a href="https://myctw.github.io/post/bd72.html"&gt;Mac 上改變 Git 認證模式&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;相關主題：
 &lt;a href="https://richardrobot.xyz/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/"&gt;Obsidian 使用 Git 跨平台同步&lt;/a&gt;
-&lt;a href="https://richardrobot.xyz/2021/09/sourcetreequan-xian-wen-ti/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="Git"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>認識Metadata</title><link href="https://richardrobot.xyz/2021/09/ren-shi-metadata/" rel="alternate"></link><published>2021-09-15T13:20:00+08:00</published><updated>2021-09-15T13:20:00+08:00</updated><author><name>Jarvis</name></author><id>tag:richardrobot.xyz,2021-09-15:/2021/09/ren-shi-metadata/</id><summary type="html">&lt;p&gt;暸解使用Obsidian的Metadata架構&lt;/p&gt;</summary><content type="html">&lt;p&gt;暸解使用&lt;a href="{filename}/Obsidian/Obsidian.md"&gt;Obsidian&lt;/a&gt;的Metadata架構&lt;/p&gt;
+&lt;a href="https://richardrobot.xyz/2021/09/sourcetreequan-xian-wen-ti/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="Git"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>Obsidian</title><link href="https://richardrobot.xyz/2021/09/obsidian/" rel="alternate"></link><published>2021-09-16T15:54:00+08:00</published><updated>2021-09-16T15:54:00+08:00</updated><author><name>Jarvis</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/obsidian/</id><summary type="html">&lt;p&gt;直接引用Youtube影片說明&lt;/p&gt;</summary><content type="html">&lt;p&gt;參考網址：
+筆記類別：#心得
+主題：&lt;a href="https://richardrobot.xyz/2021/09/obsidian/"&gt;Obsidian&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=Egj_DdGUIDI&amp;amp;list=RDCMUCdEpz2A4DzV__4C1x2quKLw&amp;amp;index=1&amp;amp;t=0s"&gt;00:00&lt;/a&gt; 開場白 
+&lt;a href="https://www.youtube.com/watch?v=Egj_DdGUIDI&amp;amp;list=RDCMUCdEpz2A4DzV__4C1x2quKLw&amp;amp;index=1&amp;amp;t=73s"&gt;01:13&lt;/a&gt; 要點一：捕捉生活中的靈感與想法 
+&lt;a href="https://www.youtube.com/watch?v=Egj_DdGUIDI&amp;amp;list=RDCMUCdEpz2A4DzV__4C1x2quKLw&amp;amp;index=1&amp;amp;t=200s"&gt;03:20&lt;/a&gt; 要點二：用自己的話寫筆記 
+&lt;a href="https://www.youtube.com/watch?v=Egj_DdGUIDI&amp;amp;list=RDCMUCdEpz2A4DzV__4C1x2quKLw&amp;amp;index=1&amp;amp;t=259s"&gt;04:19&lt;/a&gt; 要點三：引用內容要標注出處 
+&lt;a href="https://www.youtube.com/watch?v=Egj_DdGUIDI&amp;amp;list=RDCMUCdEpz2A4DzV__4C1x2quKLw&amp;amp;index=1&amp;amp;t=302s"&gt;05:02&lt;/a&gt; 要點四：建立筆記之間的連結 
+&lt;a href="https://www.youtube.com/watch?v=Egj_DdGUIDI&amp;amp;list=RDCMUCdEpz2A4DzV__4C1x2quKLw&amp;amp;index=1&amp;amp;t=398s"&gt;06:38&lt;/a&gt; 要點五：每則筆記必須簡明扼要 
+&lt;a href="https://www.youtube.com/watch?v=Egj_DdGUIDI&amp;amp;list=RDCMUCdEpz2A4DzV__4C1x2quKLw&amp;amp;index=1&amp;amp;t=446s"&gt;07:26&lt;/a&gt; 筆記關聯圖 
+&lt;a href="https://www.youtube.com/watch?v=Egj_DdGUIDI&amp;amp;list=RDCMUCdEpz2A4DzV__4C1x2quKLw&amp;amp;index=1&amp;amp;t=505s"&gt;08:25&lt;/a&gt; Obsidian 的外掛簡介&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Egj_DdGUIDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="Obsidian"></category><category term="Obsidian"></category></entry><entry><title>認識Metadata</title><link href="https://richardrobot.xyz/2021/09/ren-shi-metadata/" rel="alternate"></link><published>2021-09-15T13:20:00+08:00</published><updated>2021-09-15T13:20:00+08:00</updated><author><name>Jarvis</name></author><id>tag:richardrobot.xyz,2021-09-15:/2021/09/ren-shi-metadata/</id><summary type="html">&lt;p&gt;暸解使用Obsidian的Metadata架構&lt;/p&gt;</summary><content type="html">&lt;p&gt;暸解使用&lt;a href="https://richardrobot.xyz/2021/09/obsidian/"&gt;Obsidian&lt;/a&gt;的Metadata架構&lt;/p&gt;
 &lt;p&gt;一般在做筆記的時候，常常要回顧一下當初寫的內容，然後就開始尋找，但是卻沒有有效的尋找，所以需要一個索引來去管理筆記，常常會出現的問題點：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;標題難辨識 — 很難從標題知道筆記的確切內容&lt;/strong&gt;&lt;/li&gt;

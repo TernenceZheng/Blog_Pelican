@@ -1,4 +1,3 @@
-
 ---
 title: Obsidian
 date: 2021-09-16 15:54
