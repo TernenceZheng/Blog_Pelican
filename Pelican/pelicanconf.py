@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
-AUTHOR = 'Jarvis'
-SITENAME = 'Jarvis隨手筆記'
+AUTHOR = 'Richard'
+SITENAME = 'Richard隨手筆記'
 
 SITESUBTITLE = "紙上得來終覺淺，絕知此事要躬行"
 
