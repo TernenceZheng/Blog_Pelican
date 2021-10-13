@@ -5,7 +5,7 @@ aliases: 部落格
 tags: LineBot
 category: Django
 summary: 建立一個新的站臺，獨立於其他的
-image: /images/default_preview_image.png
+image: /images/default_preview_image.jpg
 status: hidden
 ---
 
