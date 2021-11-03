@@ -117,7 +117,7 @@
               <a target="_self" href="https://richardrobot.xyz" >微軟筆記</a>
             </li>
             <li>
-              <a target="_self" href="https://richardrobot.xyz" >Python筆記</a>
+              <a target="_self" href="https://richardrobot.xyz/category/python.html" >Python筆記</a>
             </li>
             <li>
               <a target="_self" href="https://richardrobot.xyz" >雜記</a>
@@ -163,7 +163,7 @@
       
     <h1 id="supervisor">Supervisor</h1>
     <p>
-      Posted on 二 05 10月 2021 in <a href="https://richardrobot.xyz/category/mac.html">Mac</a>
+      Posted on 週二 05 十月 2021 in <a href="https://richardrobot.xyz/category/mac.html">Mac</a>
 
     </p>
   </header>
@@ -171,13 +171,13 @@
 
   <div>
     <p>在 Linux上可以使用systemctl 這個服務來開機就能自動啓動寫好的網站服務，等等其他的，但是在Mac上卻無法，使用supervisor還有Web畫面可以查看</p>
-<p><img alt="Supervisor服務畫面.png" src="https://richardrobot.xyz/images/Supervisor服務畫面.png"></p>
+<p>![[Supervisor服務畫面.png]]</p>
 <h2>透過brew來安裝：</h2>
 <p><code>brew install supervisor</code></p>
 <h3>設定檔路徑：</h3>
 <p>由於是Mac M1 的系統，homebrew已經將設定的路徑放在 <code>/opt/homebrew/etc</code></p>
 <p>如下圖，開啓 supervisor.conf 檔案</p>
-<p><img alt="supervisor的ini設定畫面.png" src="https://richardrobot.xyz/images/supervisor的ini設定畫面.png"></p>
+<p>![[supervisor的ini設定畫面.png]]</p>
 <p>可以註解前面的 <code>;</code> 符號來啓用設定 :</p>
 <p>可以開啓 Web的畫面 啓用 登入帳號密碼</p>
 <div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">inet_http_server</span><span class="p">]</span>          <span class="p">;</span> <span class="n">inet</span> <span class="p">(</span><span class="n">TCP</span><span class="p">)</span> <span class="n">server</span> <span class="n">disabled</span> <span class="n">by</span> <span class="n">default</span>

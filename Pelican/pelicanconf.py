@@ -52,7 +52,7 @@ LINKS = (
     ("網路概論", "https://richardrobot.xyz"),
     ("程式語言", "https://richardrobot.xyz"),
     ("微軟筆記", "https://richardrobot.xyz"),
-    ("Python筆記", "https://richardrobot.xyz"),
+    ("Python筆記", "https://richardrobot.xyz/category/python.html"),
     ("雜記", "https://richardrobot.xyz")
 )
 
