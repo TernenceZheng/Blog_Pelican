@@ -155,13 +155,13 @@ GPU is available&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;在Django的做法如下：&lt;/h2&gt;
 &lt;p&gt;在 url.py 設定網址：&lt;/p&gt;
-&lt;p&gt;![[url設定的圖片.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="url設定的圖片.png" src="https://richardrobot.xyz/images/url設定的圖片.png"&gt;&lt;/p&gt;
 &lt;p&gt;檔案放置的地方：
-![[檔案放置的地方.png]]&lt;/p&gt;
+&lt;img alt="檔案放置的地方.png" src="https://richardrobot.xyz/images/檔案放置的地方.png"&gt;&lt;/p&gt;
 &lt;p&gt;Views.py 程式讀取的方式：
-![[views程式讀取的方式.png]]&lt;/p&gt;
+&lt;img alt="views程式讀取的方式.png" src="https://richardrobot.xyz/images/views程式讀取的方式.png"&gt;&lt;/p&gt;
 &lt;p&gt;驗證成功存放的路徑：
-![[驗證成功的畫面.png]]&lt;/p&gt;
+&lt;img alt="驗證成功的畫面.png" src="https://richardrobot.xyz/images/驗證成功的畫面.png"&gt;&lt;/p&gt;
 &lt;p&gt;nginx 新增的配置&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;第一個&lt;/span&gt;
 &lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -210,13 +210,13 @@ GPU is available&lt;/p&gt;
 Password:
 nginx: [warn] the "ssl" directive is deprecated, use the "listen ... ssl" directive instead in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5
 nginx: [emerg] no "ssl_certificate_key" is defined for certificate "/Users/jarvis.zheng/LineBot/ssl/chain.pem" and the "ssl" directive in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5&lt;/code&gt;&lt;/p&gt;</content><category term="Mac"></category><category term="ssl"></category></entry><entry><title>Supervisor</title><link href="https://richardrobot.xyz/2021/10/supervisor/" rel="alternate"></link><published>2021-10-05T19:22:00+08:00</published><updated>2021-10-05T19:22:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-05:/2021/10/supervisor/</id><summary type="html">&lt;p&gt;在Mac上使用supervisor來啓動服務&lt;/p&gt;</summary><content type="html">&lt;p&gt;在 Linux上可以使用systemctl 這個服務來開機就能自動啓動寫好的網站服務，等等其他的，但是在Mac上卻無法，使用supervisor還有Web畫面可以查看&lt;/p&gt;
-&lt;p&gt;![[Supervisor服務畫面.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Supervisor服務畫面.png" src="https://richardrobot.xyz/images/Supervisor服務畫面.png"&gt;&lt;/p&gt;
 &lt;h2&gt;透過brew來安裝：&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;brew install supervisor&lt;/code&gt;&lt;/p&gt;
 &lt;h3&gt;設定檔路徑：&lt;/h3&gt;
 &lt;p&gt;由於是Mac M1 的系統，homebrew已經將設定的路徑放在 &lt;code&gt;/opt/homebrew/etc&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;如下圖，開啓 supervisor.conf 檔案&lt;/p&gt;
-&lt;p&gt;![[supervisor的ini設定畫面.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="supervisor的ini設定畫面.png" src="https://richardrobot.xyz/images/supervisor的ini設定畫面.png"&gt;&lt;/p&gt;
 &lt;p&gt;可以註解前面的 &lt;code&gt;;&lt;/code&gt; 符號來啓用設定 :&lt;/p&gt;
 &lt;p&gt;可以開啓 Web的畫面 啓用 登入帳號密碼&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;inet_http_server&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;          &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;inet&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TCP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="n"&gt;disabled&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt;
@@ -252,5 +252,5 @@ nginx: [emerg] no "ssl_certificate_key" is defined for certificate "/Users/jarvi
 &lt;p&gt;&lt;a href="https://aptro.github.io/server/architecture/2016/06/21/Jupyter-Notebook-Nginx-Setup.html"&gt;Jupyter Notebook and Nginx Setup&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.gushiciku.cn/pl/2MVd/zh-tw"&gt;Mac OSX 開機啟動應用 (supervisor)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.twblogs.net/a/5d6115a6bd9eee541c32bb6f"&gt;Python Tricks —— 使用 Supervisor 控制 Linux 進程&lt;/a&gt;&lt;/p&gt;</content><category term="Mac"></category><category term="Mac"></category><category term="Supervisor"></category><category term="Nginx"></category></entry><entry><title>副檔名command無法執行</title><link href="https://richardrobot.xyz/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/</id><summary type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;</summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
-&lt;p&gt;![[副檔名command無法執行.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="副檔名command無法執行.png" src="https://richardrobot.xyz/images/副檔名command無法執行.png"&gt;&lt;/p&gt;
 &lt;p&gt;需要另外給予權限：&lt;code&gt;chmod +x batch_notes_script.command&lt;/code&gt;&lt;/p&gt;</content><category term="Mac"></category><category term="權限問題"></category></entry></feed>

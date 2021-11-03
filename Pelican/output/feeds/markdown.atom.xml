@@ -130,34 +130,34 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建。Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://markdown.tw/"&gt;Markdown&lt;/a&gt;是一種簡易的標記語言，能讓我們在最短的時間裡製作一份易讀易懂的文字檔案，當有需要輸出到網站時，也能使用許多線上轉換網站或軟體，將Markdown格式的內容轉換成HTML格式，瞬間由文字格式變身美觀的網頁格式。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;[[分段標題]]&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-fen-duan-biao-ti/"&gt;分段標題&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;以一到六個井字表示標題一至標題六&lt;code&gt;（&amp;lt;h1&amp;gt;到&amp;lt;h6&amp;gt;）&lt;/code&gt;，亦即井號越少顯示的字體越大。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;[[項目清單]]&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/"&gt;項目清單&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;列舉式的項目清單是很常用的表達語法，在HTML網頁的定義裡主要有兩種：有順序編號的&lt;code&gt;（&amp;lt;ol&amp;gt;+&amp;lt;li&amp;gt;）&lt;/code&gt;和沒有順序編號的 &lt;code&gt;（&amp;lt;ul&amp;gt;+&amp;lt;li&amp;gt;）&lt;/code&gt;，Markdown的表示方法很簡單:&lt;/p&gt;
 &lt;p&gt;1.有順序編號的清單：每列開頭是「數字.一個空白」
 2.沒有順序編號的清單：就是以項目符號開頭的清單，以「*一個空白」或「減號一個空白」來表示
 &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;[[文字變化]]&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-wen-zi-bian-hua/"&gt;文字變化&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;一段文字裡需要特別注意或要有不同變化時&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;[[連結設定]]&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-lian-jie-she-ding/"&gt;連結設定&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;快速超連結：只要把超連結用「&amp;lt;」、「&amp;gt;」括住即可，被括住的網址會形成可點擊的超連結&lt;/p&gt;
 &lt;p&gt;完整超連結：上面快速超連結直接用網址來顯示，我們可以用&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[顯示文字](http://jdev.tw/blog/3504/test)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;的語法在網頁顯示指定的文字與其使用的超連結。Markdown插入超連結的語法很簡單，但無法指示開啟在新視窗或新分頁。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;[[插入圖片]]&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-cha-ru-tu-pian/"&gt;插入圖片&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;比照超連結的寫法再於開頭加上&lt;code&gt;半形驚嘆號&lt;/code&gt;就可以了
 語法： &lt;code&gt;![顯示文字](圖片網址)&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;[[程式代碼或語法高亮]]&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/"&gt;程式代碼或語法高亮&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在一般文字中直接用 &lt;code&gt;這個樣子&lt;/code&gt; ，若是要包整段的要三個 ``` 符號前後包起來&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -169,14 +169,14 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;blockquote&gt;
 &lt;p&gt;因為 Markdown 本來就預設要轉換成 HTML 網頁格式，所以你當然可以直接寫入正確的 HTML 代碼   &lt;code&gt;&amp;lt;H1&amp;gt;ttt&amp;lt;/H1&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;[[水平分隔線]]&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-shui-ping-fen-ge-xian/"&gt;水平分隔線&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;三個或三個以上的符號，必須在獨立的一行，前後不能有其他文字。&lt;/p&gt;
 &lt;p&gt;---短橫線（Hyphens）&lt;/p&gt;
 &lt;p&gt;***半形星號（Asterisks）&lt;/p&gt;
 &lt;p&gt;___下底線（Underscores）&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;[[其他的符號]]&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-qi-ta-de-fu-hao/"&gt;其他的符號&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;剩下少用的東西有 &lt;code&gt;代辦事項&lt;/code&gt;  &lt;code&gt;列表縮進&lt;/code&gt; &lt;code&gt;跳脫字元&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-分段標題</title><link href="https://richardrobot.xyz/2021/09/markdown-fen-duan-biao-ti/" rel="alternate"></link><published>2021-09-16T17:58:00+08:00</published><updated>2021-09-16T17:58:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-fen-duan-biao-ti/</id><summary type="html">&lt;p&gt;顯示分段標題&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
