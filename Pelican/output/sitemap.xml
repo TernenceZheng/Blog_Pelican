@@ -5,21 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/</loc>
-<lastmod>2021-10-13T17:33:47-00:00</lastmod>
+<lastmod>2021-11-03T17:21:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://richardrobot.xyz/archives.html</loc>
-<lastmod>2021-10-13T17:33:47-00:00</lastmod>
+<lastmod>2021-11-03T17:21:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/2021/10/ben-yi-bi/</loc>
-<lastmod>2021-10-13T13:27:00+08:00</lastmod>
+<loc>https://richardrobot.xyz/2021/11/shi-yong-bokehchan-sheng-ji-shu-tu-biao/</loc>
+<lastmod>2021-11-03T11:05:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2021/10/macm1zhi-xing-tensorflowcuo-wu-wen-ti/</loc>
+<lastmod>2021-10-28T07:50:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -201,7 +208,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/category/mac.html</loc>
-<lastmod>2021-10-08T18:45:00+08:06</lastmod>
+<lastmod>2021-10-28T07:50:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -229,14 +236,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/category/python.html</loc>
-<lastmod>2021-09-29T15:50:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://richardrobot.xyz/category/tou-zi-xue-xi.html</loc>
-<lastmod>2021-10-13T13:27:00+08:06</lastmod>
+<lastmod>2021-11-03T11:05:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -249,8 +249,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/tag/ben-yi-bi.html</loc>
-<lastmod>2021-10-13T13:27:00+08:06</lastmod>
+<loc>https://richardrobot.xyz/tag/bokeh.html</loc>
+<lastmod>2021-11-03T11:05:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -265,13 +265,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://richardrobot.xyz/tag/git.html</loc>
 <lastmod>2021-10-05T16:36:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://richardrobot.xyz/tag/jia-zhi-ping-gu-fen-xi.html</loc>
-<lastmod>2021-10-13T13:27:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -340,6 +333,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/tag/python.html</loc>
+<lastmod>2021-11-03T11:05:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/tag/quan-xian-wen-ti.html</loc>
 <lastmod>2021-10-01T11:47:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -375,6 +375,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/tag/tensorflow.html</loc>
+<lastmod>2021-10-28T07:50:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/tag/visualstudio.html</loc>
 <lastmod>2016-03-08T12:43:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -397,7 +404,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/author/richard.html</loc>
-<lastmod>2021-10-13T13:27:00+08:06</lastmod>
+<lastmod>2021-11-03T11:05:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
