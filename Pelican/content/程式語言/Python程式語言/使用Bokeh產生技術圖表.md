@@ -5,7 +5,7 @@ aliases: 部落格
 tags: Python,Bokeh
 category: Python
 summary: 在Django上套用Bokeh產生技術圖表
-image: /images/Pasted image 20211103110735.png
+image: /images/bokeh指標views圖.png
 status: published
 ---
 
@@ -13,7 +13,7 @@ status: published
 >[Bokeh 探索頻道(2)~客製化技術圖表升級](https://www.finlab.tw/bokeh-stock-chart-with-technical-analysis/)
 >[在 Django 上使用数据可视化利器 Bokeh](https://www.jianshu.com/p/8b4f17950777)
 
-![[Pasted image 20211103110735.png]]
+![[bokeh指標views圖.png]]
 
 
 ---
@@ -29,21 +29,21 @@ from bokeh.resources import CDN
 ```
 
 在程式加入Blog內的function來產生資料跟已經畫好的圖表，使用components，產生javascript與 html區塊，最後在render頁面帶入參數
-![[Pasted image 20211103111259.png]]
-![[Pasted image 20211103111728.png]]
+![[bokeh指標views圖1.png]]
+![[bokeh指標views圖2.png]]
 
 
 在Django的templates頁面上，下圖是圖表的Html的Div區塊
-![[Pasted image 20211103112220.png]]
+![[bokeh指標templates圖1.png]]
 
 ---
 
 下圖是在`script></script>` 區塊中，先引用bokeh的js，我直接下載到我的本機，避免版本到時候又變了壞掉，最後使用bokeh產生的的javascript語法。
-![[Pasted image 20211103112331.png]]
+![[bokeh指標templates圖2.png]]
 
 
 就可以產生美美的圖了
-![[Pasted image 20211103112719.png]]
+![[bokeh指標總圖.png]]
 
 
 
