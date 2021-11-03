@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-10-13T13:27:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>本益比</title><link href="https://richardrobot.xyz/2021/10/ben-yi-bi/" rel="alternate"></link><published>2021-10-13T13:27:00+08:00</published><updated>2021-10-13T13:27:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-13:/2021/10/ben-yi-bi/</id><summary type="html">&lt;p&gt;用來衡量股價的『投資回本的速度』&lt;/p&gt;</summary><content type="html">&lt;p&gt;$$ 本益比 = 股價 / 每股盈餘(EPS) $$&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-11-03T11:05:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>使用Bokeh產生技術圖表</title><link href="https://richardrobot.xyz/2021/11/shi-yong-bokehchan-sheng-ji-shu-tu-biao/" rel="alternate"></link><published>2021-11-03T11:05:00+08:00</published><updated>2021-11-03T11:05:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-03:/2021/11/shi-yong-bokehchan-sheng-ji-shu-tu-biao/</id><summary type="html">&lt;p&gt;在Django上套用Bokeh產生技術圖表&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;參考資料：
+&lt;a href="https://www.finlab.tw/bokeh-stock-chart-with-technical-analysis/"&gt;Bokeh 探索頻道(2)~客製化技術圖表升級&lt;/a&gt;
+&lt;a href="https://www.jianshu.com/p/8b4f17950777"&gt;在 Django 上使用数据可视化利器 Bokeh&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;![[Pasted image 20211103110735.png]]&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;參考老師的Blog文章，內附的程式碼就可以無痛升級美麗圖表，但是我架設在Django上，需要調整一下來顯示在Django頁面。&lt;/p&gt;
+&lt;p&gt;在Django的View.py 上收先引用：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bokeh.embed&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;components&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bokeh.resources&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;CDN&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在程式加入Blog內的function來產生資料跟已經畫好的圖表，使用components，產生javascript與 html區塊，最後在render頁面帶入參數
+![[Pasted image 20211103111259.png]]
+![[Pasted image 20211103111728.png]]&lt;/p&gt;
+&lt;p&gt;在Django的templates頁面上，下圖是圖表的Html的Div區塊
+![[Pasted image 20211103112220.png]]&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下圖是在&lt;code&gt;script&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt; 區塊中，先引用bokeh的js，我直接下載到我的本機，避免版本到時候又變了壞掉，最後使用bokeh產生的的javascript語法。
+![[Pasted image 20211103112331.png]]&lt;/p&gt;
+&lt;p&gt;就可以產生美美的圖了
+![[Pasted image 20211103112719.png]]&lt;/p&gt;</content><category term="Python"></category><category term="Python"></category><category term="Bokeh"></category></entry><entry><title>本益比</title><link href="https://richardrobot.xyz/2021/10/ben-yi-bi/" rel="alternate"></link><published>2021-10-13T13:27:00+08:00</published><updated>2021-10-13T13:27:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-13:/2021/10/ben-yi-bi/</id><summary type="html">&lt;p&gt;用來衡量股價的『投資回本的速度』&lt;/p&gt;</summary><content type="html">&lt;p&gt;$$ 本益比 = 股價 / 每股盈餘(EPS) $$&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;以投資的角度來看，股價則是投資1股所需要的成本(購買成本)，而每股獲利意思是投資1股所得到的獲利，因此本益比就是投資該股票1股的成本與獲利的比值，即為報酬率的倒數。在合理本益比接近的條件下，較低的本益比通常代表著投資的潛在報酬較大。&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
