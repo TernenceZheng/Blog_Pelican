@@ -6,7 +6,7 @@
 &lt;/ul&gt;
 &lt;p&gt;導入套件的方式有兩種：
 如果您的插件不在可導入路徑中，您可以通過PLUGIN_PATHS設置指定路徑列表。如以下示例所示，PLUGIN_PATHS列表中的路徑可以是相對於設置文件的絕對路徑或相對路徑：&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210929155953.png" src="https://richardrobot.xyz/images/Pasted image 20210929155953.png"&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20210929155953.png]]&lt;/p&gt;
 &lt;p&gt;若是沒有依照設定的套件名稱放置程式會出現錯誤訊息：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Pelican&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;jarvis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;zheng&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nx"&gt;zhengruichangdeMac&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;mini&lt;/span&gt; &lt;span class="nx"&gt;Pelican&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="nx"&gt;pelican&lt;/span&gt; &lt;span class="nx"&gt;content&lt;/span&gt;
 &lt;span class="nx"&gt;WARNING&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="nx"&gt;usage&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;CATEGORY_FEED_ATOM&lt;/span&gt; &lt;span class="nx"&gt;is&lt;/span&gt; &lt;span class="nx"&gt;deprecated&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;use&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;instead&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
@@ -32,7 +32,7 @@
 &lt;p&gt;若是還沒建立好預設開始環境需要執行以下語法，Pelican會建立基本的程式與資料夾，若是執行以下語法會需要回答一些預設環境的設定值
 &lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;資料夾架構如下
-&lt;img alt="Pasted image 20210929144934.png" src="https://richardrobot.xyz/images/Pasted image 20210929144934.png"&gt;
+![[Pasted image 20210929144934.png]]
 每個文件的用途：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;content/ - 存儲所有網站內容的目錄&lt;/li&gt;
