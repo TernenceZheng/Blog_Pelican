@@ -26,7 +26,9 @@ GOOGLE_ADSENSE = {
 
 GOOGLE_GLOBAL_SITE_TAG = 'G-Q3D0B7D25R' # Your Google Analytics 4 Property ID
 
-DISQUS_SITENAME = "jarvissui-shou-bi-ji"
+PELICAN_COMMENT_SYSTEM = True
+
+#DISQUS_SITENAME = "jarvissui-shou-bi-ji"
 #DISQUS_SECRET_KEY = u'YOUR_SECRET_KEY'
 #DISQUS_PUBLIC_KEY = u'YOUR_PUBLIC_KEY'
 
