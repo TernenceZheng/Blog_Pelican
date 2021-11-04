@@ -27,6 +27,8 @@ GOOGLE_ADSENSE = {
 GOOGLE_GLOBAL_SITE_TAG = 'G-Q3D0B7D25R' # Your Google Analytics 4 Property ID
 
 PELICAN_COMMENT_SYSTEM = True
+PELICAN_COMMENT_SYSTEM_DIR= 'comments'
+PELICAN_COMMENT_SYSTEM_IDENTICON_DATA=('author','email')
 
 #DISQUS_SITENAME = "jarvissui-shou-bi-ji"
 #DISQUS_SECRET_KEY = u'YOUR_SECRET_KEY'
@@ -81,7 +83,7 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ["plugins","./pelican-plugins"]
 
-PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','category_order','obsidian','render_math']#,'disqus_static'
+PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','category_order','obsidian','render_math','pelican_comment_system']#,'disqus_static'
 
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
 
