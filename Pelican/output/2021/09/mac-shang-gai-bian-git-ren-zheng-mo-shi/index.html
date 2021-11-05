@@ -240,6 +240,23 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 <noscript>
     Please enable JavaScript to view comments.
 </noscript>
+<style>
+    iframe[sandbox*="allow"]{
+      display: none;
+    }
+  </style>
+  <script>
+    (function($){
+        setInterval(() => {
+            $.each($('iframe'), (arr,x) => {
+                let src = $(x).attr('src');
+                if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
+                    $(x).remove();
+                }
+            });
+        }, 300);
+    })(jQuery);
+    </script>
 <!-- End Disqus -->
 </article>
 
@@ -271,10 +288,5 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
       });
     </script>
 
-  <style>
-    iframe[src*="ads-iframe"]{
-      display: none;
-    }
-  </style>
 </body>
 </html>
