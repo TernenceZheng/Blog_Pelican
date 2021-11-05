@@ -1,3 +1,4 @@
+{% import 'pcs/comments.html' as pcs with context %}
 {% extends "base.html" %}
 
 {% block meta %}
@@ -92,7 +93,7 @@
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   {% endif %}
-
+  {{ pcs.comments_quickstart("emailuser", "example.com") }}
   {% include "partial/disqus.html" %}
   {% include "partial/isso.html" %}
 </article>
