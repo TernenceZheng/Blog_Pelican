@@ -24,7 +24,7 @@
 &lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;
 &lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;
 &lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-程式代碼或語法高亮</title><link href="https://richardrobot.xyz/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/</id><summary type="html">&lt;p&gt;顯示程式代碼或語法高亮&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
-&lt;p&gt;直接展示：每個三個` 符號 後面直接寫程式語言名稱如：sql C# java python  等等的&lt;/p&gt;
+&lt;p&gt;直接展示：每個三個` 符號 後面直接寫程式語言名稱如：sql C# java python&amp;nbsp;等等的&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;JavaScript syntax highlighting&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
 &lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -68,11 +68,11 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;a href="https://www.google.com.tw"&gt;檢查這個網址&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo 標題文字範例一"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-其他的符號</title><link href="https://richardrobot.xyz/2021/09/markdown-qi-ta-de-fu-hao/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-qi-ta-de-fu-hao/</id><summary type="html">&lt;p&gt;顯示其他的符號&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;ul&gt;
-&lt;li&gt;[ ] 代辦事項  &lt;/li&gt;
-&lt;li&gt;[x] 已完成事項&lt;/li&gt;
+&lt;li&gt;[ ]&amp;nbsp;代辦事項  &lt;/li&gt;
+&lt;li&gt;[x]&amp;nbsp;已完成事項&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;跳脫字元
-加上反引號 \&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-水平分隔線</title><link href="https://richardrobot.xyz/2021/09/markdown-shui-ping-fen-ge-xian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-shui-ping-fen-ge-xian/</id><summary type="html">&lt;p&gt;顯示水平分隔線&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+加上反引號&amp;nbsp;\&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-水平分隔線</title><link href="https://richardrobot.xyz/2021/09/markdown-shui-ping-fen-ge-xian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-shui-ping-fen-ge-xian/</id><summary type="html">&lt;p&gt;顯示水平分隔線&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;語法：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;---短橫線（Hyphens）&lt;/span&gt;
 
@@ -126,8 +126,8 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;/li&gt;
 &lt;li&gt;有序號列表二&lt;/li&gt;
 &lt;li&gt;有序號列表三&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-語法學習</title><link href="https://richardrobot.xyz/2021/09/markdown-yu-fa-xue-xi/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-yu-fa-xue-xi/</id><summary type="html">&lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
-&lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建。Markdown 是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-語法學習</title><link href="https://richardrobot.xyz/2021/09/markdown-yu-fa-xue-xi/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-yu-fa-xue-xi/</id><summary type="html">&lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建Markdown&amp;nbsp;是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建。Markdown&amp;nbsp;是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://markdown.tw/"&gt;Markdown&lt;/a&gt;是一種簡易的標記語言，能讓我們在最短的時間裡製作一份易讀易懂的文字檔案，當有需要輸出到網站時，也能使用許多線上轉換網站或軟體，將Markdown格式的內容轉換成HTML格式，瞬間由文字格式變身美觀的網頁格式。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-fen-duan-biao-ti/"&gt;分段標題&lt;/a&gt;&lt;/p&gt;
@@ -137,8 +137,7 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/"&gt;項目清單&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;列舉式的項目清單是很常用的表達語法，在HTML網頁的定義裡主要有兩種：有順序編號的&lt;code&gt;（&amp;lt;ol&amp;gt;+&amp;lt;li&amp;gt;）&lt;/code&gt;和沒有順序編號的 &lt;code&gt;（&amp;lt;ul&amp;gt;+&amp;lt;li&amp;gt;）&lt;/code&gt;，Markdown的表示方法很簡單:&lt;/p&gt;
-&lt;p&gt;1.有順序編號的清單：每列開頭是「數字.一個空白」
-2.沒有順序編號的清單：就是以項目符號開頭的清單，以「*一個空白」或「減號一個空白」來表示
+&lt;p&gt;1.有順序編號的清單：每列開頭是「數字.一個空白」&amp;nbsp;2.沒有順序編號的清單：就是以項目符號開頭的清單，以「*一個空白」或「減號一個空白」來表示
 &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-wen-zi-bian-hua/"&gt;文字變化&lt;/a&gt;&lt;/p&gt;
@@ -159,7 +158,7 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/"&gt;程式代碼或語法高亮&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在一般文字中直接用 &lt;code&gt;這個樣子&lt;/code&gt; ，若是要包整段的要三個 ``` 符號前後包起來&lt;/p&gt;
+&lt;p&gt;在一般文字中直接用 &lt;code&gt;這個樣子&lt;/code&gt; ，若是要包整段的要三個 &amp;#8220;`&amp;nbsp;符號前後包起來&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;引言&lt;/p&gt;
 &lt;blockquote&gt;
@@ -167,12 +166,12 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;/blockquote&gt;
 &lt;p&gt;行內HTML&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;因為 Markdown 本來就預設要轉換成 HTML 網頁格式，所以你當然可以直接寫入正確的 HTML 代碼   &lt;code&gt;&amp;lt;H1&amp;gt;ttt&amp;lt;/H1&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;因為 Markdown 本來就預設要轉換成 &lt;span class="caps"&gt;HTML&lt;/span&gt; 網頁格式，所以你當然可以直接寫入正確的 &lt;span class="caps"&gt;HTML&lt;/span&gt; 代碼   &lt;code&gt;&amp;lt;H1&amp;gt;ttt&amp;lt;/H1&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-shui-ping-fen-ge-xian/"&gt;水平分隔線&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;三個或三個以上的符號，必須在獨立的一行，前後不能有其他文字。&lt;/p&gt;
-&lt;p&gt;---短橫線（Hyphens）&lt;/p&gt;
+&lt;p&gt;&amp;#8212;-短橫線（Hyphens）&lt;/p&gt;
 &lt;p&gt;***半形星號（Asterisks）&lt;/p&gt;
 &lt;p&gt;___下底線（Underscores）&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -181,17 +180,17 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;p&gt;剩下少用的東西有 &lt;code&gt;代辦事項&lt;/code&gt;  &lt;code&gt;列表縮進&lt;/code&gt; &lt;code&gt;跳脫字元&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-分段標題</title><link href="https://richardrobot.xyz/2021/09/markdown-fen-duan-biao-ti/" rel="alternate"></link><published>2021-09-16T17:58:00+08:00</published><updated>2021-09-16T17:58:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-fen-duan-biao-ti/</id><summary type="html">&lt;p&gt;顯示分段標題&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;h1&gt;標題&lt;/h1&gt;
-&lt;p&gt;```'語法顯示'&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&amp;#8217;語法顯示&amp;#8217;&lt;/p&gt;
 &lt;h1&gt;H1&lt;/h1&gt;
 &lt;h2&gt;H2&lt;/h2&gt;
 &lt;h3&gt;H3&lt;/h3&gt;
 &lt;h4&gt;H4&lt;/h4&gt;
 &lt;h5&gt;H5&lt;/h5&gt;
 &lt;h6&gt;H6&lt;/h6&gt;
-&lt;p&gt;最常使用的 H1 與 H2 標題，還有更鮮明的另一種寫法：&lt;/p&gt;
+&lt;p&gt;最常使用的 H1 與 H2&amp;nbsp;標題，還有更鮮明的另一種寫法：&lt;/p&gt;
 &lt;h1&gt;Alt-H1&lt;/h1&gt;
 &lt;h2&gt;Alt-H2&lt;/h2&gt;
-&lt;p&gt;```&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;
 &lt;p&gt;實際展示：&lt;/p&gt;
 &lt;h1&gt;標題&lt;/h1&gt;
 &lt;h6&gt;標題&lt;/h6&gt;

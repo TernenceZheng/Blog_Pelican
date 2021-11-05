@@ -17,7 +17,7 @@
 
 
 &lt;hr&gt;
-&lt;p&gt;一開始以爲是只能執行在Python 3.8的環境，但是參考教學 https://www.youtube.com/watch?v=_CO-ND1FTOU&lt;/p&gt;
+&lt;p&gt;一開始以爲是只能執行在Python 3.8的環境，但是參考教學 https://www.youtube.com/watch?v=_CO-&lt;span class="caps"&gt;ND1FTOU&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;影片中也是能夠在Python3.9使用Tensorflow2.5，使用以下語法查看版本&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
 
@@ -38,18 +38,18 @@
 
 
 &lt;p&gt;Tensor Flow Version: 2.6.0
-Keras Version: 2.6.0&lt;/p&gt;
+Keras Version:&amp;nbsp;2.6.0&lt;/p&gt;
 &lt;p&gt;Python 3.9.6 | packaged by conda-forge | (default, Jul 11 2021, 03:35:11) 
 [Clang 11.1.0 ]
 Pandas 1.3.0
 Scikit-Learn 0.24.2
-GPU is available&lt;/p&gt;
+&lt;span class="caps"&gt;GPU&lt;/span&gt; is&amp;nbsp;available&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;用另外一個環境一樣Python3.9，TensorFlow2.5就可以正確執行，看來需要降版本，只好先移除了&lt;/p&gt;
 &lt;p&gt;安裝參考：
-&lt;a href="https://developer.apple.com/metal/tensorflow-plugin/"&gt;tensorflow-metal PluggableDevice 入門&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://makeoptim.com/deep-learning/tensorflow-metal"&gt;AI - Apple Silicon Mac M1 原生支持 TensorFlow 2.6 GPU 加速（tensorflow-metal PluggableDevice）&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;參考第二個連接的處理，重新安裝 Xcode ，並且重新執行安裝語法就OK了&lt;/p&gt;
+&lt;a href="https://developer.apple.com/metal/tensorflow-plugin/"&gt;tensorflow-metal PluggableDevice&amp;nbsp;入門&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://makeoptim.com/deep-learning/tensorflow-metal"&gt;&lt;span class="caps"&gt;AI&lt;/span&gt; - Apple Silicon Mac M1 原生支持 TensorFlow 2.6 &lt;span class="caps"&gt;GPU&lt;/span&gt; 加速（tensorflow-metal&amp;nbsp;PluggableDevice）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;參考第二個連接的處理，重新安裝 Xcode&amp;nbsp;，並且重新執行安裝語法就OK了&lt;/p&gt;
 &lt;p&gt;先解除安裝
 &lt;code&gt;python -m pip uninstall tensorflow-macos&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;python -m pip uninstall tensorflow-metal&lt;/code&gt;&lt;/p&gt;
@@ -92,7 +92,7 @@ GPU is available&lt;/p&gt;
 
 
 &lt;p&gt;上面處理已經完成但是會引發一個問題：&lt;/p&gt;
-&lt;p&gt;numpy 會被安裝成0.19的版本，而且會造成錯誤：&lt;/p&gt;
+&lt;p&gt;numpy&amp;nbsp;會被安裝成0.19的版本，而且會造成錯誤：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nl"&gt;ValueError:&lt;/span&gt;
 &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;ndarray&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="n"&gt;changed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;may&lt;/span&gt; &lt;span class="n"&gt;indicate&lt;/span&gt; &lt;span class="n"&gt;binary&lt;/span&gt; &lt;span class="n"&gt;incompatibility&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Expected&lt;/span&gt; &lt;span class="mi"&gt;88&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="n"&gt;header&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;got&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;PyObject&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -100,12 +100,12 @@ GPU is available&lt;/p&gt;
 
 &lt;p&gt;需要再更新Numpy&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Mac"></category><category term="Tensorflow"></category></entry><entry><title>安裝Let's Encrypt電子證書</title><link href="https://richardrobot.xyz/2021/10/an-zhuang-lets-encryptdian-zi-zheng-shu/" rel="alternate"></link><published>2021-10-08T18:45:00+08:00</published><updated>2021-10-08T18:45:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-08:/2021/10/an-zhuang-lets-encryptdian-zi-zheng-shu/</id><summary type="html">&lt;p&gt;在Mac本機安裝SSL與驗證流程記錄&lt;/p&gt;</summary><content type="html">&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Mac"></category><category term="Tensorflow"></category></entry><entry><title>安裝Let’s Encrypt電子證書</title><link href="https://richardrobot.xyz/2021/10/an-zhuang-lets-encryptdian-zi-zheng-shu/" rel="alternate"></link><published>2021-10-08T18:45:00+08:00</published><updated>2021-10-08T18:45:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-08:/2021/10/an-zhuang-lets-encryptdian-zi-zheng-shu/</id><summary type="html">&lt;p&gt;在Mac本機安裝SSL與驗證流程記錄&lt;/p&gt;</summary><content type="html">&lt;p&gt;參考資料：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a href="https://yinlei.org/x-plane10/big5.php?p=2017/01/lets-encrypt.html"&gt;安裝Let's Encrypt電子證書&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://yinlei.org/x-plane10/big5.php?p=2017/01/lets-encrypt.html"&gt;安裝Let&amp;#8217;s&amp;nbsp;Encrypt電子證書&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://jerry.thesolarsystems.net/?p=885"&gt;如何在NGINX+DJANGO平台設置SSL連線&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;在本機驗證安裝Let's Encrypt&lt;/p&gt;
+&lt;p&gt;在本機驗證安裝Let&amp;#8217;s&amp;nbsp;Encrypt&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;brew install certbot&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;brew ls certbot&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;然後在Mac執行  &lt;/p&gt;
@@ -146,7 +146,7 @@ GPU is available&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;從上面的指示來看 要在指定的網址：&lt;/p&gt;
+&lt;p&gt;從上面的指示來看&amp;nbsp;要在指定的網址：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;http://linebot.richardrobot.xyz/.well-known/acme-challenge/YYUCwTYHewbZ0vVcobFBA8kmL-xs-8AQAj5aH7tD3HI&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -154,7 +154,7 @@ GPU is available&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;YYUCwTYHewbZ0vVcobFBA8kmL-xs-8AQAj5aH7tD3HI.mFCPG4KMVD6yTJlxRiPv1IXrYQENjpRSb9DJyynjW5I&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;在Django的做法如下：&lt;/h2&gt;
-&lt;p&gt;在 url.py 設定網址：&lt;/p&gt;
+&lt;p&gt;在 url.py&amp;nbsp;設定網址：&lt;/p&gt;
 &lt;p&gt;&lt;img alt="url設定的圖片.png" src="https://richardrobot.xyz/images/url設定的圖片.png"&gt;&lt;/p&gt;
 &lt;p&gt;檔案放置的地方：
 &lt;img alt="檔案放置的地方.png" src="https://richardrobot.xyz/images/檔案放置的地方.png"&gt;&lt;/p&gt;
@@ -162,7 +162,7 @@ GPU is available&lt;/p&gt;
 &lt;img alt="views程式讀取的方式.png" src="https://richardrobot.xyz/images/views程式讀取的方式.png"&gt;&lt;/p&gt;
 &lt;p&gt;驗證成功存放的路徑：
 &lt;img alt="驗證成功的畫面.png" src="https://richardrobot.xyz/images/驗證成功的畫面.png"&gt;&lt;/p&gt;
-&lt;p&gt;nginx 新增的配置&lt;/p&gt;
+&lt;p&gt;nginx&amp;nbsp;新增的配置&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;第一個&lt;/span&gt;
 &lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 
@@ -209,16 +209,16 @@ GPU is available&lt;/p&gt;
 (LineBot) jarvis.zheng@zhengruichangdeMac-mini LineBot % sudo nginx -s reload
 Password:
 nginx: [warn] the "ssl" directive is deprecated, use the "listen ... ssl" directive instead in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5
-nginx: [emerg] no "ssl_certificate_key" is defined for certificate "/Users/jarvis.zheng/LineBot/ssl/chain.pem" and the "ssl" directive in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5&lt;/code&gt;&lt;/p&gt;</content><category term="Mac"></category><category term="ssl"></category></entry><entry><title>Supervisor</title><link href="https://richardrobot.xyz/2021/10/supervisor/" rel="alternate"></link><published>2021-10-05T19:22:00+08:00</published><updated>2021-10-05T19:22:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-05:/2021/10/supervisor/</id><summary type="html">&lt;p&gt;在Mac上使用supervisor來啓動服務&lt;/p&gt;</summary><content type="html">&lt;p&gt;在 Linux上可以使用systemctl 這個服務來開機就能自動啓動寫好的網站服務，等等其他的，但是在Mac上卻無法，使用supervisor還有Web畫面可以查看&lt;/p&gt;
+nginx: [emerg] no "ssl_certificate_key" is defined for certificate "/Users/jarvis.zheng/LineBot/ssl/chain.pem" and the "ssl" directive in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5&lt;/code&gt;&lt;/p&gt;</content><category term="Mac"></category><category term="ssl"></category></entry><entry><title>Supervisor</title><link href="https://richardrobot.xyz/2021/10/supervisor/" rel="alternate"></link><published>2021-10-05T19:22:00+08:00</published><updated>2021-10-05T19:22:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-05:/2021/10/supervisor/</id><summary type="html">&lt;p&gt;在Mac上使用supervisor來啓動服務&lt;/p&gt;</summary><content type="html">&lt;p&gt;在 Linux上可以使用systemctl&amp;nbsp;這個服務來開機就能自動啓動寫好的網站服務，等等其他的，但是在Mac上卻無法，使用supervisor還有Web畫面可以查看&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Supervisor服務畫面.png" src="https://richardrobot.xyz/images/Supervisor服務畫面.png"&gt;&lt;/p&gt;
 &lt;h2&gt;透過brew來安裝：&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;brew install supervisor&lt;/code&gt;&lt;/p&gt;
 &lt;h3&gt;設定檔路徑：&lt;/h3&gt;
 &lt;p&gt;由於是Mac M1 的系統，homebrew已經將設定的路徑放在 &lt;code&gt;/opt/homebrew/etc&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;如下圖，開啓 supervisor.conf 檔案&lt;/p&gt;
+&lt;p&gt;如下圖，開啓 supervisor.conf&amp;nbsp;檔案&lt;/p&gt;
 &lt;p&gt;&lt;img alt="supervisor的ini設定畫面.png" src="https://richardrobot.xyz/images/supervisor的ini設定畫面.png"&gt;&lt;/p&gt;
-&lt;p&gt;可以註解前面的 &lt;code&gt;;&lt;/code&gt; 符號來啓用設定 :&lt;/p&gt;
-&lt;p&gt;可以開啓 Web的畫面 啓用 登入帳號密碼&lt;/p&gt;
+&lt;p&gt;可以註解前面的 &lt;code&gt;;&lt;/code&gt; 符號來啓用設定&amp;nbsp;:&lt;/p&gt;
+&lt;p&gt;可以開啓 Web的畫面 啓用&amp;nbsp;登入帳號密碼&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;inet_http_server&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;          &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;inet&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TCP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="n"&gt;disabled&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt;
 &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;9001&lt;/span&gt;         &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;ip_address&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="n"&gt;specifier&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nb"&gt;all&lt;/span&gt; &lt;span class="n"&gt;iface&lt;/span&gt;
 &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;               &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -227,14 +227,14 @@ nginx: [emerg] no "ssl_certificate_key" is defined for certificate "/Users/jarvi
 
 
 &lt;p&gt;在最後加入客製化的設定檔：
-加入下面的設定，可以在/Process/  資料夾底下設定需要的Service檔，並且用 .ini 爲副檔名&lt;/p&gt;
+加入下面的設定，可以在/Process/  資料夾底下設定需要的Service檔，並且用 .ini&amp;nbsp;爲副檔名&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;include&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Process&lt;/span&gt;&lt;span class="o"&gt;/*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;ini&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;已django網站爲例：&lt;/p&gt;
-&lt;p&gt;command 程序啓動命令：使用gunicorn來當WebServer，使用參數檔 gunicorn.conf.py &lt;/p&gt;
+&lt;p&gt;command 程序啓動命令：使用gunicorn來當WebServer，使用參數檔&amp;nbsp;gunicorn.conf.py &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;django_server&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;miniforge3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;envs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;finlab&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gunicorn&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="n"&gt;gunicorn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;StockSecretary&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;
 &lt;span class="n"&gt;process_name&lt;/span&gt;&lt;span class="o"&gt;=%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;program_name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
@@ -248,9 +248,9 @@ nginx: [emerg] no "ssl_certificate_key" is defined for certificate "/Users/jarvi
 
 
 &lt;p&gt;參考資料：&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://hoohoo.top/blog/supervisor-instructions-for-use/"&gt;SUPERVISOR 介紹與使用方式&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://aptro.github.io/server/architecture/2016/06/21/Jupyter-Notebook-Nginx-Setup.html"&gt;Jupyter Notebook and Nginx Setup&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.gushiciku.cn/pl/2MVd/zh-tw"&gt;Mac OSX 開機啟動應用 (supervisor)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.twblogs.net/a/5d6115a6bd9eee541c32bb6f"&gt;Python Tricks —— 使用 Supervisor 控制 Linux 進程&lt;/a&gt;&lt;/p&gt;</content><category term="Mac"></category><category term="Mac"></category><category term="Supervisor"></category><category term="Nginx"></category></entry><entry><title>副檔名command無法執行</title><link href="https://richardrobot.xyz/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/</id><summary type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;</summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hoohoo.top/blog/supervisor-instructions-for-use/"&gt;&lt;span class="caps"&gt;SUPERVISOR&lt;/span&gt;&amp;nbsp;介紹與使用方式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://aptro.github.io/server/architecture/2016/06/21/Jupyter-Notebook-Nginx-Setup.html"&gt;Jupyter Notebook and Nginx&amp;nbsp;Setup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.gushiciku.cn/pl/2MVd/zh-tw"&gt;Mac &lt;span class="caps"&gt;OSX&lt;/span&gt; 開機啟動應用&amp;nbsp;(supervisor)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.twblogs.net/a/5d6115a6bd9eee541c32bb6f"&gt;Python Tricks —— 使用 Supervisor 控制 Linux&amp;nbsp;進程&lt;/a&gt;&lt;/p&gt;</content><category term="Mac"></category><category term="Mac"></category><category term="Supervisor"></category><category term="Nginx"></category></entry><entry><title>副檔名command無法執行</title><link href="https://richardrobot.xyz/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/</id><summary type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;</summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
 &lt;p&gt;&lt;img alt="副檔名command無法執行.png" src="https://richardrobot.xyz/images/副檔名command無法執行.png"&gt;&lt;/p&gt;
 &lt;p&gt;需要另外給予權限：&lt;code&gt;chmod +x batch_notes_script.command&lt;/code&gt;&lt;/p&gt;</content><category term="Mac"></category><category term="權限問題"></category></entry></feed>

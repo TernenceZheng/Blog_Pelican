@@ -58,13 +58,13 @@
     <meta name="msapplication-TileColor" content="#66A29C">
 
 <meta name="author" content="Richard" />
-<meta name="description" content="Django串街LineLogin API 流程簡單教學" />
+<meta name="description" content="Django串街LineLogin API 流程簡單教學" />
 <meta name="keywords" content="LineLoginAPI, Django">
 
 
 <meta property="og:site_name" content="Richard隨手筆記"/>
 <meta property="og:title" content="LineLogin串接"/>
-<meta property="og:description" content="Django串街LineLogin API 流程簡單教學"/>
+<meta property="og:description" content="Django串街LineLogin API 流程簡單教學"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://richardrobot.xyz/2021/10/lineloginchuan-jie/"/>
 <meta property="og:type" content="article"/>
@@ -173,15 +173,15 @@
     <p>參考資料：</p>
 <blockquote>
 <p><a href="https://jerrynest.io/django-allauth/">使用 Django Allauth 套件</a>
-<a href="https://wreadit.com/@wwwlearncodewithmikecom/post/50134">[Django教學13]Django Allauth套件整合Google登入驗證實作教學</a></p>
+<a href="https://wreadit.com/@wwwlearncodewithmikecom/post/50134">[Django教學13]Django&nbsp;Allauth套件整合Google登入驗證實作教學</a></p>
 </blockquote>
 <p>首先安裝django-allauth</p>
 <p><code>pip install django-allauth</code></p>
 <p>在Django站臺的Settings設定相關的參數設定</p>
 <ol>
-<li>在<code>INSTALLED_APPS</code> 裏面新增 allauth allauth.account ...以下的資料</li>
+<li>在<code>INSTALLED_APPS</code> 裏面新增 allauth allauth.account&nbsp;&#8230;以下的資料</li>
 <li>新增設定<code>AUTHENTICATION_BACKENDS</code></li>
-<li>新增設定<code>SITE_ID</code> ,數值要比對Django資料表內的  django_site 的ID值</li>
+<li>新增設定<code>SITE_ID</code> ,數值要比對Django資料表內的  django_site&nbsp;的ID值</li>
 <li><code>SOCIALACCOUNT_PROVIDERS</code>這是要設定讀取使用者的資料</li>
 <li>在站臺的url.py設定路徑</li>
 </ol>
@@ -211,7 +211,7 @@
 <p>在送授權的部分，django-allauth定義的callbackURL已經規範，如下圖
 <img alt="djangoallauth.png" src="https://richardrobot.xyz/images/djangoallauth.png">
 <a href="https://django-allauth.readthedocs.io/en/latest/providers.html#line">https://django-allauth.readthedocs.io/en/latest/providers.html#line</a></p>
-<p>上面的 Callback URL 必須與LINE Login 內的設定相同
+<p>上面的 Callback <span class="caps">URL</span> 必須與LINE Login 內的設定相同
 <img alt="lineloginapi的設定.png" src="https://richardrobot.xyz/images/lineloginapi的設定.png"></p>
 <hr>
 <p>另外剩下的就是要設定KEY與ClientID:</p>
@@ -226,7 +226,7 @@
 <p>這個問題的發生原因先查看了LineLogin的文件說明</p>
 <h2>要求授權</h2>
 <hr>
-<p>為進行使用者認證，並為 app 要求權限，請透過所需的 query parameter，如下面例子所示將使用者重新導向授權 URL。</p>
+<p>為進行使用者認證，並為 app 要求權限，請透過所需的 query parameter，如下面例子所示將使用者重新導向授權 <span class="caps">URL</span>。</p>
 <div class="highlight"><pre><span></span><code><span class="nl">https</span><span class="p">:</span><span class="c1">//access.line.me/oauth2/v2.1/authorize?</span>
 <span class="n">response_type</span><span class="o">=</span><span class="n">code</span>
 <span class="o">&amp;</span><span class="n">client_id</span><span class="o">=</span><span class="mi">1234567890</span>
@@ -238,7 +238,7 @@
 
 
 <p><img alt="linelogin串街參數.png" src="https://richardrobot.xyz/images/linelogin串街參數.png"></p>
-<p><a href="https://developers.line.biz/zh-hant/docs/line-login/integrate-line-login/#making-an-authorization-request">URL 的查詢屬性</a></p>
+<p><a href="https://developers.line.biz/zh-hant/docs/line-login/integrate-line-login/#making-an-authorization-request"><span class="caps">URL</span>&nbsp;的查詢屬性</a></p>
 <p>我的參數：</p>
 <div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="k">access</span><span class="p">.</span><span class="n">line</span><span class="p">.</span><span class="n">me</span><span class="o">/</span><span class="n">oauth2</span><span class="o">/</span><span class="n">v2</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">authorize</span><span class="o">?</span>
 
@@ -251,9 +251,8 @@
 
 
 <p>錯誤問題1：client_id不對
-client_id ：LINE Login Channel 的 Channel ID
-錯誤問題2：scope沒有值
-scope：向用戶請求授予權限，也就是要求取得使用者的資料</p>
+client_id ：<span class="caps">LINE</span> Login Channel 的 Channel <span class="caps">ID</span>
+錯誤問題2：scope沒有值&nbsp;scope：向用戶請求授予權限，也就是要求取得使用者的資料</p>
 <p>修正：
 1.在admin後臺修改設定
 2.在settings.py新增如下參數：

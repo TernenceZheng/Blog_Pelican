@@ -63,7 +63,7 @@
 
 
 <meta property="og:site_name" content="Richard隨手筆記"/>
-<meta property="og:title" content="安裝Let&#39;s Encrypt電子證書"/>
+<meta property="og:title" content="安裝Let’s Encrypt電子證書"/>
 <meta property="og:description" content="在Mac本機安裝SSL與驗證流程記錄"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://richardrobot.xyz/2021/10/an-zhuang-lets-encryptdian-zi-zheng-shu/"/>
@@ -75,7 +75,7 @@
 <meta property="article:tag" content="ssl"/>
 <meta property="og:image" content="/images/head_icon.jpg">
 
-  <title>Richard隨手筆記 &ndash; 安裝Let&#39;s Encrypt電子證書</title>
+  <title>Richard隨手筆記 &ndash; 安裝Let’s Encrypt電子證書</title>
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
@@ -160,7 +160,7 @@
 <article class="single">
   <header>
       
-    <h1 id="an-zhuang-lets-encryptdian-zi-zheng-shu">安裝Let's Encrypt電子證書</h1>
+    <h1 id="an-zhuang-lets-encryptdian-zi-zheng-shu">安裝Let&#8217;s&nbsp;Encrypt電子證書</h1>
     <p>
       Posted on 五 08 10月 2021 in <a href="https://richardrobot.xyz/category/mac.html">Mac</a>
 
@@ -171,10 +171,10 @@
   <div>
     <p>參考資料：</p>
 <blockquote>
-<p><a href="https://yinlei.org/x-plane10/big5.php?p=2017/01/lets-encrypt.html">安裝Let's Encrypt電子證書</a></p>
+<p><a href="https://yinlei.org/x-plane10/big5.php?p=2017/01/lets-encrypt.html">安裝Let&#8217;s&nbsp;Encrypt電子證書</a></p>
 <p><a href="https://jerry.thesolarsystems.net/?p=885">如何在NGINX+DJANGO平台設置SSL連線</a></p>
 </blockquote>
-<p>在本機驗證安裝Let's Encrypt</p>
+<p>在本機驗證安裝Let&#8217;s&nbsp;Encrypt</p>
 <p><code>brew install certbot</code></p>
 <p><code>brew ls certbot</code></p>
 <p>然後在Mac執行  </p>
@@ -215,7 +215,7 @@
 </code></pre></div>
 
 
-<p>從上面的指示來看 要在指定的網址：</p>
+<p>從上面的指示來看&nbsp;要在指定的網址：</p>
 <blockquote>
 <p>http://linebot.richardrobot.xyz/.well-known/acme-challenge/YYUCwTYHewbZ0vVcobFBA8kmL-xs-8AQAj5aH7tD3HI</p>
 </blockquote>
@@ -223,7 +223,7 @@
 <p><code>YYUCwTYHewbZ0vVcobFBA8kmL-xs-8AQAj5aH7tD3HI.mFCPG4KMVD6yTJlxRiPv1IXrYQENjpRSb9DJyynjW5I</code></p>
 <hr>
 <h2>在Django的做法如下：</h2>
-<p>在 url.py 設定網址：</p>
+<p>在 url.py&nbsp;設定網址：</p>
 <p><img alt="url設定的圖片.png" src="https://richardrobot.xyz/images/url設定的圖片.png"></p>
 <p>檔案放置的地方：
 <img alt="檔案放置的地方.png" src="https://richardrobot.xyz/images/檔案放置的地方.png"></p>
@@ -231,7 +231,7 @@
 <img alt="views程式讀取的方式.png" src="https://richardrobot.xyz/images/views程式讀取的方式.png"></p>
 <p>驗證成功存放的路徑：
 <img alt="驗證成功的畫面.png" src="https://richardrobot.xyz/images/驗證成功的畫面.png"></p>
-<p>nginx 新增的配置</p>
+<p>nginx&nbsp;新增的配置</p>
 <div class="highlight"><pre><span></span><code><span class="err">第一個</span>
 <span class="n">server</span> <span class="p">{</span>
 

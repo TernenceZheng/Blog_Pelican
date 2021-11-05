@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - VisualStudio</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/visualstudio.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2016-03-08T12:43:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>VS 常用內建快速鍵</title><link href="https://richardrobot.xyz/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;p&gt;VS 常用內建快速鍵&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - VisualStudio</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/visualstudio.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2016-03-08T12:43:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>VS 常用內建快速鍵</title><link href="https://richardrobot.xyz/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;VS&lt;/span&gt;&amp;nbsp;常用內建快速鍵&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://richardrobot.xyz/images/Pasted image 20210917172329.png"&gt;&lt;/p&gt;
 &lt;h1&gt;環境&lt;/h1&gt;
 &lt;hr&gt;
-&lt;p&gt;程式碼編輯器分頁切換 ：Ctrl+TAB 
+&lt;p&gt;程式碼編輯器分頁切換 ：Ctrl+&lt;span class="caps"&gt;TAB&lt;/span&gt; 
 存檔：Ctrl + S 
 執行(debug)：F5
 ==執行(non debug)==：&lt;code&gt;Ctrl + F5&lt;/code&gt;
@@ -21,7 +21,7 @@
 &lt;p&gt;選取文字改小寫：Ctrl + U 
 選取文字改大寫：Ctrl + Shift + U 
 ==呼叫出類別成員==：&lt;code&gt;Ctrl + J&lt;/code&gt;
-(編到一半時 tips 突然不見很好用) &lt;/p&gt;
+(編到一半時 tips&amp;nbsp;突然不見很好用) &lt;/p&gt;
 &lt;p&gt;收攏原始碼：Ctrl + M, O 
 展開原始碼：Ctrl + M, L 
 ==刪除目前這行==：&lt;code&gt;Ctrl + Shift + L&lt;/code&gt;
@@ -31,4 +31,4 @@
 ==選到最前面==：Ctrl + Shift + Home 
 ==選到最後面==：Ctrl + Shift + End 
 檢查括號匹配：Ctrl + ] 
-跳至行號：Ctrl + G &lt;/p&gt;</content><category term="VisualStudio"></category><category term="VisualStudio"></category><category term="VS祕技"></category><category term="VS快速鍵"></category></entry></feed>
+跳至行號：Ctrl +&amp;nbsp;G &lt;/p&gt;</content><category term="VisualStudio"></category><category term="VisualStudio"></category><category term="VS祕技"></category><category term="VS快速鍵"></category></entry></feed>

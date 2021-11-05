@@ -25,7 +25,6 @@ GOOGLE_ADSENSE = {
 
 GOOGLE_GLOBAL_SITE_TAG = 'G-Q3D0B7D25R' # Your Google Analytics 4 Property ID
 
-DEFAULT_CATEGORY = 'misc'
 
 DISQUS_SITENAME = "jarvissui-shou-bi-ji"
 #DISQUS_SECRET_KEY = u'YOUR_SECRET_KEY'
@@ -69,6 +68,7 @@ TIMEZONE = 'Asia/Taipei'
 
 DEFAULT_LANG = 'zh_TW'
 
+TYPOGRIFY = True
 
 # Social widget
 # Add a link to your social media accounts
