@@ -84,7 +84,7 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ["plugins","./pelican-plugins"]
 
-PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','category_order','obsidian','render_math','pelican_comment_system','disqus_static']#,'disqus_static'
+PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','category_order','obsidian','render_math','pelican_comment_system']#,'disqus_static'
 
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
 
