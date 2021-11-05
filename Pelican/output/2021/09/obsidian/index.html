@@ -189,12 +189,6 @@
     </p>
   </div>
 
-  <div class="center social-share">
-    <p>Like this article? Share it with your friends!</p>
-    <div class="addthis_native_toolbox"></div>
-    <div class="addthis_sharing_toolbox"></div>
-    <div class="addthis_inline_share_toolbox"></div>
-  </div>
 
 
   <div class="related-posts">
@@ -231,18 +225,6 @@
       display: none;
     }
   </style>
-  <script>
-    (function($){
-        setInterval(() => {
-            $.each($('iframe'), (arr,x) => {
-                let src = $(x).attr('src');
-                if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
-                    $(x).remove();
-                }
-            });
-        }, 300);
-    })(jQuery);
-    </script>
 <!-- End Disqus -->
 </article>
 
@@ -254,7 +236,6 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
   </main>
 
 
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6041ec511f4e3460" async="async"></script>
 
 
 <script type="application/ld+json">
