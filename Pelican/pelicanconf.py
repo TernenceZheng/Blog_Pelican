@@ -8,7 +8,6 @@ SITESUBTITLE = "紙上得來終覺淺，絕知此事要躬行"
 
 
 SITEURL = 'https://richardrobot.xyz'
-#SITEURL = 'http://127.0.0.1:8000'
 SITELOGO = '/images/head_icon.jpg'
 FAVICON = '/images/favicon.ico'
 
@@ -28,11 +27,11 @@ GOOGLE_GLOBAL_SITE_TAG = 'G-Q3D0B7D25R' # Your Google Analytics 4 Property ID
 
 
 
-#DISQUS_SITENAME = "jarvissui-shou-bi-ji"
-#DISQUS_SECRET_KEY = u'YOUR_SECRET_KEY'
-#DISQUS_PUBLIC_KEY = u'YOUR_PUBLIC_KEY'
+DISQUS_SITENAME = "jarvissui-shou-bi-ji"
+DISQUS_SECRET_KEY = u'YOUR_SECRET_KEY'
+DISQUS_PUBLIC_KEY = u'YOUR_PUBLIC_KEY'
 
-#ADD_THIS_ID = "ra-6041ec511f4e3460"
+ADD_THIS_ID = "ra-6041ec511f4e3460"
 
 COPYRIGHT_YEAR = 2021
 
