@@ -27,15 +27,15 @@ GOOGLE_GLOBAL_SITE_TAG = 'G-Q3D0B7D25R' # Your Google Analytics 4 Property ID
 
 
 
-# DISQUS_SITENAME = "jarvissui-shou-bi-ji"
-# DISQUS_SECRET_KEY = u'YOUR_SECRET_KEY'
-# DISQUS_PUBLIC_KEY = u'YOUR_PUBLIC_KEY'
+DISQUS_SITENAME = "jarvissui-shou-bi-ji"
+DISQUS_SECRET_KEY = u'YOUR_SECRET_KEY'
+DISQUS_PUBLIC_KEY = u'YOUR_PUBLIC_KEY'
 
 #pelican_common_system
-PELICAN_COMMENT_SYSTEM = True
-PELICAN_COMMENT_SYSTEM_DIR = 'comments'
-PELICAN_COMMENT_SYSTEM_IDENTICON_DATA = ('author','email')
-PELICAN_COMMENT_SYSTEM_IDENTICON_OUTPUT_PATH = 'images/identicon'
+# PELICAN_COMMENT_SYSTEM = True
+# PELICAN_COMMENT_SYSTEM_DIR = 'comments'
+# PELICAN_COMMENT_SYSTEM_IDENTICON_DATA = ('author','email')
+# PELICAN_COMMENT_SYSTEM_IDENTICON_OUTPUT_PATH = 'images/identicon'
 
 ADD_THIS_ID = "ra-6041ec511f4e3460"
 
@@ -86,7 +86,7 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ["plugins","./pelican-plugins"]
 
-PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','category_order','obsidian','render_math','pelican_comment_system']#,'disqus_static'
+PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','category_order','obsidian','render_math','disqus_static']#,'disqus_static'
 
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
 
