@@ -6,7 +6,7 @@ tags: Obsidian,Metadata
 category: Obsidian
 summary: 暸解使用Obsidian的Metadata架構
 image: /images/default_preview_image.jpg
-status: published
+status: hidden
 ---
 
 
