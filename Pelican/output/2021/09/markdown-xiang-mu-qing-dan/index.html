@@ -1,100 +1,174 @@
+
+
 <!DOCTYPE html>
 <html lang="zh_tw">
 <head>
-          <title>Richard隨手筆記</title>
-        <meta charset="utf-8" />
-        <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 Full Atom Feed" />
-        <link href="https://richardrobot.xyz/feeds/category.slug.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 Categories Atom Feed" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/stylesheet/style.min.css">
 
 
-    <meta name="tags" content="Markdown" />
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://richardrobot.xyz/theme/pygments/monokai.min.css">
 
-        <link rel="stylesheet" href="/theme/css/main.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!--[if lte IE 8]><script src="/theme/js/ie/html5shiv.js"></script><![endif]-->
-        <!--[if lte IE 8]><link rel="stylesheet" href="/theme/css/ie8.css" /><![endif]-->
+    <script src="https://richardrobot.xyz/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://richardrobot.xyz/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://richardrobot.xyz/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://richardrobot.xyz/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://richardrobot.xyz/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://richardrobot.xyz/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/font-awesome/css/solid.css">
+
+    <link href="https://richardrobot.xyz/static/custom.css" rel="stylesheet">
+
+    <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+<!-- End of Global site tag (gtag.js) - Google Analytics -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#66A29C">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#66A29C">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#66A29C">
+
+<meta name="author" content="Richard" />
+<meta name="description" content="顯示清單的語法" />
+<meta name="keywords" content="Markdown">
+
+
+<meta property="og:site_name" content="Richard隨手筆記"/>
+<meta property="og:title" content="Markdown-項目清單"/>
+<meta property="og:description" content="顯示清單的語法"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-09-16 17:59:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://richardrobot.xyz/author/richard.html">
+<meta property="article:section" content="Markdown"/>
+<meta property="article:tag" content="Markdown"/>
+<meta property="og:image" content="/images/head_icon.jpg">
+
+  <title>Richard隨手筆記 &ndash; Markdown-項目清單</title>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-4119678220307625",
+      enable_page_level_ads: true
+    });
+  </script>
 </head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://richardrobot.xyz">
+        <img src="/images/head_icon.jpg" alt="" title="">
+      </a>
 
-<body>
-        <header id="banner" class="body">
-                <h1><a href="https://richardrobot.xyz/">Richard隨手筆記 <strong>紙上得來終覺淺，絕知此事要躬行</strong></a></h1>
-        </header><!-- /#banner -->
-<!-- Sidebar -->
-            <div id="sidebar">
+      <h1>
+        <a href="https://richardrobot.xyz"></a>
+      </h1>
 
-                <!-- Logo -->
-                    <h1 id="logo"><a href="/">Richard隨手筆記</a></h1>
-                    <!-- Text -->
-                    <section class="box text-style1">
-                        <div class="inner">
-                            <p>
-                                <strong>Ut scelerisque nec sapien ut sollicitudin:</strong><br />紙上得來終覺淺，絕知此事要躬行
-                            </p>
-                        </div>
-                    </section>
-                <!-- Nav -->
-                    <nav id="nav">
-                        <ul>
-                            
-                            <li><a href="#">Nam euismod dui</a></li>
-                            <li><a href="#">Integer eget eros</a></li>
-                            <li><a href="#">Proin vehicula tortor</a></li>
-                            <li><a href="#">Vestibulum consectetur tellus</a></li>
-                        </ul>
-                    </nav>
+<p>紙上得來終覺淺，絕知此事要躬行</p>
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
 
-                <!-- Search -->
-                    <!-- <section class="box search">
-                        <form method="post" action="#">
-                            <input type="text" class="text" name="search" placeholder="Search" />
-                        </form>
-                    </section> -->
-
-                
-
-                <!-- Recent Posts -->
-                    <section class="box recent-posts">
-                        <header>
-                            <h2>Contact Me</h2>
-                        </header>
-                        <ul>
-                            <li><a class="icon fa-envelope" href="#"> eMail</a></li>
-                            <li><a class="icon fa-twitter" href="#"> Twitter</a></li>
-                            <li><a class="icon fa-facebook" href="#"> Facebook</a></li>
-                            <li><a class="icon fa-github" href="#"> Github</a></li>
-                            
-                        </ul>
-                    </section>
+      <nav>
+        <ul class="list">
 
 
 
-                <!-- Copyright -->
-                    <ul id="copyright">
-                        <li>Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.</li>
-                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                        <li>Modified under a <a href="https://creativecommons.org/licenses/by/3.0/">CC:BY</a> license.</li>
-                    </ul>
+            <li>
+              <a target="_self" href="https://richardrobot.xyz" >網路概論</a>
+            </li>
+            <li>
+              <a target="_self" href="https://richardrobot.xyz" >程式語言</a>
+            </li>
+            <li>
+              <a target="_self" href="https://richardrobot.xyz" >微軟筆記</a>
+            </li>
+            <li>
+              <a target="_self" href="https://richardrobot.xyz/category/python.html" >Python筆記</a>
+            </li>
+            <li>
+              <a target="_self" href="https://richardrobot.xyz" >雜記</a>
+            </li>
+        </ul>
+      </nav>
 
-            </div><!-- /#menu -->
-<div id="content">
-<div class="inner">
-        <article class="box post post-excerpt">
-                <header> 
-                <h2><a href="https://richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/" rel="bookmark" title="Permalink to Markdown-項目清單">Markdown-項目清單</a></h2> 
-                <p></p>
-                </header>
-                <div class="info">
-                    <span class="date" datetime="2021-09-16T17:59:00+08:00"><span class="month"> 9</span> <span class="day">16</span> <span class="month"> 2021</span></span>
-                    <ul class="stats">
-                                    <li><a href="mailto:?Subject=Markdown-項目清單&Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/" class="icon fa-envelope">&nbsp;</a></li>
-                                    <li><a href="http://reddit.com/submit?url=https://richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/&title=#Markdown-項目清單"" class="icon fa-reddit">&nbsp;</a></li>
-                                    <li><a href="https://twitter.com/share?url=https://richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/&text=&hashtags=GnotC" class="icon fa-twitter">&nbsp;</a></li>
-                                    <li><a href="https://www.facebook.com/sharer.php?u=https://richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/" class="icon fa-facebook">&nbsp;</a></li>
-                                </ul>
-                </div><!-- /.post-info -->
-                <div class="entry-content"> &nbsp; </div><!-- /.entry-content -->
-        </article>
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/TernenceZheng" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-envelope" href="mailto:andy711023@gmail.com" target="_blank">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://richardrobot.xyz">Home</a>
+
+      <a href="/archives">文章時間軸</a>
+      <a href="/categories">類別</a>
+      <a href="/tags">標籤</a>
+
+      <a href="https://richardrobot.xyz/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="markdown-xiang-mu-qing-dan">Markdown-項目清單</h1>
+    <p>
+      Posted on 四 16 9月 2021 in <a href="https://richardrobot.xyz/category/markdown.html">Markdown</a>
+
+    </p>
+  </header>
+
+
+  <div>
     <hr>
 <div class="highlight"><pre><span></span><code><span class="err">* 無序列表一 //可以使用星號建立無序清單  </span>
 <span class="err">- 無序列表二 //或是短橫線（負號）  </span>
@@ -132,17 +206,72 @@
 <li>有序號列表二</li>
 <li>有序號列表三</li>
 </ul>
-  </div><!-- /.entry-content -->
-  <!-- Pagination -->
-            <div class="pagination">
-              <a class="button previous" href="https://richardrobot.xyz/2021/09/markdown-yu-fa-xue-xi/">
-             Markdown-語法學習
-         </a>
-              <a href="https://richardrobot.xyz/2021/09/markdown-wen-zi-bian-hua/" class="button next">Markdown-文字變化</a>
-            </div>
- 
-</div>
-</div>
-<!-- /#contentinfo -->
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://richardrobot.xyz/tag/markdown.html">Markdown</a>
+    </p>
+  </div>
+
+
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-4119678220307625"
+         data-ad-slot="1234566"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jarvissui-shou-bi-ji';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<style>
+    iframe[sandbox*="allow-popups"]{
+      display: none;
+    }
+  </style>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy; 2021 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Richard隨手筆記 ",
+  "url" : "https://richardrobot.xyz",
+  "image": "/images/head_icon.jpg",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
 </body>
 </html>

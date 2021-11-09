@@ -86,15 +86,15 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ["plugins","./plugins"]
 
-PLUGINS = ['sitemap', 'neighbors','related_posts','representative_image','category_order','obsidian','render_math','more_categories']#,'tipue_search'
+PLUGINS = ['sitemap', 'neighbors','related_posts','representative_image','category_order','obsidian','render_math','more_categories','tipue_search']#,'tipue_search'
 
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives'] #'search']
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives','search']
 
 CATEGORIES_ORDER_BY = 'alphabetic'
 
 TAGS_ORDER_BY = 'alphabetic'
 
-THEME = 'themes/PelicanStriped'
+THEME = 'themes/Flex'
 
 STATIC_PATHS = ['images', 'extra']
 
