@@ -84,7 +84,7 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-PLUGIN_PATHS = ["plugins","./pelican-plugins"]
+PLUGIN_PATHS = ["plugins","./plugins"]
 
 PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','category_order','obsidian','render_math']#,'disqus_static'
 
@@ -94,7 +94,7 @@ CATEGORIES_ORDER_BY = 'alphabetic'
 
 TAGS_ORDER_BY = 'alphabetic'
 
-THEME = 'pelican-themes/pelican-striped-html5up'
+THEME = 'themes/pelican-striped-html5up'
 
 STATIC_PATHS = ['images', 'extra']
 
