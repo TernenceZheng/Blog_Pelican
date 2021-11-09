@@ -14,11 +14,6 @@
         <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a> ({{ articles|count }})
       </li>
       {% endfor %}
-
-      {% for cat in article.categories or [article.category] %}
-        <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{{ ', ' if not loop.last }}
-      {% endfor %}
-
     </ul>
   </div>
 </article>

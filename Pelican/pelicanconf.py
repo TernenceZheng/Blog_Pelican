@@ -88,7 +88,7 @@ PLUGIN_PATHS = ["plugins","./plugins"]
 
 PLUGINS = ['sitemap', 'neighbors','related_posts','representative_image','category_order','obsidian','render_math','more_categories','tipue_search']#,'tipue_search'
 
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives','search']
+DIRECT_TEMPLATES = ['index', 'tags', 'search', 'categories', 'authors', 'archives']
 
 CATEGORIES_ORDER_BY = 'alphabetic'
 
