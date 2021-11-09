@@ -86,7 +86,7 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ["plugins","./pelican-plugins"]
 
-PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','category_order','obsidian','render_math','more-categories']#,'disqus_static'
+PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','category_order','obsidian','render_math']#,'disqus_static'
 
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
 
@@ -94,7 +94,7 @@ CATEGORIES_ORDER_BY = 'alphabetic'
 
 TAGS_ORDER_BY = 'alphabetic'
 
-THEME = 'pelican-themes/Flex'
+THEME = 'pelican-themes/pelican-striped-html5up'
 
 STATIC_PATHS = ['images', 'extra']
 
