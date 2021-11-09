@@ -86,15 +86,15 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ["plugins","./plugins"]
 
-PLUGINS = ['sitemap', 'neighbors','related_posts','tipue_search','representative_image','category_order','obsidian','render_math','more_categories']#,'disqus_static'
+PLUGINS = ['sitemap', 'neighbors','related_posts','representative_image','category_order','obsidian','render_math','more_categories']#,'tipue_search'
 
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives'] #'search']
 
 CATEGORIES_ORDER_BY = 'alphabetic'
 
 TAGS_ORDER_BY = 'alphabetic'
 
-THEME = 'themes/pelican-striped-html5up'
+THEME = 'themes/PelicanStriped'
 
 STATIC_PATHS = ['images', 'extra']
 

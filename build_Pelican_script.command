@@ -4,7 +4,7 @@ cd /Users/jarvis.zheng/Blog_Pelican/Pelican
 
 /Users/jarvis.zheng/miniforge3/envs/Pelican/bin/pelican content
 
-git fetch
+git pull git@github.com:TernenceZheng/Blog_Pelican.git master
 
 git add .
 
