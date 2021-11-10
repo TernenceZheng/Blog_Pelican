@@ -4,6 +4,7 @@ date: 2021-09-16 17:55
 aliases: 部落格 
 tags: Obsidian,Git
 category: Git
+slug: git-obsidian
 summary: 使用Obsidian搭配Git達成可以跨越系統的同步
 image: /images/Pasted image 20210914152609.png
 status: published

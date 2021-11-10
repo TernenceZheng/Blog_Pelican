@@ -4,6 +4,7 @@ date: 2021-10-05 16:09
 aliases: 部落格 
 tags: SSH
 category: Git
+slug: git-ssh-mac-token
 summary: Mac重新開機SSHToken失效問題
 image: /images/Sourcetree出現Permissiondenied.png
 status: published

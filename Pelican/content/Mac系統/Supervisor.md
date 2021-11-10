@@ -4,6 +4,7 @@ date: 2021-10-05 19:22
 aliases: 部落格 
 tags: Mac,Supervisor,Nginx
 category: Mac
+slug: mac-supervisor
 summary: 在Mac上使用supervisor來啓動服務
 image: /images/Supervisor服務畫面.png
 status: published

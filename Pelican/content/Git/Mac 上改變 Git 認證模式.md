@@ -4,6 +4,7 @@ date: 2021-09-16 17:53
 aliases: 心得 
 tags: Git,Mac
 category: Git
+slug: git-mac-add-token
 summary: Mac 上改變 Git 認證模式
 image: /images/Mac上改變Git認證模式.png
 status: published

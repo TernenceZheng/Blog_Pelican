@@ -4,6 +4,7 @@ date: 2021-10-28 07:50
 aliases: 部落格 
 tags: Tensorflow
 category: Mac
+slug: mac-tensorflow
 summary: MacM1執行Tensorflow2.6出現錯誤
 image: /images/default_preview_image.jpg
 status: published

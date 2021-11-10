@@ -4,6 +4,7 @@ date: 2021-10-08 18:45
 aliases: 部落格 
 tags: ssl
 category: Mac
+slug: mac-lets-encrypt
 summary: 在Mac本機安裝SSL與驗證流程記錄
 image: /images/url設定的圖片.png
 status: published
