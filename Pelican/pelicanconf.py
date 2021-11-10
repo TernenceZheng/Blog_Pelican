@@ -66,7 +66,7 @@ PATH = 'content'
 
 TIMEZONE = 'Asia/Taipei'
 
-DEFAULT_LANG = 'zh_CN'
+DEFAULT_LANG = 'zh_TW'
 
 TYPOGRIFY = True
 
@@ -106,9 +106,10 @@ MENUITEMS = (
             ('標籤', '/tags')
         )
 
-THEME_COLOR = 'light'
-THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE = True
-THEME_COLOR_ENABLE_USER_OVERRIDE = True
+USE_FOLDER_AS_CATEGORY = True
+# THEME_COLOR = 'light'
+# THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE = True
+# THEME_COLOR_ENABLE_USER_OVERRIDE = True
 
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/'
