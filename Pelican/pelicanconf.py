@@ -66,7 +66,7 @@ PATH = 'content'
 
 TIMEZONE = 'Asia/Taipei'
 
-DEFAULT_LANG = 'zh_TW'
+DEFAULT_LANG = 'zh_CN'
 
 TYPOGRIFY = True
 
