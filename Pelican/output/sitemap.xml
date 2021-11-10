@@ -5,14 +5,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/</loc>
-<lastmod>2021-11-10T10:40:44-00:00</lastmod>
+<lastmod>2021-11-10T10:53:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://richardrobot.xyz/archives.html</loc>
-<lastmod>2021-11-10T10:40:44-00:00</lastmod>
+<lastmod>2021-11-10T10:53:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -25,7 +25,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/2021/10/macm1zhi-xing-tensorflowcuo-wu-wen-ti/</loc>
+<loc>https://richardrobot.xyz/2021/10/mac-tensorflow/</loc>
 <lastmod>2021-10-28T07:50:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -39,7 +39,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/2021/10/an-zhuang-lets-encryptdian-zi-zheng-shu/</loc>
+<loc>https://richardrobot.xyz/2021/10/mac-lets-encrypt/</loc>
 <lastmod>2021-10-08T18:45:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -53,35 +53,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/2021/10/supervisor/</loc>
+<loc>https://richardrobot.xyz/2021/10/mac-supervisor/</loc>
 <lastmod>2021-10-05T19:22:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/2021/10/blogfa-bu-dao-netlify/</loc>
+<loc>https://richardrobot.xyz/2021/10/git-netlify/</loc>
 <lastmod>2021-10-05T16:36:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/2021/10/maczhong-xin-kai-ji-ssh-tokenshi-xiao/</loc>
+<loc>https://richardrobot.xyz/2021/10/git-ssh-mac-token/</loc>
 <lastmod>2021-10-05T16:09:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/2021/10/fu-dang-ming-commandwu-fa-zhi-xing/</loc>
+<loc>https://richardrobot.xyz/2021/10/mac-command-permission/</loc>
 <lastmod>2021-10-01T11:47:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/2021/09/sourcetreequan-xian-wen-ti/</loc>
+<loc>https://richardrobot.xyz/2021/09/git-sourcetree-permission/</loc>
 <lastmod>2021-09-29T17:58:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -165,14 +165,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/2021/09/obsidian-shi-yong-git-kua-ping-tai-tong-bu/</loc>
+<loc>https://richardrobot.xyz/2021/09/git-obsidian/</loc>
 <lastmod>2021-09-16T17:55:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/2021/09/mac-shang-gai-bian-git-ren-zheng-mo-shi/</loc>
+<loc>https://richardrobot.xyz/2021/09/git-mac-add-token/</loc>
 <lastmod>2021-09-16T17:53:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
