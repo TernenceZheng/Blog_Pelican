@@ -133,7 +133,7 @@ AUTHOR_FEED_RSS = None
 # HOME_HIDE_TAGS = True
 FEED_USE_SUMMARY = True
 
-PYGMENTS_STYLE  =  "github"
+PYGMENTS_STYLE  =  "paraiso-dark"
 
 
 EXTRA_PATH_METADATA = {
