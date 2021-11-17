@@ -75,7 +75,8 @@ TYPOGRIFY = True
 SOCIAL = (
     ('linkedin','https://www.linkedin.com/in/jarvis-zheng-13a2b990'),
     ('github', 'https://github.com/TernenceZheng'),
-    ('envelope','mailto:andy711023@gmail.com'),
+    ('gmail', 'andy711023@gmail.com'),
+    ('rss','https://richardrobot.xyz/feeds/all.atom.xml'),
 
 )
 
