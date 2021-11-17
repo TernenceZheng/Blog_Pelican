@@ -78,14 +78,12 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <hr>
-<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="n">asterisks</span><span class="o">*</span> <span class="o">//</span><span class="err">斜體</span>  
-<span class="o">**</span><span class="n">asterisks</span><span class="o">**</span> <span class="o">//</span><span class="err">粗體</span>
-
-<span class="o">==</span><span class="err">螢光強調</span><span class="o">==</span>
-</code></pre></div>
-
-
+            <hr />
+<p><span class="dquo">&#8220;</span>`</p>
+<p><em>asterisks</em> //斜體<br />
+<strong>asterisks</strong>&nbsp;//粗體</p>
+<p>==螢光強調==</p>
+<p><span class="dquo">&#8220;</span>`</p>
 <p>實際展示：</p>
 <p><em>我是斜體字</em> </p>
 <p><strong>我是粗體字測試</strong> </p>
@@ -145,6 +143,23 @@
 
 <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<style>
+iframe[sandbox*="allow-popups"]{
+    display: none;
+}
+</style>
+<script>
+(function($){
+    setInterval(() => {
+        $.each($('iframe'), (arr,x) => {
+            let src = $(x).attr('src');
+            if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
+                $(x).remove();
+            }
+        });
+    }, 300);
+})(jQuery);
+</script>
 
 
 

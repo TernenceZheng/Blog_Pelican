@@ -81,19 +81,19 @@
         <div class="span8 offset2 article-content">
             
             <p>第一步&nbsp;先在Windows本機的建立一個資料夾，是拿來開啟Obsidian的Vault</p>
-<p><img alt="Pasted image 20210914152609.png" src="https://richardrobot.xyz/images/Pasted image 20210914152609.png">
+<p><img alt="Pasted image 20210914152609.png" src="https://richardrobot.xyz/images/Pasted image 20210914152609.png" />
 像上面的資料路徑我新開了一個 ObsidianNote資料夾，然後Obisdian設定這個資料夾就會有一些設定檔
-<img alt="Pasted image 20210914152831.png" src="https://richardrobot.xyz/images/Pasted image 20210914152831.png"></p>
+<img alt="Pasted image 20210914152831.png" src="https://richardrobot.xyz/images/Pasted image 20210914152831.png" /></p>
 <p>第二步&nbsp;在GitHub建立一個repository，然後取名同樣的名稱ObsidianNote</p>
 <p>第三步
 開啟CMD&nbsp;然後CD至剛剛的資料夾，接下來就是執行GitHub上面的初始化語法</p>
 <p><code>git init</code>
 <code>git commit -m "first commit"</code>
 <code>git remote add origin https://github.com/TernenceZheng/ObsidianNote.git</code></p>
-<p><img alt="Pasted image 20210914153508.png" src="https://richardrobot.xyz/images/Pasted image 20210914153508.png"></p>
+<p><img alt="Pasted image 20210914153508.png" src="https://richardrobot.xyz/images/Pasted image 20210914153508.png" /></p>
 <p>第四步
 安裝第三方外掛套件 Obsidian Git
-<img alt="Pasted image 20210914161351.png" src="https://richardrobot.xyz/images/Pasted image 20210914161351.png"></p>
+<img alt="Pasted image 20210914161351.png" src="https://richardrobot.xyz/images/Pasted image 20210914161351.png" /></p>
 <p>安裝及啟用後，左方將出現 Obsidian Git&nbsp;的設定，我有以下的建議：</p>
 <ul>
 <li>將 Vault 備份時間改為 5 分鐘 (Backup Interval:&nbsp;5)</li>
@@ -103,7 +103,7 @@
 </ul>
 <p>參考鏈接：<a href="https://notes.desktopofsamuel.com/posts/Obsidian%E4%B8%8A%E6%89%8B%E5%8F%8A%E4%BD%BF%E7%94%A8Git%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%90%8C%E6%AD%A5/">Obsidian上手及使用Git跨平台同步</a></p>
 <p>另外的手機版本同步參考：<a href="https://forum.obsidian.md/t/mobile-setting-up-ios-git-based-syncing-with-mobile-app-using-working-copy/16499">[移動] 設置 iOS 與移動應用程序基於 git&nbsp;的同步（使用工作副本）</a></p>
-<h1>Git</h1>
+<h1 id="git">Git</h1>
 
 
              
@@ -159,6 +159,23 @@
 
 <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<style>
+iframe[sandbox*="allow-popups"]{
+    display: none;
+}
+</style>
+<script>
+(function($){
+    setInterval(() => {
+        $.each($('iframe'), (arr,x) => {
+            let src = $(x).attr('src');
+            if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
+                $(x).remove();
+            }
+        });
+    }, 300);
+})(jQuery);
+</script>
 
 
 
@@ -176,6 +193,7 @@
 <ul class="related-posts-list">
 <li><a href="https://richardrobot.xyz/2021/09/obsidian/" title="Obsidian">Obsidian</a></li>
 <li><a href="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/" title="Obsidian快捷鍵設定">Obsidian快捷鍵設定</a></li>
+<li><a href="https://richardrobot.xyz/2021/10/obsidian-to-pelican/" title="Obsidian筆記同步到Blog排程">Obsidian筆記同步到Blog排程</a></li>
 <li><a href="https://richardrobot.xyz/2021/10/git-netlify/" title="Blog發佈到netlify">Blog發佈到netlify</a></li>
 </ul>
 <hr />
@@ -200,7 +218,7 @@
                     <span class="superscript">4</span>
 </a></li>
                 <li><a href="https://richardrobot.xyz/tags.html#obsidian-ref">Obsidian
-                    <span class="superscript">3</span>
+                    <span class="superscript">4</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

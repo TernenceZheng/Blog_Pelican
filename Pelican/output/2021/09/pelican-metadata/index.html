@@ -15,20 +15,21 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Obsidian, Obsidian, " />
+<meta name="keywords" content="Pelican, Python, " />
 
-<meta property="og:title" content="Obsidian快捷鍵設定 "/>
-<meta property="og:url" content="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/" />
-<meta property="og:description" content="Obsidian快捷鍵設定" />
+<meta property="og:title" content="Pelican說明Metadata "/>
+<meta property="og:url" content="https://richardrobot.xyz/2021/09/pelican-metadata/" />
+<meta property="og:description" content="整理一個表格來方便查看Pelican的Metadata" />
 <meta property="og:site_name" content="Richard隨手筆記" />
 <meta property="og:article:author" content="Richard" />
-<meta property="og:article:published_time" content="2021-09-16T17:40:00+08:00" />
-<meta name="twitter:title" content="Obsidian快捷鍵設定 ">
-<meta name="twitter:description" content="Obsidian快捷鍵設定">
-<meta property="og:image" content="/images/default_preview_image.jpg" />
-<meta name="twitter:image" content="/images/default_preview_image.jpg" >
+<meta property="og:article:published_time" content="2021-09-30T14:21:00+08:00" />
+<meta property="og:article:modified_time" content="2021-09-30T14:21:00+08:00" />
+<meta name="twitter:title" content="Pelican說明Metadata ">
+<meta name="twitter:description" content="整理一個表格來方便查看Pelican的Metadata">
+<meta property="og:image" content="/images/2021-10-01_PM4.46.58.pngg" />
+<meta name="twitter:image" content="/images/2021-10-01_PM4.46.58.pngg" >
 
-        <title>Obsidian快捷鍵設定  · Richard隨手筆記
+        <title>Pelican說明Metadata  · Richard隨手筆記
 </title>
         <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
 
@@ -70,8 +71,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/">
-                Obsidian快捷鍵設定
+            <a href="https://richardrobot.xyz/2021/09/pelican-metadata/">
+                Pelican說明Metadata
             </a>
         </h1>
     </header>
@@ -80,13 +81,28 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <h1 id="obsidian"><a href="https://richardrobot.xyz/2021/09/obsidian/">Obsidian</a>&nbsp;快捷鍵設定</h1>
-<p>參考網址：<a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/obsidian-%E4%BD%BF%E7%94%A8%E6%95%99%E5%AD%B8-%E7%AD%86%E8%A8%98%E7%AF%87-08-%E5%80%8D%E9%80%9F%E6%8F%90%E5%8D%87%E4%BD%A0%E7%9A%84%E6%93%8D%E4%BD%9C%E9%80%9F%E5%BA%A6-14-%E5%80%8B-obsidian-%E5%BF%AB%E6%8D%B7%E9%8D%B5%E8%A8%AD%E5%AE%9A%E5%BB%BA%E8%AD%B0-adc2d025c6d1">14個Obsidian快捷鍵設定建議</a></p>
-<p>記錄目前最常使用的快捷鍵：</p>
-<ul>
-<li>功能：快速插入模板筆記  <code>cmd + L</code></li>
-<li>功能：立即執行Git的PUSH更新 <code>cmd + Shift + P</code></li>
-</ul>
+            <hr />
+<p>![[2021-10-01_PM4.46.58.png]]</p>
+<hr />
+<p>您還可以在模板中使用自己的元數據鍵（只要它們不與保留的元數據關鍵字衝突）。下表包含保留的元數據關鍵字列表：</p>
+<p>| Metadata    | Description                                                     |
+| :&#8212;&#8212;&#8212;&#8212;&#8212;- :| &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;- |
+| title       | Title of the article or page                                    |
+| date        | Publication date (e.g., <span class="caps">YYYY</span>-<span class="caps">MM</span>-<span class="caps">DD</span> <span class="caps">HH</span>:<span class="caps">SS</span>)                       |
+| modified    | Modification date (e.g., <span class="caps">YYYY</span>-<span class="caps">MM</span>-<span class="caps">DD</span> <span class="caps">HH</span>:<span class="caps">SS</span>)                      |
+| tags        | Content tags, separated by commas                               |
+| keywords    | Content keywords, separated by commas (<span class="caps">HTML</span> content only)       |
+| category    | Content category (one only — not multiple)                      |
+| slug        | Identifier used in URLs and translations                        |
+| author      | Content author, when there is only one                          |
+| authors     | Content authors, when there are multiple                        |
+| summary     | Brief description of content for index pages                    |
+| lang        | Content language <span class="caps">ID</span> (en, fr, etc.)                              |
+| translation | If content is a translation of another (true or false)          |
+| status      | Content status: draft, hidden, or published                     |
+| template    | Name of template to use to generate content (without extension) |
+| save_as     | Save content to this relative file path                         |
+| url         | <span class="caps">URL</span> to use for this article/page                                |            |&nbsp;|</p>
 
 
              
@@ -111,8 +127,8 @@
                 <a class="accordion-toggle disqus-comment-count comment-count collapsed"
                    data-toggle="collapse"
                    data-parent="#accordion2"
-                   data-disqus-identifier="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/"
-                   href="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/#comment_thread"
+                   data-disqus-identifier="https://richardrobot.xyz/2021/09/pelican-metadata/"
+                   href="https://richardrobot.xyz/2021/09/pelican-metadata/#comment_thread"
                    id="comment-accordion-toggle">
                     Comments
                 </a>
@@ -130,8 +146,8 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 
-    var disqus_identifier = 'https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/';
-    var disqus_url = 'https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/';
+    var disqus_identifier = 'https://richardrobot.xyz/2021/09/pelican-metadata/';
+    var disqus_url = 'https://richardrobot.xyz/2021/09/pelican-metadata/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -171,31 +187,24 @@ iframe[sandbox*="allow-popups"]{
 </section>
 
             <hr/>
-<section>
-    <h2>Related Posts</h2>
-<ul class="related-posts-list">
-<li><a href="https://richardrobot.xyz/2021/09/git-obsidian/" title="Obsidian 使用 Git 跨平台同步">Obsidian 使用 Git 跨平台同步</a></li>
-<li><a href="https://richardrobot.xyz/2021/10/obsidian-to-pelican/" title="Obsidian筆記同步到Blog排程">Obsidian筆記同步到Blog排程</a></li>
-</ul>
-<hr />
-</section>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://richardrobot.xyz/2021/09/obsidian/" title="Previous: Obsidian">Obsidian</a></li>
-                <li class="next-article"><a href="https://richardrobot.xyz/2021/09/git-mac-add-token/" title="Next: Mac 上改變 Git 認證模式">Mac 上改變 Git 認證模式</a> »</li>
+                <li class="previous-article">« <a href="https://richardrobot.xyz/2021/09/git-sourcetree-permission/" title="Previous: SourceTree權限問題">SourceTree權限問題</a></li>
+                <li class="next-article"><a href="https://richardrobot.xyz/2021/10/obsidian-to-pelican/" title="Next: Obsidian筆記同步到Blog排程">Obsidian筆記同步到Blog排程</a> »</li>
             </ul>
             </nav>
             </aside>
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2021-09-16T17:40:00+08:00">四 16 9月 2021</time>
+            <time itemprop="dateCreated" datetime="2021-09-30T14:21:00+08:00">四 30 9月 2021</time>
+
             <h4>Category</h4>
-            <a class="category-link" href="https://richardrobot.xyz/categories.html#obsidian-ref">Obsidian</a>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#python-ref">Python</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="https://richardrobot.xyz/tags.html#obsidian-ref">Obsidian
+                <li><a href="https://richardrobot.xyz/tags.html#pelican-ref">Pelican
                     <span class="superscript">4</span>
 </a></li>
             </ul>

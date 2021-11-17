@@ -1,64 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - Markdown</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/markdown.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-09-16T17:59:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Markdown-插入圖片</title><link href="https://richardrobot.xyz/2021/09/markdown-cha-ru-tu-pian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-cha-ru-tu-pian/</id><summary type="html">&lt;p&gt;顯示插入圖片&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;alt&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &amp;quot;這個文字會滑鼠滑上會出現POPup&amp;quot;)&lt;/span&gt;
-
-
-&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;這裡是要寫圖片說明&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//這個是要填圖片路徑.jpg)&lt;/span&gt;
-
-
-&lt;span class="err"&gt;使用代碼重複利用相同圖片方式：&lt;/span&gt;
-
-&lt;span class="err"&gt;最近在看的新書：&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Google教我的101個工作最佳化&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;google101&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="err"&gt;最近在看的新書：&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Google教我的101個工作最佳化&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;google101&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="err"&gt;最近在看的新書：&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Google教我的101個工作最佳化&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;google101&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;google101&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348 &amp;quot;Google教我的101個工作最佳化&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - Markdown</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/markdown.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-09-16T17:59:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Markdown-插入圖片</title><link href="https://richardrobot.xyz/2021/09/markdown-cha-ru-tu-pian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-cha-ru-tu-pian/</id><summary type="html">&lt;p&gt;顯示插入圖片&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;
+&lt;p&gt;&lt;img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="這個文字會滑鼠滑上會出現POPup" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="這裡是要寫圖片說明" src="http://這個是要填圖片路徑.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;使用代碼重複利用相同圖片方式：&lt;/p&gt;
+&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化" /&gt;&lt;/p&gt;
+&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化" /&gt;&lt;/p&gt;
+&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;
 &lt;p&gt;實例展示：&lt;/p&gt;
-&lt;p&gt;&lt;img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="這個文字會滑鼠滑上會出現POPup"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="企業正在進行AI前導測試，並將人工智慧投入生產。以下是業界菁英對AI的投資方向，且已見到初步成果" src="https://www.cio.com.tw/wp-content/uploads/1200-AdobeStock_178319041-750x394.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;
-&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;
-&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-程式代碼或語法高亮</title><link href="https://richardrobot.xyz/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/</id><summary type="html">&lt;p&gt;顯示程式代碼或語法高亮&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;&lt;img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="這個文字會滑鼠滑上會出現POPup" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="企業正在進行AI前導測試，並將人工智慧投入生產。以下是業界菁英對AI的投資方向，且已見到初步成果" src="https://www.cio.com.tw/wp-content/uploads/1200-AdobeStock_178319041-750x394.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化" /&gt;&lt;/p&gt;
+&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化" /&gt;&lt;/p&gt;
+&lt;p&gt;最近在看的新書：&lt;img alt="Google教我的101個工作最佳化" src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/058/32/0010583256.jpg&amp;amp;v=51751f70&amp;amp;w=348&amp;amp;h=348" title="Google教我的101個工作最佳化" /&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-程式代碼或語法高亮</title><link href="https://richardrobot.xyz/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-cheng-shi-dai-ma-huo-yu-fa-gao-liang/</id><summary type="html">&lt;p&gt;顯示程式代碼或語法高亮&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
 &lt;p&gt;直接展示：每個三個` 符號 後面直接寫程式語言名稱如：sql C# java python&amp;nbsp;等等的&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;JavaScript syntax highlighting&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  
-&lt;span class="nx"&gt;alert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Python syntax highlighting&amp;quot;&lt;/span&gt;  
-&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;No language indicated, so no syntax highlighting.  
-But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&gt;tag&lt;span class="nt"&gt;&amp;lt;/b&amp;gt;&lt;/span&gt;.  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-連結設定</title><link href="https://richardrobot.xyz/2021/09/markdown-lian-jie-she-ding/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-lian-jie-she-ding/</id><summary type="html">&lt;p&gt;顯示連結設定&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tw&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-
-
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;這是一個帶有標題的行內連結&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;google&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;Google&amp;#39;s Homepage&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;中文版的&lt;/span&gt;&lt;span class="n"&gt;Markdown語法說明&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tw&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-
-
-&lt;span class="err"&gt;使用代碼去重複使用：&lt;/span&gt;
-
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;來看看這個網址&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="err"&gt;我是網址&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;去看看這個網址&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="err"&gt;我是網址&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;檢查這個網址&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="err"&gt;我是網址&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;我是網址&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;google&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tw&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;&lt;code&gt;javascript  
+var s = "JavaScript syntax highlighting";  
+alert(s);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python  
+s = "Python syntax highlighting"  
+print s&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;No language indicated, so no syntax highlighting.  
+But let's throw in a &amp;lt;b&amp;gt;tag&amp;lt;/b&amp;gt;.&lt;/code&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-連結設定</title><link href="https://richardrobot.xyz/2021/09/markdown-lian-jie-she-ding/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-lian-jie-she-ding/</id><summary type="html">&lt;p&gt;顯示連結設定&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://markdown.tw"&gt;http://markdown.tw&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.google.com" title="Google's Homepage"&gt;這是一個帶有標題的行內連結&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://markdown.tw"&gt;中文版的Markdown語法說明&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用代碼去重複使用：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.google.com.tw"&gt;來看看這個網址&lt;/a&gt;
+&lt;a href="https://www.google.com.tw"&gt;去看看這個網址&lt;/a&gt;
+&lt;a href="https://www.google.com.tw"&gt;檢查這個網址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;
 &lt;p&gt;實例展示：&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://markdown.tw"&gt;http://markdown.tw&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.google.com" title="Google's Homepage"&gt;這是一個帶有標題的行內連結&lt;/a&gt;&lt;/p&gt;
@@ -66,40 +39,36 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;p&gt;&lt;a href="https://www.google.com.tw"&gt;來看看這個網址&lt;/a&gt;
 &lt;a href="https://www.google.com.tw"&gt;去看看這個網址&lt;/a&gt;
 &lt;a href="https://www.google.com.tw"&gt;檢查這個網址&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo 標題文字範例一"&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-其他的符號</title><link href="https://richardrobot.xyz/2021/09/markdown-qi-ta-de-fu-hao/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-qi-ta-de-fu-hao/</id><summary type="html">&lt;p&gt;顯示其他的符號&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;&lt;img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo 標題文字範例一" /&gt;&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-其他的符號</title><link href="https://richardrobot.xyz/2021/09/markdown-qi-ta-de-fu-hao/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-qi-ta-de-fu-hao/</id><summary type="html">&lt;p&gt;顯示其他的符號&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
 &lt;ul&gt;
 &lt;li&gt;[ ]&amp;nbsp;代辦事項  &lt;/li&gt;
 &lt;li&gt;[x]&amp;nbsp;已完成事項&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;跳脫字元
-加上反引號&amp;nbsp;\&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-水平分隔線</title><link href="https://richardrobot.xyz/2021/09/markdown-shui-ping-fen-ge-xian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-shui-ping-fen-ge-xian/</id><summary type="html">&lt;p&gt;顯示水平分隔線&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+加上反引號&amp;nbsp;\&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-水平分隔線</title><link href="https://richardrobot.xyz/2021/09/markdown-shui-ping-fen-ge-xian/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-shui-ping-fen-ge-xian/</id><summary type="html">&lt;p&gt;顯示水平分隔線&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
 &lt;p&gt;語法：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;---短橫線（Hyphens）&lt;/span&gt;
-
-&lt;span class="o"&gt;***&lt;/span&gt;&lt;span class="err"&gt;半形星號（&lt;/span&gt;&lt;span class="n"&gt;Asterisks&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;
-
-&lt;span class="n"&gt;___下底線&lt;/span&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="n"&gt;Underscores&lt;/span&gt;&lt;span class="err"&gt;）&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-文字變化</title><link href="https://richardrobot.xyz/2021/09/markdown-wen-zi-bian-hua/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-wen-zi-bian-hua/</id><summary type="html">&lt;p&gt;顯示文字變化&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;asterisks&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;斜體&lt;/span&gt;  
-&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;asterisks&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="err"&gt;粗體&lt;/span&gt;
-
-&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="err"&gt;螢光強調&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;
+&lt;p&gt;&amp;#8212;-短橫線（Hyphens）&lt;/p&gt;
+&lt;p&gt;***半形星號（Asterisks）&lt;/p&gt;
+&lt;p&gt;___下底線（Underscores）&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-文字變化</title><link href="https://richardrobot.xyz/2021/09/markdown-wen-zi-bian-hua/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-wen-zi-bian-hua/</id><summary type="html">&lt;p&gt;顯示文字變化&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;asterisks&lt;/em&gt; //斜體&lt;br /&gt;
+&lt;strong&gt;asterisks&lt;/strong&gt;&amp;nbsp;//粗體&lt;/p&gt;
+&lt;p&gt;==螢光強調==&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;
 &lt;p&gt;實際展示：&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;我是斜體字&lt;/em&gt; &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;我是粗體字測試&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;==螢光強調==&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-項目清單</title><link href="https://richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-xiang-mu-qing-dan/</id><summary type="html">&lt;p&gt;顯示清單的語法&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;* 無序列表一 //可以使用星號建立無序清單  &lt;/span&gt;
-&lt;span class="err"&gt;- 無序列表二 //或是短橫線（負號）  &lt;/span&gt;
-&lt;span class="err"&gt;+ 無序列表三 //使用半形加號也可以  &lt;/span&gt;
-&lt;span class="err"&gt;1. 有序列表一  &lt;/span&gt;
-&lt;span class="err"&gt;2. 有序列表二  &lt;/span&gt;
-&lt;span class="err"&gt;3. 有序列表三&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;==螢光強調==&lt;/p&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-項目清單</title><link href="https://richardrobot.xyz/2021/09/markdown-xiang-mu-qing-dan/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-xiang-mu-qing-dan/</id><summary type="html">&lt;p&gt;顯示清單的語法&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`
+* 無序列表一 //可以使用星號建立無序清單&lt;br /&gt;
+- 無序列表二 //或是短橫線（負號）&lt;br /&gt;
++ 無序列表三 //使用半形加號也可以&lt;br /&gt;
+1. 有序列表一&lt;br /&gt;
+2. 有序列表二&lt;br /&gt;
+3.&amp;nbsp;有序列表三&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;
 &lt;p&gt;實際展示：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;無序列表一&lt;/li&gt;
@@ -126,10 +95,10 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;/li&gt;
 &lt;li&gt;有序號列表二&lt;/li&gt;
 &lt;li&gt;有序號列表三&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-語法學習</title><link href="https://richardrobot.xyz/2021/09/markdown-yu-fa-xue-xi/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-yu-fa-xue-xi/</id><summary type="html">&lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建Markdown&amp;nbsp;是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;/ul&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-語法學習</title><link href="https://richardrobot.xyz/2021/09/markdown-yu-fa-xue-xi/" rel="alternate"></link><published>2021-09-16T17:59:00+08:00</published><updated>2021-09-16T17:59:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-yu-fa-xue-xi/</id><summary type="html">&lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建Markdown&amp;nbsp;是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
 &lt;p&gt;Markdown 語言在 2004 由約翰·格魯伯（英語：John Gruber）創建。Markdown&amp;nbsp;是一種輕量級標記語言，它允許人們使用易讀易寫的純文本格式編寫文檔。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://markdown.tw/"&gt;Markdown&lt;/a&gt;是一種簡易的標記語言，能讓我們在最短的時間裡製作一份易讀易懂的文字檔案，當有需要輸出到網站時，也能使用許多線上轉換網站或軟體，將Markdown格式的內容轉換成HTML格式，瞬間由文字格式變身美觀的網頁格式。&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-fen-duan-biao-ti/"&gt;分段標題&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;以一到六個井字表示標題一至標題六&lt;code&gt;（&amp;lt;h1&amp;gt;到&amp;lt;h6&amp;gt;）&lt;/code&gt;，亦即井號越少顯示的字體越大。&lt;/p&gt;
@@ -178,21 +147,21 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/09/markdown-qi-ta-de-fu-hao/"&gt;其他的符號&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;剩下少用的東西有 &lt;code&gt;代辦事項&lt;/code&gt;  &lt;code&gt;列表縮進&lt;/code&gt; &lt;code&gt;跳脫字元&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-分段標題</title><link href="https://richardrobot.xyz/2021/09/markdown-fen-duan-biao-ti/" rel="alternate"></link><published>2021-09-16T17:58:00+08:00</published><updated>2021-09-16T17:58:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-fen-duan-biao-ti/</id><summary type="html">&lt;p&gt;顯示分段標題&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
-&lt;h1&gt;標題&lt;/h1&gt;
+&lt;/blockquote&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry><entry><title>Markdown-分段標題</title><link href="https://richardrobot.xyz/2021/09/markdown-fen-duan-biao-ti/" rel="alternate"></link><published>2021-09-16T17:58:00+08:00</published><updated>2021-09-16T17:58:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/markdown-fen-duan-biao-ti/</id><summary type="html">&lt;p&gt;顯示分段標題&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
+&lt;h1 id="_1"&gt;標題&lt;/h1&gt;
 &lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&amp;#8217;語法顯示&amp;#8217;&lt;/p&gt;
-&lt;h1&gt;H1&lt;/h1&gt;
-&lt;h2&gt;H2&lt;/h2&gt;
-&lt;h3&gt;H3&lt;/h3&gt;
-&lt;h4&gt;H4&lt;/h4&gt;
-&lt;h5&gt;H5&lt;/h5&gt;
-&lt;h6&gt;H6&lt;/h6&gt;
+&lt;h1 id="h1"&gt;H1&lt;/h1&gt;
+&lt;h2 id="h2"&gt;H2&lt;/h2&gt;
+&lt;h3 id="h3"&gt;H3&lt;/h3&gt;
+&lt;h4 id="h4"&gt;H4&lt;/h4&gt;
+&lt;h5 id="h5"&gt;H5&lt;/h5&gt;
+&lt;h6 id="h6"&gt;H6&lt;/h6&gt;
 &lt;p&gt;最常使用的 H1 與 H2&amp;nbsp;標題，還有更鮮明的另一種寫法：&lt;/p&gt;
-&lt;h1&gt;Alt-H1&lt;/h1&gt;
-&lt;h2&gt;Alt-H2&lt;/h2&gt;
+&lt;h1 id="alt-h1"&gt;Alt-H1&lt;/h1&gt;
+&lt;h2 id="alt-h2"&gt;Alt-H2&lt;/h2&gt;
 &lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;
 &lt;p&gt;實際展示：&lt;/p&gt;
-&lt;h1&gt;標題&lt;/h1&gt;
-&lt;h6&gt;標題&lt;/h6&gt;
-&lt;h1&gt;鮮明的標題&lt;/h1&gt;
-&lt;h2&gt;鮮明的標題&lt;/h2&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry></feed>
+&lt;h1 id="_2"&gt;標題&lt;/h1&gt;
+&lt;h6 id="_3"&gt;標題&lt;/h6&gt;
+&lt;h1 id="_4"&gt;鮮明的標題&lt;/h1&gt;
+&lt;h2 id="_5"&gt;鮮明的標題&lt;/h2&gt;</content><category term="Markdown"></category><category term="Markdown"></category></entry></feed>

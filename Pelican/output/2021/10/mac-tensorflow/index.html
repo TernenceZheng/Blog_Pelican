@@ -82,42 +82,33 @@
             
             <p>每當執行如下的語法時：
 <code>model.fit(x_train, y_train, epochs=5)</code></p>
-<p>就會出現以下錯誤：</p>
-<div class="highlight"><pre><span></span><code><span class="mi">2021</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">27</span> <span class="mi">20</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mf">06.945996</span><span class="p">:</span> <span class="n">I</span> <span class="n">tensorflow</span><span class="o">/</span><span class="n">compiler</span><span class="o">/</span><span class="n">mlir</span><span class="o">/</span><span class="n">mlir_graph_optimization_pass</span><span class="p">.</span><span class="na">cc</span><span class="p">:</span><span class="mi">185</span><span class="o">]</span> <span class="n">None</span> <span class="n">of</span> <span class="n">the</span> <span class="n">MLIR</span> <span class="n">Optimization</span> <span class="n">Passes</span> <span class="n">are</span> <span class="nf">enabled</span> <span class="p">(</span><span class="n">registered</span> <span class="mi">2</span><span class="p">)</span>
-
-<span class="mi">2021</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">27</span> <span class="mi">20</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mf">06.948454</span><span class="p">:</span> <span class="n">W</span> <span class="n">tensorflow</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">platform</span><span class="o">/</span><span class="n">profile_utils</span><span class="o">/</span><span class="n">cpu_utils</span><span class="p">.</span><span class="na">cc</span><span class="p">:</span><span class="mi">128</span><span class="o">]</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">get</span> <span class="n">CPU</span> <span class="n">frequency</span><span class="p">:</span> <span class="mi">0</span> <span class="n">Hz</span>
-
-<span class="n">Epoch</span> <span class="mi">1</span><span class="o">/</span><span class="mi">5</span>
-
-<span class="mi">2021</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">27</span> <span class="mi">20</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mf">07.052295</span><span class="p">:</span> <span class="n">I</span> <span class="n">tensorflow</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">grappler</span><span class="o">/</span><span class="n">optimizers</span><span class="o">/</span><span class="n">custom_graph_optimizer_registry</span><span class="p">.</span><span class="na">cc</span><span class="p">:</span><span class="mi">112</span><span class="o">]</span> <span class="n">Plugin</span> <span class="n">optimizer</span> <span class="k">for</span> <span class="n">device_type</span> <span class="n">GPU</span> <span class="n">is</span> <span class="n">enabled</span><span class="p">.</span>
-
-<span class="mi">2021</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">27</span> <span class="mi">20</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mf">07.079</span> <span class="n">python</span><span class="o">[</span><span class="mi">8109</span><span class="p">:</span><span class="mi">118092</span><span class="o">]</span> <span class="o">-[</span><span class="n">MPSGraph</span> <span class="n">adamUpdateWithLearningRateTensor</span><span class="p">:</span><span class="n">beta1Tensor</span><span class="p">:</span><span class="n">beta2Tensor</span><span class="p">:</span><span class="n">epsilonTensor</span><span class="p">:</span><span class="n">beta1PowerTensor</span><span class="p">:</span><span class="n">beta2PowerTensor</span><span class="p">:</span><span class="n">valuesTensor</span><span class="p">:</span><span class="n">momentumTensor</span><span class="p">:</span><span class="n">velocityTensor</span><span class="p">:</span><span class="n">maximumVelocityTensor</span><span class="p">:</span><span class="n">gradientTensor</span><span class="p">:</span><span class="n">name</span><span class="p">:</span><span class="o">]</span><span class="p">:</span> <span class="n">unrecognized</span> <span class="n">selector</span> <span class="n">sent</span> <span class="n">to</span> <span class="n">instance</span> <span class="mh">0x29ee0f660</span>
-
-<span class="mi">2021</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">27</span> <span class="mi">20</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mf">07.091</span> <span class="n">python</span><span class="o">[</span><span class="mi">8109</span><span class="p">:</span><span class="mi">118092</span><span class="o">]</span> <span class="o">***</span> <span class="n">Terminating</span> <span class="n">app</span> <span class="n">due</span> <span class="n">to</span> <span class="n">uncaught</span> <span class="n">exception</span> <span class="err">&#39;</span><span class="n">NSInvalidArgumentException</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">reason</span><span class="p">:</span> <span class="err">&#39;</span><span class="o">-[</span><span class="n">MPSGraph</span> <span class="n">adamUpdateWithLearningRateTensor</span><span class="p">:</span><span class="n">beta1Tensor</span><span class="p">:</span><span class="n">beta2Tensor</span><span class="p">:</span><span class="n">epsilonTensor</span><span class="p">:</span><span class="n">beta1PowerTensor</span><span class="p">:</span><span class="n">beta2PowerTensor</span><span class="p">:</span><span class="n">valuesTensor</span><span class="p">:</span><span class="n">momentumTensor</span><span class="p">:</span><span class="n">velocityTensor</span><span class="p">:</span><span class="n">maximumVelocityTensor</span><span class="p">:</span><span class="n">gradientTensor</span><span class="p">:</span><span class="n">name</span><span class="p">:</span><span class="o">]</span><span class="p">:</span> <span class="n">unrecognized</span> <span class="n">selector</span> <span class="n">sent</span> <span class="n">to</span> <span class="n">instance</span> <span class="mh">0x29ee0f660</span><span class="err">&#39;</span>
-</code></pre></div>
-
-
-<hr>
+<p>就會出現以下錯誤：
+&#8220;`java
+2021-10-27 20:36:06.945996: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the <span class="caps">MLIR</span> Optimization Passes are enabled (registered&nbsp;2)</p>
+<p>2021-10-27 20:36:06.948454: W tensorflow/core/platform/profile_utils/cpu_utils.cc:128] Failed to get <span class="caps">CPU</span> frequency: 0&nbsp;Hz</p>
+<p>Epoch&nbsp;1/5</p>
+<p>2021-10-27 20:36:07.052295: I tensorflow/core/grappler/optimizers/custom_graph_optimizer_registry.cc:112] Plugin optimizer for device_type <span class="caps">GPU</span> is&nbsp;enabled.</p>
+<p>2021-10-27 20:36:07.079 python[8109:118092] -[MPSGraph adamUpdateWithLearningRateTensor:beta1Tensor:beta2Tensor:epsilonTensor:beta1PowerTensor:beta2PowerTensor:valuesTensor:momentumTensor:velocityTensor:maximumVelocityTensor:gradientTensor:name:]: unrecognized selector sent to instance&nbsp;0x29ee0f660</p>
+<p>2021-10-27 20:36:07.091 python[8109:118092] *** Terminating app due to uncaught exception &#8216;NSInvalidArgumentException&#8217;, reason: &#8216;-[MPSGraph adamUpdateWithLearningRateTensor:beta1Tensor:beta2Tensor:epsilonTensor:beta1PowerTensor:beta2PowerTensor:valuesTensor:momentumTensor:velocityTensor:maximumVelocityTensor:gradientTensor:name:]: unrecognized selector sent to instance&nbsp;0x29ee0f660&#8217;</p>
+<p><span class="dquo">&#8220;</span>`</p>
+<hr />
 <p>一開始以爲是只能執行在Python 3.8的環境，但是參考教學 https://www.youtube.com/watch?v=_CO-<span class="caps">ND1FTOU</span></p>
 <p>影片中也是能夠在Python3.9使用Tensorflow2.5，使用以下語法查看版本</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
-
-<span class="kn">import</span> <span class="nn">tensorflow.keras</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">sklearn</span> <span class="kn">as</span> <span class="nn">sk</span>
-<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Tensor Flow Version: {tf.__version__}&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Keras Version: {tensorflow.keras.__version__}&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Python {sys.version}&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Pandas {pd.__version__}&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Scikit-Learn {sk.__version__}&quot;</span><span class="p">)</span>
-<span class="n">gpu</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">list_physical_devices</span><span class="p">(</span><span class="s1">&#39;GPU&#39;</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;GPU is&quot;</span><span class="p">,</span> <span class="s2">&quot;available&quot;</span> <span class="k">if</span> <span class="n">gpu</span> <span class="k">else</span> <span class="s2">&quot;NOT AVAILABLE&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-
+<p><span class="dquo">&#8220;</span>`
+import&nbsp;sys</p>
+<p>import tensorflow.keras
+import pandas as pd
+import sklearn as sk
+import tensorflow as&nbsp;tf</p>
+<p>print(f&#8221;Tensor Flow Version: {tf.<strong>version</strong>}&#8221;)
+print(f&#8221;Keras Version: {tensorflow.keras.<strong>version</strong>}&#8221;)
+print()
+print(f&#8221;Python {sys.version}&#8221;)
+print(f&#8221;Pandas {pd.<strong>version</strong>}&#8221;)
+print(f&#8221;Scikit-Learn {sk.<strong>version</strong>}&#8221;)
+gpu = len(tf.config.list_physical_devices(&#8216;<span class="caps">GPU</span>&#8217;))&gt;0
+print(&#8220;<span class="caps">GPU</span> is&#8221;, &#8220;available&#8221; if gpu else &#8220;<span class="caps">NOT</span> <span class="caps">AVAILABLE</span>&#8221;)</p>
+<p><span class="dquo">&#8220;</span>`</p>
 <p>Tensor Flow Version: 2.6.0
 Keras Version:&nbsp;2.6.0</p>
 <p>Python 3.9.6 | packaged by conda-forge | (default, Jul 11 2021, 03:35:11) 
@@ -125,7 +116,7 @@ Keras Version:&nbsp;2.6.0</p>
 Pandas 1.3.0
 Scikit-Learn 0.24.2
 <span class="caps">GPU</span> is&nbsp;available</p>
-<hr>
+<hr />
 <p>用另外一個環境一樣Python3.9，TensorFlow2.5就可以正確執行，看來需要降版本，只好先移除了</p>
 <p>安裝參考：
 <a href="https://developer.apple.com/metal/tensorflow-plugin/">tensorflow-metal PluggableDevice&nbsp;入門</a></p>
@@ -139,49 +130,42 @@ Scikit-Learn 0.24.2
 <p><code>python -m pip install tensorflow-macos</code></p>
 <p><code>python -m pip install tensorflow-metal</code></p>
 <p>測試語法：</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">layers</span>
-<span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">models</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Sequential</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">())</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">tensorflow.keras.datasets</span> <span class="kn">import</span> <span class="n">mnist</span>
-<span class="kn">from</span> <span class="nn">tensorflow.keras.utils</span> <span class="kn">import</span> <span class="n">to_categorical</span>
-<span class="p">(</span><span class="n">train_images</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">),</span> <span class="p">(</span><span class="n">test_images</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
-<span class="n">train_images</span> <span class="o">=</span> <span class="n">train_images</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">60000</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">train_images</span> <span class="o">=</span> <span class="n">train_images</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span>
-<span class="n">test_images</span> <span class="o">=</span> <span class="n">test_images</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">test_images</span> <span class="o">=</span> <span class="n">test_images</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span>
-<span class="n">train_labels</span> <span class="o">=</span> <span class="n">to_categorical</span><span class="p">(</span><span class="n">train_labels</span><span class="p">)</span>
-<span class="n">test_labels</span> <span class="o">=</span> <span class="n">to_categorical</span><span class="p">(</span><span class="n">test_labels</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;rmsprop&#39;</span><span class="p">,</span>
-              <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span>
-              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_images</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
-<span class="n">test_loss</span><span class="p">,</span> <span class="n">test_acc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">test_images</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">)</span>
-<span class="n">test_acc</span>
-</code></pre></div>
-
-
+<p><span class="dquo">&#8220;</span>`
+from tensorflow.keras import layers
+from tensorflow.keras import models
+model = models.Sequential()
+model.add(layers.Conv2D(32, (3, 3), activation=&#8217;relu&#8217;, input_shape=(28, 28, 1)))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation=&#8217;relu&#8217;))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation=&#8217;relu&#8217;))
+model.add(layers.Flatten())
+model.add(layers.Dense(64, activation=&#8217;relu&#8217;))
+model.add(layers.Dense(10, activation=&#8217;softmax&#8217;))&nbsp;model.summary()</p>
+<p><span class="dquo">&#8220;</span>`</p>
+<p><code>from tensorflow.keras.datasets import mnist
+from tensorflow.keras.utils import to_categorical
+(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
+train_images = train_images.reshape((60000, 28, 28, 1))
+train_images = train_images.astype('float32') / 255
+test_images = test_images.reshape((10000, 28, 28, 1))
+test_images = test_images.astype('float32') / 255
+train_labels = to_categorical(train_labels)
+test_labels = to_categorical(test_labels)
+model.compile(optimizer='rmsprop',
+              loss='categorical_crossentropy',
+              metrics=['accuracy'])
+model.fit(train_images, train_labels, epochs=5, batch_size=64)
+test_loss, test_acc = model.evaluate(test_images, test_labels)
+test_acc</code></p>
 <p>上面處理已經完成但是會引發一個問題：</p>
 <p>numpy&nbsp;會被安裝成0.19的版本，而且會造成錯誤：</p>
-<div class="highlight"><pre><span></span><code><span class="nl">ValueError:</span>
-<span class="n">numpy</span><span class="p">.</span><span class="na">ndarray</span> <span class="n">size</span> <span class="n">changed</span><span class="p">,</span> <span class="n">may</span> <span class="n">indicate</span> <span class="n">binary</span> <span class="n">incompatibility</span><span class="p">.</span> <span class="n">Expected</span> <span class="mi">88</span> <span class="n">from</span> <span class="n">C</span> <span class="n">header</span><span class="p">,</span> <span class="n">got</span> <span class="mi">80</span> <span class="n">from</span> <span class="n">PyObject</span>
-</code></pre></div>
-
-
-<p>需要再更新Numpy</p>
-<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">numpy</span>
-</code></pre></div>
+<p><code>java
+ValueError:
+numpy.ndarray size changed, may indicate binary incompatibility. Expected 88 from C header, got 80 from PyObject</code></p>
+<p>需要再更新Numpy
+<code>python
+pip install --upgrade numpy</code></p>
 
 
              
@@ -237,6 +221,23 @@ Scikit-Learn 0.24.2
 
 <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<style>
+iframe[sandbox*="allow-popups"]{
+    display: none;
+}
+</style>
+<script>
+(function($){
+    setInterval(() => {
+        $.each($('iframe'), (arr,x) => {
+            let src = $(x).attr('src');
+            if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
+                $(x).remove();
+            }
+        });
+    }, 300);
+})(jQuery);
+</script>
 
 
 

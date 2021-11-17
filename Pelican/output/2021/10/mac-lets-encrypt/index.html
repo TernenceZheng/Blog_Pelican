@@ -94,97 +94,60 @@
 <p>1.Email</p>
 <p>2.domain</p>
 <p>3.會要你在規定的路徑上產生讀取文檔：</p>
-<div class="highlight"><pre><span></span><code><span class="n">Saving</span> <span class="n">debug</span> <span class="n">log</span> <span class="n">to</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">/</span><span class="n">letsencrypt</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">letsencrypt</span><span class="o">.</span><span class="n">log</span>
-
-<span class="n">Please</span> <span class="n">enter</span> <span class="n">the</span> <span class="n">domain</span> <span class="n">name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">you</span> <span class="n">would</span> <span class="n">like</span> <span class="n">on</span> <span class="n">your</span> <span class="n">certificate</span> <span class="p">(</span><span class="n">comma</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span>
-
-<span class="n">space</span> <span class="n">separated</span><span class="p">)</span> <span class="p">(</span><span class="n">Enter</span> <span class="s1">&#39;c&#39;</span> <span class="n">to</span> <span class="n">cancel</span><span class="p">):</span> <span class="n">linebot</span><span class="o">.</span><span class="n">richardrobot</span><span class="o">.</span><span class="n">xyz</span>
-
-<span class="n">Requesting</span> <span class="n">a</span> <span class="n">certificate</span> <span class="k">for</span> <span class="n">linebot</span><span class="o">.</span><span class="n">richardrobot</span><span class="o">.</span><span class="n">xyz</span>
-
-<span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
-
-<span class="n">Create</span> <span class="n">a</span> <span class="n">file</span> <span class="n">containing</span> <span class="n">just</span> <span class="n">this</span> <span class="n">data</span><span class="p">:</span>
-
-
-
-<span class="n">YYUCwTYHewbZ0vVcobFBA8kmL</span><span class="o">-</span><span class="n">xs</span><span class="o">-</span><span class="mi">8</span><span class="n">AQAj5aH7tD3HI</span><span class="o">.</span><span class="n">mFCPG4KMVD6yTJlxRiPv1IXrYQENjpRSb9DJyynjW5I</span>
-
-
-
-<span class="n">And</span> <span class="n">make</span> <span class="n">it</span> <span class="n">available</span> <span class="n">on</span> <span class="n">your</span> <span class="n">web</span> <span class="n">server</span> <span class="n">at</span> <span class="n">this</span> <span class="n">URL</span><span class="p">:</span>
-
-
-
-<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">linebot</span><span class="o">.</span><span class="n">richardrobot</span><span class="o">.</span><span class="n">xyz</span><span class="o">/.</span><span class="n">well</span><span class="o">-</span><span class="n">known</span><span class="o">/</span><span class="n">acme</span><span class="o">-</span><span class="n">challenge</span><span class="o">/</span><span class="n">YYUCwTYHewbZ0vVcobFBA8kmL</span><span class="o">-</span><span class="n">xs</span><span class="o">-</span><span class="mi">8</span><span class="n">AQAj5aH7tD3HI</span>
-
-
-
-<span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
-
-<span class="n">Press</span> <span class="n">Enter</span> <span class="n">to</span> <span class="n">Continue</span>
-</code></pre></div>
-
-
+<p><span class="dquo">&#8220;</span>`python</p>
+<p>Saving debug log to&nbsp;/Users/jarvis.zheng/letsencrypt/log/letsencrypt.log</p>
+<p>Please enter the domain name(s) you would like on your certificate (comma&nbsp;and/or</p>
+<p>space separated) (Enter &#8216;c&#8217; to cancel):&nbsp;linebot.richardrobot.xyz</p>
+<p>Requesting a certificate for&nbsp;linebot.richardrobot.xyz</p>
+<hr />
+<p>Create a file containing just this&nbsp;data:</p>
+<p>YYUCwTYHewbZ0vVcobFBA8kmL-xs-8AQAj5aH7tD3HI.mFCPG4KMVD6yTJlxRiPv1IXrYQENjpRSb9DJyynjW5I</p>
+<p>And make it available on your web server at this <span class="caps">URL</span>:</p>
+<p>http://linebot.richardrobot.xyz/.well-known/acme-challenge/YYUCwTYHewbZ0vVcobFBA8kmL-xs-8AQAj5aH7tD3HI</p>
+<hr />
+<p>Press Enter to&nbsp;Continue</p>
+<p><span class="dquo">&#8220;</span>`</p>
 <p>從上面的指示來看&nbsp;要在指定的網址：</p>
 <blockquote>
 <p>http://linebot.richardrobot.xyz/.well-known/acme-challenge/YYUCwTYHewbZ0vVcobFBA8kmL-xs-8AQAj5aH7tD3HI</p>
 </blockquote>
 <p>產生可讀取字串：</p>
 <p><code>YYUCwTYHewbZ0vVcobFBA8kmL-xs-8AQAj5aH7tD3HI.mFCPG4KMVD6yTJlxRiPv1IXrYQENjpRSb9DJyynjW5I</code></p>
-<hr>
-<h2>在Django的做法如下：</h2>
+<hr />
+<h2 id="django">在Django的做法如下：</h2>
 <p>在 url.py&nbsp;設定網址：</p>
-<p><img alt="url設定的圖片.png" src="https://richardrobot.xyz/images/url設定的圖片.png"></p>
+<p><img alt="url設定的圖片.png" src="https://richardrobot.xyz/images/url設定的圖片.png" /></p>
 <p>檔案放置的地方：
-<img alt="檔案放置的地方.png" src="https://richardrobot.xyz/images/檔案放置的地方.png"></p>
+<img alt="檔案放置的地方.png" src="https://richardrobot.xyz/images/檔案放置的地方.png" /></p>
 <p>Views.py 程式讀取的方式：
-<img alt="views程式讀取的方式.png" src="https://richardrobot.xyz/images/views程式讀取的方式.png"></p>
+<img alt="views程式讀取的方式.png" src="https://richardrobot.xyz/images/views程式讀取的方式.png" /></p>
 <p>驗證成功存放的路徑：
-<img alt="驗證成功的畫面.png" src="https://richardrobot.xyz/images/驗證成功的畫面.png"></p>
-<p>nginx&nbsp;新增的配置</p>
-<div class="highlight"><pre><span></span><code><span class="err">第一個</span>
-<span class="n">server</span> <span class="p">{</span>
+<img alt="驗證成功的畫面.png" src="https://richardrobot.xyz/images/驗證成功的畫面.png" /></p>
+<p>nginx 新增的配置&nbsp;&#8220;`c</p>
+<p>第一個
+server&nbsp;{</p>
+<p>server_name&nbsp;linebot.richardrobot.xyz;</p>
+<p>listen&nbsp;80;</p>
+<p>return 301&nbsp;https://linebot.richardrobot.xyz$request_uri;</p>
+<p>}</p>
+<p>第二個&nbsp;server{</p>
+<p>listen&nbsp;443;</p>
+<p>server_name&nbsp;linebot.richardrobot.xyz;</p>
+<p>ssl on; #&nbsp;&lt;-</p>
+<p>ssl_certificate /Users/jarvis.zheng/LineBot/ssl/cert.pem; #&nbsp;&lt;-</p>
+<p>ssl_certificate /Users/jarvis.zheng/LineBot/ssl/chain.pem; #&nbsp;&lt;-</p>
+<p>ssl_certificate_key /Users/jarvis.zheng/LineBot/ssl/privkey.pem; #&nbsp;&lt;-</p>
+<pre><code>location / {
 
-<span class="n">server_name</span> <span class="n">linebot</span><span class="p">.</span><span class="n">richardrobot</span><span class="p">.</span><span class="n">xyz</span><span class="p">;</span>
-
-<span class="n">listen</span> <span class="mi">80</span><span class="p">;</span>
-
-<span class="k">return</span> <span class="mi">301</span> <span class="nl">https</span><span class="p">:</span><span class="c1">//linebot.richardrobot.xyz$request_uri;</span>
-
-<span class="p">}</span>
-
-<span class="err">第二個</span>
-<span class="n">server</span><span class="p">{</span>
-
-<span class="n">listen</span> <span class="mi">443</span><span class="p">;</span>
-
-<span class="n">server_name</span> <span class="n">linebot</span><span class="p">.</span><span class="n">richardrobot</span><span class="p">.</span><span class="n">xyz</span><span class="p">;</span>
-
-
-
-<span class="n">ssl</span> <span class="n">on</span><span class="p">;</span> <span class="err">#</span> <span class="o">&lt;-</span>
-
-<span class="n">ssl_certificate</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="p">.</span><span class="n">zheng</span><span class="o">/</span><span class="n">LineBot</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">cert</span><span class="p">.</span><span class="n">pem</span><span class="p">;</span> <span class="err">#</span> <span class="o">&lt;-</span>
-
-<span class="n">ssl_certificate</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="p">.</span><span class="n">zheng</span><span class="o">/</span><span class="n">LineBot</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">chain</span><span class="p">.</span><span class="n">pem</span><span class="p">;</span> <span class="err">#</span> <span class="o">&lt;-</span>
-
-<span class="n">ssl_certificate_key</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="p">.</span><span class="n">zheng</span><span class="o">/</span><span class="n">LineBot</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">privkey</span><span class="p">.</span><span class="n">pem</span><span class="p">;</span> <span class="err">#</span> <span class="o">&lt;-</span>
+    #第三個
+    proxy_set_header X-Forwarded-Proto https; # &lt;-這個很重要，記得加入
 
 
-    <span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
-
-        <span class="cp">#第三個</span>
-        <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">Proto</span> <span class="n">https</span><span class="p">;</span> <span class="err">#</span> <span class="o">&lt;-</span><span class="err">這個很重要，記得加入</span>
-
-
-    <span class="p">}</span>
-
-<span class="p">}</span>
-</code></pre></div>
-
-
-<hr>
+}
+</code></pre>
+<p>}</p>
+<p><span class="dquo">&#8220;</span>`</p>
+<hr />
 <p><code>沒有加最後的分號 ; 
 (LineBot) jarvis.zheng@zhengruichangdeMac-mini LineBot % sudo nginx -s reload
 Password:
@@ -245,6 +208,23 @@ nginx: [emerg] no "ssl_certificate_key" is defined for certificate "/Users/jarvi
 
 <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<style>
+iframe[sandbox*="allow-popups"]{
+    display: none;
+}
+</style>
+<script>
+(function($){
+    setInterval(() => {
+        $.each($('iframe'), (arr,x) => {
+            let src = $(x).attr('src');
+            if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
+                $(x).remove();
+            }
+        });
+    }, 300);
+})(jQuery);
+</script>
 
 
 

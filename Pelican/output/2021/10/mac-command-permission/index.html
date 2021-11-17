@@ -81,7 +81,7 @@
         <div class="span8 offset2 article-content">
             
             <p>寫好了可以執行的發佈語法，點擊執行卻出現這個</p>
-<p><img alt="副檔名command無法執行.png" src="https://richardrobot.xyz/images/副檔名command無法執行.png"></p>
+<p><img alt="副檔名command無法執行.png" src="https://richardrobot.xyz/images/副檔名command無法執行.png" /></p>
 <p>需要另外給予權限：<code>chmod +x batch_notes_script.command</code></p>
 
 
@@ -138,6 +138,23 @@
 
 <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<style>
+iframe[sandbox*="allow-popups"]{
+    display: none;
+}
+</style>
+<script>
+(function($){
+    setInterval(() => {
+        $.each($('iframe'), (arr,x) => {
+            let src = $(x).attr('src');
+            if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
+                $(x).remove();
+            }
+        });
+    }, 300);
+})(jQuery);
+</script>
 
 
 
@@ -153,7 +170,7 @@
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://richardrobot.xyz/2021/09/git-sourcetree-permission/" title="Previous: SourceTree權限問題">SourceTree權限問題</a></li>
+                <li class="previous-article">« <a href="https://richardrobot.xyz/2021/10/obsidian-to-pelican/" title="Previous: Obsidian筆記同步到Blog排程">Obsidian筆記同步到Blog排程</a></li>
                 <li class="next-article"><a href="https://richardrobot.xyz/2021/10/git-ssh-mac-token/" title="Next: Mac重新開機SSH Token失效">Mac重新開機SSH Token失效</a> »</li>
             </ul>
             </nav>

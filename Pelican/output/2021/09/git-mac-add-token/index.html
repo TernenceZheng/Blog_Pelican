@@ -80,11 +80,11 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <hr>
+            <hr />
 <p>2021/09/14 今天在mac 上面在 git clone&nbsp;https://github.com/TernenceZheng/ObsidianNote.git</p>
-<hr>
-<p><img alt="Mac上改變Git認證模式.png" src="https://richardrobot.xyz/images/Mac上改變Git認證模式.png"></p>
-<hr>
+<hr />
+<p><img alt="Mac上改變Git認證模式.png" src="https://richardrobot.xyz/images/Mac上改變Git認證模式.png" /></p>
+<hr />
 <p>結果我的mac顯示無法用使用者帳號密碼去登入驗證</p>
 <p><code>'Mac上面錯誤訊息'
 Cloning into 'ObsidianNote'...
@@ -94,11 +94,11 @@ remote: Support for password authentication was removed on August 13, 2021. Plea
 remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
 fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.git/'</code></p>
 <p>看了文章原來要去用GitHub的Token驗證方式才可以，舊的帳號密碼已經不行了，下面是Github產生的Token
-<img alt="Pasted image 20210914164331.png" src="https://richardrobot.xyz/images/Pasted image 20210914164331.png"></p>
+<img alt="Pasted image 20210914164331.png" src="https://richardrobot.xyz/images/Pasted image 20210914164331.png" /></p>
 <p>把拿到的Token註冊在MacOS的鑰匙圈如下圖</p>
-<hr>
+<hr />
 <p>![[Pic2021-09-144.54.10.png]]</p>
-<hr>
+<hr />
 <p>就完成Token的驗證註冊，然後git&nbsp;clone就OK了</p>
 <p>參考資料：<a href="https://myctw.github.io/post/bd72.html">Mac 上改變 Git&nbsp;認證模式</a></p>
 <p>相關主題：
@@ -159,6 +159,23 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 
 <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<style>
+iframe[sandbox*="allow-popups"]{
+    display: none;
+}
+</style>
+<script>
+(function($){
+    setInterval(() => {
+        $.each($('iframe'), (arr,x) => {
+            let src = $(x).attr('src');
+            if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
+                $(x).remove();
+            }
+        });
+    }, 300);
+})(jQuery);
+</script>
 
 
 

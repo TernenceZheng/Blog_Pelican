@@ -95,78 +95,67 @@
 <li><code>SOCIALACCOUNT_PROVIDERS</code>這是要設定讀取使用者的資料</li>
 <li>在站臺的url.py設定路徑</li>
 </ol>
-<p><img alt="settings設定參數1.png" src="https://richardrobot.xyz/images/settings設定參數1.png">
-<img alt="settings設定參數二.png" src="https://richardrobot.xyz/images/settings設定參數二.png"></p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-
-<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span><span class="n">include</span>
-
-<span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">url</span>
-
-<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
-
-    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;accounts/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;allauth.urls&#39;</span><span class="p">)),</span>
-<span class="p">]</span>
-</code></pre></div>
-
-
-<hr>
+<p><img alt="settings設定參數1.png" src="https://richardrobot.xyz/images/settings設定參數1.png" />
+<img alt="settings設定參數二.png" src="https://richardrobot.xyz/images/settings設定參數二.png" />
+<span class="dquo">&#8220;</span>`python
+from django.contrib import&nbsp;admin</p>
+<p>from django.urls import&nbsp;path,include</p>
+<p>from django.conf.urls import&nbsp;url</p>
+<p>urlpatterns = [
+    path(&#8216;admin/&#8217;,&nbsp;admin.site.urls),</p>
+<pre><code>path('accounts/', include('allauth.urls')),
+</code></pre>
+<p>]&nbsp;&#8220;`</p>
+<hr />
 <p>以上設定完成要執行Django語法來產生資料表：</p>
 <p><code>python manage.py makemigrations</code></p>
 <p><code>python manage.py migrate</code></p>
 <p><code>python manage.py runserver</code></p>
-<hr>
+<hr />
 <p>以上就是Django的設定部分，另外LineLogin的設定需要注意的細節，因爲django-allauth已經將送LineLogin授權路徑參數自動拼裝好了，裏面有些規範需要注意</p>
 <p>在送授權的部分，django-allauth定義的callbackURL已經規範，如下圖
-<img alt="djangoallauth.png" src="https://richardrobot.xyz/images/djangoallauth.png">
+<img alt="djangoallauth.png" src="https://richardrobot.xyz/images/djangoallauth.png" />
 <a href="https://django-allauth.readthedocs.io/en/latest/providers.html#line">https://django-allauth.readthedocs.io/en/latest/providers.html#line</a></p>
 <p>上面的 Callback <span class="caps">URL</span> 必須與LINE Login 內的設定相同
-<img alt="lineloginapi的設定.png" src="https://richardrobot.xyz/images/lineloginapi的設定.png"></p>
-<hr>
+<img alt="lineloginapi的設定.png" src="https://richardrobot.xyz/images/lineloginapi的設定.png" /></p>
+<hr />
 <p>另外剩下的就是要設定KEY與ClientID:</p>
 <p>去內部後臺設定LINE SecrtKEY
-<img alt="linelogin內部後臺設定.png" src="https://richardrobot.xyz/images/linelogin內部後臺設定.png"></p>
+<img alt="linelogin內部後臺設定.png" src="https://richardrobot.xyz/images/linelogin內部後臺設定.png" /></p>
 <p>回到頁面去，雖然沒有寫什麼頁面，可是 django-allauth已經內建了許多頁面可以直接查看
-<img alt="linelogin預設路徑頁面.png" src="https://richardrobot.xyz/images/linelogin預設路徑頁面.png">
-<img alt="linelogin預設登入畫面.png" src="https://richardrobot.xyz/images/linelogin預設登入畫面.png"></p>
+<img alt="linelogin預設路徑頁面.png" src="https://richardrobot.xyz/images/linelogin預設路徑頁面.png" />
+<img alt="linelogin預設登入畫面.png" src="https://richardrobot.xyz/images/linelogin預設登入畫面.png" /></p>
 <p>以上就是完成初步的串街，內容套版需要再詳細實做與修改，另外在串街流程中發生的錯誤在導向到LineLogin畫面時出現 400 錯誤：
-<img alt="linelogin400錯誤情況.png" src="https://richardrobot.xyz/images/linelogin400錯誤情況.png"></p>
-<hr>
+<img alt="linelogin400錯誤情況.png" src="https://richardrobot.xyz/images/linelogin400錯誤情況.png" /></p>
+<hr />
 <p>這個問題的發生原因先查看了LineLogin的文件說明</p>
-<h2>要求授權</h2>
-<hr>
-<p>為進行使用者認證，並為 app 要求權限，請透過所需的 query parameter，如下面例子所示將使用者重新導向授權 <span class="caps">URL</span>。</p>
-<div class="highlight"><pre><span></span><code><span class="nl">https</span><span class="p">:</span><span class="c1">//access.line.me/oauth2/v2.1/authorize?</span>
-<span class="n">response_type</span><span class="o">=</span><span class="n">code</span>
-<span class="o">&amp;</span><span class="n">client_id</span><span class="o">=</span><span class="mi">1234567890</span>
-<span class="o">&amp;</span><span class="n">redirect_uri</span><span class="o">=</span><span class="n">https</span><span class="o">%</span><span class="mi">3</span><span class="n">A</span><span class="o">%</span><span class="mf">2F</span><span class="o">%</span><span class="mf">2F</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">%</span><span class="mf">2F</span><span class="n">auth</span>
-<span class="o">&amp;</span><span class="n">state</span><span class="o">=</span><span class="mi">12345</span><span class="n">abcde</span>
-<span class="o">&amp;</span><span class="n">scope</span><span class="o">=</span><span class="n">profile</span><span class="o">%</span><span class="mi">20</span><span class="n">openid</span>
-<span class="o">&amp;</span><span class="n">nonce</span><span class="o">=</span><span class="mi">09876</span><span class="n">xyz</span>
-</code></pre></div>
-
-
-<p><img alt="linelogin串街參數.png" src="https://richardrobot.xyz/images/linelogin串街參數.png"></p>
+<h2 id="_1">要求授權</h2>
+<hr />
+<p>為進行使用者認證，並為 app 要求權限，請透過所需的 query parameter，如下面例子所示將使用者重新導向授權 <span class="caps">URL</span>。
+<code>c
+https://access.line.me/oauth2/v2.1/authorize?
+response_type=code
+&amp;client_id=1234567890
+&amp;redirect_uri=https%3A%2F%2Fexample.com%2Fauth
+&amp;state=12345abcde
+&amp;scope=profile%20openid
+&amp;nonce=09876xyz</code></p>
+<p><img alt="linelogin串街參數.png" src="https://richardrobot.xyz/images/linelogin串街參數.png" /></p>
 <p><a href="https://developers.line.biz/zh-hant/docs/line-login/integrate-line-login/#making-an-authorization-request"><span class="caps">URL</span>&nbsp;的查詢屬性</a></p>
-<p>我的參數：</p>
-<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="k">access</span><span class="p">.</span><span class="n">line</span><span class="p">.</span><span class="n">me</span><span class="o">/</span><span class="n">oauth2</span><span class="o">/</span><span class="n">v2</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">authorize</span><span class="o">?</span>
-
-<span class="n">client_id</span><span class="o">=</span><span class="n">U2c2bde960c5d7723082f2b9a491f51e1</span>
-<span class="o">&amp;</span><span class="n">redirect_uri</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">linebot</span><span class="p">.</span><span class="n">richardrobot</span><span class="p">.</span><span class="n">xyz</span><span class="o">/</span><span class="n">accounts</span><span class="o">/</span><span class="n">line</span><span class="o">/</span><span class="n">login</span><span class="o">/</span><span class="n">callback</span><span class="o">/</span>
-<span class="o">&amp;</span><span class="k">scope</span><span class="o">=</span>
-<span class="o">&amp;</span><span class="n">response_type</span><span class="o">=</span><span class="n">code</span>
-<span class="o">&amp;</span><span class="k">state</span><span class="o">=</span><span class="n">BBwcp2EEdqnJ</span>
-</code></pre></div>
-
-
+<p>我的參數：
+&#8220;`&nbsp;https://access.line.me/oauth2/v2.1/authorize?</p>
+<p>client_id=U2c2bde960c5d7723082f2b9a491f51e1
+&amp;redirect_uri=http://linebot.richardrobot.xyz/accounts/line/login/callback/
+&amp;scope=
+&amp;response_type=code
+&amp;state=BBwcp2EEdqnJ&nbsp;&#8220;`</p>
 <p>錯誤問題1：client_id不對
 client_id ：<span class="caps">LINE</span> Login Channel 的 Channel <span class="caps">ID</span>
 錯誤問題2：scope沒有值&nbsp;scope：向用戶請求授予權限，也就是要求取得使用者的資料</p>
 <p>修正：
 1.在admin後臺修改設定
 2.在settings.py新增如下參數：
-<img alt="linelogin新增參數.png" src="https://richardrobot.xyz/images/linelogin新增參數.png"></p>
+<img alt="linelogin新增參數.png" src="https://richardrobot.xyz/images/linelogin新增參數.png" /></p>
 
 
              
@@ -222,6 +211,23 @@ client_id ：<span class="caps">LINE</span> Login Channel 的 Channel <span clas
 
 <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<style>
+iframe[sandbox*="allow-popups"]{
+    display: none;
+}
+</style>
+<script>
+(function($){
+    setInterval(() => {
+        $.each($('iframe'), (arr,x) => {
+            let src = $(x).attr('src');
+            if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
+                $(x).remove();
+            }
+        });
+    }, 300);
+})(jQuery);
+</script>
 
 
 
