@@ -86,7 +86,7 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ["plugins","./plugins"]
 
-PLUGINS = ['sitemap', 'neighbors','related_posts','representative_image','category_order','obsidian','render_math','more_categories','tipue_search']#,'tipue_search'
+PLUGINS = ['sitemap', 'neighbors','related_posts','representative_image','category_order','obsidian','render_math','more_categories','tipue_search','extract_toc']
 
 DIRECT_TEMPLATES = ['index', 'tags', 'search', 'categories', 'authors', 'archives']
 
@@ -97,6 +97,13 @@ TAGS_ORDER_BY = 'alphabetic'
 THEME = 'themes/elegant'
 
 STATIC_PATHS = ['images', 'extra']
+
+
+MARKDOWN = {
+  'extension_configs': {
+    'markdown.extensions.toc': {}
+  }
+}
 
 # Main Menu Items
 MAIN_MENU = True
