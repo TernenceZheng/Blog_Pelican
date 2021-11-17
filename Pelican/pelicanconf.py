@@ -99,11 +99,19 @@ THEME = 'themes/elegant'
 STATIC_PATHS = ['images', 'extra']
 
 
-# MARKDOWN = {
-#   'extension_configs': {
-#     'markdown.extensions.toc': {}
-#   }
-# }
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {
+            'css_class': 'highlight'
+        },
+        'markdown.extensions.extra': {},
+        'markdown.extensions.toc': {
+            'permalink': 'true'
+        },
+        'markdown.extensions.meta': {}
+    }
+}
+
 
 # Main Menu Items
 MAIN_MENU = True
