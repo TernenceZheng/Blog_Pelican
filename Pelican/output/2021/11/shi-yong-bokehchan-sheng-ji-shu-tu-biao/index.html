@@ -85,23 +85,26 @@
 <a href="https://www.finlab.tw/bokeh-stock-chart-with-technical-analysis/">Bokeh 探索頻道(2)~客製化技術圖表升級</a>
 <a href="https://www.jianshu.com/p/8b4f17950777">在 Django 上使用数据可视化利器&nbsp;Bokeh</a></p>
 </blockquote>
-<p><img alt="bokeh指標views圖.png" src="https://richardrobot.xyz/images/bokeh指標views圖.png" /></p>
-<hr />
+<p><img alt="bokeh指標views圖.png" src="https://richardrobot.xyz/images/bokeh指標views圖.png"></p>
+<hr>
 <p>參考老師的Blog文章，內附的程式碼就可以無痛升級美麗圖表，但是我架設在Django上，需要調整一下來顯示在Django頁面。</p>
-<p>在Django的View.py 上收先引用：
-&#8220;`
-from bokeh.embed import&nbsp;components</p>
-<p>from bokeh.resources import <span class="caps">CDN</span>&nbsp;&#8220;`</p>
+<p>在Django的View.py&nbsp;上收先引用：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">bokeh.embed</span> <span class="kn">import</span> <span class="n">components</span>
+
+<span class="kn">from</span> <span class="nn">bokeh.resources</span> <span class="kn">import</span> <span class="n">CDN</span>
+</code></pre></div>
+
+
 <p>在程式加入Blog內的function來產生資料跟已經畫好的圖表，使用components，產生javascript與 html區塊，最後在render頁面帶入參數
-<img alt="bokeh指標views圖1.png" src="https://richardrobot.xyz/images/bokeh指標views圖1.png" />
-<img alt="bokeh指標views圖2.png" src="https://richardrobot.xyz/images/bokeh指標views圖2.png" /></p>
+<img alt="bokeh指標views圖1.png" src="https://richardrobot.xyz/images/bokeh指標views圖1.png">
+<img alt="bokeh指標views圖2.png" src="https://richardrobot.xyz/images/bokeh指標views圖2.png"></p>
 <p>在Django的templates頁面上，下圖是圖表的Html的Div區塊
-<img alt="bokeh指標templates圖1.png" src="https://richardrobot.xyz/images/bokeh指標templates圖1.png" /></p>
-<hr />
+<img alt="bokeh指標templates圖1.png" src="https://richardrobot.xyz/images/bokeh指標templates圖1.png"></p>
+<hr>
 <p>下圖是在<code>script&gt;&lt;/script&gt;</code> 區塊中，先引用bokeh的js，我直接下載到我的本機，避免版本到時候又變了壞掉，最後使用bokeh產生的的javascript語法。
-<img alt="bokeh指標templates圖2.png" src="https://richardrobot.xyz/images/bokeh指標templates圖2.png" /></p>
+<img alt="bokeh指標templates圖2.png" src="https://richardrobot.xyz/images/bokeh指標templates圖2.png"></p>
 <p>就可以產生美美的圖了
-<img alt="bokeh指標總圖.png" src="https://richardrobot.xyz/images/bokeh指標總圖.png" /></p>
+<img alt="bokeh指標總圖.png" src="https://richardrobot.xyz/images/bokeh指標總圖.png"></p>
 
 
              

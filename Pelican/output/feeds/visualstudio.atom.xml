@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - VisualStudio</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/visualstudio.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2016-03-08T12:43:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>VS 常用內建快速鍵</title><link href="https://richardrobot.xyz/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;VS&lt;/span&gt;&amp;nbsp;常用內建快速鍵&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://richardrobot.xyz/images/Pasted image 20210917172329.png" /&gt;&lt;/p&gt;
-&lt;h1 id="_1"&gt;環境&lt;/h1&gt;
-&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - VisualStudio</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/visualstudio.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2016-03-08T12:43:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>VS 常用內建快速鍵</title><link href="https://richardrobot.xyz/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;VS&lt;/span&gt;&amp;nbsp;常用內建快速鍵&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://richardrobot.xyz/images/Pasted image 20210917172329.png"&gt;&lt;/p&gt;
+&lt;h1&gt;環境&lt;/h1&gt;
+&lt;hr&gt;
 &lt;p&gt;程式碼編輯器分頁切換 ：Ctrl+&lt;span class="caps"&gt;TAB&lt;/span&gt; 
 存檔：Ctrl + S 
 執行(debug)：F5
@@ -13,8 +13,8 @@
 切換斷點：F9 
 ==啟用/停用斷點==：&lt;code&gt;Ctrl + F9&lt;/code&gt;
 ==刪除所有斷點==：&lt;code&gt;Ctrl + Shift + F9&lt;/code&gt;&lt;/p&gt;
-&lt;h1 id="_2"&gt;編輯&lt;/h1&gt;
-&lt;hr /&gt;
+&lt;h1&gt;編輯&lt;/h1&gt;
+&lt;hr&gt;
 &lt;p&gt;==註解選取範圍==：&lt;code&gt;Ctrl+K,C&lt;/code&gt; 
 ==取消註解選取範圍==：&lt;code&gt;Ctrl+K,U&lt;/code&gt;
  ==自動縮排==：&lt;code&gt;選取範圍後，Alt + F8&lt;/code&gt;&lt;/p&gt;

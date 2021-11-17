@@ -81,35 +81,43 @@
         <div class="span8 offset2 article-content">
             
             <p>在 Linux上可以使用systemctl&nbsp;這個服務來開機就能自動啓動寫好的網站服務，等等其他的，但是在Mac上卻無法，使用supervisor還有Web畫面可以查看</p>
-<p><img alt="Supervisor服務畫面.png" src="https://richardrobot.xyz/images/Supervisor服務畫面.png" /></p>
-<h2 id="brew">透過brew來安裝：</h2>
+<p><img alt="Supervisor服務畫面.png" src="https://richardrobot.xyz/images/Supervisor服務畫面.png"></p>
+<h2>透過brew來安裝：</h2>
 <p><code>brew install supervisor</code></p>
-<h3 id="_1">設定檔路徑：</h3>
+<h3>設定檔路徑：</h3>
 <p>由於是Mac M1 的系統，homebrew已經將設定的路徑放在 <code>/opt/homebrew/etc</code></p>
 <p>如下圖，開啓 supervisor.conf&nbsp;檔案</p>
-<p><img alt="supervisor的ini設定畫面.png" src="https://richardrobot.xyz/images/supervisor的ini設定畫面.png" /></p>
+<p><img alt="supervisor的ini設定畫面.png" src="https://richardrobot.xyz/images/supervisor的ini設定畫面.png"></p>
 <p>可以註解前面的 <code>;</code> 符號來啓用設定&nbsp;:</p>
-<p>可以開啓 Web的畫面 啓用 登入帳號密碼
-<code>python
-[inet_http_server]          ; inet (TCP) server disabled by default
-port=127.0.0.1:9001         ; ip_address:port specifier, *:port for all iface
-username=test               ; default is no username (open server)
-password=123                ; default is no password (open server)</code></p>
+<p>可以開啓 Web的畫面 啓用&nbsp;登入帳號密碼</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">inet_http_server</span><span class="p">]</span>          <span class="p">;</span> <span class="n">inet</span> <span class="p">(</span><span class="n">TCP</span><span class="p">)</span> <span class="n">server</span> <span class="n">disabled</span> <span class="n">by</span> <span class="n">default</span>
+<span class="n">port</span><span class="o">=</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">9001</span>         <span class="p">;</span> <span class="n">ip_address</span><span class="p">:</span><span class="n">port</span> <span class="n">specifier</span><span class="p">,</span> <span class="o">*</span><span class="p">:</span><span class="n">port</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">iface</span>
+<span class="n">username</span><span class="o">=</span><span class="n">test</span>               <span class="p">;</span> <span class="n">default</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">username</span> <span class="p">(</span><span class="nb">open</span> <span class="n">server</span><span class="p">)</span>
+<span class="n">password</span><span class="o">=</span><span class="mi">123</span>                <span class="p">;</span> <span class="n">default</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">password</span> <span class="p">(</span><span class="nb">open</span> <span class="n">server</span><span class="p">)</span>
+</code></pre></div>
+
+
 <p>在最後加入客製化的設定檔：
 加入下面的設定，可以在/Process/  資料夾底下設定需要的Service檔，並且用 .ini&nbsp;爲副檔名</p>
-<p><span class="dquo">&#8220;</span>`java
-[include]
-files =&nbsp;/Users/jarvis.zheng/Process/*.ini</p>
-<p><span class="dquo">&#8220;</span>`</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">include</span><span class="o">]</span>
+<span class="n">files</span> <span class="o">=</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="p">.</span><span class="na">zheng</span><span class="o">/</span><span class="n">Process</span><span class="o">/*</span><span class="p">.</span><span class="na">ini</span>
+</code></pre></div>
+
+
 <p>已django網站爲例：</p>
-<p>command 程序啓動命令：使用gunicorn來當WebServer，使用參數檔 gunicorn.conf.py&nbsp;&#8220;`python</p>
-<p>[program:django_server]
-command=/Users/jarvis.zheng/miniforge3/envs/finlab/bin/gunicorn -c gunicorn.conf.py StockSecretary.wsgi
-process_name=%(program_name)s&nbsp;directory=/Users/jarvis.zheng/StockWeb/</p>
-<p><span class="dquo">&#8220;</span>`</p>
+<p>command 程序啓動命令：使用gunicorn來當WebServer，使用參數檔&nbsp;gunicorn.conf.py </p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">program</span><span class="p">:</span><span class="n">django_server</span><span class="p">]</span>
+<span class="n">command</span><span class="o">=/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">/</span><span class="n">miniforge3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">finlab</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">gunicorn</span> <span class="o">-</span><span class="n">c</span> <span class="n">gunicorn</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">py</span> <span class="n">StockSecretary</span><span class="o">.</span><span class="n">wsgi</span>
+<span class="n">process_name</span><span class="o">=%</span><span class="p">(</span><span class="n">program_name</span><span class="p">)</span><span class="n">s</span>
+<span class="n">directory</span><span class="o">=/</span><span class="n">Users</span><span class="o">/</span><span class="n">jarvis</span><span class="o">.</span><span class="n">zheng</span><span class="o">/</span><span class="n">StockWeb</span><span class="o">/</span>
+</code></pre></div>
+
+
 <p>啓動服務：</p>
-<p><code>python
-sudo brew services start supervisor</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">brew</span> <span class="n">services</span> <span class="n">start</span> <span class="n">supervisor</span>
+</code></pre></div>
+
+
 <p>參考資料：</p>
 <p><a href="https://hoohoo.top/blog/supervisor-instructions-for-use/"><span class="caps">SUPERVISOR</span>&nbsp;介紹與使用方式</a></p>
 <p><a href="https://aptro.github.io/server/architecture/2016/06/21/Jupyter-Notebook-Nginx-Setup.html">Jupyter Notebook and Nginx&nbsp;Setup</a></p>
