@@ -14,8 +14,8 @@
 &lt;li&gt;&lt;code&gt;SOCIALACCOUNT_PROVIDERS&lt;/code&gt;這是要設定讀取使用者的資料&lt;/li&gt;
 &lt;li&gt;在站臺的url.py設定路徑&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="settings設定參數1.png" src="https://richardrobot.xyz/images/settings設定參數1.png"&gt;
-&lt;img alt="settings設定參數二.png" src="https://richardrobot.xyz/images/settings設定參數二.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="settings設定參數1.png" src="https://richardrobot.xyz/images/settings設定參數1.png" /&gt;
+&lt;img alt="settings設定參數二.png" src="https://richardrobot.xyz/images/settings設定參數二.png" /&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.contrib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;admin&lt;/span&gt;
 
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.urls&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;include&lt;/span&gt;
@@ -30,31 +30,31 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;以上設定完成要執行Django語法來產生資料表：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;python manage.py makemigrations&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;python manage.py migrate&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;python manage.py runserver&lt;/code&gt;&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;以上就是Django的設定部分，另外LineLogin的設定需要注意的細節，因爲django-allauth已經將送LineLogin授權路徑參數自動拼裝好了，裏面有些規範需要注意&lt;/p&gt;
 &lt;p&gt;在送授權的部分，django-allauth定義的callbackURL已經規範，如下圖
-&lt;img alt="djangoallauth.png" src="https://richardrobot.xyz/images/djangoallauth.png"&gt;
+&lt;img alt="djangoallauth.png" src="https://richardrobot.xyz/images/djangoallauth.png" /&gt;
 &lt;a href="https://django-allauth.readthedocs.io/en/latest/providers.html#line"&gt;https://django-allauth.readthedocs.io/en/latest/providers.html#line&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;上面的 Callback &lt;span class="caps"&gt;URL&lt;/span&gt; 必須與LINE Login 內的設定相同
-&lt;img alt="lineloginapi的設定.png" src="https://richardrobot.xyz/images/lineloginapi的設定.png"&gt;&lt;/p&gt;
-&lt;hr&gt;
+&lt;img alt="lineloginapi的設定.png" src="https://richardrobot.xyz/images/lineloginapi的設定.png" /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;p&gt;另外剩下的就是要設定KEY與ClientID:&lt;/p&gt;
 &lt;p&gt;去內部後臺設定LINE SecrtKEY
-&lt;img alt="linelogin內部後臺設定.png" src="https://richardrobot.xyz/images/linelogin內部後臺設定.png"&gt;&lt;/p&gt;
+&lt;img alt="linelogin內部後臺設定.png" src="https://richardrobot.xyz/images/linelogin內部後臺設定.png" /&gt;&lt;/p&gt;
 &lt;p&gt;回到頁面去，雖然沒有寫什麼頁面，可是 django-allauth已經內建了許多頁面可以直接查看
-&lt;img alt="linelogin預設路徑頁面.png" src="https://richardrobot.xyz/images/linelogin預設路徑頁面.png"&gt;
-&lt;img alt="linelogin預設登入畫面.png" src="https://richardrobot.xyz/images/linelogin預設登入畫面.png"&gt;&lt;/p&gt;
+&lt;img alt="linelogin預設路徑頁面.png" src="https://richardrobot.xyz/images/linelogin預設路徑頁面.png" /&gt;
+&lt;img alt="linelogin預設登入畫面.png" src="https://richardrobot.xyz/images/linelogin預設登入畫面.png" /&gt;&lt;/p&gt;
 &lt;p&gt;以上就是完成初步的串街，內容套版需要再詳細實做與修改，另外在串街流程中發生的錯誤在導向到LineLogin畫面時出現 400 錯誤：
-&lt;img alt="linelogin400錯誤情況.png" src="https://richardrobot.xyz/images/linelogin400錯誤情況.png"&gt;&lt;/p&gt;
-&lt;hr&gt;
+&lt;img alt="linelogin400錯誤情況.png" src="https://richardrobot.xyz/images/linelogin400錯誤情況.png" /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;p&gt;這個問題的發生原因先查看了LineLogin的文件說明&lt;/p&gt;
-&lt;h2&gt;要求授權&lt;/h2&gt;
-&lt;hr&gt;
+&lt;h2 id="_1"&gt;要求授權&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;hr /&gt;
 &lt;p&gt;為進行使用者認證，並為 app 要求權限，請透過所需的 query parameter，如下面例子所示將使用者重新導向授權 &lt;span class="caps"&gt;URL&lt;/span&gt;。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//access.line.me/oauth2/v2.1/authorize?&lt;/span&gt;
 &lt;span class="n"&gt;response_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;
@@ -66,7 +66,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="linelogin串街參數.png" src="https://richardrobot.xyz/images/linelogin串街參數.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="linelogin串街參數.png" src="https://richardrobot.xyz/images/linelogin串街參數.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://developers.line.biz/zh-hant/docs/line-login/integrate-line-login/#making-an-authorization-request"&gt;&lt;span class="caps"&gt;URL&lt;/span&gt;&amp;nbsp;的查詢屬性&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;我的參數：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="k"&gt;access&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;me&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;oauth2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;v2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;authorize&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;
@@ -85,4 +85,4 @@ client_id ：&lt;span class="caps"&gt;LINE&lt;/span&gt; Login Channel 的 Channe
 &lt;p&gt;修正：
 1.在admin後臺修改設定
 2.在settings.py新增如下參數：
-&lt;img alt="linelogin新增參數.png" src="https://richardrobot.xyz/images/linelogin新增參數.png"&gt;&lt;/p&gt;</content><category term="LineBot"></category><category term="LineLoginAPI"></category><category term="Django"></category></entry></feed>
+&lt;img alt="linelogin新增參數.png" src="https://richardrobot.xyz/images/linelogin新增參數.png" /&gt;&lt;/p&gt;</content><category term="LineBot"></category><category term="LineLoginAPI"></category><category term="Django"></category></entry></feed>
