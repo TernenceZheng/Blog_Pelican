@@ -86,15 +86,17 @@
 <li>舊版的套件集合的Git，<a href="https://github.com/getpelican/pelican-plugins">舊版pelican-plugins</a></li>
 </ul>
 <p>導入套件的方式有兩種：&nbsp;如果您的插件不在可導入路徑中，您可以通過PLUGIN_PATHS設置指定路徑列表。如以下示例所示，PLUGIN_PATHS列表中的路徑可以是相對於設置文件的絕對路徑或相對路徑：</p>
-<p><img alt="Pasted image 20210929155953.png" src="https://richardrobot.xyz/images/Pasted image 20210929155953.png" /></p>
+<p><img alt="Pasted image 20210929155953.png" src="https://richardrobot.xyz/images/Pasted image 20210929155953.png"></p>
 <p>若是沒有依照設定的套件名稱放置程式會出現錯誤訊息：</p>
-<p><code>javascript
-(Pelican) jarvis.zheng@zhengruichangdeMac-mini Pelican % pelican content
-WARNING: %s usage in CATEGORY_FEED_ATOM is deprecated, use {slug} instead.
-ERROR: Cannot load plugin `related_posts`
-  | Cannot import plugin `related_posts`
-Done: Processed 7 articles, 0 drafts, 0 pages, 0 hidden pages and 0 draft pages in 0.20 seconds.</code></p>
-<h3 id="_1">總結</h3>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nx">Pelican</span><span class="p">)</span> <span class="nx">jarvis</span><span class="p">.</span><span class="nx">zheng</span><span class="err">@</span><span class="nx">zhengruichangdeMac</span><span class="o">-</span><span class="nx">mini</span> <span class="nx">Pelican</span> <span class="o">%</span> <span class="nx">pelican</span> <span class="nx">content</span>
+<span class="nx">WARNING</span><span class="o">:</span> <span class="o">%</span><span class="nx">s</span> <span class="nx">usage</span> <span class="k">in</span> <span class="nx">CATEGORY_FEED_ATOM</span> <span class="nx">is</span> <span class="nx">deprecated</span><span class="p">,</span> <span class="nx">use</span> <span class="p">{</span><span class="nx">slug</span><span class="p">}</span> <span class="nx">instead</span><span class="p">.</span>
+<span class="nx">ERROR</span><span class="o">:</span> <span class="nx">Cannot</span> <span class="nx">load</span> <span class="nx">plugin</span> <span class="sb">`related_posts`</span>
+  <span class="o">|</span> <span class="nx">Cannot</span> <span class="kr">import</span> <span class="nx">plugin</span> <span class="sb">`related_posts`</span>
+<span class="nx">Done</span><span class="o">:</span> <span class="nx">Processed</span> <span class="mi">7</span> <span class="nx">articles</span><span class="p">,</span> <span class="mi">0</span> <span class="nx">drafts</span><span class="p">,</span> <span class="mi">0</span> <span class="nx">pages</span><span class="p">,</span> <span class="mi">0</span> <span class="nx">hidden</span> <span class="nx">pages</span> <span class="nx">and</span> <span class="mi">0</span> <span class="nx">draft</span> <span class="nx">pages</span> <span class="k">in</span> <span class="mf">0.20</span> <span class="nx">seconds</span><span class="p">.</span>
+</code></pre></div>
+
+
+<h3>總結</h3>
 <blockquote>
 <p>套件的使用，在命名空間下的，要執行安裝語法，會直接搜尋環境下的套件程式，若是用舊版的，要去舊版git&nbsp;去clone下來，並且對照名稱放程式資料夾在/pelican-plugins</p>
 </blockquote>

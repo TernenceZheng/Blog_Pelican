@@ -79,48 +79,36 @@
 </div>
 
 <div class="row-fluid">
-    <div class="span2 table-of-content">
-        <nav>
-        <h4>Contents</h4>
-        <div class="toc">
-<ul>
-<li><a href="#_1">緣起</a></li>
-<li><a href="#_2">想法</a></li>
-<li><a href="#_3">流程：</a></li>
-</ul>
-</div>
-        </nav>
-    </div>
-    <div class="span8 article-content">
+        <div class="span8 offset2 article-content">
             
-            
-<h2 id="_1">緣起</h2>
+            <p>[<span class="caps">TOC</span>]</p>
+<h2>緣起</h2>
 <p>自從發現<a href="https://richardrobot.xyz/2021/09/obsidian/">Obsidian</a>這個東西之後，寫作筆記感覺很方便，而且使用Markdown語法，也剛好想建置Blog網站，用Python的Pelican套件，一樣是用Markdown來產生文章，就覺得兩個東西可以合併，既可以做筆記，又可以寫Blog。</p>
-<hr/>
-<h2 id="_2">想法</h2>
+<hr>
+<h2>想法</h2>
 <ol>
 <li>
 <p>obsidian的備份機制使用Github來完成，而且有套件可以自動Push
-<img alt="obsidian已安裝的第三方外掛.png" src="https://richardrobot.xyz/images/obsidian已安裝的第三方外掛.png"/></p>
+<img alt="obsidian已安裝的第三方外掛.png" src="https://richardrobot.xyz/images/obsidian已安裝的第三方外掛.png"></p>
 </li>
 <li>
-<p><a href="https://richardrobot.xyz/2021/10/git-netlify/">Blog發佈到netlify</a> 也是用GitHub</p>
+<p><a href="https://richardrobot.xyz/2021/10/git-netlify/">Blog發佈到netlify</a>&nbsp;也是用GitHub</p>
 </li>
 <li>
 <p>主要把Obsidian的MD檔同步到Pelican的content資料夾，再做一個發佈的程式就完成了</p>
 </li>
 </ol>
-<h2 id="_3">流程：</h2>
+<h2>流程：</h2>
 <ol>
 <li>Obsidian 的筆記寫完之後使用 <code>command + Shift  + P</code> 快捷鍵Push到GitHub：ObsidianNote。 參考：   <a href="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/">Obsidian快捷鍵設定</a></li>
 <li>複製檔案到如下圖</li>
 </ol>
 <p>右邊的 ==隨手筆記==資料夾 複製=&gt; ==/Pelican/content 底下==
-<img alt="顯示同步資料夾.png" src="https://richardrobot.xyz/images/顯示同步資料夾.png"/></p>
+<img alt="顯示同步資料夾.png" src="https://richardrobot.xyz/images/顯示同步資料夾.png"></p>
 <ol>
 <li>複製圖檔</li>
 <li>執行語法來生成頁面 <code>pelican content</code></li>
-<li>git commit <span class="amp">&amp;</span> push</li>
+<li>git commit <span class="amp">&amp;</span>&nbsp;push</li>
 </ol>
 
 
