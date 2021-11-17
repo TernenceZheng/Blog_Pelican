@@ -23,7 +23,7 @@ GOOGLE_ADSENSE = {
     }
 }
 
-GOOGLE_GLOBAL_SITE_TAG = 'G-Q3D0B7D25R' # Your Google Analytics 4 Property ID
+MODERN_GOOGLE_ANALYTICS = u'G-Q3D0B7D25R' # Your Google Analytics 4 Property ID
 
 
 DISQUS_SITENAME = "jarvissui-shou-bi-ji"
