@@ -1,173 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="zh_tw">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/custom.css" media="screen">
 
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
-    <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/stylesheet/style.min.css">
+        <meta name="author" content="Richard" />
 
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
-          href="https://richardrobot.xyz/theme/pygments/paraiso-dark.min.css">
+<meta name="keywords" content="Mac, Supervisor, Nginx, Mac, " />
 
-    <link rel="stylesheet" href="https://richardrobot.xyz/theme/tipuesearch/tipuesearch.min.css" />
+<meta property="og:title" content="Supervisor "/>
+<meta property="og:url" content="https://richardrobot.xyz/2021/10/mac-supervisor/" />
+<meta property="og:description" content="在Mac上使用supervisor來啓動服務" />
+<meta property="og:site_name" content="Richard隨手筆記" />
+<meta property="og:article:author" content="Richard" />
+<meta property="og:article:published_time" content="2021-10-05T19:22:00+08:00" />
+<meta name="twitter:title" content="Supervisor ">
+<meta name="twitter:description" content="在Mac上使用supervisor來啓動服務">
+<meta property="og:image" content="/images/Supervisor服務畫面.png" />
+<meta name="twitter:image" content="/images/Supervisor服務畫面.png" >
 
-  <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/font-awesome/css/fontawesome.css">
-  <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/font-awesome/css/brands.css">
-  <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/font-awesome/css/solid.css">
-
-    <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/static/custom.css">
-
-    <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 Atom">
-
-
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-
-  
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q3D0B7D25R');
-</script>
-<!-- End of Global site tag (gtag.js) - Google Analytics -->
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#66A29C">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#66A29C">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Microsoft EDGE -->
-    <meta name="msapplication-TileColor" content="#66A29C">
-
- 
-
-<meta name="author" content="Richard" />
-<meta name="description" content="在Mac上使用supervisor來啓動服務" />
-<meta name="keywords" content="Mac, Supervisor, Nginx">
-
-
-  <meta property="og:site_name" content="Richard隨手筆記"/>
-  <meta property="og:title" content="Supervisor"/>
-  <meta property="og:description" content="在Mac上使用supervisor來啓動服務"/>
-  <meta property="og:locale" content="en_US"/>
-  <meta property="og:url" content="https://richardrobot.xyz/2021/10/mac-supervisor/"/>
-  <meta property="og:type" content="article"/>
-  <meta property="article:published_time" content="2021-10-05 19:22:00+08:00"/>
-  <meta property="article:modified_time" content=""/>
-  <meta property="article:author" content="https://richardrobot.xyz/author/richard.html">
-  <meta property="article:section" content="Mac"/>
-  <meta property="article:tag" content="Mac"/>
-  <meta property="article:tag" content="Supervisor"/>
-  <meta property="article:tag" content="Nginx"/>
-  <meta property="og:image" content="/images/head_icon.jpg">
-
-  <title>Richard隨手筆記 &ndash; Supervisor</title>
-
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-4119678220307625",
-      enable_page_level_ads: true
-    });
-  </script>
-</head>
-<body class="light-theme">
-  <aside>
-    <div>
-      <a href="https://richardrobot.xyz/">
-        <img src="/images/head_icon.jpg" alt="" title="">
-      </a>
-
-      <h1>
-        <a href="https://richardrobot.xyz/"></a>
-      </h1>
-
-<p>紙上得來終覺淺，絕知此事要躬行</p>
-        <form class="navbar-search" action="https://richardrobot.xyz/search.html" role="search">
-          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
-        </form>
-
-      <nav>
-        <ul class="list">
+        <title>Supervisor  · Richard隨手筆記
+</title>
+        <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
 
 
 
-            <li>
-              <a target="_self" href="https://richardrobot.xyz" >網路概論</a>
-            </li>
-            <li>
-              <a target="_self" href="https://richardrobot.xyz" >程式語言</a>
-            </li>
-            <li>
-              <a target="_self" href="https://richardrobot.xyz" >微軟筆記</a>
-            </li>
-            <li>
-              <a target="_self" href="https://richardrobot.xyz/category/python.html" >Python筆記</a>
-            </li>
-            <li>
-              <a target="_self" href="https://richardrobot.xyz" >雜記</a>
-            </li>
-        </ul>
-      </nav>
-
-      <ul class="social">
-          <li>
-            <a  class="sc-linkedin" href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" target="_blank">
-              <i class="fab fa-linkedin"></i>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://richardrobot.xyz/"><span class=site-name>Richard隨手筆記</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://richardrobot.xyz
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://richardrobot.xyz/categories.html">Categories</a></li>
+                                <li ><a href="https://richardrobot.xyz/tags.html">Tags</a></li>
+                                <li ><a href="https://richardrobot.xyz/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="https://richardrobot.xyz/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://richardrobot.xyz/2021/10/mac-supervisor/">
+                Supervisor
             </a>
-          </li>
-          <li>
-            <a  class="sc-github" href="https://github.com/TernenceZheng" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-          <li>
-            <a  class="sc-envelope" href="mailto:andy711023@gmail.com" target="_blank">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </li>
-      </ul>
-    </div>
+        </h1>
+    </header>
+</div>
 
-  </aside>
-  <main>
-
-    <nav>
-      <a href="https://richardrobot.xyz/">Home</a>
-
-      <a href="/archives">文章時間軸</a>
-      <a href="/categories">類別</a>
-      <a href="/tags">標籤</a>
-
-      <a href="https://richardrobot.xyz/feeds/all.atom.xml">Atom</a>
-
-    </nav>
-
-<article class="single">
-  <header>
-      
-    <h1 id="mac-supervisor">Supervisor</h1>
-    <p>
-      Posted on 二 05 10月 2021 in <a href="https://richardrobot.xyz/category/mac.html">Mac</a>
-
-    </p>
-  </header>
-
-
-  <div>
-    <p>在 Linux上可以使用systemctl&nbsp;這個服務來開機就能自動啓動寫好的網站服務，等等其他的，但是在Mac上卻無法，使用supervisor還有Web畫面可以查看</p>
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <p>在 Linux上可以使用systemctl&nbsp;這個服務來開機就能自動啓動寫好的網站服務，等等其他的，但是在Mac上卻無法，使用supervisor還有Web畫面可以查看</p>
 <p><img alt="Supervisor服務畫面.png" src="https://richardrobot.xyz/images/Supervisor服務畫面.png"></p>
 <h2>透過brew來安裝：</h2>
 <p><code>brew install supervisor</code></p>
@@ -210,68 +123,247 @@
 <p><a href="https://aptro.github.io/server/architecture/2016/06/21/Jupyter-Notebook-Nginx-Setup.html">Jupyter Notebook and Nginx&nbsp;Setup</a></p>
 <p><a href="https://www.gushiciku.cn/pl/2MVd/zh-tw">Mac <span class="caps">OSX</span> 開機啟動應用&nbsp;(supervisor)</a></p>
 <p><a href="https://www.twblogs.net/a/5d6115a6bd9eee541c32bb6f">Python Tricks —— 使用 Supervisor 控制 Linux&nbsp;進程</a></p>
-  </div>
-  <div class="tag-cloud">
-    <p>
-      <a href="https://richardrobot.xyz/tag/mac.html">Mac</a>
-      <a href="https://richardrobot.xyz/tag/supervisor.html">Supervisor</a>
-      <a href="https://richardrobot.xyz/tag/nginx.html">Nginx</a>
-    </p>
-  </div>
+
+
+             
+ 
+            
+            
+            
 
 
 
-  <div class="related-posts">
-    <h4>You might enjoy</h4>
-    <ul class="related-posts">
-      <li><a href="https://richardrobot.xyz/2021/09/git-mac-add-token/">Mac 上改變 Git&nbsp;認證模式</a></li>
-    </ul>
-  </div>
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle ads-responsive"
-         data-ad-client="ca-pub-4119678220307625"
-         data-ad-slot="1234566"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 
-<!-- Disqus -->
-<div id="disqus_thread"></div>
-<script type="text/javascript">
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://richardrobot.xyz/2021/10/mac-supervisor/"
+                   href="https://richardrobot.xyz/2021/10/mac-supervisor/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
     var disqus_shortname = 'jarvissui-shou-bi-ji';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://richardrobot.xyz/2021/10/mac-supervisor/';
+    var disqus_url = 'https://richardrobot.xyz/2021/10/mac-supervisor/';
+
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<noscript>
-    Please enable JavaScript to view comments.
-</noscript>
-<!-- End Disqus -->
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Related Posts</h2>
+<ul class="related-posts-list">
+<li><a href="https://richardrobot.xyz/2021/09/git-mac-add-token/" title="Mac 上改變 Git 認證模式">Mac 上改變 Git 認證模式</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://richardrobot.xyz/2021/10/git-netlify/" title="Previous: Blog發佈到netlify">Blog發佈到netlify</a></li>
+                <li class="next-article"><a href="https://richardrobot.xyz/2021/10/lineloginchuan-jie/" title="Next: LineLogin串接">LineLogin串接</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2021-10-05T19:22:00+08:00">二 05 10月 2021</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#mac-ref">Mac</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://richardrobot.xyz/tags.html#mac-ref">Mac
+                    <span class="superscript">2</span>
+</a></li>
+                <li><a href="https://richardrobot.xyz/tags.html#nginx-ref">Nginx
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://richardrobot.xyz/tags.html#supervisor-ref">Supervisor
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+    <a href="https://github.com/TernenceZheng" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
 </article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-    <footer>
-<p>&copy; 2021 </p>
-<p>
-Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
-</p>    </footer>
-  </main>
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Richard隨手筆記</span> - 紙上得來終覺淺，絕知此事要躬行
+    </div>
 
 
 
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://richardrobot.xyz/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
 
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Richard隨手筆記 ",
-  "url" : "https://richardrobot.xyz",
-  "image": "/images/head_icon.jpg",
-  "description": ""
-}
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
 </script>
 
-</body>
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
 </html>
