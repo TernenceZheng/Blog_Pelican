@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - Pelican</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/pelican.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-10-05T16:36:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Blog發佈到netlify</title><link href="https://richardrobot.xyz/2021/10/git-netlify/" rel="alternate"></link><published>2021-10-05T16:36:00+08:00</published><updated>2021-10-05T16:36:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-05:/2021/10/git-netlify/</id><summary type="html">&lt;p&gt;使用Netlify來部署Pelican的程式&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Blog發佈到netlify.png" src="https://richardrobot.xyz/images/Blog發佈到netlify.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - Pelican</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/pelican.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-10-05T16:36:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Blog發佈到netlify</title><link href="https://richardrobot.xyz/2021/10/git-netlify/" rel="alternate"></link><published>2021-10-05T16:36:00+08:00</published><updated>2021-10-05T16:36:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-05:/2021/10/git-netlify/</id><summary type="html">&lt;p&gt;使用Netlify來部署Pelican的程式&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Blog發佈到netlify.png" src="https://richardrobot.xyz/images/Blog發佈到netlify.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Netlify&amp;nbsp;基本的說明：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="https://blog.alantsai.net/posts/2018/07/migrate-blog-to-ssg-demo-devops-8-netlify-free-static-site-hosting-service"&gt;netlify 超佛心的靜態網站hosting服務 -&amp;nbsp;不只做hosting還有更多&lt;/a&gt;&lt;/p&gt;
@@ -16,9 +16,9 @@
 &lt;p&gt;Build&amp;nbsp;command&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;pelican content -s publishconf.py&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;這個設定了反而不能，會出現錯誤，我的設定&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Netlify設定發佈建置.png" src="https://richardrobot.xyz/images/Netlify設定發佈建置.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Netlify設定發佈建置.png" src="https://richardrobot.xyz/images/Netlify設定發佈建置.png" /&gt;&lt;/p&gt;
 &lt;p&gt;另外需要把Netlify提供的Name Server 設定到 Namecheap&amp;nbsp;的DNS設定&lt;/p&gt;
 &lt;p&gt;Netlify的設定畫面：
-&lt;img alt="Netlify設定Domain的畫面.png" src="https://richardrobot.xyz/images/Netlify設定Domain的畫面.png"&gt;&lt;/p&gt;
+&lt;img alt="Netlify設定Domain的畫面.png" src="https://richardrobot.xyz/images/Netlify設定Domain的畫面.png" /&gt;&lt;/p&gt;
 &lt;p&gt;然後對應到：&lt;span class="caps"&gt;NAMESERVERS&lt;/span&gt;&amp;nbsp;選CustomDNS&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Namecheap設定的畫面.png" src="https://richardrobot.xyz/images/Namecheap設定的畫面.png"&gt;&lt;/p&gt;</content><category term="Pelican"></category><category term="Namecheap"></category><category term="Netlify"></category><category term="Git"></category></entry></feed>
+&lt;p&gt;&lt;img alt="Namecheap設定的畫面.png" src="https://richardrobot.xyz/images/Namecheap設定的畫面.png" /&gt;&lt;/p&gt;</content><category term="Pelican"></category><category term="Namecheap"></category><category term="Netlify"></category><category term="Git"></category></entry></feed>
