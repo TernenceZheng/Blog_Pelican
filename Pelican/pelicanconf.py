@@ -94,7 +94,7 @@ CATEGORIES_ORDER_BY = 'alphabetic'
 
 TAGS_ORDER_BY = 'alphabetic'
 
-THEME = 'themes/Flex'
+THEME = 'themes/elegant'
 
 STATIC_PATHS = ['images', 'extra']
 
