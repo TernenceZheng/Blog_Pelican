@@ -1,5 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-11-03T11:05:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>使用Bokeh產生技術圖表</title><link href="https://richardrobot.xyz/2021/11/shi-yong-bokehchan-sheng-ji-shu-tu-biao/" rel="alternate"></link><published>2021-11-03T11:05:00+08:00</published><updated>2021-11-03T11:05:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-03:/2021/11/shi-yong-bokehchan-sheng-ji-shu-tu-biao/</id><summary type="html">&lt;p&gt;在Django上套用Bokeh產生技術圖表&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-11-25T23:04:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Python爬蟲程式錯誤</title><link href="https://richardrobot.xyz/2021/11/python-crawler-error/" rel="alternate"></link><published>2021-11-25T23:04:00+08:00</published><updated>2021-11-25T23:04:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-25:/2021/11/python-crawler-error/</id><summary type="html">&lt;p&gt;ConnectionResetError(54,&amp;#8217;Connection reset by&amp;nbsp;peer&amp;#8217;))&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="traceback"&gt;錯誤發生的Traceback&lt;a class="headerlink" href="#traceback" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/urllib3/response.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;438&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;_error_catcher&lt;/span&gt;
+
+ &lt;span class="k"&gt;yield&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/urllib3/response.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;767&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;read_chunked&lt;/span&gt;
+
+ &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_handle_chunk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;amt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/urllib3/response.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;711&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;_handle_chunk&lt;/span&gt;
+
+ &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_fp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_safe_read&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;amt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/http/client.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;625&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;_safe_read&lt;/span&gt;
+
+ &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;min&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;amt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MAXAMOUNT&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/socket.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;704&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;readinto&lt;/span&gt;
+
+ &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_sock&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;recv_into&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/ssl.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;1241&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;recv_into&lt;/span&gt;
+
+ &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nbytes&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/ssl.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;1099&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt;
+
+ &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_sslobj&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="ne"&gt;ConnectionResetError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Errno&lt;/span&gt; &lt;span class="mi"&gt;54&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Connection&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;peer&lt;/span&gt;
+
+
+
+&lt;span class="n"&gt;During&lt;/span&gt; &lt;span class="n"&gt;handling&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;above&lt;/span&gt; &lt;span class="n"&gt;exception&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;another&lt;/span&gt; &lt;span class="n"&gt;exception&lt;/span&gt; &lt;span class="n"&gt;occurred&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+
+
+
+&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/requests/models.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;753&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;generate&lt;/span&gt;
+
+ &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stream&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chunk_size&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;decode_content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/urllib3/response.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;572&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;stream&lt;/span&gt;
+
+ &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_chunked&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;amt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;decode_content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;decode_content&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/urllib3/response.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;793&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;read_chunked&lt;/span&gt;
+
+ &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_original_response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/contextlib.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;137&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="fm"&gt;__exit__&lt;/span&gt;
+
+ &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;throw&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;typ&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;traceback&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/urllib3/response.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;455&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;_error_catcher&lt;/span&gt;
+
+ &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;ProtocolError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Connection broken: &lt;/span&gt;&lt;span class="si"&gt;%r&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;urllib3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exceptions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ProtocolError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Connection broken: ConnectionResetError(54, 'Connection reset by peer')"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ne"&gt;ConnectionResetError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;54&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'Connection reset by peer'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+
+
+&lt;span class="n"&gt;During&lt;/span&gt; &lt;span class="n"&gt;handling&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;above&lt;/span&gt; &lt;span class="n"&gt;exception&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;another&lt;/span&gt; &lt;span class="n"&gt;exception&lt;/span&gt; &lt;span class="n"&gt;occurred&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+
+
+
+&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/FileSource/batch_stock.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;module&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+
+ &lt;span class="n"&gt;auto_update&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'otc_cap_reduction'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;crawl_otc_cap_reduction&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/FileSource/batch_stock.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;47&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;auto_update&lt;/span&gt;
+
+ &lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;crawl_function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/finlab/crawlers/api.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;454&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;crawl_otc_cap_reduction&lt;/span&gt;
+
+ &lt;span class="n"&gt;res4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests_get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;urs_crawl_otc_cap_reduction&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/finlab/crawlers/helper.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;363&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;requests_get&lt;/span&gt;
+
+ &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ses&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;args2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/requests/sessions.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;555&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;get&lt;/span&gt;
+
+ &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'GET'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/requests/sessions.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;542&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;
+
+ &lt;span class="n"&gt;resp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;prep&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;send_kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/requests/sessions.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;697&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;send&lt;/span&gt;
+
+ &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/requests/models.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;831&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;
+
+ &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iter_content&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CONTENT_CHUNK_SIZE&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;''&lt;/span&gt;
+
+ &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;"/Users/jarvis.zheng/miniforge3/envs/finlab/lib/python3.9/site-packages/requests/models.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;756&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;generate&lt;/span&gt;
+
+ &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;ChunkedEncodingError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exceptions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ChunkedEncodingError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Connection broken: ConnectionResetError(54, 'Connection reset by peer')"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ne"&gt;ConnectionResetError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;54&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'Connection reset by peer'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr/&gt;
+&lt;h2 id="_1"&gt;問題原因&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;參考：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://stackoverflow.com/questions/59851207/connectionreseterror-with-requests-module-raises-exception-inside-of-exception"&gt;帶有請求模塊的 ConnectionResetError 在異常內部引發異常，使程序崩潰&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由參考的資訊來看，我的發生也是依序發生&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ConnectionResetError: [Errno 54] Connection reset by peer&lt;/li&gt;
+&lt;li&gt;urllib3.exceptions.ProtocolError: (“Connection broken: ConnectionResetError(54, ‘Connection reset by peer’)”, ConnectionResetError(54, ‘Connection reset by peer’))&lt;/li&gt;
+&lt;li&gt;requests.exceptions.ChunkedEncodingError: (“Connection broken: ConnectionResetError(54, ‘Connection reset by peer’)”, ConnectionResetError(54, ‘Connection reset by peer’))&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;由第三點的說明來看，是連線已經中斷了，而導致程式Crash，原本的程式在request的寫法&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ses&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;args2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ne"&gt;ConnectionError&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ReadTimeout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;ses&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;看來只有ConnectionError或Timeout才會被忽略，再新增&lt;code&gt;ConnectionResetError&lt;/code&gt; 再來觀察看看連線中斷的問題，避免程式因為斷線而Crash，在except內再重新request&lt;/p&gt;</content><category term="Python"></category><category term="ConnectionResetError"></category></entry><entry><title>ASCII認識</title><link href="https://richardrobot.xyz/2021/11/ascii/" rel="alternate"></link><published>2021-11-22T18:27:00+08:00</published><updated>2021-11-22T18:27:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-22:/2021/11/ascii/</id><summary type="html">&lt;p&gt;程式在使用XML的序列化時發生十六進位值(0x08)是無效的字&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;錯誤&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;發生錯誤訊息如下，程式在使用XML的序列化時發生這樣的錯誤&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nl"&gt;ErrorMsg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;InvalidOperationException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;產生&lt;/span&gt; &lt;span class="n"&gt;XML&lt;/span&gt; &lt;span class="err"&gt;文件時發生錯誤。&lt;/span&gt; &lt;span class="o"&gt;---&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;ArgumentException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;''&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;十六進位值&lt;/span&gt; &lt;span class="mh"&gt;0x08&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;是無效的字元。&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;查詢問題後發現文字內有特殊的符號 &lt;span class="caps"&gt;EX&lt;/span&gt; ： &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20211123110703.png" src="https://richardrobot.xyz/images/Pasted image 20211123110703.png"/&gt;&lt;/p&gt;
+&lt;p&gt;測試程式有特殊符號，會Exception在&lt;code&gt;xmlSerializer.Serialize&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;ActionResult&lt;/span&gt; &lt;span class="nf"&gt;test1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;xmlData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;""&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;Data&lt;/span&gt; &lt;span class="n"&gt;oData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Data&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;try&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;oData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inputText&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"測試_測試測試測試測試測試"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// 序列化為XML。&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Xml&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Serialization&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;XmlSerializer&lt;/span&gt; &lt;span class="n"&gt;xmlSerializer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Xml&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Serialization&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;XmlSerializer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;oData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetType&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+        &lt;span class="n"&gt;XmlWriterSettings&lt;/span&gt; &lt;span class="n"&gt;xmlSettings&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;XmlWriterSettings&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+        &lt;span class="n"&gt;xmlSettings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Encoding&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Encoding&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetEncoding&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Big5"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;xmlSettings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Indent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;xmlSettings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;OmitXmlDeclaration&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+        &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;StringWriter&lt;/span&gt; &lt;span class="n"&gt;szWriter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;StringWriter&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;XmlWriter&lt;/span&gt; &lt;span class="n"&gt;xmlWriter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;XmlWriter&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;szWriter&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;xmlSettings&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;xmlSerializer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Serialize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xmlWriter&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;oData&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+
+            &lt;span class="n"&gt;xmlData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;szWriter&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToString&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Content&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Content&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xmlData&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;其中的特殊符號在ASCII表轉換成 16進制的 08，是算ASCII的控制字元，無法轉換。&lt;/p&gt;
+&lt;h2 id="ascii"&gt;ASCII碼表&lt;a class="headerlink" href="#ascii" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;整理一下代碼的意義：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第0～32號及第127號(共34個)是控制字元或通訊專用字元&lt;/li&gt;
+&lt;li&gt;第33～126號(共94個)是字元&lt;/li&gt;
+&lt;li&gt;第48～57號為0～9十個阿拉伯數字&lt;/li&gt;
+&lt;li&gt;第65～90號為26個大寫英文字母&lt;/li&gt;
+&lt;li&gt;第97～122號為26個小寫英文字母，其餘為一些標點符號、運算符號&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr/&gt;
+&lt;p&gt;&lt;img alt="ASCII.gif" src="https://richardrobot.xyz/images/ASCII.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://kevin.hwai.edu.tw/~kevin/material/JAVA/Sample2016/ASCII.htm"&gt;ASCII碼介紹&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://idv.sinica.edu.tw/bear/charcodes/Section02.htm"&gt;認識中文字元碼&lt;/a&gt;&lt;/p&gt;</content><category term="微軟筆記"></category><category term="ascii"></category></entry><entry><title>使用Bokeh產生技術圖表</title><link href="https://richardrobot.xyz/2021/11/shi-yong-bokehchan-sheng-ji-shu-tu-biao/" rel="alternate"></link><published>2021-11-03T11:05:00+08:00</published><updated>2021-11-03T11:05:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-03:/2021/11/shi-yong-bokehchan-sheng-ji-shu-tu-biao/</id><summary type="html">&lt;p&gt;在Django上套用Bokeh產生技術圖表&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;參考資料：
 &lt;a href="https://www.finlab.tw/bokeh-stock-chart-with-technical-analysis/"&gt;Bokeh 探索頻道(2)~客製化技術圖表升級&lt;/a&gt;
 &lt;a href="https://www.jianshu.com/p/8b4f17950777"&gt;在 Django 上使用数据可视化利器&amp;nbsp;Bokeh&lt;/a&gt;&lt;/p&gt;
@@ -900,11 +1085,12 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=Egj_DdGUIDI&amp;amp;list=RDCMUCdEpz2A4DzV__4C1x2quKLw&amp;amp;index=1&amp;amp;t=446s"&gt;07:26&lt;/a&gt;&amp;nbsp;筆記關聯圖 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=Egj_DdGUIDI&amp;amp;list=RDCMUCdEpz2A4DzV__4C1x2quKLw&amp;amp;index=1&amp;amp;t=505s"&gt;08:25&lt;/a&gt; Obsidian&amp;nbsp;的外掛簡介&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Egj_DdGUIDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="Obsidian"></category><category term="Obsidian"></category></entry><entry><title>VS 常用內建快速鍵</title><link href="https://richardrobot.xyz/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;VS&lt;/span&gt;&amp;nbsp;常用內建快速鍵&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://richardrobot.xyz/images/Pasted image 20210917172329.png" /&gt;&lt;/p&gt;
-&lt;h1 id="_1"&gt;環境&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;hr /&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Egj_DdGUIDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="Obsidian"></category><category term="Obsidian"></category></entry><entry><title>VS 常用內建快速鍵</title><link href="https://richardrobot.xyz/2016/03/VisualStudio/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2021-11-18T16:32:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2016-03-08:/2016/03/VisualStudio/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;VS&lt;/span&gt;&amp;nbsp;常用內建快速鍵&lt;/p&gt;</summary><content type="html">
+&lt;hr/&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://richardrobot.xyz/images/Pasted image 20210917172329.png"/&gt;&lt;/p&gt;
+&lt;h2 id="_1"&gt;環境&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="_2"&gt;環境設定的組合快捷鍵&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;hr/&gt;
 &lt;p&gt;程式碼編輯器分頁切換 ：Ctrl+&lt;span class="caps"&gt;TAB&lt;/span&gt; 
 存檔：Ctrl + S 
 執行(debug)：F5
@@ -914,15 +1100,16 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 切換斷點：F9 
 ==啟用/停用斷點==：&lt;code&gt;Ctrl + F9&lt;/code&gt;
 ==刪除所有斷點==：&lt;code&gt;Ctrl + Shift + F9&lt;/code&gt;&lt;/p&gt;
-&lt;h1 id="_2"&gt;編輯&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;hr /&gt;
+&lt;h2 id="_3"&gt;編輯&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="_4"&gt;編輯程式時的組合快捷鍵&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;hr/&gt;
 &lt;p&gt;==註解選取範圍==：&lt;code&gt;Ctrl+K,C&lt;/code&gt; 
 ==取消註解選取範圍==：&lt;code&gt;Ctrl+K,U&lt;/code&gt;
  ==自動縮排==：&lt;code&gt;選取範圍後，Alt + F8&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;選取文字改小寫：Ctrl + U 
 選取文字改大寫：Ctrl + Shift + U 
 ==呼叫出類別成員==：&lt;code&gt;Ctrl + J&lt;/code&gt;
-(編到一半時 tips&amp;nbsp;突然不見很好用) &lt;/p&gt;
+(編到一半時 tips 突然不見很好用) &lt;/p&gt;
 &lt;p&gt;收攏原始碼：Ctrl + M, O 
 展開原始碼：Ctrl + M, L 
 ==刪除目前這行==：&lt;code&gt;Ctrl + Shift + L&lt;/code&gt;
@@ -932,4 +1119,12 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 ==選到最前面==：Ctrl + Shift + Home 
 ==選到最後面==：Ctrl + Shift + End 
 檢查括號匹配：Ctrl + ] 
-跳至行號：Ctrl +&amp;nbsp;G &lt;/p&gt;</content><category term="VisualStudio"></category><category term="VisualStudio"></category><category term="VS祕技"></category><category term="VS快速鍵"></category></entry></feed>
+跳至行號：Ctrl + G &lt;/p&gt;
+&lt;hr/&gt;
+&lt;h2 id="visualstudiocode"&gt;VisualStudioCode&lt;a class="headerlink" href="#visualstudiocode" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="vscode"&gt;VSCode環境的編輯快捷鍵&lt;a class="headerlink" href="#vscode" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Code Formatting Shortcut:&lt;/p&gt;
+&lt;p&gt;以下的設定在 &lt;span class="caps"&gt;VS2019&lt;/span&gt; 的設定是 ： &lt;code&gt;Ctrl + K  + D&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Visual Studio Code on Windows ： &lt;code&gt;Shift + Alt + F&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Visual Studio Code on MacOS : &lt;code&gt;Shift + Option + F&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Visual Studio Code on Ubuntu : &lt;code&gt;Ctrl + Shift + I&lt;/code&gt;&lt;/p&gt;</content><category term="微軟筆記"></category><category term="VisualStudio"></category></entry></feed>

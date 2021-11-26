@@ -5,15 +5,29 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/</loc>
-<lastmod>2021-11-17T17:49:06-00:00</lastmod>
+<lastmod>2021-11-26T13:17:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://richardrobot.xyz/archives.html</loc>
-<lastmod>2021-11-17T17:49:06-00:00</lastmod>
+<lastmod>2021-11-26T13:17:31-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2021/11/python-crawler-error/</loc>
+<lastmod>2021-11-25T23:04:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2021/11/ascii/</loc>
+<lastmod>2021-11-22T18:27:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -207,8 +221,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</loc>
-<lastmod>2016-03-08T12:43:00+08:00</lastmod>
+<loc>https://richardrobot.xyz/2016/03/VisualStudio/</loc>
+<lastmod>2021-11-18T16:32:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -257,7 +271,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/category/python.html</loc>
-<lastmod>2021-11-03T11:05:00+08:06</lastmod>
+<lastmod>2021-11-25T23:04:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -270,8 +284,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://richardrobot.xyz/category/visualstudio.html</loc>
-<lastmod>2016-03-08T12:43:00+08:06</lastmod>
+<loc>https://richardrobot.xyz/category/wei-ruan-bi-ji.html</loc>
+<lastmod>2021-11-22T18:27:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/tag/ascii.html</loc>
+<lastmod>2021-11-22T18:27:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -286,6 +307,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://richardrobot.xyz/tag/bokeh.html</loc>
 <lastmod>2021-11-03T11:05:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/tag/connectionreseterror.html</loc>
+<lastmod>2021-11-25T23:04:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -418,28 +446,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/tag/visualstudio.html</loc>
-<lastmod>2016-03-08T12:43:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://richardrobot.xyz/tag/vskuai-su-jian.html</loc>
-<lastmod>2016-03-08T12:43:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://richardrobot.xyz/tag/vsmi-ji.html</loc>
-<lastmod>2016-03-08T12:43:00+08:06</lastmod>
+<lastmod>2021-11-18T16:32:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://richardrobot.xyz/author/richard.html</loc>
-<lastmod>2021-11-03T11:05:00+08:06</lastmod>
+<lastmod>2021-11-25T23:04:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

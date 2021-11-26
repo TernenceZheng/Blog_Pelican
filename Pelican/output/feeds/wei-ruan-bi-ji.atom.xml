@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 微軟筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/wei-ruan-bi-ji.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-11-22T18:27:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>ASCII認識</title><link href="https://richardrobot.xyz/2021/11/ascii/" rel="alternate"></link><published>2021-11-22T18:27:00+08:00</published><updated>2021-11-22T18:27:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-22:/2021/11/ascii/</id><summary type="html">&lt;p&gt;程式在使用XML的序列化時發生十六進位值(0x08)是無效的字&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;錯誤&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;發生錯誤訊息如下，程式在使用XML的序列化時發生這樣的錯誤&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nl"&gt;ErrorMsg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;InvalidOperationException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;產生&lt;/span&gt; &lt;span class="n"&gt;XML&lt;/span&gt; &lt;span class="err"&gt;文件時發生錯誤。&lt;/span&gt; &lt;span class="o"&gt;---&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;ArgumentException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;''&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;十六進位值&lt;/span&gt; &lt;span class="mh"&gt;0x08&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;是無效的字元。&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;查詢問題後發現文字內有特殊的符號 &lt;span class="caps"&gt;EX&lt;/span&gt; ： &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20211123110703.png" src="https://richardrobot.xyz/images/Pasted image 20211123110703.png"/&gt;&lt;/p&gt;
+&lt;p&gt;測試程式有特殊符號，會Exception在&lt;code&gt;xmlSerializer.Serialize&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;ActionResult&lt;/span&gt; &lt;span class="nf"&gt;test1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;xmlData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;""&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;Data&lt;/span&gt; &lt;span class="n"&gt;oData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Data&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;try&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;oData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inputText&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"測試_測試測試測試測試測試"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// 序列化為XML。&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Xml&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Serialization&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;XmlSerializer&lt;/span&gt; &lt;span class="n"&gt;xmlSerializer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Xml&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Serialization&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;XmlSerializer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;oData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetType&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+        &lt;span class="n"&gt;XmlWriterSettings&lt;/span&gt; &lt;span class="n"&gt;xmlSettings&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;XmlWriterSettings&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+        &lt;span class="n"&gt;xmlSettings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Encoding&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Encoding&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetEncoding&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Big5"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;xmlSettings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Indent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;xmlSettings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;OmitXmlDeclaration&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+        &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;StringWriter&lt;/span&gt; &lt;span class="n"&gt;szWriter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;StringWriter&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;XmlWriter&lt;/span&gt; &lt;span class="n"&gt;xmlWriter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;XmlWriter&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;szWriter&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;xmlSettings&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;xmlSerializer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Serialize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xmlWriter&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;oData&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+
+            &lt;span class="n"&gt;xmlData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;szWriter&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToString&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Content&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Content&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xmlData&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;其中的特殊符號在ASCII表轉換成 16進制的 08，是算ASCII的控制字元，無法轉換。&lt;/p&gt;
+&lt;h2 id="ascii"&gt;ASCII碼表&lt;a class="headerlink" href="#ascii" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;整理一下代碼的意義：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第0～32號及第127號(共34個)是控制字元或通訊專用字元&lt;/li&gt;
+&lt;li&gt;第33～126號(共94個)是字元&lt;/li&gt;
+&lt;li&gt;第48～57號為0～9十個阿拉伯數字&lt;/li&gt;
+&lt;li&gt;第65～90號為26個大寫英文字母&lt;/li&gt;
+&lt;li&gt;第97～122號為26個小寫英文字母，其餘為一些標點符號、運算符號&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr/&gt;
+&lt;p&gt;&lt;img alt="ASCII.gif" src="https://richardrobot.xyz/images/ASCII.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://kevin.hwai.edu.tw/~kevin/material/JAVA/Sample2016/ASCII.htm"&gt;ASCII碼介紹&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://idv.sinica.edu.tw/bear/charcodes/Section02.htm"&gt;認識中文字元碼&lt;/a&gt;&lt;/p&gt;</content><category term="微軟筆記"></category><category term="ascii"></category></entry><entry><title>VS 常用內建快速鍵</title><link href="https://richardrobot.xyz/2016/03/VisualStudio/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2021-11-18T16:32:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2016-03-08:/2016/03/VisualStudio/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;VS&lt;/span&gt;&amp;nbsp;常用內建快速鍵&lt;/p&gt;</summary><content type="html">
+&lt;hr/&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://richardrobot.xyz/images/Pasted image 20210917172329.png"/&gt;&lt;/p&gt;
+&lt;h2 id="_1"&gt;環境&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="_2"&gt;環境設定的組合快捷鍵&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;hr/&gt;
+&lt;p&gt;程式碼編輯器分頁切換 ：Ctrl+&lt;span class="caps"&gt;TAB&lt;/span&gt; 
+存檔：Ctrl + S 
+執行(debug)：F5
+==執行(non debug)==：&lt;code&gt;Ctrl + F5&lt;/code&gt;
+全部儲存：Ctrl + Shift + S 
+ 單步執行：F11 (F10) 
+切換斷點：F9 
+==啟用/停用斷點==：&lt;code&gt;Ctrl + F9&lt;/code&gt;
+==刪除所有斷點==：&lt;code&gt;Ctrl + Shift + F9&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="_3"&gt;編輯&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="_4"&gt;編輯程式時的組合快捷鍵&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;hr/&gt;
+&lt;p&gt;==註解選取範圍==：&lt;code&gt;Ctrl+K,C&lt;/code&gt; 
+==取消註解選取範圍==：&lt;code&gt;Ctrl+K,U&lt;/code&gt;
+ ==自動縮排==：&lt;code&gt;選取範圍後，Alt + F8&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;選取文字改小寫：Ctrl + U 
+選取文字改大寫：Ctrl + Shift + U 
+==呼叫出類別成員==：&lt;code&gt;Ctrl + J&lt;/code&gt;
+(編到一半時 tips 突然不見很好用) &lt;/p&gt;
+&lt;p&gt;收攏原始碼：Ctrl + M, O 
+展開原始碼：Ctrl + M, L 
+==刪除目前這行==：&lt;code&gt;Ctrl + Shift + L&lt;/code&gt;
+轉至定義： F12 
+檔案最前面：Shift + Home 
+檔案最後面：Shift + End 
+==選到最前面==：Ctrl + Shift + Home 
+==選到最後面==：Ctrl + Shift + End 
+檢查括號匹配：Ctrl + ] 
+跳至行號：Ctrl + G &lt;/p&gt;
+&lt;hr/&gt;
+&lt;h2 id="visualstudiocode"&gt;VisualStudioCode&lt;a class="headerlink" href="#visualstudiocode" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="vscode"&gt;VSCode環境的編輯快捷鍵&lt;a class="headerlink" href="#vscode" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Code Formatting Shortcut:&lt;/p&gt;
+&lt;p&gt;以下的設定在 &lt;span class="caps"&gt;VS2019&lt;/span&gt; 的設定是 ： &lt;code&gt;Ctrl + K  + D&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Visual Studio Code on Windows ： &lt;code&gt;Shift + Alt + F&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Visual Studio Code on MacOS : &lt;code&gt;Shift + Option + F&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Visual Studio Code on Ubuntu : &lt;code&gt;Ctrl + Shift + I&lt;/code&gt;&lt;/p&gt;</content><category term="微軟筆記"></category><category term="VisualStudio"></category></entry></feed>

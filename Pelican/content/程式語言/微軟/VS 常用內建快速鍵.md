@@ -1,14 +1,17 @@
 ---
 title: VS 常用內建快速鍵
 date: 2016-03-08 12:43
+modified: 2021-11-18 16:32
 aliases: 部落格 
-tags: VisualStudio,VS祕技,VS快速鍵
-category: VisualStudio
+tags: VisualStudio
+category: 微軟筆記
+slug: VisualStudio
 summary: VS 常用內建快速鍵
 image: /images/Pasted image 20210917172329.png
 status: published
-
 ---
+
+[TOC]
 
 ---
 
@@ -16,7 +19,9 @@ status: published
 
 
 
-# 環境 
+## 環境 
+###環境設定的組合快捷鍵
+
 
 ---
 
@@ -36,7 +41,8 @@ status: published
  
  
 
-# 編輯
+## 編輯
+### 編輯程式時的組合快捷鍵
 ---
 
 ==註解選取範圍==：`Ctrl+K,C` 
@@ -58,3 +64,21 @@ status: published
 ==選到最後面==：Ctrl + Shift + End 
 檢查括號匹配：Ctrl + ] 
 跳至行號：Ctrl + G 
+
+---
+
+
+
+## VisualStudioCode
+### VSCode環境的編輯快捷鍵
+
+
+Code Formatting Shortcut:
+
+以下的設定在 VS2019 的設定是 ： `Ctrl + K  + D`
+
+Visual Studio Code on Windows ： `Shift + Alt + F`
+
+Visual Studio Code on MacOS : `Shift + Option + F`
+
+Visual Studio Code on Ubuntu : `Ctrl + Shift + I`
