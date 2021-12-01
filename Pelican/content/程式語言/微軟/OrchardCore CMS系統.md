@@ -17,9 +17,10 @@ status: published
 
 
 >OrchardCore CMS安裝流程在MAC上，主要在非Windows系統的安裝流程。
-> - 主要參考：[https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode](https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode)
+>
+>  - 主要參考：[https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode](https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode)
 > 
-> - 另外NET CORE的Runtime安裝參考微軟官方：[https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions](https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions)
+>  - 另外NET CORE的Runtime安裝參考微軟官方：[https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions](https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions)
 
 
 注意：
@@ -65,7 +66,9 @@ sudo apt-get update; \
 ## Orchard Core的所有功能概述¶
 
 這是Orchard Core所有內置功能的分類概覽。
+
 - 參考: [https://docs.orchardcore.net/en/dev/docs/reference/](https://docs.orchardcore.net/en/dev/docs/reference/)
+
 
 分類：
 

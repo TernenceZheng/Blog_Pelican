@@ -14,9 +14,12 @@ status: published
 [TOC]
 
 ## 需求
-### DjangoCMS WagtailCMS  OrchardCodeCMS
 
 需要建置一個快速的內容形象網站，最好的就是找CMS系統，以目前學的C#，還有新手Python程度，找到有幾個CMS來選擇
+
+### DjangoCMS WagtailCMS  OrchardCodeCMS
+
+
 
 - OrchardCodeCMS
 - WagtailCMS
@@ -65,10 +68,10 @@ Youtube上的Wagtail學習系列影片，相關的教學還蠻多的，個人覺
 
 [CodeRed CMS](https://github.com/coderedcorp/coderedcms)
 
-這個RedCode像是Wagtail的加強版，把很多想要的功能都做好了，
+這個CodeRed像是Wagtail的加強版，把很多想要的功能都做好了，
 
 ![[RedcodeCMS的功能項目.jpg]]
 
-一開始還不太懂架構的堆疊，後來摸熟之後，就像是在玩疊積木一樣，能夠快速的建立一個小站臺，非要說缺點就是要精確的調整樣式的話，會比較麻煩，若是有設計的人員可能比較好，基本上RedCode套件樣式是使用 [https://bootswatch.com/lux/](https://bootswatch.com/lux/) 基本的版型。
+一開始還不太懂架構的堆疊，後來摸熟之後，就像是在玩疊積木一樣，能夠快速的建立一個小站臺，非要說缺點就是要精確的調整樣式的話，會比較麻煩，若是有設計的人員可能比較好，基本上CodeRed套件樣式是使用 [https://bootswatch.com/lux/](https://bootswatch.com/lux/) 基本的版型。
 
 以上就是碰過的內容管理系統，各個架構都感覺不錯，各有長處，但是以本業是微軟方面的我，OrchardCodeCMS可以好好學學看，可以學到蠻多東西，而且 .NET Core 是微軟較新的技術，順便練習。

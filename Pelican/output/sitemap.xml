@@ -5,14 +5,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/</loc>
-<lastmod>2021-12-01T14:45:26-00:00</lastmod>
+<lastmod>2021-12-01T18:54:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://richardrobot.xyz/archives.html</loc>
-<lastmod>2021-12-01T14:45:26-00:00</lastmod>
+<lastmod>2021-12-01T18:54:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -235,6 +235,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/2020/12/vncserver-gcp/</loc>
+<lastmod>2021-12-01T15:57:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/2016/03/VisualStudio/</loc>
 <lastmod>2021-11-18T16:32:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -244,6 +251,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://richardrobot.xyz/category/git.html</loc>
 <lastmod>2021-10-05T16:09:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/category/googlecloudplatform.html</loc>
+<lastmod>2021-12-01T15:57:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -314,6 +328,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://richardrobot.xyz/tag/ben-yi-bi.html</loc>
 <lastmod>2021-10-13T13:27:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/tag/biao-qian.html</loc>
+<lastmod>2021-12-01T15:57:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -488,7 +509,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/author/richard.html</loc>
-<lastmod>2021-12-01T11:12:00+08:06</lastmod>
+<lastmod>2021-12-01T15:57:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

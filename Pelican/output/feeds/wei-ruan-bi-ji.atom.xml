@@ -2,10 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 微軟筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/wei-ruan-bi-ji.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-12-01T11:12:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>OrchardCore CMS系統</title><link href="https://richardrobot.xyz/2021/12/orchardcode-cms/" rel="alternate"></link><published>2021-12-01T11:12:00+08:00</published><updated>2021-12-01T11:12:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-01:/2021/12/orchardcode-cms/</id><summary type="html">&lt;p&gt;記錄使用OrchardCodeCMS的學習歷程&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="net-coresdk"&gt;安裝 .&lt;span class="caps"&gt;NET&lt;/span&gt; Core與SDK&lt;a class="headerlink" href="#net-coresdk" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;OrchardCore CMS安裝流程在MAC上，主要在非Windows系統的安裝流程。
-- 主要參考：&lt;a href="https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode"&gt;https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;OrchardCore CMS安裝流程在MAC上，主要在非Windows系統的安裝流程。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;另外NET CORE的Runtime安裝參考微軟官方：&lt;a href="https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions"&gt;https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;主要參考：&lt;a href="https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode"&gt;https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;另外NET CORE的Runtime安裝參考微軟官方：&lt;a href="https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions"&gt;https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;注意：&lt;/p&gt;
@@ -45,8 +49,10 @@
   &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;dotnet&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;runtime&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="orchard-core"&gt;Orchard Core的所有功能概述¶&lt;a class="headerlink" href="#orchard-core" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;這是Orchard Core所有內置功能的分類概覽。
-- 參考: &lt;a href="https://docs.orchardcore.net/en/dev/docs/reference/"&gt;https://docs.orchardcore.net/en/dev/docs/reference/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;這是Orchard Core所有內置功能的分類概覽。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;參考: &lt;a href="https://docs.orchardcore.net/en/dev/docs/reference/"&gt;https://docs.orchardcore.net/en/dev/docs/reference/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;分類：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
