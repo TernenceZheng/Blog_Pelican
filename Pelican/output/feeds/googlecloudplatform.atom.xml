@@ -47,9 +47,9 @@
 1. 您的Compute Engine實例正在運行，請參閱設置Compute Engine實例。
 2. 域名指向您的虛擬機。（此Domain我已先設定FreeDNS：gcp.mooo.com 暫時的設定，到時候申請好正式的Domain再修改）
 3. 有關設置Cloud DNS的信息，請參閱為您的域設置Google Cloud &lt;span class="caps"&gt;DNS&lt;/span&gt;。&lt;/p&gt;
-&lt;p&gt;在一樣剛剛的GCP Terminal安裝以下套件
-執行語法：
-&lt;code&gt;sudo apt update&lt;/code&gt;
+&lt;p&gt;在一樣剛剛的GCP Terminal安裝以下套件&lt;/p&gt;
+&lt;p&gt;執行語法：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt update&lt;/code&gt;
 &lt;code&gt;sudo apt install python3-pip python3-dev libpq-dev postgresql-contrib nginx curl&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="安裝套件跟postgresql.png" src="https://richardrobot.xyz/images/安裝套件跟postgresql.png"/&gt;&lt;/p&gt;
 &lt;p&gt;如下圖，在GCP的操作功能上找SQL，並且產生Cloud SQL執行個體&lt;/p&gt;
@@ -181,7 +181,7 @@
 &lt;h2 id="_2"&gt;後續&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;hr/&gt;
 &lt;p&gt;後續開發都是使用VSCode，發現使用Remote SSH連線遠端直接修改設定檔還比較快
-另外記錄使用方式： &lt;a href="{filename}/程式語言/微軟/使用VSCode遠端SSH開發.md"&gt;使用VSCode遠端SSH開發&lt;/a&gt;&lt;/p&gt;
+另外記錄使用方式： &lt;a href="https://richardrobot.xyz/2020/08/VisualStudioCode-GCP/"&gt;使用VSCode遠端SSH開發&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;參考資料：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://medium.com/@huiqinng/%E7%AD%86%E8%A8%98-%E5%9C%A8gcp%E4%B8%8A%E5%BB%BA%E7%AB%8B%E5%8F%AFremote-dekstop%E7%9A%84ubuntu%E7%92%B0%E5%A2%83-e56fdbd3a4f2"&gt;【筆記】在GCP上建立可Remote dekstop的Ubuntu環境&lt;/a&gt;&lt;/li&gt;

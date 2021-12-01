@@ -98,7 +98,9 @@ GCP需要開啟防火牆 指定 PORT 5901
 
 
 在一樣剛剛的GCP Terminal安裝以下套件
+
 執行語法：
+
 `sudo apt update`
 `sudo apt install python3-pip python3-dev libpq-dev postgresql-contrib nginx curl`
 

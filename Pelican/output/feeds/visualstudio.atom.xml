@@ -1,34 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - VisualStudio</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/visualstudio.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2016-03-08T12:43:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>VS 常用內建快速鍵</title><link href="https://richardrobot.xyz/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2016-03-08T12:43:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2016-03-08:/2016/03/vs-chang-yong-nei-jian-kuai-su-jian/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;VS&lt;/span&gt;&amp;nbsp;常用內建快速鍵&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://richardrobot.xyz/images/Pasted image 20210917172329.png" /&gt;&lt;/p&gt;
-&lt;h1 id="_1"&gt;環境&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;hr /&gt;
-&lt;p&gt;程式碼編輯器分頁切換 ：Ctrl+&lt;span class="caps"&gt;TAB&lt;/span&gt; 
-存檔：Ctrl + S 
-執行(debug)：F5
-==執行(non debug)==：&lt;code&gt;Ctrl + F5&lt;/code&gt;
-全部儲存：Ctrl + Shift + S 
- 單步執行：F11 (F10) 
-切換斷點：F9 
-==啟用/停用斷點==：&lt;code&gt;Ctrl + F9&lt;/code&gt;
-==刪除所有斷點==：&lt;code&gt;Ctrl + Shift + F9&lt;/code&gt;&lt;/p&gt;
-&lt;h1 id="_2"&gt;編輯&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;hr /&gt;
-&lt;p&gt;==註解選取範圍==：&lt;code&gt;Ctrl+K,C&lt;/code&gt; 
-==取消註解選取範圍==：&lt;code&gt;Ctrl+K,U&lt;/code&gt;
- ==自動縮排==：&lt;code&gt;選取範圍後，Alt + F8&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;選取文字改小寫：Ctrl + U 
-選取文字改大寫：Ctrl + Shift + U 
-==呼叫出類別成員==：&lt;code&gt;Ctrl + J&lt;/code&gt;
-(編到一半時 tips&amp;nbsp;突然不見很好用) &lt;/p&gt;
-&lt;p&gt;收攏原始碼：Ctrl + M, O 
-展開原始碼：Ctrl + M, L 
-==刪除目前這行==：&lt;code&gt;Ctrl + Shift + L&lt;/code&gt;
-轉至定義： F12 
-檔案最前面：Shift + Home 
-檔案最後面：Shift + End 
-==選到最前面==：Ctrl + Shift + Home 
-==選到最後面==：Ctrl + Shift + End 
-檢查括號匹配：Ctrl + ] 
-跳至行號：Ctrl +&amp;nbsp;G &lt;/p&gt;</content><category term="VisualStudio"></category><category term="VisualStudio"></category><category term="VS祕技"></category><category term="VS快速鍵"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - VisualStudio</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/visualstudio.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2020-08-25T18:22:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>使用VSCode遠端SSH開發</title><link href="https://richardrobot.xyz/2020/08/VisualStudioCode-GCP/" rel="alternate"></link><published>2020-08-25T18:22:00+08:00</published><updated>2020-08-25T18:22:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2020-08-25:/2020/08/VisualStudioCode-GCP/</id><summary type="html">&lt;p&gt;使用VSCode遠端開發，透過Remote-&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="ssh-key"&gt;產生SSH &lt;span class="caps"&gt;KEY&lt;/span&gt;&lt;a class="headerlink" href="#ssh-key" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;開啟 Terminal 執行以下語法，可以看到路徑預設在 &lt;code&gt;/Users/你的名稱/.ssh&lt;/code&gt; 下&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;ssh-keygen&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;如下圖，要求輸入名稱或是直接按Enter產生預設名稱id_rsa，我輸入jarvis.zheng-GithHub&lt;/p&gt;
+&lt;p&gt;![[ssh-key產生.jpg]]&lt;/p&gt;
+&lt;p&gt;在Mac 下使用快捷鍵來查看隱藏資料夾： &lt;code&gt;Command + Shift +  .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;公鑰 (jarvis.zheng-GithHub.pub) 以及私鑰 (jarvis.zheng-GithHub)， 公鑰到時候要複製到GCP上，而私鑰則是自己用，雙方才能夠溝通。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="產生的公鑰與私鑰.jpg" src="https://richardrobot.xyz/images/產生的公鑰與私鑰.jpg"/&gt;&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;如下圖，是GCP的Compute Engine 上面設定公鑰的地方&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;&lt;img alt="在GCP上面把公鑰複製上去.jpg" src="https://richardrobot.xyz/images/在GCP上面把公鑰複製上去.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;如下圖在VSCode安裝外掛套件，Remote Development&lt;/p&gt;
+&lt;p&gt;&lt;img alt="VSCode安裝RemoteDevelopment.jpg" src="https://richardrobot.xyz/images/VSCode安裝RemoteDevelopment.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;安裝完成後，在 VSCode介面的左下角可以看到圖標，按下去顯示清單，選擇Connect to Host，輸入要連線的伺服器，格式 username@server_host&lt;/p&gt;
+&lt;p&gt;就是GCP上面的： 使用者名稱@外部IP&lt;/p&gt;
+&lt;p&gt;&lt;img alt="在VScode安裝並且連線GCP的外部IP.jpg" src="https://richardrobot.xyz/images/在VScode安裝並且連線GCP的外部IP.jpg"/&gt;&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;番外篇：
+&lt;span class="caps"&gt;SSH&lt;/span&gt; Key產生的時候權限問題 ，無法儲存檔案問題，&lt;/p&gt;
+&lt;p&gt;完美解決： https://stackoverflow.com/questions/51614552/google-cloud-platform-ssh-to-google-cloud-instance-will-have-permission-denied&lt;/p&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.wowfuncode.com/2020/07/14/vscode-using-remote-ssh/"&gt;&lt;span class="caps"&gt;VS&lt;/span&gt; Code 使用 Remote – &lt;span class="caps"&gt;SSH&lt;/span&gt; 開啟遠端 Linux 資料夾&lt;/a&gt;&lt;/p&gt;</content><category term="VisualStudio"></category><category term="VisualStudioCode"></category><category term="GoogleCloudPlatform"></category></entry></feed>

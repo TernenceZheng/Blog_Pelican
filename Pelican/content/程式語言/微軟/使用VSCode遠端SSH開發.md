@@ -8,7 +8,7 @@ category: VisualStudio
 slug: VisualStudioCode-GCP
 summary: 使用VSCode遠端開發，透過Remote-SSH
 image: /images/default_preview_image.jpg
-status: drpublished
+status: published
 ---
 
 [TOC]
