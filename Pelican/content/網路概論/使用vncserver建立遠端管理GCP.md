@@ -3,7 +3,7 @@ title: 使用vncserver建立遠端管理GCP與內容管理系統建置
 date: 2020-12-01 15:57
 modified: 2021-12-01 15:57
 aliases: 部落格 
-tags: 標籤
+tags: GoogleCloudPlatform,WagtailCMS
 category: GoogleCloudPlatform
 slug: vncserver-gcp
 summary: 使用vncserver建立遠端管理GCP與架設內容管理系統站臺
@@ -283,6 +283,13 @@ server
 
 最後：將檔案連結到啟動網站的目錄來啟動該檔案
 `sudo ln -s /etc/nginx/sites-available/pgcp.mooo.com /etc/nginx/sites-enabled`
+
+執行最後語法：測試nginx與重啟
+``` python
+sudo nginx -t
+sudo service nginx restart
+```
+
 ## 後續
 ---
 後續開發都是使用VSCode，發現使用Remote SSH連線遠端直接修改設定檔還比較快

@@ -15,7 +15,7 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="標籤, GoogleCloudPlatform, " />
+<meta name="keywords" content="GoogleCloudPlatform, WagtailCMS, GoogleCloudPlatform, " />
 
 <meta property="og:title" content="使用vncserver建立遠端管理GCP與內容管理系統建置 "/>
 <meta property="og:url" content="https://richardrobot.xyz/2020/12/vncserver-gcp/" />
@@ -137,6 +137,7 @@
 <p>輸入語法：
 <code>sudo vim .vnc/xstartup</code></p>
 <p>進入如下畫面： 畫面是使用ubuntu的內建vim編輯器</p>
+<p><img alt="畫面是使用ubuntu的內建vim編輯器.png" src="https://richardrobot.xyz/images/畫面是使用ubuntu的內建vim編輯器.png"/></p>
 <p>按 I 進入編輯模式 貼上四行語法</p>
 <div class="highlight"><pre><span></span><code><span class="n">gnome</span><span class="o">-</span><span class="n">panel</span> <span class="o">&amp;</span>
 <span class="n">gnome</span><span class="o">-</span><span class="n">settings</span><span class="o">-</span><span class="n">daemon</span> <span class="o">&amp;</span>
@@ -213,6 +214,7 @@
 <p><img alt="連線字串與使用者是上面在GCE設定的.png" src="https://richardrobot.xyz/images/連線字串與使用者是上面在GCE設定的.png"/></p>
 <p>上面連線字串修改好是連線遠端SQL的資料庫後，接下來的語法執行就開始建立資料庫的Table與 Schema</p>
 <h3 id="python-managepy-migrate">執行 python manage.py migrate 初始化<a class="headerlink" href="#python-managepy-migrate" title="Permanent link">¶</a></h3>
+<p><img alt="開始建立資料庫的Table與Schema.png" src="https://richardrobot.xyz/images/開始建立資料庫的Table與Schema.png"/></p>
 <p>執行語法：</p>
 <div class="highlight"><pre><span></span><code><span class="n">cd</span> <span class="n">WagtailProject</span>
 <span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="na">py</span> <span class="n">migrate</span>
@@ -287,6 +289,10 @@
 </code></pre></div>
 <p>最後：將檔案連結到啟動網站的目錄來啟動該檔案
 <code>sudo ln -s /etc/nginx/sites-available/pgcp.mooo.com /etc/nginx/sites-enabled</code></p>
+<p>執行最後語法：測試nginx與重啟</p>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">nginx</span> <span class="o">-</span><span class="n">t</span>
+<span class="n">sudo</span> <span class="n">service</span> <span class="n">nginx</span> <span class="n">restart</span>
+</code></pre></div>
 <h2 id="_2">後續<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <hr/>
 <p>後續開發都是使用VSCode，發現使用Remote SSH連線遠端直接修改設定檔還比較快
@@ -370,6 +376,13 @@ iframe[sandbox*="allow-popups"]{
 </section>
 
             <hr/>
+<section>
+    <h2>Related Posts</h2>
+<ul class="related-posts-list">
+<li><a href="https://richardrobot.xyz/2021/12/python-cms/" title="內容管理系統CMS">內容管理系統CMS</a></li>
+</ul>
+<hr />
+</section>
             <aside>
             <nav>
             <ul class="articles-timeline">
@@ -389,8 +402,11 @@ iframe[sandbox*="allow-popups"]{
             <a class="category-link" href="https://richardrobot.xyz/categories.html#googlecloudplatform-ref">GoogleCloudPlatform</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="https://richardrobot.xyz/tags.html#biao-qian-ref">標籤
+                <li><a href="https://richardrobot.xyz/tags.html#googlecloudplatform-ref">GoogleCloudPlatform
                     <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://richardrobot.xyz/tags.html#wagtailcms-ref">WagtailCMS
+                    <span class="superscript">2</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

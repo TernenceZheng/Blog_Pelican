@@ -1246,6 +1246,7 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 &lt;p&gt;輸入語法：
 &lt;code&gt;sudo vim .vnc/xstartup&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;進入如下畫面： 畫面是使用ubuntu的內建vim編輯器&lt;/p&gt;
+&lt;p&gt;&lt;img alt="畫面是使用ubuntu的內建vim編輯器.png" src="https://richardrobot.xyz/images/畫面是使用ubuntu的內建vim編輯器.png"/&gt;&lt;/p&gt;
 &lt;p&gt;按 I 進入編輯模式 貼上四行語法&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;gnome&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;panel&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
 &lt;span class="n"&gt;gnome&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;daemon&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
@@ -1322,6 +1323,7 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 &lt;p&gt;&lt;img alt="連線字串與使用者是上面在GCE設定的.png" src="https://richardrobot.xyz/images/連線字串與使用者是上面在GCE設定的.png"/&gt;&lt;/p&gt;
 &lt;p&gt;上面連線字串修改好是連線遠端SQL的資料庫後，接下來的語法執行就開始建立資料庫的Table與 Schema&lt;/p&gt;
 &lt;h3 id="python-managepy-migrate"&gt;執行 python manage.py migrate 初始化&lt;a class="headerlink" href="#python-managepy-migrate" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="開始建立資料庫的Table與Schema.png" src="https://richardrobot.xyz/images/開始建立資料庫的Table與Schema.png"/&gt;&lt;/p&gt;
 &lt;p&gt;執行語法：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;WagtailProject&lt;/span&gt;
 &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;py&lt;/span&gt; &lt;span class="n"&gt;migrate&lt;/span&gt;
@@ -1396,6 +1398,10 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;最後：將檔案連結到啟動網站的目錄來啟動該檔案
 &lt;code&gt;sudo ln -s /etc/nginx/sites-available/pgcp.mooo.com /etc/nginx/sites-enabled&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;執行最後語法：測試nginx與重啟&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;nginx&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;service&lt;/span&gt; &lt;span class="n"&gt;nginx&lt;/span&gt; &lt;span class="n"&gt;restart&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="_2"&gt;後續&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;hr/&gt;
 &lt;p&gt;後續開發都是使用VSCode，發現使用Remote SSH連線遠端直接修改設定檔還比較快
@@ -1406,7 +1412,7 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 &lt;li&gt;&lt;a href="https://infinitewing.github.io/2017/08/13/20170813001/"&gt;在GCP開啟Ubuntu遠端桌面&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.cloudbooklet.com/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04-in-google-cloud/"&gt;How To Set Up Django with Postgres, Nginx, and Gunicorn on Ubuntu 18.04 in Google Cloud&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://medium.com/tsungs-blog/django-%E5%9C%A8ubuntu%E4%B8%AD%E9%81%8B%E7%94%A8nginx-gunicorn-%E6%9E%B6%E8%A8%AD-django-api-server-6d41c165a2c7"&gt;[Django] 在Ubuntu中運用Nginx、Gunicorn 架設 Django &lt;span class="caps"&gt;API&lt;/span&gt; Server&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="GoogleCloudPlatform"></category><category term="標籤"></category></entry><entry><title>VS 常用內建快速鍵</title><link href="https://richardrobot.xyz/2016/03/VisualStudio/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2021-11-18T16:32:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2016-03-08:/2016/03/VisualStudio/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;VS&lt;/span&gt;&amp;nbsp;常用內建快速鍵&lt;/p&gt;</summary><content type="html">
+&lt;/ul&gt;</content><category term="GoogleCloudPlatform"></category><category term="GoogleCloudPlatform"></category><category term="WagtailCMS"></category></entry><entry><title>VS 常用內建快速鍵</title><link href="https://richardrobot.xyz/2016/03/VisualStudio/" rel="alternate"></link><published>2016-03-08T12:43:00+08:00</published><updated>2021-11-18T16:32:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2016-03-08:/2016/03/VisualStudio/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;VS&lt;/span&gt;&amp;nbsp;常用內建快速鍵&lt;/p&gt;</summary><content type="html">
 &lt;hr/&gt;
 &lt;p&gt;&lt;img alt="Pasted image 20210917172329.png" src="https://richardrobot.xyz/images/Pasted image 20210917172329.png"/&gt;&lt;/p&gt;
 &lt;h2 id="_1"&gt;環境&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
