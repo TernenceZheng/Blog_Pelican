@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - Python</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/python.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-11-25T23:04:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Python爬蟲程式錯誤</title><link href="https://richardrobot.xyz/2021/11/python-crawler-error/" rel="alternate"></link><published>2021-11-25T23:04:00+08:00</published><updated>2021-11-25T23:04:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-25:/2021/11/python-crawler-error/</id><summary type="html">&lt;p&gt;ConnectionResetError(54,&amp;#8217;Connection reset by&amp;nbsp;peer&amp;#8217;))&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - Python</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/python.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-12-01T09:58:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>內容管理系統CMS</title><link href="https://richardrobot.xyz/2021/12/python-cms/" rel="alternate"></link><published>2021-12-01T09:58:00+08:00</published><updated>2021-12-01T09:58:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-01:/2021/12/python-cms/</id><summary type="html">&lt;p&gt;使用CMS系統建構網站&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;需求&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="djangocms-wagtailcms-orchardcodecms"&gt;DjangoCMS WagtailCMS  OrchardCodeCMS&lt;a class="headerlink" href="#djangocms-wagtailcms-orchardcodecms" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;需要建置一個快速的內容形象網站，最好的就是找CMS系統，以目前學的C#，還有新手Python程度，找到有幾個CMS來選擇&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OrchardCodeCMS&lt;/li&gt;
+&lt;li&gt;WagtailCMS&lt;/li&gt;
+&lt;li&gt;DjangoCMS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最後選擇使用WagtailCMS來處理我的需求以及找到一個套件能快速建構內容網站。&lt;/p&gt;
+&lt;h2 id="orchardcodecms"&gt;OrchardCodeCMS&lt;a class="headerlink" href="#orchardcodecms" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;使用ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; Core 來建置CMS系統，.&lt;span class="caps"&gt;NET&lt;/span&gt; Core 目前還沒學到，而且我比較偏向使用Python來學習順便練習，但是這個OrchardCoreCMS內容功能蠻強大的，而且也蠻靈活的，由於NET Core 已經可以跨平臺，所以在我的Mac也可以建置。使用Visual Studio 2019 開啟，直接建置完成，啟動後，就直接一個設定頁面可以選擇，資料庫提供SQLite，&lt;span class="caps"&gt;SQL&lt;/span&gt; Server，還有一些基本的樣板，提供基本的Agency，Blog，ComingSoom 等的樣板。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="OrchardCodeCMS開始設定頁面.jpg" src="https://richardrobot.xyz/images/OrchardCodeCMS開始設定頁面.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="可以設定版型.jpg" src="https://richardrobot.xyz/images/可以設定版型.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pastedimage20211201104159.png" src="https://richardrobot.xyz/images/Pastedimage20211201104159.png"/&gt;&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;節錄一下官方文件的重點：&lt;/p&gt;
+&lt;p&gt;不同的網站建設策略¶
+Orchard Core CMS支持所有主要的網站建設策略：&lt;/p&gt;
+&lt;p&gt;完整的CMS。在這種模式下，網站使用主題和模板來呈現您的內容，目的是實現很少甚至沒有自定義開發。&lt;/p&gt;
+&lt;p&gt;解耦CMS。除了內容管理後端之外，該網站一開始是空白。您可以使用Razor Pages或MVC操作創建所需的所有模板，並通過內容服務訪問內容。
+參考：&lt;a href="https://www.youtube.com/watch?v=yWpz8p-oaKg"&gt;https://www.youtube.com/watch?v=yWpz8p-oaKg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;無頭CMS。該站點僅管理內容，並且您創建了一個單獨的應用程序，該應用程序將使用GraphQL或REST API來獲取託管內容。
+參考：&lt;a href="https://www.youtube.com/watch?v=4o9zG17cfa0"&gt;https://www.youtube.com/watch?v=4o9zG17cfa0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;解耦CMS比較適合拿來做客製化的樣板網站，對於OrchardCodeCMS功能的理解，另外鏈結一篇文章: &lt;a href="https://richardrobot.xyz/2021/12/orchardcode-cms/"&gt;OrchardCore CMS系統&lt;/a&gt; ，內容之多對於我只是想要簡單的內容展示形象網站似乎有點大，先放著以後再來學好了。&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h2 id="djangocmswagtailcms"&gt;DjangoCMS與WagtailCMS&lt;a class="headerlink" href="#djangocmswagtailcms" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;DjangoCMS之前有稍微研究一下官方提供的測試後臺，玩了一下，對於我這個Python新手而言，還有操作上，覺得有點不直覺，後來就跑去看WagtailCMS，對於想要快速建構一個Blog或是小型形象網站，WagtailCMS似乎比較能夠達成我的需求，而且還不太會寫Python的我&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/playlist?list=PLMQHMcNi6ocsS8Bfnuy_IDgJ4bHRRrvub"&gt;https://www.youtube.com/playlist?list=PLMQHMcNi6ocsS8Bfnuy_IDgJ4bHRRrvub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Youtube上的Wagtail學習系列影片，相關的教學還蠻多的，個人覺得WagtailCMS，也還是需要一點程式底子去處理細微的修改，但是後來發現一個好套件。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/coderedcorp/coderedcms"&gt;CodeRed &lt;span class="caps"&gt;CMS&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;這個RedCode像是Wagtail的加強版，把很多想要的功能都做好了，&lt;/p&gt;
+&lt;p&gt;&lt;img alt="RedcodeCMS的功能項目.jpg" src="https://richardrobot.xyz/images/RedcodeCMS的功能項目.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;一開始還不太懂架構的堆疊，後來摸熟之後，就像是在玩疊積木一樣，能夠快速的建立一個小站臺，非要說缺點就是要精確的調整樣式的話，會比較麻煩，若是有設計的人員可能比較好，基本上RedCode套件樣式是使用 &lt;a href="https://bootswatch.com/lux/"&gt;https://bootswatch.com/lux/&lt;/a&gt; 基本的版型。&lt;/p&gt;
+&lt;p&gt;以上就是碰過的內容管理系統，各個架構都感覺不錯，各有長處，但是以本業是微軟方面的我，OrchardCodeCMS可以好好學學看，可以學到蠻多東西，而且 .&lt;span class="caps"&gt;NET&lt;/span&gt; Core 是微軟較新的技術，順便練習。&lt;/p&gt;</content><category term="Python"></category><category term="WagtailCMS"></category><category term="CodeRedCMS"></category></entry><entry><title>Python爬蟲程式錯誤</title><link href="https://richardrobot.xyz/2021/11/python-crawler-error/" rel="alternate"></link><published>2021-11-25T23:04:00+08:00</published><updated>2021-11-25T23:04:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-25:/2021/11/python-crawler-error/</id><summary type="html">&lt;p&gt;ConnectionResetError(54,&amp;#8217;Connection reset by&amp;nbsp;peer&amp;#8217;))&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="traceback"&gt;錯誤發生的Traceback&lt;a class="headerlink" href="#traceback" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
 

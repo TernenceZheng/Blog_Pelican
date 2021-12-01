@@ -1,5 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-11-25T23:04:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Python爬蟲程式錯誤</title><link href="https://richardrobot.xyz/2021/11/python-crawler-error/" rel="alternate"></link><published>2021-11-25T23:04:00+08:00</published><updated>2021-11-25T23:04:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-25:/2021/11/python-crawler-error/</id><summary type="html">&lt;p&gt;ConnectionResetError(54,&amp;#8217;Connection reset by&amp;nbsp;peer&amp;#8217;))&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-12-01T11:12:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>OrchardCore CMS系統</title><link href="https://richardrobot.xyz/2021/12/orchardcode-cms/" rel="alternate"></link><published>2021-12-01T11:12:00+08:00</published><updated>2021-12-01T11:12:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-01:/2021/12/orchardcode-cms/</id><summary type="html">&lt;p&gt;記錄使用OrchardCodeCMS的學習歷程&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="net-coresdk"&gt;安裝 .&lt;span class="caps"&gt;NET&lt;/span&gt; Core與SDK&lt;a class="headerlink" href="#net-coresdk" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OrchardCore CMS安裝流程在MAC上，主要在非Windows系統的安裝流程。
+- 主要參考：&lt;a href="https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode"&gt;https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;另外NET CORE的Runtime安裝參考微軟官方：&lt;a href="https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions"&gt;https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用Chrome的瀏覽器，因為不是Https，會自動將後臺登入自動導302Found問題，導致後臺登入一直出現在登入頁面，改用FireFox就可以&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;另外 aspnetcore-runtime-3.1 皆改用3.1似乎才能正常運作&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是注意目前.net core 已經到5.0 ，這個CMS框架只支援3.0&lt;/p&gt;
+&lt;p&gt;安裝另外執行以下語法：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;gpg&lt;/span&gt;
+&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mv&lt;/span&gt; &lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;trusted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//packages.microsoft.com/config/ubuntu/20.04/prod.list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mv&lt;/span&gt; &lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;chown&lt;/span&gt; &lt;span class="nl"&gt;root&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;trusted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;chown&lt;/span&gt; &lt;span class="nl"&gt;root&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;transport&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;aspnetcore&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;runtime&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.1&lt;/span&gt;
+
+
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;gpg&lt;/span&gt;
+&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mv&lt;/span&gt; &lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;trusted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//packages.microsoft.com/config/ubuntu/20.04/prod.list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mv&lt;/span&gt; &lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;chown&lt;/span&gt; &lt;span class="nl"&gt;root&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;trusted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;chown&lt;/span&gt; &lt;span class="nl"&gt;root&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;transport&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;dotnet&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;runtime&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="orchard-core"&gt;Orchard Core的所有功能概述¶&lt;a class="headerlink" href="#orchard-core" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;這是Orchard Core所有內置功能的分類概覽。
+- 參考: &lt;a href="https://docs.orchardcore.net/en/dev/docs/reference/"&gt;https://docs.orchardcore.net/en/dev/docs/reference/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;分類：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;admin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;App Security&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Authentication and User Management&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Content&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Design&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Extensibility&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hosting and Operations&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Localization&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navigation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Search, Indexing, Querying&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面就先記錄一下最主要的功能Content Type&lt;/p&gt;
+&lt;h3 id="content-type"&gt;Content Type(內容類別)&lt;a class="headerlink" href="#content-type" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Content Type：選擇內容類型列表&lt;/p&gt;
+&lt;p&gt;簡單說明就是頁面的顯示自定義類型，像是產品頁面類型，首頁頁面類型，部落格頁面類型，等等的分別，&lt;/p&gt;
+&lt;p&gt;例如：IndexPage 可以定義為首頁，ProductListPage可以定義為產品列表頁面，ProductPage可以定義為產品頁面&lt;/p&gt;
+&lt;p&gt;Content Type 裡面會有兩個部分組成&lt;/p&gt;
+&lt;p&gt;Content Parts ，Content Field&lt;/p&gt;
+&lt;h3 id="content-parts"&gt;Content Parts(內容部分)&lt;a class="headerlink" href="#content-parts" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="contentParts的功能.png" src="https://richardrobot.xyz/images/contentParts的功能.png"/&gt;&lt;/p&gt;
+&lt;p&gt;該Title模塊提供了標題部分，使您可以自定義內容項的DisplayText屬性。整個管理界面都使用DisplayText屬性來幫助您識別內容項。&lt;/p&gt;
+&lt;p&gt;標題部分¶ 將此部分附加到您的內容項以自定義ContentItem的DisplayText屬性。&lt;/p&gt;
+&lt;p&gt;TitlePart設置¶ 默認情況下，附加TitlePart將允許內容編輯器手動編輯ContentItem的DisplayText（標題）。&lt;/p&gt;
+&lt;p&gt;您也可以通過使用Liquid表達式指定模式來生成標題。&lt;/p&gt;
+&lt;p&gt;模式有權訪問當前的ContentItem，並在ContentItem更新時執行。例如，字段可用於生成圖案。以下示例在內容類型上使用名為的Text字段。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;ContentItem.Content.Product.Name.Text&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="content-fields"&gt;Content Fields(內容欄位)&lt;a class="headerlink" href="#content-fields" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="contentFields的功能.png" src="https://richardrobot.xyz/images/contentFields的功能.png"/&gt;&lt;/p&gt;</content><category term="微軟筆記"></category><category term="OrchardCodeCMS"></category></entry><entry><title>內容管理系統CMS</title><link href="https://richardrobot.xyz/2021/12/python-cms/" rel="alternate"></link><published>2021-12-01T09:58:00+08:00</published><updated>2021-12-01T09:58:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-01:/2021/12/python-cms/</id><summary type="html">&lt;p&gt;使用CMS系統建構網站&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;需求&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="djangocms-wagtailcms-orchardcodecms"&gt;DjangoCMS WagtailCMS  OrchardCodeCMS&lt;a class="headerlink" href="#djangocms-wagtailcms-orchardcodecms" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;需要建置一個快速的內容形象網站，最好的就是找CMS系統，以目前學的C#，還有新手Python程度，找到有幾個CMS來選擇&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OrchardCodeCMS&lt;/li&gt;
+&lt;li&gt;WagtailCMS&lt;/li&gt;
+&lt;li&gt;DjangoCMS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最後選擇使用WagtailCMS來處理我的需求以及找到一個套件能快速建構內容網站。&lt;/p&gt;
+&lt;h2 id="orchardcodecms"&gt;OrchardCodeCMS&lt;a class="headerlink" href="#orchardcodecms" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;使用ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; Core 來建置CMS系統，.&lt;span class="caps"&gt;NET&lt;/span&gt; Core 目前還沒學到，而且我比較偏向使用Python來學習順便練習，但是這個OrchardCoreCMS內容功能蠻強大的，而且也蠻靈活的，由於NET Core 已經可以跨平臺，所以在我的Mac也可以建置。使用Visual Studio 2019 開啟，直接建置完成，啟動後，就直接一個設定頁面可以選擇，資料庫提供SQLite，&lt;span class="caps"&gt;SQL&lt;/span&gt; Server，還有一些基本的樣板，提供基本的Agency，Blog，ComingSoom 等的樣板。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="OrchardCodeCMS開始設定頁面.jpg" src="https://richardrobot.xyz/images/OrchardCodeCMS開始設定頁面.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="可以設定版型.jpg" src="https://richardrobot.xyz/images/可以設定版型.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pastedimage20211201104159.png" src="https://richardrobot.xyz/images/Pastedimage20211201104159.png"/&gt;&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;節錄一下官方文件的重點：&lt;/p&gt;
+&lt;p&gt;不同的網站建設策略¶
+Orchard Core CMS支持所有主要的網站建設策略：&lt;/p&gt;
+&lt;p&gt;完整的CMS。在這種模式下，網站使用主題和模板來呈現您的內容，目的是實現很少甚至沒有自定義開發。&lt;/p&gt;
+&lt;p&gt;解耦CMS。除了內容管理後端之外，該網站一開始是空白。您可以使用Razor Pages或MVC操作創建所需的所有模板，並通過內容服務訪問內容。
+參考：&lt;a href="https://www.youtube.com/watch?v=yWpz8p-oaKg"&gt;https://www.youtube.com/watch?v=yWpz8p-oaKg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;無頭CMS。該站點僅管理內容，並且您創建了一個單獨的應用程序，該應用程序將使用GraphQL或REST API來獲取託管內容。
+參考：&lt;a href="https://www.youtube.com/watch?v=4o9zG17cfa0"&gt;https://www.youtube.com/watch?v=4o9zG17cfa0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;解耦CMS比較適合拿來做客製化的樣板網站，對於OrchardCodeCMS功能的理解，另外鏈結一篇文章: &lt;a href="https://richardrobot.xyz/2021/12/orchardcode-cms/"&gt;OrchardCore CMS系統&lt;/a&gt; ，內容之多對於我只是想要簡單的內容展示形象網站似乎有點大，先放著以後再來學好了。&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h2 id="djangocmswagtailcms"&gt;DjangoCMS與WagtailCMS&lt;a class="headerlink" href="#djangocmswagtailcms" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;DjangoCMS之前有稍微研究一下官方提供的測試後臺，玩了一下，對於我這個Python新手而言，還有操作上，覺得有點不直覺，後來就跑去看WagtailCMS，對於想要快速建構一個Blog或是小型形象網站，WagtailCMS似乎比較能夠達成我的需求，而且還不太會寫Python的我&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/playlist?list=PLMQHMcNi6ocsS8Bfnuy_IDgJ4bHRRrvub"&gt;https://www.youtube.com/playlist?list=PLMQHMcNi6ocsS8Bfnuy_IDgJ4bHRRrvub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Youtube上的Wagtail學習系列影片，相關的教學還蠻多的，個人覺得WagtailCMS，也還是需要一點程式底子去處理細微的修改，但是後來發現一個好套件。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/coderedcorp/coderedcms"&gt;CodeRed &lt;span class="caps"&gt;CMS&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;這個RedCode像是Wagtail的加強版，把很多想要的功能都做好了，&lt;/p&gt;
+&lt;p&gt;&lt;img alt="RedcodeCMS的功能項目.jpg" src="https://richardrobot.xyz/images/RedcodeCMS的功能項目.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;一開始還不太懂架構的堆疊，後來摸熟之後，就像是在玩疊積木一樣，能夠快速的建立一個小站臺，非要說缺點就是要精確的調整樣式的話，會比較麻煩，若是有設計的人員可能比較好，基本上RedCode套件樣式是使用 &lt;a href="https://bootswatch.com/lux/"&gt;https://bootswatch.com/lux/&lt;/a&gt; 基本的版型。&lt;/p&gt;
+&lt;p&gt;以上就是碰過的內容管理系統，各個架構都感覺不錯，各有長處，但是以本業是微軟方面的我，OrchardCodeCMS可以好好學學看，可以學到蠻多東西，而且 .&lt;span class="caps"&gt;NET&lt;/span&gt; Core 是微軟較新的技術，順便練習。&lt;/p&gt;</content><category term="Python"></category><category term="WagtailCMS"></category><category term="CodeRedCMS"></category></entry><entry><title>Python爬蟲程式錯誤</title><link href="https://richardrobot.xyz/2021/11/python-crawler-error/" rel="alternate"></link><published>2021-11-25T23:04:00+08:00</published><updated>2021-11-25T23:04:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-25:/2021/11/python-crawler-error/</id><summary type="html">&lt;p&gt;ConnectionResetError(54,&amp;#8217;Connection reset by&amp;nbsp;peer&amp;#8217;))&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="traceback"&gt;錯誤發生的Traceback&lt;a class="headerlink" href="#traceback" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
 
