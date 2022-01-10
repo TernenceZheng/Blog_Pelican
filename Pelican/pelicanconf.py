@@ -164,3 +164,5 @@ RELATED_POSTS_MAX = 5
 RELATED_POSTS_SKIP_SAME_CATEGORY = True
 
 GITHUB_URL = 'https://github.com/TernenceZheng'
+
+LANDING_PAGE_TITLE =  'Richard隨手筆記 - 紙上得來終覺淺，絕知此事要躬行'
