@@ -1,5 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-12-01T15:57:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>OrchardCore CMS系統</title><link href="https://richardrobot.xyz/2021/12/orchardcode-cms/" rel="alternate"></link><published>2021-12-01T11:12:00+08:00</published><updated>2021-12-01T11:12:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-01:/2021/12/orchardcode-cms/</id><summary type="html">&lt;p&gt;記錄使用OrchardCodeCMS的學習歷程&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-12-30T10:36:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>ASP.NET MVC的參數驗證方式</title><link href="https://richardrobot.xyz/2021/12/asp-net-mvc-actionfilter/" rel="alternate"></link><published>2021-12-30T10:36:00+08:00</published><updated>2021-12-30T10:36:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-30:/2021/12/asp-net-mvc-actionfilter/</id><summary type="html">&lt;p&gt;用ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; &lt;span class="caps"&gt;MVC&lt;/span&gt; 的&amp;nbsp;ActionFilterAttribute來過濾API參數&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;前言&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;有時提供廠商的API，明明沒有定義的參數卻帶入，或是已經是舊版不用的參數還是會帶入，使用這個方式來過濾並且阻擋，使用ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; &lt;span class="caps"&gt;MVC&lt;/span&gt; 的 ActionFilterAttribute 方式&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ParaFilterAttribute&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ActionFilterAttribute&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;summary&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// 交易類型 &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;/summary&amp;gt; &lt;/span&gt;
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;ParaType&lt;/span&gt; &lt;span class="n"&gt;paraType&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;get&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;summary&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// 比對Model名稱(MVC ModelBinding) &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;/summary&amp;gt; &lt;/span&gt;
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;ParameterName&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;get&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;override&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;OnActionExecuting&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ActionExecutingContext&lt;/span&gt; &lt;span class="n"&gt;filterContext&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;//取得傳入Model ApiModel &lt;/span&gt;
+        &lt;span class="n"&gt;ApiModel&lt;/span&gt; &lt;span class="n"&gt;viewModel&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;filterContext&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ActionParameters&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ParameterName&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ApiModel&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;viewModel&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="k"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;//抓出交易類別的Property &lt;/span&gt;
+            &lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;props&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ApiModel&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetProperties&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+                    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;IsNotParameter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+
+            &lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;errorList&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;GetErrorProps&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;viewModel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;errorList&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Count&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;filterContext&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Result&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ContentResult&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+                &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="c1"&gt;//返回錯誤&lt;/span&gt;
+                &lt;span class="p"&gt;};&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="c1"&gt;/// &amp;lt;summary&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// 取得比對不符的參數 &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;/summary&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;param name="viewModel"&amp;gt;&amp;lt;/param&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;param name="props"&amp;gt;&amp;lt;/param&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt; &lt;/span&gt;
+    &lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;PropertyInfo&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;GetErrorProps&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ApiModel&lt;/span&gt; &lt;span class="n"&gt;viewModel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;IEnumerable&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;PropertyInfo&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;PropertyInfo&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;PropertyInfo&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;();&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddRange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DiffValueType&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;viewModel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddRange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DiffRefType&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;viewModel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="c1"&gt;/// &amp;lt;summary&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// 參考類型比較 &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;/summary&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;param name="viewModel"&amp;gt;&amp;lt;/param&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;param name="props"&amp;gt;&amp;lt;/param&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt; &lt;/span&gt;
+    &lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="n"&gt;IEnumerable&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;PropertyInfo&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;DiffRefType&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ApiModel&lt;/span&gt; &lt;span class="n"&gt;viewModel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;IEnumerable&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;PropertyInfo&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;!&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PropertyType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsValueType&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetValue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;viewModel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="k"&gt;null&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="c1"&gt;/// &amp;lt;summary&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// 值類型比較 &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;/summary&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;param name="viewModel"&amp;gt;&amp;lt;/param&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;param name="props"&amp;gt;&amp;lt;/param&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt; &lt;/span&gt;
+    &lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="n"&gt;IEnumerable&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;PropertyInfo&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;DiffValueType&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ApiModel&lt;/span&gt; &lt;span class="n"&gt;viewModel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;IEnumerable&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;PropertyInfo&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;props&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PropertyType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsValueType&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetValue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;viewModel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;null&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;ToString&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PropertyType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetDefault&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;ToString&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="c1"&gt;/// &amp;lt;summary&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// 抓出要比較交易類別 &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;/summary&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;param name="p"&amp;gt;&amp;lt;/param&amp;gt; &lt;/span&gt;
+    &lt;span class="c1"&gt;/// &amp;lt;returns&amp;gt;&amp;lt;/returns&amp;gt; &lt;/span&gt;
+    &lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="nf"&gt;IsNotParameter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PropertyInfo&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;ParaType&lt;/span&gt; &lt;span class="n"&gt;paraVal&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetAttributeValue&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;ParamterAttribute&lt;/span&gt; &lt;span class="n"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ParaType&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;paraVal&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;ParaType&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="_2"&gt;欄位屬性這樣用&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;[Paramter(ParaType = 列舉物件)]&lt;/span&gt; 
+&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;SomeModelPara&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;get&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="filter"&gt;Filter這樣用&lt;a class="headerlink" href="#filter" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;[ParaFilter(ParaType = 列舉物件, ParameterName = "物件名稱")]&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="CSharp"></category><category term="ASP.NET MVC"></category></entry><entry><title>ASP.NET CORE 在IIS錯誤問題</title><link href="https://richardrobot.xyz/2021/12/aspnetcore-iis-error/" rel="alternate"></link><published>2021-12-10T09:44:00+08:00</published><updated>2021-12-10T09:44:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-10:/2021/12/aspnetcore-iis-error/</id><summary type="html">&lt;p&gt;預覽標題&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;
+&lt;ul&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img alt="IIS錯誤問題.png" src="https://richardrobot.xyz/images/IIS錯誤問題.png" /&gt;&lt;/p&gt;
+&lt;p&gt;在IIS上執行ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; core&amp;nbsp;需要安裝：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;NET&lt;/span&gt; Core的程式&amp;nbsp;aspnetcore-runtime-3.1.11-win-x64&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;NET&lt;/span&gt; Core 裝載套件組合&amp;nbsp;dotnet-hosting-3.1.11-win&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href="https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/publish-to-iis?view=aspnetcore-5.0&amp;amp;tabs=netcore-cli"&gt;這是微軟的官方說明教學&lt;/a&gt;&lt;/p&gt;</content><category term="微軟筆記"></category><category term="ASP.NET Core"></category><category term="IIS"></category></entry><entry><title>OrchardCore CMS系統</title><link href="https://richardrobot.xyz/2021/12/orchardcode-cms/" rel="alternate"></link><published>2021-12-01T11:12:00+08:00</published><updated>2021-12-01T11:12:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-01:/2021/12/orchardcode-cms/</id><summary type="html">&lt;p&gt;記錄使用OrchardCodeCMS的學習歷程&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="net-coresdk"&gt;安裝 .&lt;span class="caps"&gt;NET&lt;/span&gt; Core與SDK&lt;a class="headerlink" href="#net-coresdk" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;OrchardCore CMS安裝流程在MAC上，主要在非Windows系統的安裝流程。&lt;/p&gt;
@@ -269,7 +373,7 @@ Orchard Core CMS支持所有主要的網站建設策略：&lt;/p&gt;
 &lt;p&gt;看來只有ConnectionError或Timeout才會被忽略，再新增&lt;code&gt;ConnectionResetError&lt;/code&gt; 再來觀察看看連線中斷的問題，避免程式因為斷線而Crash，在except內再重新request&lt;/p&gt;</content><category term="Python"></category><category term="ConnectionResetError"></category></entry><entry><title>ASCII認識</title><link href="https://richardrobot.xyz/2021/11/ascii/" rel="alternate"></link><published>2021-11-22T18:27:00+08:00</published><updated>2021-11-22T18:27:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-22:/2021/11/ascii/</id><summary type="html">&lt;p&gt;程式在使用XML的序列化時發生十六進位值(0x08)是無效的字&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;錯誤&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;發生錯誤訊息如下，程式在使用XML的序列化時發生這樣的錯誤&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nl"&gt;ErrorMsg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;InvalidOperationException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;產生&lt;/span&gt; &lt;span class="n"&gt;XML&lt;/span&gt; &lt;span class="err"&gt;文件時發生錯誤。&lt;/span&gt; &lt;span class="o"&gt;---&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;ArgumentException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;''&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;十六進位值&lt;/span&gt; &lt;span class="mh"&gt;0x08&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;是無效的字元。&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ErrorMsg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;InvalidOperationException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;產生&lt;/span&gt; &lt;span class="n"&gt;XML&lt;/span&gt; &lt;span class="err"&gt;文件時發生錯誤。&lt;/span&gt; &lt;span class="p"&gt;---&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ArgumentException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;''&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;十六進位值&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x08&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;是無效的字元。&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;查詢問題後發現文字內有特殊的符號 &lt;span class="caps"&gt;EX&lt;/span&gt; ： &lt;/p&gt;
 &lt;p&gt;&lt;img alt="Pasted image 20211123110703.png" src="https://richardrobot.xyz/images/Pasted image 20211123110703.png"/&gt;&lt;/p&gt;

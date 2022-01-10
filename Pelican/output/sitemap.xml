@@ -5,15 +5,29 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/</loc>
-<lastmod>2021-12-01T19:09:55-00:00</lastmod>
+<lastmod>2022-01-10T16:56:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://richardrobot.xyz/archives.html</loc>
-<lastmod>2021-12-01T19:09:55-00:00</lastmod>
+<lastmod>2022-01-10T16:56:34-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2021/12/asp-net-mvc-actionfilter/</loc>
+<lastmod>2021-12-30T10:36:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2021/12/aspnetcore-iis-error/</loc>
+<lastmod>2021-12-10T09:44:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -256,6 +270,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/category/csharp.html</loc>
+<lastmod>2021-12-30T10:36:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/category/git.html</loc>
 <lastmod>2021-10-05T16:09:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -327,7 +348,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/category/wei-ruan-bi-ji.html</loc>
-<lastmod>2021-12-01T11:12:00+08:06</lastmod>
+<lastmod>2021-12-10T09:44:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -335,6 +356,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://richardrobot.xyz/tag/ascii.html</loc>
 <lastmod>2021-11-22T18:27:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/tag/aspnet-core.html</loc>
+<lastmod>2021-12-10T09:44:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/tag/aspnet-mvc.html</loc>
+<lastmod>2021-12-30T10:36:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -384,6 +419,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://richardrobot.xyz/tag/googlecloudplatform.html</loc>
 <lastmod>2021-12-01T15:57:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/tag/iis.html</loc>
+<lastmod>2021-12-10T09:44:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -530,7 +572,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/author/richard.html</loc>
-<lastmod>2021-12-01T15:57:00+08:06</lastmod>
+<lastmod>2021-12-30T10:36:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

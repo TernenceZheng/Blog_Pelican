@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 微軟筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/wei-ruan-bi-ji.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-12-01T11:12:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>OrchardCore CMS系統</title><link href="https://richardrobot.xyz/2021/12/orchardcode-cms/" rel="alternate"></link><published>2021-12-01T11:12:00+08:00</published><updated>2021-12-01T11:12:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-01:/2021/12/orchardcode-cms/</id><summary type="html">&lt;p&gt;記錄使用OrchardCodeCMS的學習歷程&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 微軟筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/wei-ruan-bi-ji.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-12-10T09:44:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>ASP.NET CORE 在IIS錯誤問題</title><link href="https://richardrobot.xyz/2021/12/aspnetcore-iis-error/" rel="alternate"></link><published>2021-12-10T09:44:00+08:00</published><updated>2021-12-10T09:44:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-10:/2021/12/aspnetcore-iis-error/</id><summary type="html">&lt;p&gt;預覽標題&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;
+&lt;ul&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img alt="IIS錯誤問題.png" src="https://richardrobot.xyz/images/IIS錯誤問題.png" /&gt;&lt;/p&gt;
+&lt;p&gt;在IIS上執行ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; core&amp;nbsp;需要安裝：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;NET&lt;/span&gt; Core的程式&amp;nbsp;aspnetcore-runtime-3.1.11-win-x64&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;NET&lt;/span&gt; Core 裝載套件組合&amp;nbsp;dotnet-hosting-3.1.11-win&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href="https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/publish-to-iis?view=aspnetcore-5.0&amp;amp;tabs=netcore-cli"&gt;這是微軟的官方說明教學&lt;/a&gt;&lt;/p&gt;</content><category term="微軟筆記"></category><category term="ASP.NET Core"></category><category term="IIS"></category></entry><entry><title>OrchardCore CMS系統</title><link href="https://richardrobot.xyz/2021/12/orchardcode-cms/" rel="alternate"></link><published>2021-12-01T11:12:00+08:00</published><updated>2021-12-01T11:12:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-01:/2021/12/orchardcode-cms/</id><summary type="html">&lt;p&gt;記錄使用OrchardCodeCMS的學習歷程&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="net-coresdk"&gt;安裝 .&lt;span class="caps"&gt;NET&lt;/span&gt; Core與SDK&lt;a class="headerlink" href="#net-coresdk" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;OrchardCore CMS安裝流程在MAC上，主要在非Windows系統的安裝流程。&lt;/p&gt;
@@ -106,7 +120,7 @@
 &lt;p&gt;&lt;img alt="contentFields的功能.png" src="https://richardrobot.xyz/images/contentFields的功能.png"/&gt;&lt;/p&gt;</content><category term="微軟筆記"></category><category term="OrchardCodeCMS"></category></entry><entry><title>ASCII認識</title><link href="https://richardrobot.xyz/2021/11/ascii/" rel="alternate"></link><published>2021-11-22T18:27:00+08:00</published><updated>2021-11-22T18:27:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-11-22:/2021/11/ascii/</id><summary type="html">&lt;p&gt;程式在使用XML的序列化時發生十六進位值(0x08)是無效的字&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;錯誤&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;發生錯誤訊息如下，程式在使用XML的序列化時發生這樣的錯誤&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nl"&gt;ErrorMsg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;InvalidOperationException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;產生&lt;/span&gt; &lt;span class="n"&gt;XML&lt;/span&gt; &lt;span class="err"&gt;文件時發生錯誤。&lt;/span&gt; &lt;span class="o"&gt;---&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;ArgumentException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;''&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;十六進位值&lt;/span&gt; &lt;span class="mh"&gt;0x08&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;是無效的字元。&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ErrorMsg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;InvalidOperationException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;產生&lt;/span&gt; &lt;span class="n"&gt;XML&lt;/span&gt; &lt;span class="err"&gt;文件時發生錯誤。&lt;/span&gt; &lt;span class="p"&gt;---&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ArgumentException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;''&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;十六進位值&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x08&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;是無效的字元。&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;查詢問題後發現文字內有特殊的符號 &lt;span class="caps"&gt;EX&lt;/span&gt; ： &lt;/p&gt;
 &lt;p&gt;&lt;img alt="Pasted image 20211123110703.png" src="https://richardrobot.xyz/images/Pasted image 20211123110703.png"/&gt;&lt;/p&gt;

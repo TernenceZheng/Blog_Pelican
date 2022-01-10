@@ -17,7 +17,7 @@ status: published
 
 發生錯誤訊息如下，程式在使用XML的序列化時發生這樣的錯誤
 
-```c
+```C#
 ErrorMsg: System.InvalidOperationException: 產生 XML 文件時發生錯誤。 ---> System.ArgumentException: '' (十六進位值 0x08) 是無效的字元。
 ```
 
