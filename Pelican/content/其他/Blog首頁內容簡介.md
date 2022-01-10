@@ -3,7 +3,7 @@ title: Blog首頁內容簡介
 layout: page
 date: 2021-12-28 00:04
 image: /images/default_preview_image.jpg
-status: hidden
+status: published
 slug: landing-page-about-hidden
 ---
 

@@ -6,7 +6,7 @@ tags: 標籤
 category: 類別
 summary: 預覽標題
 image: /images/default_preview_image.jpg
-status: draft, hidden, published
+status: draft
 ---
 
 

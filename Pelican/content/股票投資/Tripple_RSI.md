@@ -7,7 +7,7 @@ category: 投資學習
 Slug: 自定義URL標籤
 summary: 預覽標題
 image: /images/stocklogo.jpg
-status: draft, hidden, published
+status: draft
 ---
 
 
