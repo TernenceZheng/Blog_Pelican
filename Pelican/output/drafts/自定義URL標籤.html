@@ -15,21 +15,19 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="ASP.NET Core, IIS, 微軟筆記, " />
+<meta name="keywords" content="標籤, 類別, " />
 
-<meta property="og:title" content="ASP.NET CORE 在IIS錯誤問題 "/>
-<meta property="og:url" content="https://richardrobot.xyz/2021/12/aspnetcore-iis-error/" />
+<meta property="og:title" content="使用List來反射物件屬性成為動態物件 "/>
+<meta property="og:url" content="https://richardrobot.xyz/drafts/自定義URL標籤.html" />
 <meta property="og:description" content="預覽標題" />
 <meta property="og:site_name" content="Richard隨手筆記" />
 <meta property="og:article:author" content="Richard" />
-<meta property="og:article:published_time" content="2021-12-10T09:44:00+08:00" />
-<meta property="og:article:modified_time" content="2021-12-10T09:44:00+08:00" />
-<meta name="twitter:title" content="ASP.NET CORE 在IIS錯誤問題 ">
+<meta property="og:article:published_time" content="2022-01-06T14:14:00+08:00" />
+<meta property="og:article:modified_time" content="2022-01-06T14:14:00+08:00" />
+<meta name="twitter:title" content="使用List來反射物件屬性成為動態物件 ">
 <meta name="twitter:description" content="預覽標題">
-<meta property="og:image" content="/images/default_preview_image.jpg" />
-<meta name="twitter:image" content="/images/default_preview_image.jpg" >
 
-        <title>ASP.NET CORE 在IIS錯誤問題  · Richard隨手筆記
+        <title>使用List來反射物件屬性成為動態物件  · Richard隨手筆記
 </title>
         <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
@@ -79,8 +77,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="https://richardrobot.xyz/2021/12/aspnetcore-iis-error/">
-                <span class="caps">ASP</span>.<span class="caps">NET</span> <span class="caps">CORE</span>&nbsp;在IIS錯誤問題
+            <a href="https://richardrobot.xyz/drafts/自定義URL標籤.html">
+                使用List來反射物件屬性成為動態物件
             </a>
         </h1>
     </header>
@@ -88,22 +86,19 @@
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
-            
+            <p id="list-of-translations">
+This post is also available in:
+    <a href="https://richardrobot.xyz/drafts/自定義URL標籤.html">zh_tw</a> and    <a href="https://richardrobot.xyz/drafts/自定義URL標籤.html">zh_tw</a></p>
+
             <div class="toc">
 <ul></ul>
 </div>
-<p><img alt="IIS錯誤問題.png" src="https://richardrobot.xyz/images/IIS錯誤問題.png" /></p>
-<p>在IIS上執行ASP.<span class="caps">NET</span> core&nbsp;需要安裝：</p>
-<ul>
-<li>
-<p><span class="caps">NET</span> Core的程式&nbsp;aspnetcore-runtime-3.1.11-win-x64</p>
-</li>
-<li>
-<p><span class="caps">NET</span> Core 裝載套件組合&nbsp;dotnet-hosting-3.1.11-win</p>
-</li>
-</ul>
-<hr />
-<p><a href="https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/publish-to-iis?view=aspnetcore-5.0&amp;tabs=netcore-cli">這是微軟的官方說明教學</a></p>
+<p><span class="caps">TODO</span></p>
+<p>參考資料：</p>
+<p><a href="https://coderedirect.com/questions/338198/reflect-emit-dynamic-type-memory-blowup">Reflect.Emit Dynamic Type Memory Blowup</a>]</p>
+<p><a href="https://www.codeproject.com/Articles/18450/HyperDescriptor-Accelerated-dynamic-property-acces">HyperDescriptor: Accelerated dynamic property&nbsp;access</a></p>
+<p><a href="https://theburningmonk.com/2015/08/fasterflect-vs-hyperdescriptor-vs-fastmember-vs-reflection/">Fasterflect vs HyperDescriptor vs FastMember vs&nbsp;Reflection</a></p>
+<p><a href="https://blog.marcgravell.com/2012/01/playing-with-your-member.html">Playing with your&nbsp;member</a></p>
 
 
              
@@ -118,86 +113,17 @@
 
 
 
-<section>
-    <h6 style="display:none;">Comments</h6>
-    <p id="comment-message"> </p>
-
-    <div class="accordion" id="accordion2">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
-                   data-toggle="collapse"
-                   data-parent="#accordion2"
-                   data-disqus-identifier="https://richardrobot.xyz/2021/12/aspnetcore-iis-error/"
-                   href="https://richardrobot.xyz/2021/12/aspnetcore-iis-error/#comment_thread"
-                   id="comment-accordion-toggle">
-                    Comments
-                </a>
-            </div>
-            <div id="comment_thread" class="accordion-body collapse">
-                <div class="accordion-inner">
-                    <div class="comments">
-                        <div id="disqus_thread"></div>
-                        <script>
-    var disqus_shortname = 'jarvissui-shou-bi-ji';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-
-    var disqus_identifier = 'https://richardrobot.xyz/2021/12/aspnetcore-iis-error/';
-    var disqus_url = 'https://richardrobot.xyz/2021/12/aspnetcore-iis-error/';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-
-<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-<style>
-iframe[sandbox*="allow-popups"]{
-    display: none;
-}
-</style>
-
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
             <hr/>
-            <aside>
-            <nav>
-            <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://richardrobot.xyz/2021/12/orchardcode-cms/" title="Previous: OrchardCore CMS系統">OrchardCore CMS系統</a></li>
-                <li class="next-article"><a href="https://richardrobot.xyz/2021/12/landing-page-about-hidden/" title="Next: Blog首頁內容簡介">Blog首頁內容簡介</a> »</li>
-            </ul>
-            </nav>
-            </aside>
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2021-12-10T09:44:00+08:00">五 10 12月 2021</time>
+            <time itemprop="dateCreated" datetime="2022-01-06T14:14:00+08:00">四 06 1月 2022</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="https://richardrobot.xyz/categories.html#wei-ruan-bi-ji-ref">微軟筆記</a>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#lei-bie-ref">類別</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="https://richardrobot.xyz/tags.html#aspnet-core-ref">ASP.NET Core
-                    <span class="superscript">1</span>
-</a></li>
-                <li><a href="https://richardrobot.xyz/tags.html#iis-ref">IIS
-                    <span class="superscript">1</span>
+                <li><a href="https://richardrobot.xyz/tags.html#biao-qian-ref">標籤
 </a></li>
             </ul>
 <h4>Contact</h4>
