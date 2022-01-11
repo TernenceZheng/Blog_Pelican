@@ -16,7 +16,7 @@ slug: landing-page-about-hidden
 
 ##  Sight Project
 
-![SightProject股票分析圖](/images/SightProject股票分析圖.png)
+![SightProject股票分析圖](images/SightProject股票分析圖.png)
 
 
 由於近幾年機器學習，深度學習的熱門話題引起我的注意，於是自學進修Python，參加了Hahow的線上課程，是以研究股票投資爲主，深度學習技術爲輔的兩門課程：
