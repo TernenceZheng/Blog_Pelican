@@ -5,15 +5,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/</loc>
-<lastmod>2022-01-11T15:30:43-00:00</lastmod>
+<lastmod>2022-01-11T16:11:36-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://richardrobot.xyz/archives.html</loc>
-<lastmod>2022-01-11T15:30:43-00:00</lastmod>
+<lastmod>2022-01-11T16:11:36-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2022/01/instagram/</loc>
+<lastmod>2022-01-11T16:06:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -298,6 +305,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/category/instagram.html</loc>
+<lastmod>2022-01-11T16:06:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/category/linebot.html</loc>
 <lastmod>2021-10-08T08:38:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -459,6 +473,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/tag/live.html</loc>
+<lastmod>2022-01-11T16:06:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/tag/mac.html</loc>
 <lastmod>2021-10-05T19:22:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -586,7 +607,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/author/richard.html</loc>
-<lastmod>2021-12-30T10:36:00+08:06</lastmod>
+<lastmod>2022-01-11T16:06:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
