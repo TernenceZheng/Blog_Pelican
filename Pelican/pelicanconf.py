@@ -166,3 +166,13 @@ RELATED_POSTS_SKIP_SAME_CATEGORY = True
 GITHUB_URL = 'https://github.com/TernenceZheng'
 
 LANDING_PAGE_TITLE =  'Richard隨手筆記 - 紙上得來終覺淺，絕知此事要躬行'
+
+PROJECTS_TITLE = "Related Projects"
+
+PROJECTS = [{
+    'name': '深度學習',
+    'url': 'https://stock.richardrobot.xyz',
+    'description': '以學習投資股票的課程，增進Python的程式語言能力，並且主要透過股票資料來打入 深度學習 與 機器學習 的敲門磚'},
+    {'name': '內容管理系統',
+    'url': 'https://godtable.com',
+    'description': '以Django為基底架構的CMS，對於想要快速建構一個Blog或是小型形象網站，WagtailCMS較能夠達成需求'}]

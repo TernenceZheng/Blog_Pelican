@@ -4,8 +4,8 @@ date: 2021-12-13 10:38
 aliases: 部落格 
 tags: 標籤
 category: 投資學習
-Slug: 自定義URL標籤
-summary: 預覽標題
+Slug: tripple-rsi
+summary: 技術面策略。主要進場條件為RSI指標轉強。主要進場條件為股價跌破季線、tripple_RSI於上季已反映。每週換股
 image: /images/stocklogo.jpg
 status: draft
 ---
