@@ -14,7 +14,7 @@ slug: landing-page-about-hidden
 
 ---
 
-##  Sight Project
+##  Side Project
 
 ![SightProject股票分析圖](images/SightProject股票分析圖.png)
 
