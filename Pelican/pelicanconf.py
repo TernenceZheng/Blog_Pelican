@@ -98,7 +98,7 @@ TAGS_ORDER_BY = 'alphabetic'
 THEME = 'themes/elegant'
 
 STATIC_PATHS = ['images', 'extra']
-
+EXTRA_PATH_METADATA = {'images/favicon.ico': {'path': 'favicon.ico'},}
 
 MARKDOWN = {
     'extension_configs': {
