@@ -45,7 +45,7 @@ const convertInstagramToPhotoSwipe = () => {
     // Get instagram-id
     const instagramId = ele.dataset.instagramId;
 
-    fetch("https://www.instagram.com/p/${instagramId}/?__a=1",{mode:"cors"})
+    fetch('https://www.instagram.com/p/${instagramId}/?__a=1',{mode:'cors'})
       .then((response) => {
         response.json().then((json) => {
           // Get Original image from the json
