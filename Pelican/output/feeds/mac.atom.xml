@@ -100,12 +100,7 @@ Scikit-Learn 0.24.2
 
 &lt;p&gt;需要再更新Numpy&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Mac"></category><category term="Tensorflow"></category></entry><entry><title>安裝Let’s Encrypt電子證書</title><link href="https://richardrobot.xyz/2021/10/mac-lets-encrypt/" rel="alternate"></link><published>2021-10-08T18:45:00+08:00</published><updated>2021-10-08T18:45:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-08:/2021/10/mac-lets-encrypt/</id><summary type="html">&lt;p&gt;在Mac本機安裝SSL與驗證流程記錄&lt;/p&gt;</summary><content type="html">&lt;p&gt;參考資料：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="https://yinlei.org/x-plane10/big5.php?p=2017/01/lets-encrypt.html"&gt;安裝Let&amp;#8217;s&amp;nbsp;Encrypt電子證書&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://jerry.thesolarsystems.net/?p=885"&gt;如何在NGINX+DJANGO平台設置SSL連線&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在本機驗證安裝Let&amp;#8217;s&amp;nbsp;Encrypt&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Mac"></category><category term="Tensorflow"></category></entry><entry><title>安裝Let’s Encrypt電子證書</title><link href="https://richardrobot.xyz/2021/10/mac-lets-encrypt/" rel="alternate"></link><published>2021-10-08T18:45:00+08:00</published><updated>2021-10-08T18:45:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-08:/2021/10/mac-lets-encrypt/</id><summary type="html">&lt;p&gt;在Mac本機安裝SSL與驗證流程記錄&lt;/p&gt;</summary><content type="html">&lt;p&gt;在本機驗證安裝Let&amp;#8217;s&amp;nbsp;Encrypt&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;brew install certbot&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;brew ls certbot&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;然後在Mac執行  &lt;/p&gt;
@@ -209,7 +204,12 @@ Scikit-Learn 0.24.2
 (LineBot) jarvis.zheng@zhengruichangdeMac-mini LineBot % sudo nginx -s reload
 Password:
 nginx: [warn] the "ssl" directive is deprecated, use the "listen ... ssl" directive instead in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5
-nginx: [emerg] no "ssl_certificate_key" is defined for certificate "/Users/jarvis.zheng/LineBot/ssl/chain.pem" and the "ssl" directive in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5&lt;/code&gt;&lt;/p&gt;</content><category term="Mac"></category><category term="ssl"></category></entry><entry><title>Supervisor</title><link href="https://richardrobot.xyz/2021/10/mac-supervisor/" rel="alternate"></link><published>2021-10-05T19:22:00+08:00</published><updated>2021-10-05T19:22:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-05:/2021/10/mac-supervisor/</id><summary type="html">&lt;p&gt;在Mac上使用supervisor來啓動服務&lt;/p&gt;</summary><content type="html">&lt;p&gt;在 Linux上可以使用systemctl&amp;nbsp;這個服務來開機就能自動啓動寫好的網站服務，等等其他的，但是在Mac上卻無法，使用supervisor還有Web畫面可以查看&lt;/p&gt;
+nginx: [emerg] no "ssl_certificate_key" is defined for certificate "/Users/jarvis.zheng/LineBot/ssl/chain.pem" and the "ssl" directive in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://yinlei.org/x-plane10/big5.php?p=2017/01/lets-encrypt.html"&gt;安裝Let&amp;#8217;s&amp;nbsp;Encrypt電子證書&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://jerry.thesolarsystems.net/?p=885"&gt;如何在NGINX+DJANGO平台設置SSL連線&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Mac"></category><category term="ssl"></category></entry><entry><title>Supervisor</title><link href="https://richardrobot.xyz/2021/10/mac-supervisor/" rel="alternate"></link><published>2021-10-05T19:22:00+08:00</published><updated>2021-10-05T19:22:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-05:/2021/10/mac-supervisor/</id><summary type="html">&lt;p&gt;在Mac上使用supervisor來啓動服務&lt;/p&gt;</summary><content type="html">&lt;p&gt;在 Linux上可以使用systemctl&amp;nbsp;這個服務來開機就能自動啓動寫好的網站服務，等等其他的，但是在Mac上卻無法，使用supervisor還有Web畫面可以查看&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Supervisor服務畫面.png" src="https://richardrobot.xyz/images/Supervisor服務畫面.png" /&gt;&lt;/p&gt;
 &lt;h2 id="brew"&gt;透過brew來安裝：&lt;a class="headerlink" href="#brew" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;brew install supervisor&lt;/code&gt;&lt;/p&gt;

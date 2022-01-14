@@ -9,13 +9,6 @@ summary: 在Mac本機安裝SSL與驗證流程記錄
 image: /images/url設定的圖片.png
 status: published
 ---
-參考資料：
-
->[安裝Let's Encrypt電子證書](https://yinlei.org/x-plane10/big5.php?p=2017/01/lets-encrypt.html)
-
-
->[如何在NGINX+DJANGO平台設置SSL連線](https://jerry.thesolarsystems.net/?p=885)
-
 
 
 在本機驗證安裝Let's Encrypt
@@ -160,4 +153,10 @@ Password:
 nginx: [warn] the "ssl" directive is deprecated, use the "listen ... ssl" directive instead in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5
 nginx: [emerg] no "ssl_certificate_key" is defined for certificate "/Users/jarvis.zheng/LineBot/ssl/chain.pem" and the "ssl" directive in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5
 ```
+
+
+參考資料：
+
+- [安裝Let's Encrypt電子證書](https://yinlei.org/x-plane10/big5.php?p=2017/01/lets-encrypt.html)
+- [如何在NGINX+DJANGO平台設置SSL連線](https://jerry.thesolarsystems.net/?p=885)
 

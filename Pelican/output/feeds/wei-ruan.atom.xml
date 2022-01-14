@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 微軟</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/wei-ruan.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2022-01-12T14:40:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>IIS站臺對Options請求直接返回404</title><link href="https://richardrobot.xyz/2022/01/iis-cors-404/" rel="alternate"></link><published>2022-01-12T14:40:00+08:00</published><updated>2022-01-12T14:40:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-01-12:/2022/01/iis-cors-404/</id><summary type="html">&lt;p&gt;在SignalR遇上CORS時IIS站臺設定的問題&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="signalr"&gt;SignalR的問題&lt;a class="headerlink" href="#signalr" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;之前在做SignalR的時候，需要對不同的子網域做API的呼叫，JS是在 signalr.domain.com ，需要呼叫的是在 o.domain.com 開始使用連線時，會引發CORS問題，如下圖：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;錯誤
+&lt;img alt="CorsPreflightError.png" src="https://richardrobot.xyz/images/CorsPreflightError.png"/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SignalR在做options時，會用 https://signalr.domain.com/negotiate?negotiateVersion=1 這樣的路徑做預檢，不過查了老半天都是回404，檢查原因有可能如下：&lt;/p&gt;
+&lt;h2 id="webconfigoptions"&gt;WebConfig是否被移除options請求的處理&lt;a class="headerlink" href="#webconfigoptions" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;system.webServer&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;handlers&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;remove&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"OPTIONSVerbHandler"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/handlers&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/system.webServer&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="iis-urlscanallowverbsoptions"&gt;檢查IIS是否安裝了 UrlScan的東西，若安裝了請檢查AllowVerbs中是否包含了options&lt;a class="headerlink" href="#iis-urlscanallowverbsoptions" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;UrlScan的配置文件為UrlScan.ini (C:\Windows\System32\inetsrv\urlscan\UrlScan.ini) 將OPTIONS從[DenyVerbs]中移除並添加到[AllowVerbs]下&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ISAPI篩選器的UrlScan.png" src="https://richardrobot.xyz/images/ISAPI篩選器的UrlScan.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="UrlScan的設定.png" src="https://richardrobot.xyz/images/UrlScan的設定.png"/&gt;&lt;/p&gt;
+&lt;h2 id="webconfigallow-methodoptions"&gt;在站臺的webconfig中的Allow-Method中是否加上options&lt;a class="headerlink" href="#webconfigallow-methodoptions" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;system.webServer&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;httpProtocol&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;customHeaders&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"Access-Control-Allow-Methods"&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;"OPTIONS,POST,GET"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"Access-Control-Allow-Headers"&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;"x-requested-with,aspxauth"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"Access-Control-Allow-Credentials"&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;"true"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;/customHeaders&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/httpProtocol&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/system.webServer&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.cnblogs.com/cplemom/p/10845434.html"&gt;IIS下網站對options請求直接返回404&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ithelp.ithome.com.tw/articles/10251693?sc=hot"&gt;Cross-Origin Resource Sharing (&lt;span class="caps"&gt;CORS&lt;/span&gt;)&lt;/a&gt;&lt;/p&gt;</content><category term="微軟"></category><category term="CORS"></category><category term="IIS"></category></entry></feed>

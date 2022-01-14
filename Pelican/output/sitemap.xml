@@ -5,15 +5,57 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/</loc>
-<lastmod>2022-01-12T11:48:48-00:00</lastmod>
+<lastmod>2022-01-14T19:27:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://richardrobot.xyz/archives.html</loc>
-<lastmod>2022-01-12T11:48:48-00:00</lastmod>
+<lastmod>2022-01-14T19:27:44-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2022/01/how-learn-fast/</loc>
+<lastmod>2022-01-13T14:42:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2022/01/http-method/</loc>
+<lastmod>2022-01-13T11:19:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2022/01/http-status-code/</loc>
+<lastmod>2022-01-13T11:04:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2022/01/http-cors/</loc>
+<lastmod>2022-01-12T15:44:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2022/01/iis-cors-404/</loc>
+<lastmod>2022-01-12T14:40:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/2022/01/cors-in-js-fix/</loc>
+<lastmod>2022-01-11T22:07:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -291,6 +333,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/category/english.html</loc>
+<lastmod>2022-01-13T14:42:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/category/git.html</loc>
 <lastmod>2021-10-05T16:09:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -305,8 +354,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/category/http.html</loc>
+<lastmod>2022-01-13T11:19:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/category/instagram.html</loc>
 <lastmod>2022-01-11T16:06:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/category/lei-bie.html</loc>
+<lastmod>2022-01-11T22:07:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -368,6 +431,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/category/wang-lu-gai-lun.html</loc>
+<lastmod>2022-01-12T15:44:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/category/wei-ruan.html</loc>
+<lastmod>2022-01-12T14:40:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/category/wei-ruan-bi-ji.html</loc>
 <lastmod>2021-12-10T09:44:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -424,6 +501,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/tag/cors.html</loc>
+<lastmod>2022-01-12T15:44:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/tag/django.html</loc>
 <lastmod>2021-10-08T08:38:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -452,8 +536,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/tag/http-method.html</loc>
+<lastmod>2022-01-13T11:19:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://richardrobot.xyz/tag/http-status.html</loc>
+<lastmod>2022-01-13T11:04:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/tag/iis.html</loc>
-<lastmod>2021-12-10T09:44:00+08:06</lastmod>
+<lastmod>2022-01-12T14:40:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -578,6 +676,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://richardrobot.xyz/tag/ted.html</loc>
+<lastmod>2022-01-13T14:42:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://richardrobot.xyz/tag/tensorflow.html</loc>
 <lastmod>2021-10-28T07:50:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -607,7 +712,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://richardrobot.xyz/author/richard.html</loc>
-<lastmod>2022-01-11T16:06:00+08:06</lastmod>
+<lastmod>2022-01-13T14:42:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh_tw">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Richard" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="HTTP, HTTP, " />
+
+<meta property="og:title" content="HTTP Header 欄位的分類 "/>
+<meta property="og:url" content="https://richardrobot.xyz/drafts/http-header.html" />
+<meta property="og:description" content="記錄HTTP Header 欄位的分類的資料" />
+<meta property="og:site_name" content="Richard隨手筆記" />
+<meta property="og:article:author" content="Richard" />
+<meta property="og:article:published_time" content="2022-01-13T10:28:00+08:00" />
+<meta property="og:article:modified_time" content="2022-01-13T10:28:00+08:00" />
+<meta name="twitter:title" content="HTTP Header 欄位的分類 ">
+<meta name="twitter:description" content="記錄HTTP Header 欄位的分類的資料">
+
+        <title>HTTP Header 欄位的分類  · Richard隨手筆記
+</title>
+        <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://richardrobot.xyz/"><span class=site-name>Richard隨手筆記</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://richardrobot.xyz
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://richardrobot.xyz/categories.html">Categories</a></li>
+                                <li ><a href="https://richardrobot.xyz/tags.html">Tags</a></li>
+                                <li ><a href="https://richardrobot.xyz/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="https://richardrobot.xyz/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://richardrobot.xyz/drafts/http-header.html">
+                <span class="caps">HTTP</span> Header&nbsp;欄位的分類
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <div class="toc">
+<ul></ul>
+</div>
+<blockquote>
+<p>HTTP的Header項目繁多，以下挑幾個常用出來說明，文末會列出分類的項目清單。</p>
+</blockquote>
+<ul>
+<li>
+<p><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers#cookies" title="Permalink to Cookies">Cookies</a>
+<span class="caps">HTTP</span>/1.1 引入Cookie來儲存狀態資料。
+Cookie是伺服器發送到使用者瀏覽器並且保存在瀏覽器本機的一小塊數據，它會在之後瀏覽時，像同一個伺服器再次發送請求時被自動攜帶上，用於告知伺服器前後請求是否來字同一個瀏覽。
+新的瀏覽器API目前已經支援其他儲存方式，開發者直接將數據儲存在本機的方式有Web Storage 、&nbsp;IndexedDB</p>
+</li>
+<li>
+<p><span class="caps">CORS</span>(延伸閱讀：<a href="https://richardrobot.xyz/2022/01/http-cors/">深入理解CORS</a>)
+<strong>跨來源資源共享</strong>（英語：Cross-origin resource sharing，縮寫：<span class="caps">CORS</span>），用於讓網頁的受限資源能夠被其他<a href="https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D" title="域名">域名</a>的頁面存取的一種機制。&nbsp;通過該機制，頁面能夠自由地使用不同源（英語：cross-origin）的圖片、樣式、指令碼、iframes以及影片。</p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers#message_body_information" title="Permalink to Message body information">Message body information</a>
+其中較為重要的為 Content-Type (延伸閱讀：[[<span class="caps">HTTP</span>&nbsp;Content-Type]])</p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers#request_context" title="Permalink to Request context">Request context</a>
+<span class="caps">TODO</span></p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers#response_context" title="Permalink to Response context">Response context</a>
+<span class="caps">TODO</span></p>
+</li>
+</ul>
+<p>參考連結：</p>
+<ul>
+<li><a href="https://blog.longwin.com.tw/2017/10/http-header-field-define-list-rule-rfc-2017/"><span class="caps">HTTP</span> Header&nbsp;欄位的分類</a></li>
+<li><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers"><span class="caps">HTTP</span> headers - <span class="caps">HTTP</span> | <span class="caps">MDN</span></a></li>
+</ul>
+<p>以下是針對文件的分類項目清單：</p>
+<ul>
+<li>Authentication<ul>
+<li><span class="caps">WWW</span>-Authenticate</li>
+<li>Authorization</li>
+<li>Proxy-Authenticate</li>
+<li>Proxy-Authorization</li>
+</ul>
+</li>
+<li>Caching<ul>
+<li>Age</li>
+<li>Cache-Control</li>
+<li>Expires</li>
+<li>Pragma</li>
+<li>Warning</li>
+</ul>
+</li>
+<li>Client hints<ul>
+<li>Accept-<span class="caps">CH</span></li>
+<li>Content-<span class="caps">DPR</span></li>
+<li><span class="caps">DPR</span></li>
+<li>Downlink</li>
+<li>Save-Data</li>
+<li>Viewport-Width</li>
+<li>Width</li>
+</ul>
+</li>
+<li>Conditionals<ul>
+<li>Last-Modified</li>
+<li>ETag</li>
+<li>If-Match</li>
+<li>If-None-Match</li>
+<li>If-Modified-Since</li>
+<li>If-Unmodified-Since</li>
+</ul>
+</li>
+<li>Connection management<ul>
+<li>Connection</li>
+<li>Keep-Alive</li>
+</ul>
+</li>
+<li>Content negotiation<ul>
+<li>Accept</li>
+<li>Accept-Charset</li>
+<li>Accept-Encoding</li>
+<li>Accept-Language</li>
+</ul>
+</li>
+<li>Controls<ul>
+<li>Expect</li>
+<li>Max-Forwards&nbsp;*Cookies</li>
+<li>Cookie</li>
+<li>Set-Cookie</li>
+<li>Cookie2 (被 Cookie&nbsp;取代，棄用)</li>
+<li>Set-Cookie2 (被 Set-Cookie2 取代，棄用)<em>
+</em><span class="caps">CORS</span></li>
+<li>Access-Control-Allow-Origin</li>
+<li>Access-Control-Allow-Credentials</li>
+<li>Access-Control-Allow-Headers</li>
+<li>Access-Control-Allow-Methods</li>
+<li>Access-Control-Expose-Headers</li>
+<li>Access-Control-Max-Age</li>
+<li>Access-Control-Request-Headers</li>
+<li>Access-Control-Request-Method</li>
+<li>Origin*</li>
+</ul>
+</li>
+<li>Do Not Track<ul>
+<li><span class="caps">DNT</span></li>
+<li>Tk</li>
+</ul>
+</li>
+<li>Downloads<ul>
+<li>Content-Disposition</li>
+</ul>
+</li>
+<li>Message body information<ul>
+<li>Content-Length</li>
+<li>Content-Type</li>
+<li>Content-Encoding</li>
+<li>Content-Language</li>
+<li>Content-Location</li>
+</ul>
+</li>
+<li>Proxies<ul>
+<li>Forwarded</li>
+<li>X-Forwarded-For</li>
+<li>X-Forwarded-Host</li>
+<li>X-Forwarded-Proto</li>
+<li>Via</li>
+</ul>
+</li>
+<li>Redirects<br />
+    Location
+*Request context<ul>
+<li>From</li>
+<li>Host</li>
+<li>Referer</li>
+<li>Referrer-Policy</li>
+<li>User-Agent<em>
+</em>Response&nbsp;context</li>
+<li>Allow</li>
+<li>Server*</li>
+</ul>
+</li>
+<li>Range requests<ul>
+<li>Accept-Ranges</li>
+<li>Range</li>
+<li>If-Range</li>
+<li>Content-Range</li>
+</ul>
+</li>
+<li>Security<ul>
+<li>Content-Security-Policy (<span class="caps">CSP</span>)</li>
+<li>Content-Security-Policy-Report-Only</li>
+<li>Public-Key-Pins (<span class="caps">HPKP</span>)</li>
+<li>Public-Key-Pins-Report-Only</li>
+<li>Strict-Transport-Security (<span class="caps">HSTS</span>)</li>
+<li>Upgrade-Insecure-Requests</li>
+<li>X-Content-Type-Options</li>
+<li>X-Frame-Options (<span class="caps">XFO</span>)</li>
+<li>X-<span class="caps">XSS</span>-Protection</li>
+</ul>
+</li>
+<li>Server-sent events<ul>
+<li>Ping-From</li>
+<li>Ping-To</li>
+<li>Last-Event-<span class="caps">ID</span></li>
+</ul>
+</li>
+<li>Transfer coding<ul>
+<li>Transfer-Encoding</li>
+<li><span class="caps">TE</span></li>
+<li>Trailer</li>
+</ul>
+</li>
+<li>WebSockets<ul>
+<li>Sec-WebSocket-Key</li>
+<li>Sec-WebSocket-Extensions</li>
+<li>Sec-WebSocket-Accept</li>
+<li>Sec-WebSocket-Protocol</li>
+<li>Sec-WebSocket-Version&nbsp;Other</li>
+<li>Date</li>
+<li>Large-Allocation</li>
+<li>Link</li>
+<li>Retry-After</li>
+<li>SourceMap</li>
+<li>Upgrade</li>
+<li>Vary</li>
+<li>X-<span class="caps">DNS</span>-Prefetch-Control</li>
+<li>X-Firefox-Spdy</li>
+<li>X-Requested-With</li>
+<li>X-<span class="caps">UA</span>-Compatible</li>
+</ul>
+</li>
+</ul>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2022-01-13T10:28:00+08:00">四 13 1月 2022</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#http-ref">HTTP</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://richardrobot.xyz/tags.html#http-ref">HTTP
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+    <a href="https://github.com/TernenceZheng" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="andy711023@gmail.com" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Gmail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff"/><rect width="362" height="272" x="75" y="120" fill="#f2f2f2" rx="8%"/><path fill="#d54c3f" d="M120 392H97c-12 0-22-10-22-23V143h45z"/><path fill="#b63524" d="M392 392h23c12 0 22-10 22-23V143h-45z"/><path fill-opacity=".05" d="M256 286L120 392V187z"/><path fill-opacity=".08" d="M82 159l235 233h75V159z"/><path stroke-linecap="round" fill="none" stroke="#de5145" stroke-width="45" d="M97 143l159 115 159-115"/><path fill="#f2f2f2" d="M415 120c-5 0-10 2-13 4L256 230 110 124c-3-2-8-4-13-4z"/></svg>
+    </a>
+    <a href="https://richardrobot.xyz/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Richard隨手筆記</span> - 紙上得來終覺淺，絕知此事要躬行
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://richardrobot.xyz/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
