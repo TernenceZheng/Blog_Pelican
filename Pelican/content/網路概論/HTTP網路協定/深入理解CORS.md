@@ -2,7 +2,6 @@
 title: 深入理解CORS
 date: 2022-01-12 15:44
 modified: 2022-01-12 15:44
-aliases: 部落格 
 tags: CORS
 category: 網路概論
 slug: http-cors

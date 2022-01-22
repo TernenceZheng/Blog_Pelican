@@ -2,9 +2,8 @@
 title: ASP.NET MVC的參數驗證方式
 date: 2021-12-30 10:36
 modified: 2021-12-30 10:36
-aliases: 部落格 
-tags: ASP.NET MVC
-category: CSharp
+tags: ASPNETMVC,CSharp
+category: 後端程式
 slug: asp-net-mvc-actionfilter
 summary: 用ASP.NET MVC 的 ActionFilterAttribute來過濾API參數
 image: /images/default_preview_image.jpg

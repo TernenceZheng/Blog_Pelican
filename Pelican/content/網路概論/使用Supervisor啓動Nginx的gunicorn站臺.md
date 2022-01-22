@@ -1,10 +1,9 @@
 ---
 title: 使用Supervisor啓動Nginx的gunicorn站臺
 date: 2021-10-07 22:07
-aliases: 部落格 
-tags: 標籤
-category: 類別
-summary: 預覽標題
+tags: Supervisor,Python
+category: 後端程式
+summary: 使用Supervisor啓動Nginx的gunicorn站臺
 image: /images/default_preview_image.jpg
 status: draft
 ---

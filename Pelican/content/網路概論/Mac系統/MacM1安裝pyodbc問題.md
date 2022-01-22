@@ -3,7 +3,7 @@ title: MacM1安裝pyodbc問題
 date: 2021-10-07 08:05
 aliases: 語法記錄 
 tags: Mac,MSSQL,Django
-category: Mac
+category: 網路概論
 slug: mac-m1-pyodbc
 summary: 一些瑣碎的事情沒有資訊的歷程記錄
 image: /images/圖片名稱

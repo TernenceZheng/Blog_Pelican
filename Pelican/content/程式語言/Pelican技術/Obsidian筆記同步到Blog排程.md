@@ -2,9 +2,8 @@
 title: Obsidian筆記同步到Blog排程
 date: 2021-10-01 09:26
 modified: 2021-10-01 09:26
-aliases: 部落格 
-tags: Obsidian,Pelican
-category: Python
+tags: Obsidian,Pelican,Python
+category: 網路概論
 slug: obsidian-to-pelican
 summary: 這個記錄着我製作Obsidian筆記同步到blog的語法
 image: /images/default_preview_image.jpg

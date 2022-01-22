@@ -2,9 +2,8 @@
 title: HTTP  StatusCode 清單
 date: 2022-01-13 11:04
 modified: 2022-01-13 11:04
-aliases: 部落格 
-tags: HTTP-STATUS
-category: HTTP
+tags: HTTP-STATUS,HTTP
+category: 網路概論
 slug: http-status-code
 summary: 記錄Http的狀態碼以待備查
 image: /images/default_preview_image.jpg

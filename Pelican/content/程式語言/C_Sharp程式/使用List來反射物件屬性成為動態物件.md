@@ -2,12 +2,10 @@
 title: 使用List來反射物件屬性成為動態物件
 date: 2022-01-06 14:14
 modified: 2022-01-06 14:14
-aliases: 部落格 
-tags: 標籤
-category: 類別
+tags: Reflect,Emit,Dynamic
+category: 後端程式
 slug: 自定義URL標籤
-related_posts: slug1, slug2, slug3, ... slugN
-summary: 預覽標題
+summary: 使用List來反射物件屬性成為動態物件
 image: /images/default_preview_image.jpg
 status: draft
 ---

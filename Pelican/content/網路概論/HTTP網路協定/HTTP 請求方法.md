@@ -2,9 +2,8 @@
 title: HTTP 請求方法
 date: 2022-01-13 11:19
 modified: 2022-01-13 11:19
-aliases: 部落格 
-tags: HTTP-METHOD
-category: HTTP
+tags: HTTP-METHOD,HTTP
+category: 網路概論
 slug: http-method
 summary: HTTP/1.1協定中共定義了八種方法（也叫「動作」）來以不同方式操作指定的資源
 image: /images/default_preview_image.jpg

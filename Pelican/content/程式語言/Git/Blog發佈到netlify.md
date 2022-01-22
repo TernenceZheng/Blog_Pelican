@@ -1,9 +1,8 @@
 ---
 title: Blog發佈到netlify
 date: 2021-10-05 16:36
-aliases: 部落格 
-tags: Namecheap,Netlify,Git
-category: Pelican
+tags: Namecheap,Netlify,Git,Pelican
+category: 後端程式
 slug: git-netlify
 summary: 使用Netlify來部署Pelican的程式
 image: /images/Blog發佈到netlify.png

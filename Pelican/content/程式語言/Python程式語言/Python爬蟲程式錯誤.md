@@ -2,9 +2,8 @@
 title: Python爬蟲程式錯誤
 date: 2021-11-25 23:04
 modified: 2021-11-25 23:04
-aliases: 部落格 
-tags: ConnectionResetError
-category: Python
+tags: ConnectionResetError,Python
+category: 後端程式
 slug: python-crawler-error
 summary: ConnectionResetError(54,'Connection reset by peer'))
 image: /images/default_preview_image.jpg

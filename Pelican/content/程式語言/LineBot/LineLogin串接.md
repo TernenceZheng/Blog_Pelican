@@ -1,9 +1,8 @@
 ---
 title: LineLogin串接
 date: 2021-10-08 08:38
-aliases: 部落格 
-tags: LineLoginAPI,Django
-category: LineBot
+tags: LineLoginAPI,LineBot,Django
+category: 後端程式
 summary: Django串街LineLogin API 流程簡單教學
 image: /images/linelogin400錯誤情況.png
 status: published

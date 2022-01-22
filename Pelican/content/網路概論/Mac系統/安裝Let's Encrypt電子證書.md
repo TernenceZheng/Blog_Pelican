@@ -1,9 +1,8 @@
 ---
 title: 安裝Let's Encrypt電子證書
 date: 2021-10-08 18:45
-aliases: 部落格 
-tags: ssl
-category: Mac
+tags: SSL,Mac
+category: 網路概論
 slug: mac-lets-encrypt
 summary: 在Mac本機安裝SSL與驗證流程記錄
 image: /images/url設定的圖片.png

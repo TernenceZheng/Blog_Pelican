@@ -2,9 +2,8 @@
 title: Fetch語法對Instagram的CORS問題
 date: 2022-01-11 22:07
 modified: 2022-01-11 22:07
-aliases: 部落格 
 tags: CORS
-category: 類別
+category: 網路概論
 slug: cors-in-js-fix
 summary: Pelican的樣板。有提供一個功能在頁面可以嵌入 Instagram的PO文，使用方式就只需要定義一個DIV在Markdown的檔案中就可以嵌入
 image: /images/default_preview_image.jpg

@@ -1,9 +1,8 @@
 ---
 title: MacM1執行Tensorflow錯誤問題
 date: 2021-10-28 07:50
-aliases: 部落格 
-tags: Tensorflow
-category: Mac
+tags: TensorFlow,Mac
+category: 後端程式
 slug: mac-tensorflow
 summary: MacM1執行Tensorflow2.6出現錯誤
 image: /images/default_preview_image.jpg

@@ -2,9 +2,8 @@
 title: ASCII認識
 date: 2021-11-22 18:27
 modified: 2021-11-22 18:27
-aliases: 部落格 
-tags: ascii
-category: 微軟筆記
+tags: ascii,微軟筆記
+category: 後端程式
 slug: ascii
 summary: 程式在使用XML的序列化時發生十六進位值(0x08)是無效的字
 image: /images/default_preview_image.jpg

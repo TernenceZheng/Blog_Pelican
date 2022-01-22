@@ -1,9 +1,8 @@
 ---
 title: SourceTree權限問題
 date: 2021-09-29 17:58
-aliases: 心得 
 tags: Git,SourceTree
-category: Git
+category: 網路概論
 slug: git-sourcetree-permission
 related_posts: git-ssh-mac-token,git-ssh-mac-token
 summary: Sourcetree出現Permission denied (publickey)

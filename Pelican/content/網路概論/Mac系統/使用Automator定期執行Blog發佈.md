@@ -2,9 +2,8 @@
 title: 使用Automator定期執行Blog發佈
 date: 2022-01-14 17:40
 modified: 2022-01-14 17:40
-aliases: 部落格 
-tags: Automator
-category: Mac
+tags: Automator,Mac
+category: 網路概論
 slug: mac-automator-blog
 summary: 加強Blog發佈程式流程
 image: /images/default_preview_image.jpg

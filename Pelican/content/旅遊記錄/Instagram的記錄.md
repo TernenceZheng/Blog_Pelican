@@ -2,9 +2,8 @@
 title: Instagram的記錄
 date: 2022-01-11 16:06
 modified: 2022-01-11 16:06
-aliases: 部落格 
-tags: Live
-category: Instagram
+tags: Life,Instagram
+category: 網路概論
 slug: instagram
 summary: 測試
 image: /images/default_preview_image.jpg

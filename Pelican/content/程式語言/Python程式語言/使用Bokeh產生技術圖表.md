@@ -1,9 +1,8 @@
 ---
 title: 使用Bokeh產生技術圖表
 date: 2021-11-03 11:05
-aliases: 部落格 
 tags: Python,Bokeh
-category: Python
+category: 後端程式
 summary: 在Django上套用Bokeh產生技術圖表
 image: /images/bokeh指標views圖.png
 status: published

@@ -2,9 +2,8 @@
 title: 使用VSCode遠端SSH開發
 date: 2020-08-25 18:22
 modified: 2020-08-25 18:22
-aliases: 部落格 
 tags: VisualStudioCode,GoogleCloudPlatform
-category: VisualStudio
+category: 後端程式
 slug: VisualStudioCode-GCP
 summary: 使用VSCode遠端開發，透過Remote-SSH
 image: /images/default_preview_image.jpg

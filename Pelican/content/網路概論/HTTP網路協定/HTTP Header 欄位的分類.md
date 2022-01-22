@@ -2,9 +2,8 @@
 title: HTTP Header 欄位的分類
 date: 2022-01-13 10:28
 modified: 2022-01-13 10:28
-aliases: 部落格 
 tags: HTTP
-category: HTTP
+category: 網路概論
 slug: http-header
 summary: 記錄HTTP Header 欄位的分類的資料
 image: /images/default_preview_image.jpg

@@ -2,9 +2,8 @@
 title: OrchardCore CMS系統
 date: 2021-12-01 11:12
 modified: 2021-12-01 11:12
-aliases: 部落格 
-tags: OrchardCodeCMS
-category: 微軟筆記
+tags: OrchardCodeCMS,微軟筆記
+category: 網路概論
 slug: orchardcode-cms
 summary: 記錄使用OrchardCodeCMS的學習歷程
 image: /images/default_preview_image.jpg

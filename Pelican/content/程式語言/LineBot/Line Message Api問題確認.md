@@ -1,12 +1,11 @@
 ---
 title: Line Message Api問題確認
 date: 2021-10-12 14:17
-aliases: 部落格 
-tags: 標籤
-category: 類別
-summary: 預覽標題
+tags: line
+category: 後端程式
+summary: Line Message Api問題確認
 image: /images/default_preview_image.jpg
-status: hidden
+status: draft
 ---
 參考資料：
 

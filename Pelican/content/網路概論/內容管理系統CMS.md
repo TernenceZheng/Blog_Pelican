@@ -2,9 +2,8 @@
 title: 內容管理系統CMS
 date: 2021-12-01 09:58
 modified: 2021-12-01 09:58
-aliases: 部落格 
-tags: WagtailCMS,CodeRedCMS
-category: Python
+tags: WagtailCMS,CodeRedCMS,Python
+category: 後端程式
 slug: python-cms
 summary: 使用CMS系統建構網站
 image: /images/default_preview_image.jpg

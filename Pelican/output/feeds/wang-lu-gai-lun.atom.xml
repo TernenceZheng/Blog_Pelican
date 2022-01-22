@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 網路概論</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/wang-lu-gai-lun.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2022-01-12T15:44:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>深入理解CORS</title><link href="https://richardrobot.xyz/2022/01/http-cors/" rel="alternate"></link><published>2022-01-12T15:44:00+08:00</published><updated>2022-01-12T15:44:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-01-12:/2022/01/http-cors/</id><summary type="html">&lt;p&gt;在兩次的錯誤後，好好的來理解所謂的CORS問題處理&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 網路概論</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/wang-lu-gai-lun.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2022-01-13T11:19:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>HTTP 請求方法</title><link href="https://richardrobot.xyz/2022/01/http-method/" rel="alternate"></link><published>2022-01-13T11:19:00+08:00</published><updated>2022-01-13T11:19:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-01-13:/2022/01/http-method/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt;/1.1協定中共定義了八種方法（也叫「動作」）來以不同方式操作指定的資源&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt;/1.1協定中共定義了八種方法（也叫「動作」）來以不同方式操作指定的資源，在此先列出常用的方法來記錄，詳細的方法清單在下面連結的維基百科查看。&lt;/p&gt;
+&lt;h4 id="get"&gt;&lt;span class="caps"&gt;GET&lt;/span&gt;&lt;a class="headerlink" href="#get" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;向指定的資源發出「顯示」請求。使用GET方法應該只用在讀取資料&lt;/p&gt;
+&lt;h4 id="post"&gt;&lt;span class="caps"&gt;POST&lt;/span&gt;&lt;a class="headerlink" href="#post" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;向指定資源提交資料，請求伺服器進行處理（例如提交表單或者上傳檔案）。 資料被包含在請求本文中。這個請求可能會建立新的資源或修改現有資源，或二者皆有。每次提交，表單的資料被瀏覽器用編碼到HTTP請求的body里。&lt;/p&gt;
+&lt;p&gt;瀏覽器發出的POST請求的body主要有兩種格式：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;1.一種是application/x-www-form-urlencoded用來傳輸簡單的資料，大概就是”key1=value1&amp;amp;key2=value2”這樣的格式。&lt;/em&gt;
+&lt;em&gt;2.一種是傳檔案，會採用multipart/form-data格式。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;採用後者是因為application/x-www-form-urlencoded的編碼方式對於檔案這種二進位的資料非常低效。&lt;/p&gt;
+&lt;h4 id="options"&gt;&lt;span class="caps"&gt;OPTIONS&lt;/span&gt;&lt;a class="headerlink" href="#options" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;這個方法可使伺服器傳回該資源所支援的所有HTTP請求方法。用  &lt;code&gt;*&lt;/code&gt; 來代替資源名稱，向Web伺服器傳送OPTIONS請求，可以測試伺服器功能是否正常運作。&lt;/p&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE"&gt;超文本傳輸協定&lt;/a&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="HTTP-METHOD"></category><category term="HTTP"></category></entry><entry><title>HTTP StatusCode 清單</title><link href="https://richardrobot.xyz/2022/01/http-status-code/" rel="alternate"></link><published>2022-01-13T11:04:00+08:00</published><updated>2022-01-13T11:04:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-01-13:/2022/01/http-status-code/</id><summary type="html">&lt;p&gt;記錄Http的狀態碼以待備查&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;
+&lt;ul&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;所有HTTP回應的第一行都是&lt;strong&gt;狀態行&lt;/strong&gt;，依次是當前HTTP版本號，3位數字組成的&lt;a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81" title="HTTP狀態碼"&gt;狀態代碼&lt;/a&gt;，以及描述狀態的短語，彼此由空格分隔。&lt;/p&gt;
+&lt;p&gt;狀態代碼的第一個數字代表當前回應的類型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81#1xx%E6%B6%88%E6%81%AF" title="HTTP狀態碼"&gt;1xx訊息&lt;/a&gt;——請求已被伺服器接收，繼續處理&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81#2xx%E6%88%90%E5%8A%9F" title="HTTP狀態碼"&gt;2xx成功&lt;/a&gt;——請求已成功被伺服器接收、理解、並接受&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81#3xx%E9%87%8D%E5%AE%9A%E5%90%91" title="HTTP狀態碼"&gt;3xx重新導向&lt;/a&gt;——需要後續操作才能完成這一請求&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81#4xx%E8%AF%B7%E6%B1%82%E9%94%99%E8%AF%AF" title="HTTP狀態碼"&gt;4xx請求錯誤&lt;/a&gt;——請求含有詞法錯誤或者無法被執行&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81#5xx%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%94%99%E8%AF%AF" title="HTTP狀態碼"&gt;5xx伺服器錯誤&lt;/a&gt;——伺服器在處理某個正確請求時發生錯誤&lt;/li&gt;
+&lt;/ul&gt;</content><category term="網路概論"></category><category term="HTTP-STATUS"></category><category term="HTTP"></category></entry><entry><title>深入理解CORS</title><link href="https://richardrobot.xyz/2022/01/http-cors/" rel="alternate"></link><published>2022-01-12T15:44:00+08:00</published><updated>2022-01-12T15:44:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-01-12:/2022/01/http-cors/</id><summary type="html">&lt;p&gt;在兩次的錯誤後，好好的來理解所謂的CORS問題處理&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;前言&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;在兩篇文章的洗禮後，好好的來理解所謂的CORS問題處理&lt;/p&gt;
 &lt;ul&gt;
@@ -74,4 +98,610 @@
 &lt;p&gt;&lt;a href="https://sa123.cc/mbz87ag1594xka2ohlgj.html"&gt;跨域（&lt;span class="caps"&gt;CORS&lt;/span&gt;）產生原因分析與解決方案，這一次徹底搞懂它&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/750548/"&gt;fetch捕獲重定向302/301&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://blog.techbridge.cc/2017/05/20/api-ajax-cors-and-jsonp/"&gt;輕鬆理解 Ajax 與跨來源請求&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://ithelp.ithome.com.tw/articles/10251693?sc=hot"&gt;[Day 27] Cross-Origin Resource Sharing (&lt;span class="caps"&gt;CORS&lt;/span&gt;)&lt;/a&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="CORS"></category></entry></feed>
+&lt;p&gt;&lt;a href="https://ithelp.ithome.com.tw/articles/10251693?sc=hot"&gt;[Day 27] Cross-Origin Resource Sharing (&lt;span class="caps"&gt;CORS&lt;/span&gt;)&lt;/a&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="CORS"></category></entry><entry><title>IIS站臺對Options請求直接返回404</title><link href="https://richardrobot.xyz/2022/01/iis-cors-404/" rel="alternate"></link><published>2022-01-12T14:40:00+08:00</published><updated>2022-01-12T14:40:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-01-12:/2022/01/iis-cors-404/</id><summary type="html">&lt;p&gt;在SignalR遇上CORS時IIS站臺設定的問題&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="signalr"&gt;SignalR的問題&lt;a class="headerlink" href="#signalr" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;之前在做SignalR的時候，需要對不同的子網域做API的呼叫，JS是在 signalr.domain.com ，需要呼叫的是在 o.domain.com 開始使用連線時，會引發CORS問題，如下圖：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;錯誤
+&lt;img alt="CorsPreflightError.png" src="https://richardrobot.xyz/images/CorsPreflightError.png"/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SignalR在做options時，會用 https://signalr.domain.com/negotiate?negotiateVersion=1 這樣的路徑做預檢，不過查了老半天都是回404，檢查原因有可能如下：&lt;/p&gt;
+&lt;h2 id="webconfigoptions"&gt;WebConfig是否被移除options請求的處理&lt;a class="headerlink" href="#webconfigoptions" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;system.webServer&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;handlers&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;remove&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"OPTIONSVerbHandler"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/handlers&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/system.webServer&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="iis-urlscanallowverbsoptions"&gt;檢查IIS是否安裝了 UrlScan的東西，若安裝了請檢查AllowVerbs中是否包含了options&lt;a class="headerlink" href="#iis-urlscanallowverbsoptions" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;UrlScan的配置文件為UrlScan.ini (C:\Windows\System32\inetsrv\urlscan\UrlScan.ini) 將OPTIONS從[DenyVerbs]中移除並添加到[AllowVerbs]下&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ISAPI篩選器的UrlScan.png" src="https://richardrobot.xyz/images/ISAPI篩選器的UrlScan.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="UrlScan的設定.png" src="https://richardrobot.xyz/images/UrlScan的設定.png"/&gt;&lt;/p&gt;
+&lt;h2 id="webconfigallow-methodoptions"&gt;在站臺的webconfig中的Allow-Method中是否加上options&lt;a class="headerlink" href="#webconfigallow-methodoptions" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;system.webServer&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;httpProtocol&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;customHeaders&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"Access-Control-Allow-Methods"&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;"OPTIONS,POST,GET"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"Access-Control-Allow-Headers"&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;"x-requested-with,aspxauth"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"Access-Control-Allow-Credentials"&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;"true"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;/customHeaders&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/httpProtocol&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/system.webServer&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.cnblogs.com/cplemom/p/10845434.html"&gt;IIS下網站對options請求直接返回404&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ithelp.ithome.com.tw/articles/10251693?sc=hot"&gt;Cross-Origin Resource Sharing (&lt;span class="caps"&gt;CORS&lt;/span&gt;)&lt;/a&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="CORS"></category><category term="IIS"></category><category term="微軟筆記"></category></entry><entry><title>Fetch語法對Instagram的CORS問題</title><link href="https://richardrobot.xyz/2022/01/cors-in-js-fix/" rel="alternate"></link><published>2022-01-11T22:07:00+08:00</published><updated>2022-01-11T22:07:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-01-11:/2022/01/cors-in-js-fix/</id><summary type="html">&lt;p&gt;Pelican的樣板。有提供一個功能在頁面可以嵌入&amp;nbsp;Instagram的PO文，使用方式就只需要定義一個DIV在Markdown的檔案中就可以嵌入&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;Pelican的樣板：  &lt;a href="https://github.com/Pelican-Elegant"&gt;Pelican-Elegant&lt;/a&gt;。有提供一個功能在頁面可以嵌入 Instagram的PO文，使用方式就只需要定義一個DIV在Markdown的檔案中就可以嵌入，&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"elegant-instagram"&lt;/span&gt; &lt;span class="na"&gt;data-instagram-id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"BwWo35fAcR3"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;其中，data-instagram-id就是Instagram上面PO文時的連結路徑，不過使用過後出現CORS問題，在Github上面Issues也有
+&lt;a href="https://github.com/Pelican-Elegant/elegant/issues/664"&gt;[&lt;span class="caps"&gt;BUG&lt;/span&gt;] Instagram code doesn’t work, browser shows blocked url because of policy&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;Access&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;fetch&lt;/span&gt; &lt;span class="nx"&gt;at&lt;/span&gt; &lt;span class="s1"&gt;'https://www.instagram.com/p/YYYYYYYY/?__a=1'&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="nx"&gt;origin&lt;/span&gt; &lt;span class="s1"&gt;'https://MYURL'&lt;/span&gt; &lt;span class="nx"&gt;has&lt;/span&gt; &lt;span class="nx"&gt;been&lt;/span&gt; &lt;span class="nx"&gt;blocked&lt;/span&gt; &lt;span class="nx"&gt;by&lt;/span&gt; &lt;span class="nx"&gt;CORS&lt;/span&gt; &lt;span class="nx"&gt;policy&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;No&lt;/span&gt; &lt;span class="s1"&gt;'Access-Control-Allow-Origin'&lt;/span&gt; &lt;span class="nx"&gt;header&lt;/span&gt; &lt;span class="nx"&gt;is&lt;/span&gt; &lt;span class="nx"&gt;present&lt;/span&gt; &lt;span class="nx"&gt;on&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;requested&lt;/span&gt; &lt;span class="nx"&gt;resource&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="nx"&gt;If&lt;/span&gt; &lt;span class="nx"&gt;an&lt;/span&gt; &lt;span class="nx"&gt;opaque&lt;/span&gt; &lt;span class="nx"&gt;response&lt;/span&gt; &lt;span class="nx"&gt;serves&lt;/span&gt; &lt;span class="nx"&gt;your&lt;/span&gt; &lt;span class="nx"&gt;needs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;set&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;request&lt;/span&gt;&lt;span class="s1"&gt;'s mode to '&lt;/span&gt;&lt;span class="nx"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;cors&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;fetch&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;resource&lt;/span&gt; &lt;span class="kd"&gt;with&lt;/span&gt; &lt;span class="nx"&gt;CORS&lt;/span&gt; &lt;span class="nx"&gt;disabled&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+
+&lt;span class="nx"&gt;Instagram&lt;/span&gt; &lt;span class="nx"&gt;gallery&lt;/span&gt; &lt;span class="nx"&gt;is&lt;/span&gt; &lt;span class="nx"&gt;not&lt;/span&gt; &lt;span class="nx"&gt;shown&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;由建議處理方式是fetch 加上 mode:’no-cors’&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;instagramId&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ele&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;dataset&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;instagramId&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nx"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`https://www.instagram.com/p/&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;instagramId&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;/?__a=1`&lt;/span&gt;&lt;span class="p"&gt;,{&lt;/span&gt;&lt;span class="nx"&gt;mode&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;"no-cors"&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;雖然不會出現CORS的問題了，但是IG的API回應卻是302 &lt;/p&gt;
+&lt;p&gt;&lt;img alt="使用CORS後API變302回應.png" src="https://richardrobot.xyz/images/使用CORS後API變302回應.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="已經修改fetch模式是nocors.png" src="https://richardrobot.xyz/images/已經修改fetch模式是nocors.png"/&gt;&lt;/p&gt;
+&lt;p&gt;由於Response回應302，所以後續就直接錯誤了，認為應該是用fetch API去呼叫，會跳轉到IG的Login畫面，API是無法呈現的所以後續無法轉JSON格式，看來是需要增加access token變成登入狀態&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;access-control-expose-headers: X-IG-Set-WWW-Claim&lt;/span&gt;
+&lt;span class="err"&gt;alt-svc: h3=":443"; ma=3600,h3-29=":443"; ma=3600&lt;/span&gt;
+&lt;span class="err"&gt;cache-control: private, no-cache, no-store, must-revalidate&lt;/span&gt;
+&lt;span class="err"&gt;content-language: zh-tw&lt;/span&gt;
+&lt;span class="err"&gt;content-length: 0&lt;/span&gt;
+&lt;span class="err"&gt;content-security-policy: report-uri https://www.instagram.com/security/csp_report/; default-src 'self' https://www.instagram.com; img-src data: blob: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com https://*.facebook.com https://*.fbsbx.com https://*.giphy.com; font-src data: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com; media-src 'self' blob: https://www.instagram.com https://*.cdninstagram.com https://*.fbcdn.net; manifest-src 'self' https://www.instagram.com; script-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://*.cdninstagram.com wss://www.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' https://*.www.instagram.com https://www.instagram.com 'unsafe-inline'; connect-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://graph.instagram.com https://*.graph.instagram.com https://i.instagram.com/graphql_www https://graphql.instagram.com https://*.cdninstagram.com https://api.instagram.com https://i.instagram.com https://*.i.instagram.com wss://www.instagram.com wss://edge-chat.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net chrome-extension://boadgeojelhgndaghljhdicfkmllpafd blob:; worker-src 'self' blob: https://www.instagram.com; frame-src 'self' https://instagram.com https://www.instagram.com https://*.instagram.com https://staticxx.facebook.com https://www.facebook.com https://web.facebook.com https://connect.facebook.net https://m.facebook.com; object-src 'none'; upgrade-insecure-requests&lt;/span&gt;
+&lt;span class="err"&gt;content-type: text/html; charset=utf-8&lt;/span&gt;
+&lt;span class="err"&gt;date: Wed, 12 Jan 2022 06:27:35 GMT&lt;/span&gt;
+&lt;span class="err"&gt;expires: Sat, 01 Jan 2000 00:00:00 GMT&lt;/span&gt;
+&lt;span class="err"&gt;location: https://www.instagram.com/accounts/login/&lt;/span&gt;
+&lt;span class="err"&gt;pragma: no-cache&lt;/span&gt;
+&lt;span class="err"&gt;set-cookie: mid=Yd501wALAAE2tYIXNpy3T6lgubqt; Domain=.instagram.com; expires=Fri, 12-Jan-2024 06:27:35 GMT; Max-Age=63072000; Path=/; Secure&lt;/span&gt;
+&lt;span class="err"&gt;set-cookie: ig_did=B725DF97-76E5-4F3A-915A-366CD821B3A9; Domain=.instagram.com; expires=Fri, 12-Jan-2024 06:27:35 GMT; HttpOnly; Max-Age=63072000; Path=/; Secure&lt;/span&gt;
+&lt;span class="err"&gt;set-cookie: ig_nrcb=1; Domain=.instagram.com; expires=Thu, 12-Jan-2023 06:27:35 GMT; Max-Age=31536000; Path=/; Secure&lt;/span&gt;
+&lt;span class="err"&gt;strict-transport-security: max-age=31536000&lt;/span&gt;
+&lt;span class="err"&gt;vary: Accept-Language, Cookie&lt;/span&gt;
+&lt;span class="err"&gt;x-aed: 48&lt;/span&gt;
+&lt;span class="err"&gt;x-content-type-options: nosniff&lt;/span&gt;
+&lt;span class="err"&gt;x-fb-trip-id: 1679558926&lt;/span&gt;
+&lt;span class="err"&gt;x-frame-options: SAMEORIGIN&lt;/span&gt;
+&lt;span class="err"&gt;x-ig-origin-region: prn&lt;/span&gt;
+&lt;span class="err"&gt;x-ig-push-state: c2&lt;/span&gt;
+&lt;span class="err"&gt;x-ig-request-end-time: 1939701098&lt;/span&gt;
+&lt;span class="err"&gt;x-ig-request-start-time: 1939701061.9430351&lt;/span&gt;
+&lt;span class="err"&gt;x-xss-protection: 0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;目前似乎無法針對 302 問題解決。若是做登入IG後，再次GET資料，雖然會有200的正常狀態，但是其實返回的物件是一個 &lt;code&gt;status:0&lt;/code&gt; 的情況， 參考了這篇： &lt;a href="https://ithelp.ithome.com.tw/articles/10249967"&gt;Fetch 的使用注意事項&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IG回應的資歷形態.png" src="https://richardrobot.xyz/images/IG回應的資歷形態.png"/&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;*引用：&lt;/p&gt;
+&lt;p&gt;很多人會認為只要將 fetch 裡的屬性 mode，調整成 &lt;code&gt;mode: 'no-cors'&lt;/code&gt;，就可以避免 &lt;span class="caps"&gt;CORS&lt;/span&gt;，其實不是！
+&lt;code&gt;mode: 'no-cors&lt;/code&gt; 在設定上的意義是，告訴瀏覽器，我本來就知道 server 對於這個 request 是沒有設定可以存取 &lt;span class="caps"&gt;CORS&lt;/span&gt; 的，我本來就拿不到 response，我設定&lt;code&gt;mode: 'no-cors&lt;/code&gt;，是為了，就算無法存取，也不要跑到 .catch() 那邊，讓它出現 Error。
+一樣拿不到 server 的 response，但會拿到一個 &lt;code&gt;status: 0&lt;/code&gt; 的 response。*&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="cors-server-cors-response"&gt;結論：在 &lt;span class="caps"&gt;CORS&lt;/span&gt; 的限制底下，只有 server 開放 &lt;span class="caps"&gt;CORS&lt;/span&gt; 存取，你才拿得到 response，如果沒有開放，就一定拿不到。&lt;a class="headerlink" href="#cors-server-cors-response" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;p&gt;https://www.ithome.com.tw/voice/129558&lt;/p&gt;
+&lt;p&gt;https://shubo.io/what-is-cors/&lt;/p&gt;
+&lt;p&gt;https://sa123.cc/mbz87ag1594xka2ohlgj.html&lt;/p&gt;
+&lt;p&gt;https://codertw.com/%E7%A8%8B%E5%&lt;span class="caps"&gt;BC&lt;/span&gt;%8F%E8%&lt;span class="caps"&gt;AA&lt;/span&gt;%9E%E8%A8%80/750548/&lt;/p&gt;</content><category term="網路概論"></category><category term="CORS"></category></entry><entry><title>Instagram的記錄</title><link href="https://richardrobot.xyz/2022/01/instagram/" rel="alternate"></link><published>2022-01-11T16:06:00+08:00</published><updated>2022-01-11T16:06:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-01-11:/2022/01/instagram/</id><summary type="html">&lt;p&gt;測試&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;
+&lt;ul&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;月眉濕地生態園區
+&lt;div class="elegant-instagram" data-instagram-id="CYnUNkKonB9"&gt;&lt;/div&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="Life"></category><category term="Instagram"></category></entry><entry><title>OrchardCore CMS系統</title><link href="https://richardrobot.xyz/2021/12/orchardcode-cms/" rel="alternate"></link><published>2021-12-01T11:12:00+08:00</published><updated>2021-12-01T11:12:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-01:/2021/12/orchardcode-cms/</id><summary type="html">&lt;p&gt;記錄使用OrchardCodeCMS的學習歷程&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="net-coresdk"&gt;安裝 .&lt;span class="caps"&gt;NET&lt;/span&gt; Core與SDK&lt;a class="headerlink" href="#net-coresdk" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OrchardCore CMS安裝流程在MAC上，主要在非Windows系統的安裝流程。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;主要參考：&lt;a href="https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode"&gt;https://github.com/orchardcmsnet/MyOrchardCoreCMSonLinuxUsingVSCode&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;另外NET CORE的Runtime安裝參考微軟官方：&lt;a href="https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions"&gt;https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-ubuntu#how-to-install-other-versions&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用Chrome的瀏覽器，因為不是Https，會自動將後臺登入自動導302Found問題，導致後臺登入一直出現在登入頁面，改用FireFox就可以&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;另外 aspnetcore-runtime-3.1 皆改用3.1似乎才能正常運作&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是注意目前.net core 已經到5.0 ，這個CMS框架只支援3.0&lt;/p&gt;
+&lt;p&gt;安裝另外執行以下語法：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;gpg&lt;/span&gt;
+&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mv&lt;/span&gt; &lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;trusted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//packages.microsoft.com/config/ubuntu/20.04/prod.list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mv&lt;/span&gt; &lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;chown&lt;/span&gt; &lt;span class="nl"&gt;root&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;trusted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;chown&lt;/span&gt; &lt;span class="nl"&gt;root&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;transport&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;aspnetcore&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;runtime&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.1&lt;/span&gt;
+
+
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;gpg&lt;/span&gt;
+&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mv&lt;/span&gt; &lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;trusted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//packages.microsoft.com/config/ubuntu/20.04/prod.list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mv&lt;/span&gt; &lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;chown&lt;/span&gt; &lt;span class="nl"&gt;root&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;trusted&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gpg&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;chown&lt;/span&gt; &lt;span class="nl"&gt;root&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;transport&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; \
+  &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;dotnet&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;runtime&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="orchard-core"&gt;Orchard Core的所有功能概述¶&lt;a class="headerlink" href="#orchard-core" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;這是Orchard Core所有內置功能的分類概覽。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;參考: &lt;a href="https://docs.orchardcore.net/en/dev/docs/reference/"&gt;https://docs.orchardcore.net/en/dev/docs/reference/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分類：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;admin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;App Security&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Authentication and User Management&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Content&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Design&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Extensibility&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hosting and Operations&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Localization&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navigation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Search, Indexing, Querying&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面就先記錄一下最主要的功能Content Type&lt;/p&gt;
+&lt;h3 id="content-type"&gt;Content Type(內容類別)&lt;a class="headerlink" href="#content-type" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Content Type：選擇內容類型列表&lt;/p&gt;
+&lt;p&gt;簡單說明就是頁面的顯示自定義類型，像是產品頁面類型，首頁頁面類型，部落格頁面類型，等等的分別，&lt;/p&gt;
+&lt;p&gt;例如：IndexPage 可以定義為首頁，ProductListPage可以定義為產品列表頁面，ProductPage可以定義為產品頁面&lt;/p&gt;
+&lt;p&gt;Content Type 裡面會有兩個部分組成&lt;/p&gt;
+&lt;p&gt;Content Parts ，Content Field&lt;/p&gt;
+&lt;h3 id="content-parts"&gt;Content Parts(內容部分)&lt;a class="headerlink" href="#content-parts" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="contentParts的功能.png" src="https://richardrobot.xyz/images/contentParts的功能.png"/&gt;&lt;/p&gt;
+&lt;p&gt;該Title模塊提供了標題部分，使您可以自定義內容項的DisplayText屬性。整個管理界面都使用DisplayText屬性來幫助您識別內容項。&lt;/p&gt;
+&lt;p&gt;標題部分¶ 將此部分附加到您的內容項以自定義ContentItem的DisplayText屬性。&lt;/p&gt;
+&lt;p&gt;TitlePart設置¶ 默認情況下，附加TitlePart將允許內容編輯器手動編輯ContentItem的DisplayText（標題）。&lt;/p&gt;
+&lt;p&gt;您也可以通過使用Liquid表達式指定模式來生成標題。&lt;/p&gt;
+&lt;p&gt;模式有權訪問當前的ContentItem，並在ContentItem更新時執行。例如，字段可用於生成圖案。以下示例在內容類型上使用名為的Text字段。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;ContentItem.Content.Product.Name.Text&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="content-fields"&gt;Content Fields(內容欄位)&lt;a class="headerlink" href="#content-fields" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="contentFields的功能.png" src="https://richardrobot.xyz/images/contentFields的功能.png"/&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="OrchardCodeCMS"></category><category term="微軟筆記"></category></entry><entry><title>安裝Let’s Encrypt電子證書</title><link href="https://richardrobot.xyz/2021/10/mac-lets-encrypt/" rel="alternate"></link><published>2021-10-08T18:45:00+08:00</published><updated>2021-10-08T18:45:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-08:/2021/10/mac-lets-encrypt/</id><summary type="html">&lt;p&gt;在Mac本機安裝SSL與驗證流程記錄&lt;/p&gt;</summary><content type="html">&lt;p&gt;在本機驗證安裝Let&amp;#8217;s&amp;nbsp;Encrypt&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;brew install certbot&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;brew ls certbot&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;然後在Mac執行  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;certbot --config-dir ~/letsencrypt/etc --work-dir ~/letsencrypt/lib --logs-dir ~/letsencrypt/log certonly --manual&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;接下來會有三個步驟要輸入：&lt;/p&gt;
+&lt;p&gt;1.Email&lt;/p&gt;
+&lt;p&gt;2.domain&lt;/p&gt;
+&lt;p&gt;3.會要你在規定的路徑上產生讀取文檔：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Saving&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt; &lt;span class="n"&gt;log&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;letsencrypt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;letsencrypt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;
+
+&lt;span class="n"&gt;Please&lt;/span&gt; &lt;span class="n"&gt;enter&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;domain&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;would&lt;/span&gt; &lt;span class="n"&gt;like&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;certificate&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;comma&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="ow"&gt;or&lt;/span&gt;
+
+&lt;span class="n"&gt;space&lt;/span&gt; &lt;span class="n"&gt;separated&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Enter&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;c&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;cancel&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="n"&gt;linebot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;richardrobot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xyz&lt;/span&gt;
+
+&lt;span class="n"&gt;Requesting&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;certificate&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;linebot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;richardrobot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xyz&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;
+
+&lt;span class="n"&gt;Create&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;containing&lt;/span&gt; &lt;span class="n"&gt;just&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+
+
+
+&lt;span class="n"&gt;YYUCwTYHewbZ0vVcobFBA8kmL&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xs&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="n"&gt;AQAj5aH7tD3HI&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mFCPG4KMVD6yTJlxRiPv1IXrYQENjpRSb9DJyynjW5I&lt;/span&gt;
+
+
+
+&lt;span class="n"&gt;And&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;available&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;web&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+
+
+
+&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;linebot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;richardrobot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xyz&lt;/span&gt;&lt;span class="o"&gt;/.&lt;/span&gt;&lt;span class="n"&gt;well&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;known&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;acme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;challenge&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;YYUCwTYHewbZ0vVcobFBA8kmL&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xs&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="n"&gt;AQAj5aH7tD3HI&lt;/span&gt;
+
+
+
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;
+
+&lt;span class="n"&gt;Press&lt;/span&gt; &lt;span class="n"&gt;Enter&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;Continue&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;從上面的指示來看&amp;nbsp;要在指定的網址：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;http://linebot.richardrobot.xyz/.well-known/acme-challenge/YYUCwTYHewbZ0vVcobFBA8kmL-xs-8AQAj5aH7tD3HI&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;產生可讀取字串：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;YYUCwTYHewbZ0vVcobFBA8kmL-xs-8AQAj5aH7tD3HI.mFCPG4KMVD6yTJlxRiPv1IXrYQENjpRSb9DJyynjW5I&lt;/code&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id="django"&gt;在Django的做法如下：&lt;a class="headerlink" href="#django" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;在 url.py&amp;nbsp;設定網址：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="url設定的圖片.png" src="https://richardrobot.xyz/images/url設定的圖片.png" /&gt;&lt;/p&gt;
+&lt;p&gt;檔案放置的地方：
+&lt;img alt="檔案放置的地方.png" src="https://richardrobot.xyz/images/檔案放置的地方.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Views.py 程式讀取的方式：
+&lt;img alt="views程式讀取的方式.png" src="https://richardrobot.xyz/images/views程式讀取的方式.png" /&gt;&lt;/p&gt;
+&lt;p&gt;驗證成功存放的路徑：
+&lt;img alt="驗證成功的畫面.png" src="https://richardrobot.xyz/images/驗證成功的畫面.png" /&gt;&lt;/p&gt;
+&lt;p&gt;nginx&amp;nbsp;新增的配置&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;第一個&lt;/span&gt;
+&lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+&lt;span class="n"&gt;server_name&lt;/span&gt; &lt;span class="n"&gt;linebot&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;richardrobot&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xyz&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;301&lt;/span&gt; &lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//linebot.richardrobot.xyz$request_uri;&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="err"&gt;第二個&lt;/span&gt;
+&lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+
+&lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="mi"&gt;443&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;server_name&lt;/span&gt; &lt;span class="n"&gt;linebot&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;richardrobot&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xyz&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+
+
+&lt;span class="n"&gt;ssl&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;
+
+&lt;span class="n"&gt;ssl_certificate&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;LineBot&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pem&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;
+
+&lt;span class="n"&gt;ssl_certificate&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;LineBot&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pem&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;
+
+&lt;span class="n"&gt;ssl_certificate_key&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;LineBot&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;privkey&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pem&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;
+
+
+    &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+        &lt;span class="cp"&gt;#第三個&lt;/span&gt;
+        &lt;span class="n"&gt;proxy_set_header&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Forwarded&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Proto&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="err"&gt;這個很重要，記得加入&lt;/span&gt;
+
+
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;code&gt;沒有加最後的分號 ; 
+(LineBot) jarvis.zheng@zhengruichangdeMac-mini LineBot % sudo nginx -s reload
+Password:
+nginx: [warn] the "ssl" directive is deprecated, use the "listen ... ssl" directive instead in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5
+nginx: [emerg] no "ssl_certificate_key" is defined for certificate "/Users/jarvis.zheng/LineBot/ssl/chain.pem" and the "ssl" directive in /opt/homebrew/etc/nginx/sites-enabled/LineBot:5&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://yinlei.org/x-plane10/big5.php?p=2017/01/lets-encrypt.html"&gt;安裝Let&amp;#8217;s&amp;nbsp;Encrypt電子證書&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://jerry.thesolarsystems.net/?p=885"&gt;如何在NGINX+DJANGO平台設置SSL連線&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="網路概論"></category><category term="SSL"></category><category term="Mac"></category></entry><entry><title>Supervisor</title><link href="https://richardrobot.xyz/2021/10/mac-supervisor/" rel="alternate"></link><published>2021-10-05T19:22:00+08:00</published><updated>2021-10-05T19:22:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-05:/2021/10/mac-supervisor/</id><summary type="html">&lt;p&gt;在Mac上使用supervisor來啓動服務&lt;/p&gt;</summary><content type="html">&lt;p&gt;在 Linux上可以使用systemctl&amp;nbsp;這個服務來開機就能自動啓動寫好的網站服務，等等其他的，但是在Mac上卻無法，使用supervisor還有Web畫面可以查看&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Supervisor服務畫面.png" src="https://richardrobot.xyz/images/Supervisor服務畫面.png" /&gt;&lt;/p&gt;
+&lt;h2 id="brew"&gt;透過brew來安裝：&lt;a class="headerlink" href="#brew" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;brew install supervisor&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id="_1"&gt;設定檔路徑：&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;由於是Mac M1 的系統，homebrew已經將設定的路徑放在 &lt;code&gt;/opt/homebrew/etc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如下圖，開啓 supervisor.conf&amp;nbsp;檔案&lt;/p&gt;
+&lt;p&gt;&lt;img alt="supervisor的ini設定畫面.png" src="https://richardrobot.xyz/images/supervisor的ini設定畫面.png" /&gt;&lt;/p&gt;
+&lt;p&gt;可以註解前面的 &lt;code&gt;;&lt;/code&gt; 符號來啓用設定&amp;nbsp;:&lt;/p&gt;
+&lt;p&gt;可以開啓 Web的畫面 啓用&amp;nbsp;登入帳號密碼&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;inet_http_server&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;          &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;inet&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TCP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="n"&gt;disabled&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt;
+&lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;9001&lt;/span&gt;         &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;ip_address&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="n"&gt;specifier&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nb"&gt;all&lt;/span&gt; &lt;span class="n"&gt;iface&lt;/span&gt;
+&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;               &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;123&lt;/span&gt;                &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在最後加入客製化的設定檔：
+加入下面的設定，可以在/Process/  資料夾底下設定需要的Service檔，並且用 .ini&amp;nbsp;爲副檔名&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;include&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Process&lt;/span&gt;&lt;span class="o"&gt;/*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;ini&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;已django網站爲例：&lt;/p&gt;
+&lt;p&gt;command 程序啓動命令：使用gunicorn來當WebServer，使用參數檔&amp;nbsp;gunicorn.conf.py &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;django_server&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;miniforge3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;envs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;finlab&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gunicorn&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="n"&gt;gunicorn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;StockSecretary&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;
+&lt;span class="n"&gt;process_name&lt;/span&gt;&lt;span class="o"&gt;=%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;program_name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
+&lt;span class="n"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;StockWeb&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;啓動服務：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;services&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="n"&gt;supervisor&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hoohoo.top/blog/supervisor-instructions-for-use/"&gt;&lt;span class="caps"&gt;SUPERVISOR&lt;/span&gt;&amp;nbsp;介紹與使用方式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://aptro.github.io/server/architecture/2016/06/21/Jupyter-Notebook-Nginx-Setup.html"&gt;Jupyter Notebook and Nginx&amp;nbsp;Setup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.gushiciku.cn/pl/2MVd/zh-tw"&gt;Mac &lt;span class="caps"&gt;OSX&lt;/span&gt; 開機啟動應用&amp;nbsp;(supervisor)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.twblogs.net/a/5d6115a6bd9eee541c32bb6f"&gt;Python Tricks —— 使用 Supervisor 控制 Linux&amp;nbsp;進程&lt;/a&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="Mac"></category><category term="Supervisor"></category><category term="Nginx"></category></entry><entry><title>Mac重新開機SSH Token失效</title><link href="https://richardrobot.xyz/2021/10/git-ssh-mac-token/" rel="alternate"></link><published>2021-10-05T16:09:00+08:00</published><updated>2021-10-05T16:09:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-05:/2021/10/git-ssh-mac-token/</id><summary type="html">&lt;p&gt;Mac重新開機SSHToken失效問題&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;img alt="Sourcetree出現Permissiondenied.png" src="https://richardrobot.xyz/images/Sourcetree出現Permissiondenied.png" /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;已經加入Github的SSH Token了，再次的PUSH還是會產生 &lt;a href="https://richardrobot.xyz/2021/09/git-sourcetree-permission/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;查詢問題之後 參考&lt;a href="https://www.twblogs.net/a/5cc1dbe7bd9eee3aed78a30f"&gt; 操作提示 Permission denied, please try again&lt;/a&gt;&amp;nbsp;，裏面的說明：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ssh-add 這個命令不是用來永久性的記住你所使用的私鑰的。實際上，它的作用只是把你指定的私鑰添加到 ssh-agent 所管理的一個 session 當中。而 ssh-agent 是一個用於存儲私鑰的臨時性的 session&amp;nbsp;服務，所以每次重啓都會失效，都需要再次執行命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;或是設定 &lt;a href="https://mednoter.com/ssh-add-automatically.html"&gt;Mac 重啟後自動ssh-add&amp;nbsp;私鑰&lt;/a&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="SSH"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>副檔名command無法執行</title><link href="https://richardrobot.xyz/2021/10/mac-command-permission/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/mac-command-permission/</id><summary type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;</summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
+&lt;p&gt;&lt;img alt="副檔名command無法執行.png" src="https://richardrobot.xyz/images/副檔名command無法執行.png" /&gt;&lt;/p&gt;
+&lt;p&gt;需要另外給予權限：&lt;code&gt;chmod +x batch_notes_script.command&lt;/code&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="權限問題"></category><category term="Mac"></category></entry><entry><title>Obsidian筆記同步到Blog排程</title><link href="https://richardrobot.xyz/2021/10/obsidian-to-pelican/" rel="alternate"></link><published>2021-10-01T09:26:00+08:00</published><updated>2021-10-01T09:26:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/obsidian-to-pelican/</id><summary type="html">&lt;p&gt;這個記錄着我製作Obsidian筆記同步到blog的語法&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;緣起&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;自從發現&lt;a href="https://richardrobot.xyz/2021/09/obsidian/"&gt;Obsidian&lt;/a&gt;這個東西之後，寫作筆記感覺很方便，而且使用Markdown語法，也剛好想建置Blog網站，用Python的Pelican套件，一樣是用Markdown來產生文章，就覺得兩個東西可以合併，既可以做筆記，又可以寫Blog。&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h2 id="_2"&gt;想法&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;obsidian的備份機制使用Github來完成，而且有套件可以自動Push
+&lt;img alt="obsidian已安裝的第三方外掛.png" src="https://richardrobot.xyz/images/obsidian已安裝的第三方外掛.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/10/git-netlify/"&gt;Blog發佈到netlify&lt;/a&gt; 也是用GitHub&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;主要把Obsidian的MD檔同步到Pelican的content資料夾，再做一個發佈的程式就完成了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="_3"&gt;流程：&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Obsidian 的筆記寫完之後使用 &lt;code&gt;command + Shift  + P&lt;/code&gt; 快捷鍵Push到GitHub：ObsidianNote。 參考：   &lt;a href="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/"&gt;Obsidian快捷鍵設定&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;複製檔案到如下圖&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;右邊的 ==隨手筆記==資料夾 複製=&amp;gt; ==/Pelican/content 底下==&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;&lt;img alt="顯示同步資料夾.png" src="https://richardrobot.xyz/images/顯示同步資料夾.png"/&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;複製圖檔&lt;/li&gt;
+&lt;li&gt;執行語法來生成頁面 &lt;code&gt;pelican content&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;git commit &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; push&lt;/li&gt;
+&lt;/ol&gt;</content><category term="網路概論"></category><category term="Obsidian"></category><category term="Pelican"></category><category term="Python"></category></entry><entry><title>SourceTree權限問題</title><link href="https://richardrobot.xyz/2021/09/git-sourcetree-permission/" rel="alternate"></link><published>2021-09-29T17:58:00+08:00</published><updated>2021-09-29T17:58:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-29:/2021/09/git-sourcetree-permission/</id><summary type="html">&lt;p&gt;Sourcetree出現Permission denied&amp;nbsp;(publickey)&lt;/p&gt;</summary><content type="html">&lt;h3 id="sourcetreepermission-denied-publickey"&gt;Sourcetree出現Permission denied (publickey)&lt;a class="headerlink" href="#sourcetreepermission-denied-publickey" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img alt="Sourcetree出現Permissiondenied.png" src="https://richardrobot.xyz/images/Sourcetree出現Permissiondenied.png" /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;這個問題的產生可能是程式問題，已經透過SourceTree的UI界面功能去產生SSH的KEY
+做法來源&lt;a href="https://richardrobot.xyz/2021/09/git-mac-add-token/"&gt;Mac 上改變 Git 認證模式&lt;/a&gt;&amp;nbsp;，也已經至GitHub去註冊KEY&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210929180241.png" src="https://richardrobot.xyz/images/Pasted image 20210929180241.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Google以後參考資料部落格：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://medium.com/@wade30191/macos%E6%9B%B4%E6%96%B0%E5%BE%8C%E4%BD%BF%E7%94%A8sourcetree%E5%87%BA%E7%8F%BEpermission-denied-publickey-c226a85c0a3a"&gt;MacOS更新後使用Sourcetree出現Permission denied&amp;nbsp;(publickey)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就去找出當初用GitHub產生的PrivateKey在哪如下圖左紅框，就執行一下以下語法就可以了&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img alt="Pasted image 20210929180643.png" src="https://richardrobot.xyz/images/Pasted image 20210929180643.png" /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;==語法：==&lt;/p&gt;
+&lt;p&gt;執行新增&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;/.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;GitHub&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;檢查語法&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="nd"&gt;@github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="網路概論"></category><category term="Git"></category><category term="SourceTree"></category></entry><entry><title>Obsidian快捷鍵設定</title><link href="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/" rel="alternate"></link><published>2021-09-16T17:40:00+08:00</published><updated>2021-09-16T17:40:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/obsidiankuai-jie-jian-she-ding/</id><summary type="html">&lt;p&gt;Obsidian快捷鍵設定&lt;/p&gt;</summary><content type="html">&lt;h1 id="obsidian"&gt;&lt;a href="https://richardrobot.xyz/2021/09/obsidian/"&gt;Obsidian&lt;/a&gt; 快捷鍵設定&lt;a class="headerlink" href="#obsidian" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;參考網址：&lt;a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/obsidian-%E4%BD%BF%E7%94%A8%E6%95%99%E5%AD%B8-%E7%AD%86%E8%A8%98%E7%AF%87-08-%E5%80%8D%E9%80%9F%E6%8F%90%E5%8D%87%E4%BD%A0%E7%9A%84%E6%93%8D%E4%BD%9C%E9%80%9F%E5%BA%A6-14-%E5%80%8B-obsidian-%E5%BF%AB%E6%8D%B7%E9%8D%B5%E8%A8%AD%E5%AE%9A%E5%BB%BA%E8%AD%B0-adc2d025c6d1"&gt;14個Obsidian快捷鍵設定建議&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;記錄目前最常使用的快捷鍵：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;功能：快速插入模板筆記  &lt;code&gt;cmd + L&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;功能：立即執行Git的PUSH更新 &lt;code&gt;cmd + Shift + P&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="網路概論"></category><category term="Obsidian"></category></entry><entry><title>使用vncserver建立遠端管理GCP與內容管理系統建置</title><link href="https://richardrobot.xyz/2020/12/vncserver-gcp/" rel="alternate"></link><published>2020-12-01T15:57:00+08:00</published><updated>2021-12-01T15:57:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2020-12-01:/2020/12/vncserver-gcp/</id><summary type="html">&lt;p&gt;使用vncserver建立遠端管理GCP與架設內容管理系統站臺&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;這篇文章是從頭建立起GCP網站，與遠端連線的方法
+1. 使用VNC Server來遠端桌面連線，因為有許多需要修改設定檔需要遠端執行
+2. 站臺的建立方式WebServer是用Nginx+Gunicorn ，Python的站臺程式用WagtailCMS&lt;/p&gt;
+&lt;h2 id="vnc-servergcp"&gt;&lt;span class="caps"&gt;VNC&lt;/span&gt; Server建立可遠端桌面連線GCP&lt;a class="headerlink" href="#vnc-servergcp" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;hr/&gt;
+&lt;p&gt;首先，先在GCP建立Compute Engine的VM執行個體，VM的執行個體系統選擇Ubuntu，再將外部IP改為靜態IP&lt;/p&gt;
+&lt;p&gt;&lt;img alt="VM設定靜態IP.png" src="https://richardrobot.xyz/images/VM設定靜態IP.png"/&gt;
+&lt;img alt="VM設定靜態IP2.png" src="https://richardrobot.xyz/images/VM設定靜態IP2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;使用平臺提供的瀏覽器Terminal&lt;/p&gt;
+&lt;p&gt;&lt;img alt="使用平臺提供的瀏覽器Terminal.png" src="https://richardrobot.xyz/images/使用平臺提供的瀏覽器Terminal.png"/&gt;
+&lt;img alt="使用平臺提供的瀏覽器Terminal2.png" src="https://richardrobot.xyz/images/使用平臺提供的瀏覽器Terminal2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;安裝一些必要的套件，並且執行 vnc4server 執行語法:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install vnc4server&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vnc4server&lt;/code&gt;&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;&lt;img alt="安裝與執行vnc4server.png" src="https://richardrobot.xyz/images/安裝與執行vnc4server.png"/&gt;&lt;/p&gt;
+&lt;h3 id="vncxstartup"&gt;修改~/.vnc/xstartup 的設定&lt;a class="headerlink" href="#vncxstartup" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;輸入語法：
+&lt;code&gt;sudo vim .vnc/xstartup&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;進入如下畫面： 畫面是使用ubuntu的內建vim編輯器&lt;/p&gt;
+&lt;p&gt;&lt;img alt="畫面是使用ubuntu的內建vim編輯器.png" src="https://richardrobot.xyz/images/畫面是使用ubuntu的內建vim編輯器.png"/&gt;&lt;/p&gt;
+&lt;p&gt;按 I 進入編輯模式 貼上四行語法&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;gnome&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;panel&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
+&lt;span class="n"&gt;gnome&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;daemon&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
+&lt;span class="n"&gt;metacity&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
+&lt;span class="n"&gt;nautilus&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;再輸入 :wq 儲存退出&lt;/p&gt;
+&lt;p&gt;輸入語法
+&lt;code&gt;vncserver -kill :1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vncserver :1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;以上完成vncserver建立，可遠端桌面連線了 &lt;/p&gt;
+&lt;p&gt;GCP需要開啟防火牆 指定 &lt;span class="caps"&gt;PORT&lt;/span&gt; 5901&lt;/p&gt;
+&lt;p&gt;&lt;img alt="GCP需要開啟防火牆.png" src="https://richardrobot.xyz/images/GCP需要開啟防火牆.png"/&gt;&lt;/p&gt;
+&lt;h3 id="realvnc-viewer"&gt;下載RealVNC Viewer&lt;a class="headerlink" href="#realvnc-viewer" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;輸入 35.229.134.113:5901 連線，這個連線IP就是當初建立VM的外部靜態IP&lt;/p&gt;
+&lt;p&gt;&lt;img alt="下載RealVNC.png" src="https://richardrobot.xyz/images/下載RealVNC.png"/&gt;
+&lt;img alt="下載RealVNC2.png" src="https://richardrobot.xyz/images/下載RealVNC2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;可遠端桌面連線是方便以後程式建置時，資料架構查看或上傳程式方便&lt;/p&gt;
+&lt;h2 id="google-cloudubuntu-postgresnginxgunicorndjango"&gt;如何在Google Cloud中的Ubuntu 上使用Postgres，Nginx和Gunicorn設置Django&lt;a class="headerlink" href="#google-cloudubuntu-postgresnginxgunicorndjango" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;hr/&gt;
+&lt;p&gt;前置準備：
+1. 您的Compute Engine實例正在運行，請參閱設置Compute Engine實例。
+2. 域名指向您的虛擬機。（此Domain我已先設定FreeDNS：gcp.mooo.com 暫時的設定，到時候申請好正式的Domain再修改）
+3. 有關設置Cloud DNS的信息，請參閱為您的域設置Google Cloud &lt;span class="caps"&gt;DNS&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;在一樣剛剛的GCP Terminal安裝以下套件&lt;/p&gt;
+&lt;p&gt;執行語法：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt update&lt;/code&gt;
+&lt;code&gt;sudo apt install python3-pip python3-dev libpq-dev postgresql-contrib nginx curl&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="安裝套件跟postgresql.png" src="https://richardrobot.xyz/images/安裝套件跟postgresql.png"/&gt;&lt;/p&gt;
+&lt;p&gt;如下圖，在GCP的操作功能上找SQL，並且產生Cloud SQL執行個體&lt;/p&gt;
+&lt;p&gt;&lt;img alt="建立GCP的SQL資料庫.png" src="https://richardrobot.xyz/images/建立GCP的SQL資料庫.png"/&gt;&lt;/p&gt;
+&lt;p&gt;位置區域要跟VM的位置區域一樣&lt;/p&gt;
+&lt;p&gt;&lt;img alt="位置區域要跟VM的位置區域一樣.png" src="https://richardrobot.xyz/images/位置區域要跟VM的位置區域一樣.png"/&gt;&lt;/p&gt;
+&lt;p&gt;建立SQL後，下面顯示的公開IP是到時候程式Django站臺連線需要&lt;/p&gt;
+&lt;p&gt;&lt;img alt="建立SQL後下面顯示的公開IP是到時候程式連線需要.png" src="https://richardrobot.xyz/images/建立SQL後下面顯示的公開IP是到時候程式連線需要.png"/&gt;&lt;/p&gt;
+&lt;p&gt;編輯連線設定：設定只有VM的IP可以連線，填入GCP的靜態外部IP&lt;/p&gt;
+&lt;p&gt;&lt;img alt="編輯連線設定設定只有VM的IP可以連線.png" src="https://richardrobot.xyz/images/編輯連線設定設定只有VM的IP可以連線.png"/&gt;&lt;/p&gt;
+&lt;p&gt;上面建立好資料庫後，開始建立VM上面Django的專案&lt;/p&gt;
+&lt;h2 id="vmwagtailcms"&gt;建立VM上面WagtailCMS的專案&lt;a class="headerlink" href="#vmwagtailcms" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;hr/&gt;
+&lt;p&gt;接下來就開始是安裝與建立內容管理系統的部分，與GCP的設定大部分已完成。
+關於內容管理系統的試用分享可查看： &lt;a href="https://richardrobot.xyz/2021/12/python-cms/"&gt;內容管理系統CMS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;建構的流程
+1. 建立Python的虛擬環境
+2. 安裝套裝程式:Django gunicorn coderedcms 
+3. 設定連線字串
+4. 執行 python manage.py migrate 初始化
+5. 建立Gunicorn 連接起程式
+6. 設定Nginx的設定檔&lt;/p&gt;
+&lt;h3 id="python"&gt;建立Python的虛擬環境&lt;a class="headerlink" href="#python" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;執行語法：（下面的語法含義可看文章說明）
+安裝虛擬環境
+&lt;code&gt;sudo -H pip3 install --upgrade pip&lt;/code&gt;
+&lt;code&gt;sudo -H pip3 install virtualenv&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;建立名為WagtailDir 資料夾，並且創建虛擬環境，切換環境
+&lt;code&gt;mkdir ~/WagtailDir&lt;/code&gt;
+&lt;code&gt;cd ~/WagtailDir&lt;/code&gt;
+&lt;code&gt;virtualenv WagtailEnv&lt;/code&gt;
+&lt;code&gt;source WagtailEnv/bin/activate&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;下圖是建立資料夾與python的虛擬環境&lt;/p&gt;
+&lt;p&gt;&lt;img alt="建立資料夾與python的虛擬環境.png" src="https://richardrobot.xyz/images/建立資料夾與python的虛擬環境.png"/&gt;&lt;/p&gt;
+&lt;h3 id="django-gunicorn-coderedcms"&gt;安裝套裝程式:Django gunicorn coderedcms&lt;a class="headerlink" href="#django-gunicorn-coderedcms" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;執行語法
+&lt;code&gt;pip install django gunicorn psycopg2-binary&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip install coderedcms&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;coderedcms start WagtailProject --sitename "網站名稱"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;上面是建立Django專案的語法，還有CodeRed &lt;span class="caps"&gt;CMS&lt;/span&gt; 的套件，從VNC Viewer可看到資料夾&lt;/p&gt;
+&lt;p&gt;&lt;img alt="還有CodeRed CMS 的套從VNC Viewer可看到資料夾.png" src="https://richardrobot.xyz/images/還有CodeRed CMS 的套從VNC Viewer可看到資料夾.png"/&gt;
+&lt;img alt="還有CodeRed CMS 的套從VNC Viewer可看到資料夾2.png" src="https://richardrobot.xyz/images/還有CodeRed CMS 的套從VNC Viewer可看到資料夾2.png"/&gt;&lt;/p&gt;
+&lt;h3 id="_1"&gt;設定連線字串&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;修改連線字串：連線字串在 /settings/base.py&lt;/p&gt;
+&lt;p&gt;&lt;img alt="修改連線字串連線字串在basepy.png" src="https://richardrobot.xyz/images/修改連線字串連線字串在basepy.png"/&gt;&lt;/p&gt;
+&lt;p&gt;連線字串的修改相關名稱設定可參考Django的連線設定，連線字串的使用者與密碼就是前面在GCP設定的&lt;/p&gt;
+&lt;p&gt;&lt;img alt="連線字串與使用者是上面在GCE設定的.png" src="https://richardrobot.xyz/images/連線字串與使用者是上面在GCE設定的.png"/&gt;&lt;/p&gt;
+&lt;p&gt;上面連線字串修改好是連線遠端SQL的資料庫後，接下來的語法執行就開始建立資料庫的Table與 Schema&lt;/p&gt;
+&lt;h3 id="python-managepy-migrate"&gt;執行 python manage.py migrate 初始化&lt;a class="headerlink" href="#python-managepy-migrate" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="開始建立資料庫的Table與Schema.png" src="https://richardrobot.xyz/images/開始建立資料庫的Table與Schema.png"/&gt;&lt;/p&gt;
+&lt;p&gt;執行語法：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;WagtailProject&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;py&lt;/span&gt; &lt;span class="n"&gt;migrate&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;py&lt;/span&gt; &lt;span class="n"&gt;makemigrations&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;py&lt;/span&gt; &lt;span class="n"&gt;createsuperuser&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;py&lt;/span&gt; &lt;span class="n"&gt;runserver&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;py&lt;/span&gt; &lt;span class="n"&gt;collectstatic&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;看到以下畫面有顯示 http://127.0.0.1:8000 表示已經在本機跑起來一個Application Web Server&lt;/p&gt;
+&lt;p&gt;&lt;img alt="看到以下畫面有顯示表示已經在本機跑起來.png" src="https://richardrobot.xyz/images/看到以下畫面有顯示表示已經在本機跑起來.png"/&gt;&lt;/p&gt;
+&lt;h3 id="gunicorn"&gt;建立Gunicorn 連接起程式&lt;a class="headerlink" href="#gunicorn" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;接下來建立Gunicorn 連接起程式
+執行語法：
+&lt;code&gt;sudo vim /etc/systemd/system/gunicorn.socket&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="建立Gunicorn連接起程式.png" src="https://richardrobot.xyz/images/建立Gunicorn連接起程式.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo vim /etc/systemd/system/gunicorn.service&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="建立Gunicorn連接起程式2.png" src="https://richardrobot.xyz/images/建立Gunicorn連接起程式2.png"/&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Unit&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;Description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;gunicorn&lt;/span&gt; &lt;span class="n"&gt;daemon&lt;/span&gt;
+&lt;span class="n"&gt;Requires&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;gunicorn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;socket&lt;/span&gt;
+&lt;span class="n"&gt;After&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;network&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;
+
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Service&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sutsagent&lt;/span&gt;
+&lt;span class="n"&gt;Group&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sutsagent&lt;/span&gt;
+&lt;span class="n"&gt;WorkingDirectory&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sutsagent&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WagtailDir&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WagtailProject&lt;/span&gt;
+&lt;span class="n"&gt;ExecStart&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sutsagent&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WagtailDir&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WagtailEnv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gunicorn&lt;/span&gt; \
+     &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;access&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;logfile&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; \
+     &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;workers&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; \
+     &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;bind&lt;/span&gt; &lt;span class="n"&gt;unix&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gunicorn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sock&lt;/span&gt; \
+     &lt;span class="n"&gt;WagtailProject&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;
+
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Install&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;WantedBy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;最後執行一些啟動，重啟與狀態查看&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;systemctl&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="n"&gt;gunicorn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;socket&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;systemctl&lt;/span&gt; &lt;span class="n"&gt;enable&lt;/span&gt; &lt;span class="n"&gt;gunicorn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;socket&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;systemctl&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="n"&gt;gunicorn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;socket&lt;/span&gt;
+&lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gunicorn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sock&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;systemctl&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="n"&gt;gunicorn&lt;/span&gt;
+&lt;span class="n"&gt;curl&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;unix&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;socket&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gunicorn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sock&lt;/span&gt; &lt;span class="n"&gt;localhost&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;systemctl&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="n"&gt;gunicorn&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;systemctl&lt;/span&gt; &lt;span class="n"&gt;daemon&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;reload&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;systemctl&lt;/span&gt; &lt;span class="n"&gt;restart&lt;/span&gt; &lt;span class="n"&gt;gunicorn&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="nginx"&gt;設定Nginx的設定檔&lt;a class="headerlink" href="#nginx" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;設定Nginx，建立一個自定義名稱設定檔，我定義為 gcp.mooo.com&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo vim /etc/nginx/sites-available/gcp.mooo.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Nginx的一些設定，主要設定server_name要對應自己的Domain，與location的路徑&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;server&lt;/span&gt; 
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;server_name&lt;/span&gt; &lt;span class="n"&gt;gcp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mooo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gcp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mooo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;favicon&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ico&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;access_log&lt;/span&gt; &lt;span class="n"&gt;off&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;log_not_found&lt;/span&gt; &lt;span class="n"&gt;off&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sutsagent&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WagtailDir&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;WagtailProject&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;include&lt;/span&gt; &lt;span class="n"&gt;proxy_params&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;proxy_pass&lt;/span&gt; &lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//unix:/run/gunicorn.sock;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;最後：將檔案連結到啟動網站的目錄來啟動該檔案
+&lt;code&gt;sudo ln -s /etc/nginx/sites-available/pgcp.mooo.com /etc/nginx/sites-enabled&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;執行最後語法：測試nginx與重啟&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;nginx&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;service&lt;/span&gt; &lt;span class="n"&gt;nginx&lt;/span&gt; &lt;span class="n"&gt;restart&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="_2"&gt;後續&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;hr/&gt;
+&lt;p&gt;後續開發都是使用VSCode，發現使用Remote SSH連線遠端直接修改設定檔還比較快
+另外記錄使用方式： &lt;a href="https://richardrobot.xyz/2020/08/VisualStudioCode-GCP/"&gt;使用VSCode遠端SSH開發&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@huiqinng/%E7%AD%86%E8%A8%98-%E5%9C%A8gcp%E4%B8%8A%E5%BB%BA%E7%AB%8B%E5%8F%AFremote-dekstop%E7%9A%84ubuntu%E7%92%B0%E5%A2%83-e56fdbd3a4f2"&gt;【筆記】在GCP上建立可Remote dekstop的Ubuntu環境&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://infinitewing.github.io/2017/08/13/20170813001/"&gt;在GCP開啟Ubuntu遠端桌面&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.cloudbooklet.com/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04-in-google-cloud/"&gt;How To Set Up Django with Postgres, Nginx, and Gunicorn on Ubuntu 18.04 in Google Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/tsungs-blog/django-%E5%9C%A8ubuntu%E4%B8%AD%E9%81%8B%E7%94%A8nginx-gunicorn-%E6%9E%B6%E8%A8%AD-django-api-server-6d41c165a2c7"&gt;[Django] 在Ubuntu中運用Nginx、Gunicorn 架設 Django &lt;span class="caps"&gt;API&lt;/span&gt; Server&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="網路概論"></category><category term="GoogleCloudPlatform"></category><category term="WagtailCMS"></category></entry></feed>

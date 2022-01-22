@@ -2,9 +2,8 @@
 title: ASP.NET CORE 在IIS錯誤問題
 date: 2021-12-10 09:44
 modified: 2021-12-10 09:44
-aliases: 部落格 
-tags: ASP.NET Core,IIS
-category: 微軟筆記
+tags: ASPNETCore,IIS,微軟筆記
+category: 後端程式
 slug: aspnetcore-iis-error
 summary: 預覽標題
 image: /images/default_preview_image.jpg

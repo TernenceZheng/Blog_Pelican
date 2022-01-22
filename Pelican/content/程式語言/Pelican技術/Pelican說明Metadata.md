@@ -2,9 +2,8 @@
 title: Pelican說明Metadata
 date: 2021-09-30 14:21
 modified: 2021-09-30 14:21
-aliases: 部落格 
-tags: Pelican
-category: Python
+tags: Pelican,Python
+category: 後端程式
 slug: pelican-metadata
 summary: 整理一個表格來方便查看Pelican的Metadata
 image: /images/2021-10-01_PM4.46.58.pngg

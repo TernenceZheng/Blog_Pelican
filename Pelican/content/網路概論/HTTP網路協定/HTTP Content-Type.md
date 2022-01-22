@@ -2,9 +2,8 @@
 title: HTTP Content-Type
 date: 2022-01-14 11:39
 modified: 2022-01-14 11:39
-aliases: 部落格 
-tags: 標籤
-category: 類別
+tags: ContentType,HTTP
+category: 網路概論
 slug: 自定義URL標籤
 related_posts: slug1, slug2, slug3, ... slugN
 summary: 預覽標題

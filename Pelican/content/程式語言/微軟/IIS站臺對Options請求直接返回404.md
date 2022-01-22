@@ -2,9 +2,8 @@
 title: IIS站臺對Options請求直接返回404
 date: 2022-01-12 14:40
 modified: 2022-01-12 14:40
-aliases: 部落格 
-tags: CORS,IIS
-category: 微軟
+tags: CORS,IIS,微軟筆記
+category: 網路概論
 slug: iis-cors-404
 summary: 在SignalR遇上CORS時IIS站臺設定的問題
 image: /images/default_preview_image.jpg
