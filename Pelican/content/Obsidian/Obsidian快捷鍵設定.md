@@ -2,7 +2,7 @@
 title: Obsidian快捷鍵設定
 date: 2021-09-16 17:40
 tags: Obsidian
-category: 網路概論
+category: Obsidian
 summary: Obsidian快捷鍵設定
 image: /images/default_preview_image.jpg
 status: published

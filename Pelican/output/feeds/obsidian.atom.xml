@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - Obsidian</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/obsidian.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-09-16T15:54:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Obsidian</title><link href="https://richardrobot.xyz/2021/09/obsidian/" rel="alternate"></link><published>2021-09-16T15:54:00+08:00</published><updated>2021-09-16T15:54:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/obsidian/</id><summary type="html">&lt;p&gt;直接引用Youtube影片說明&lt;/p&gt;</summary><content type="html">&lt;p&gt;參考網址：
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - Obsidian</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/obsidian.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-10-01T09:26:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Obsidian筆記同步到Blog排程</title><link href="https://richardrobot.xyz/2021/10/obsidian-to-pelican/" rel="alternate"></link><published>2021-10-01T09:26:00+08:00</published><updated>2021-10-01T09:26:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/obsidian-to-pelican/</id><summary type="html">&lt;p&gt;這個記錄着我製作Obsidian筆記同步到blog的語法&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;緣起&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;自從發現&lt;a href="https://richardrobot.xyz/2021/09/obsidian/"&gt;Obsidian&lt;/a&gt;這個東西之後，寫作筆記感覺很方便，而且使用Markdown語法，也剛好想建置Blog網站，用Python的Pelican套件，一樣是用Markdown來產生文章，就覺得兩個東西可以合併，既可以做筆記，又可以寫Blog。&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h2 id="_2"&gt;想法&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;obsidian的備份機制使用Github來完成，而且有套件可以自動Push
+&lt;img alt="obsidian已安裝的第三方外掛.png" src="https://richardrobot.xyz/images/obsidian已安裝的第三方外掛.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://richardrobot.xyz/2021/10/git-netlify/"&gt;Blog發佈到netlify&lt;/a&gt; 也是用GitHub&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;主要把Obsidian的MD檔同步到Pelican的content資料夾，再做一個發佈的程式就完成了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="_3"&gt;流程：&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Obsidian 的筆記寫完之後使用 &lt;code&gt;command + Shift  + P&lt;/code&gt; 快捷鍵Push到GitHub：ObsidianNote。 參考：   &lt;a href="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/"&gt;Obsidian快捷鍵設定&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;複製檔案到如下圖&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;右邊的 ==隨手筆記==資料夾 複製=&amp;gt; ==/Pelican/content 底下==&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;&lt;img alt="顯示同步資料夾.png" src="https://richardrobot.xyz/images/顯示同步資料夾.png"/&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;複製圖檔&lt;/li&gt;
+&lt;li&gt;執行語法來生成頁面 &lt;code&gt;pelican content&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;git commit &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; push&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Obsidian"></category><category term="Obsidian"></category><category term="Pelican"></category><category term="Python"></category></entry><entry><title>Obsidian快捷鍵設定</title><link href="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/" rel="alternate"></link><published>2021-09-16T17:40:00+08:00</published><updated>2021-09-16T17:40:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/obsidiankuai-jie-jian-she-ding/</id><summary type="html">&lt;p&gt;Obsidian快捷鍵設定&lt;/p&gt;</summary><content type="html">&lt;h1 id="obsidian"&gt;&lt;a href="https://richardrobot.xyz/2021/09/obsidian/"&gt;Obsidian&lt;/a&gt; 快捷鍵設定&lt;a class="headerlink" href="#obsidian" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;參考網址：&lt;a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/obsidian-%E4%BD%BF%E7%94%A8%E6%95%99%E5%AD%B8-%E7%AD%86%E8%A8%98%E7%AF%87-08-%E5%80%8D%E9%80%9F%E6%8F%90%E5%8D%87%E4%BD%A0%E7%9A%84%E6%93%8D%E4%BD%9C%E9%80%9F%E5%BA%A6-14-%E5%80%8B-obsidian-%E5%BF%AB%E6%8D%B7%E9%8D%B5%E8%A8%AD%E5%AE%9A%E5%BB%BA%E8%AD%B0-adc2d025c6d1"&gt;14個Obsidian快捷鍵設定建議&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;記錄目前最常使用的快捷鍵：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;功能：快速插入模板筆記  &lt;code&gt;cmd + L&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;功能：立即執行Git的PUSH更新 &lt;code&gt;cmd + Shift + P&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Obsidian"></category><category term="Obsidian"></category></entry><entry><title>Obsidian</title><link href="https://richardrobot.xyz/2021/09/obsidian/" rel="alternate"></link><published>2021-09-16T15:54:00+08:00</published><updated>2021-09-16T15:54:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/obsidian/</id><summary type="html">&lt;p&gt;直接引用Youtube影片說明&lt;/p&gt;</summary><content type="html">&lt;p&gt;參考網址：
 筆記類別：#心得
 主題：&lt;a href="https://richardrobot.xyz/2021/09/obsidian/"&gt;Obsidian&lt;/a&gt;&lt;/p&gt;
 &lt;hr /&gt;

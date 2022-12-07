@@ -7,7 +7,7 @@ category: 網路概論
 related_posts: slug1, slug2, slug3, ... slugN
 summary: 預覽標題
 image: /images/default_preview_image.jpg
-status: draft, hidden, published
+status: draft
 ---
 
 [TOC]

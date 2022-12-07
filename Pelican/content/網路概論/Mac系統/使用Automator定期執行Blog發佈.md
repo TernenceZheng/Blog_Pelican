@@ -7,7 +7,7 @@ category: 網路概論
 slug: mac-automator-blog
 summary: 加強Blog發佈程式流程
 image: /images/default_preview_image.jpg
-status: draft, hidden, published
+status: published
 ---
 
 [TOC]

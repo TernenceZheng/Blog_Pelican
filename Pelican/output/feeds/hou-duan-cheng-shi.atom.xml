@@ -1,5 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 後端程式</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/hou-duan-cheng-shi.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2021-12-30T10:36:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>ASP.NET MVC的參數驗證方式</title><link href="https://richardrobot.xyz/2021/12/asp-net-mvc-actionfilter/" rel="alternate"></link><published>2021-12-30T10:36:00+08:00</published><updated>2021-12-30T10:36:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-30:/2021/12/asp-net-mvc-actionfilter/</id><summary type="html">&lt;p&gt;用ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; &lt;span class="caps"&gt;MVC&lt;/span&gt; 的&amp;nbsp;ActionFilterAttribute來過濾API參數&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 後端程式</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/hou-duan-cheng-shi.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2022-09-05T19:46:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>依賴注入的心得筆記</title><link href="https://richardrobot.xyz/2022/09/ioc-di/" rel="alternate"></link><published>2022-09-05T19:46:00+08:00</published><updated>2022-09-05T19:46:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-09-05:/2022/09/ioc-di/</id><summary type="html">&lt;p&gt;依賴注入的心得筆記&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;依賴注入的入門階段&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;自從被打槍不會ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; Core 後，就不斷的學習新的NetCore技術，先後買了幾本書，&lt;/p&gt;
+&lt;p&gt;第一本：&lt;a href="https://www.tenlong.com.tw/products/9789865501402?list_name=srh"&gt;完全精通微軟Web架構: &lt;span class="caps"&gt;ASP&lt;/span&gt;.Net Core 3最新強實戰&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;說實在的，這本書似乎不太適合我看，首先對於兩岸的文字描述，對我來講實在有點障礙，在專有名詞上，我還是偏好非中國那邊的用語，另外這本的講解，讓我覺得文字說明不夠簡單扼要，常常看了一個段落，然後實在看不明白到底要表達什麼，看過另外一本的依賴注入後才發覺這本書文字的累贅，不過其實還是不錯的書，至少把NetCore的最根本原理與NetCore如何實現跨平台與各個Middleware說明的很徹底，還是值得的一本，只不過我要看很久。&lt;/p&gt;
+&lt;p&gt;第二本：&lt;a href="https://www.tenlong.com.tw/products/9789864344987?list_name=srh"&gt;依賴注入：原理、實作與設計模式 (Dependency Injection: Principles, Practices, Patterns, 2/e)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;這本在看了上面第一本ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; Core 3 後，發現依賴注入是ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; Core 核心概念，並且第一本的依賴注入講解的內容我覺得實在不懂，後來又買了這本。 著實的認為這本真的是非常好的書，&lt;/p&gt;
+&lt;h2 id="_2"&gt;依賴注入的概念假想&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;說道依賴注入，書上用插座的範例來說明設計模式的譬喻，來讓讀者能夠深刻體會設計模式是如何實現的。不免俗的我自己也有自己一套譬喻假想，常常人家說到依賴注入就會說到 IoC (控制反轉)，然後就是依賴注入的 組合根，建構子注入，屬性注入，方法注入，DI容器，光是這麼多名詞，硬記也不知道在記什麼，但是讀到後面卻產生一個很相似的譬喻：{『武林的世界』&lt;/p&gt;
+&lt;p&gt;首先，要成為一個武林高手，必須內外兼修，內就是修煉內功心法，外就是修煉武學招式，
+對於依賴注入，IoC控制反轉就感覺是修煉內功心法，為何如此說法呢？先看看名詞定義，以下引用&lt;a href="https://www.tenlong.com.tw/products/9789865501402?list_name=srh"&gt;完全精通微軟Web架構: &lt;span class="caps"&gt;ASP&lt;/span&gt;.Net Core 3最新強實戰&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="inverse-of-control"&gt;控制反轉（Inverse of Control）&lt;a class="headerlink" href="#inverse-of-control" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;對於任何一項工作，不論大小，基本上都可以分解成對應的步驟，所以任何一項工作的實施都有固定的流程，而IoC的控制就是視作『&lt;strong&gt;&lt;em&gt;針對流程的控制&lt;/em&gt;&lt;/strong&gt;』。一般來講，設計模式是為了解決一個實際問題的方案，但是IoC沒有一個針對性的問題領域，本身也沒有提供一種可操作的解決方案，所以認為視為IoC是一種『&lt;strong&gt;&lt;em&gt;設計原則&lt;/em&gt;&lt;/strong&gt;』&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由以上的定義可以瞭解，控制反轉是一個概念，一個設計原則，當我們在定義介面的時候，對於功能的切割是由哪些類別來注入，實際的控制權是由外部注入的，所以『&lt;strong&gt;&lt;em&gt;針對流程的控制&lt;/em&gt;&lt;/strong&gt;』要如何定義的靈活與彈性就要靠日後的練習，完全就是一個心法的概念。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="_3"&gt;什麼是『組合根』&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;可以組合應用程式中使用的類別。 將需要實體物件的建立作業，全部集中化到一個地方，而這個負責處理作業的區塊就是『組合根』，通常是應用程式的啟動點，在NetCore就是Main方法中。&lt;/p&gt;
+&lt;h3 id="_4"&gt;建構子注入&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;必須在Public 修飾子的建構子中以建構子參數的形式，定義這份依賴需求，要求外部提供物件。 重要：建構子參數要增加必須在同一個建構子增加額外的參數，避免使用多載方式導致混淆。&lt;/p&gt;
+&lt;h3 id="_5"&gt;屬性注入&lt;a class="headerlink" href="#_5" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;接著讓我們來看看屬性注入，顧名思義就是&lt;strong&gt;從公開的屬性丟進去&lt;/strong&gt;，因此有時候也會被叫做設值注入。
+通常我們會在 &lt;strong&gt;「外部使用者要能夠隨時切換依賴對象」或是「類別已經有預設值了，但希望提供使用者可以覆寫掉預設值的彈性」時用到屬性注入&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="_6"&gt;方法注入&lt;a class="headerlink" href="#_6" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;當依賴對象可能會隨著每次呼叫的方法不同，又或者是依賴對象不變但每次的使用方都有可能變化時，就需要透過方法參數的形式來設定依賴關係。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上述這些定義就是依賴注入的方法，組合根就是在定義如何引用各個類別，組合起所有的類別，這些方式就是類似拳腳基本功，有了基本的拳腳功夫，接下來就是討論到DI容器，DI容器可以說是各個門派的獨有的技能。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr/&gt;
+&lt;h3 id="di"&gt;DI容器技術&lt;a class="headerlink" href="#di" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;所謂的DI容器技術指的就是一套軟體函式庫，協助我們將許多包括『物件關聯組合』，『管理物件生命週期』等作業自動化。&lt;/p&gt;
+&lt;p&gt;由上述的定義可瞭解到，使用依賴注入，會有許多相關的知識需要理解，在此不多講解，可參考
+&lt;a href="https://www.tenlong.com.tw/products/9789864344987?list_name=srh"&gt;依賴注入：原理、實作與設計模式 (Dependency Injection: Principles, Practices, Patterns, 2/e)&lt;/a&gt;&lt;br/&gt; 第七章到第九章的內容&lt;/p&gt;
+&lt;p&gt;然而DI容器其實是協助我們管理跟自動化，而提供許多的函式方法來協助我們，下面就會記錄與說明函式的方法。讓我們加入華山派的劍宗吧。&lt;/p&gt;
+&lt;h2 id="autofac"&gt;依賴注入的容器：Autofac的記錄&lt;a class="headerlink" href="#autofac" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://autofac.org/apidoc/html/62C594FF.htm"&gt;Autofac .&lt;span class="caps"&gt;NET&lt;/span&gt; Inversion of Control Container&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;ConfigureContainer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ContainerBuilder&lt;/span&gt; &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;Assembly&lt;/span&gt; &lt;span class="n"&gt;domainAssembly&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ITimeProvider&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;Assembly&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterType&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;DefaultTimeProvider&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;().&lt;/span&gt;&lt;span class="n"&gt;As&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;ITimeProvider&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;().&lt;/span&gt;&lt;span class="n"&gt;SingleInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterInstance&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;IUserContext&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;AspNetUserContextAdapter&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;CommerceContext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Configuration&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ConnectionString&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;InstancePerLifetimeScope&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterAssemblyTypes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;domainAssembly&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;AsClosedTypesOf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ICommandService&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;));&lt;/span&gt;
+
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterGenericDecorator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AuditingCommandServiceDecorator&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;),&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ICommandService&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;));&lt;/span&gt;
+
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterGenericDecorator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SaveChangesCommandServiceDecorator&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;),&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ICommandService&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;));&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterGenericDecorator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SecureCommandServiceDecorator&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;),&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ICommandService&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;));&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// ---- Start code section 13.4.4 ----&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterAssemblyTypes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;domainAssembly&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;As&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt;
+            &lt;span class="k"&gt;from&lt;/span&gt; &lt;span class="n"&gt;interfaceType&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetInterfaces&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="k"&gt;where&lt;/span&gt; &lt;span class="n"&gt;interfaceType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsClosedTypeOf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IEventHandler&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;))&lt;/span&gt;
+            &lt;span class="k"&gt;select&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nf"&gt;KeyedService&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"handler"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;interfaceType&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterGeneric&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CompositeEventHandler&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;As&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IEventHandler&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WithParameter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ResolveNamed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"handler"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ParameterType&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+    &lt;span class="c1"&gt;// ---- End code section 13.4.4 ----&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// Register adapters to external systems&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterAssemblyTypes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;WcfBillingSystem&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;Assembly&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AsImplementedInterfaces&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// Register repositories&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterAssemblyTypes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SqlProductRepository&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;Assembly&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;EndsWith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Repository"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AsImplementedInterfaces&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span class="caps"&gt;TODO&lt;/span&gt;：等待學習中….
+RegisterType
+RegisterInstance
+RegisterAssemblyTypes RegisterGenericDecorator&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ithelp.ithome.com.tw/users/20144614/ironman/5120"&gt;[Dot Net Core](圖解系列與常用套件)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://autofac.readthedocs.io/en/latest/index.html"&gt;官方文檔&lt;/a&gt;&lt;/p&gt;</content><category term="後端程式"></category><category term="Dependency Injection"></category></entry><entry><title>GIT錯誤：the remote end hung up unexpectedly</title><link href="https://richardrobot.xyz/2022/07/git-remote-hung-up-unexpectedly/" rel="alternate"></link><published>2022-07-28T17:20:00+08:00</published><updated>2022-07-28T17:20:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-07-28:/2022/07/git-remote-hung-up-unexpectedly/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;GIT&lt;/span&gt; error：the remote end hung up&amp;nbsp;unexpectedly&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;
+&lt;ul&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;最近修改專案，新增了許多packages，然後加入Git 清單內，但是當要PUSH時，就發生如下錯誤訊息，&amp;nbsp;git小烏龜報錯如標題&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Enumerating objects: 490, done.&lt;/span&gt;
+&lt;span class="err"&gt;Counting objects: 100% (381/381), done.&lt;/span&gt;
+&lt;span class="err"&gt;Delta compression using up to 12 threads&lt;/span&gt;
+&lt;span class="err"&gt;Compressing objects: 100% (288/288), done.&lt;/span&gt;
+&lt;span class="c"&gt;error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400&lt;/span&gt;
+&lt;span class="c"&gt;fatal: the remote end hung up unexpectedly&lt;/span&gt;
+&lt;span class="err"&gt;Writing objects: 100% (299/299), 7.85 MiB | 8.89 MiB/s, done.&lt;/span&gt;
+&lt;span class="err"&gt;Total 299 (delta 133), reused 16 (delta 1), pack-reused 0&lt;/span&gt;
+&lt;span class="c"&gt;fatal: the remote end hung up unexpectedly&lt;/span&gt;
+&lt;span class="err"&gt;Everything up-to-date&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;查詢google後，約略可能為如下原因所引發的，git上傳實際會將先檔案放入緩衝區，緩衝區如果設置的值比要上傳的內容小，那麼就會出現這個錯誤&lt;/p&gt;
+&lt;p&gt;修改提交緩存區大小為5GB，或者更大的數字，該方式全域生效，一勞永逸&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git config --global http.postBuffer 5242880000&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;參考資料：&lt;a href="https://www.cnblogs.com/rgqjson/p/13297526.html"&gt;git 推送出现 &amp;#8220;fatal: The remote end hung up unexpectedly&amp;#8221;&amp;nbsp;解决方案&lt;/a&gt;&lt;/p&gt;</content><category term="後端程式"></category><category term="git"></category></entry><entry><title>ASP.NET MVC的參數驗證方式</title><link href="https://richardrobot.xyz/2021/12/asp-net-mvc-actionfilter/" rel="alternate"></link><published>2021-12-30T10:36:00+08:00</published><updated>2021-12-30T10:36:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-12-30:/2021/12/asp-net-mvc-actionfilter/</id><summary type="html">&lt;p&gt;用ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; &lt;span class="caps"&gt;MVC&lt;/span&gt; 的&amp;nbsp;ActionFilterAttribute來過濾API參數&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;前言&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;有時提供廠商的API，明明沒有定義的參數卻帶入，或是已經是舊版不用的參數還是會帶入，使用這個方式來過濾並且阻擋，使用ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; &lt;span class="caps"&gt;MVC&lt;/span&gt; 的 ActionFilterAttribute 方式&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ParaFilterAttribute&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ActionFilterAttribute&lt;/span&gt;
@@ -764,8 +868,7 @@ client_id ：&lt;span class="caps"&gt;LINE&lt;/span&gt; Login Channel 的 Channe
 &lt;li&gt;以及最重要的關掉 Disable Push（Disable Push: &lt;span class="caps"&gt;OFF&lt;/span&gt;)，才會自動把所有 Commit 推送到 Github&amp;nbsp;上，讓其他裝置可以同步。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;參考鏈接：&lt;a href="https://notes.desktopofsamuel.com/posts/Obsidian%E4%B8%8A%E6%89%8B%E5%8F%8A%E4%BD%BF%E7%94%A8Git%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%90%8C%E6%AD%A5/"&gt;Obsidian上手及使用Git跨平台同步&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;另外的手機版本同步參考：&lt;a href="https://forum.obsidian.md/t/mobile-setting-up-ios-git-based-syncing-with-mobile-app-using-working-copy/16499"&gt;[移動] 設置 iOS 與移動應用程序基於 git&amp;nbsp;的同步（使用工作副本）&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id="git"&gt;Git&lt;a class="headerlink" href="#git" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;</content><category term="後端程式"></category><category term="Obsidian"></category><category term="Git"></category></entry><entry><title>使用VSCode遠端SSH開發</title><link href="https://richardrobot.xyz/2020/08/VisualStudioCode-GCP/" rel="alternate"></link><published>2020-08-25T18:22:00+08:00</published><updated>2020-08-25T18:22:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2020-08-25:/2020/08/VisualStudioCode-GCP/</id><summary type="html">&lt;p&gt;使用VSCode遠端開發，透過Remote-&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;另外的手機版本同步參考：&lt;a href="https://forum.obsidian.md/t/mobile-setting-up-ios-git-based-syncing-with-mobile-app-using-working-copy/16499"&gt;[移動] 設置 iOS 與移動應用程序基於 git&amp;nbsp;的同步（使用工作副本）&lt;/a&gt;&lt;/p&gt;</content><category term="後端程式"></category><category term="Obsidian"></category><category term="Git"></category></entry><entry><title>使用VSCode遠端SSH開發</title><link href="https://richardrobot.xyz/2020/08/VisualStudioCode-GCP/" rel="alternate"></link><published>2020-08-25T18:22:00+08:00</published><updated>2020-08-25T18:22:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2020-08-25:/2020/08/VisualStudioCode-GCP/</id><summary type="html">&lt;p&gt;使用VSCode遠端開發，透過Remote-&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="ssh-key"&gt;產生SSH &lt;span class="caps"&gt;KEY&lt;/span&gt;&lt;a class="headerlink" href="#ssh-key" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;開啟 Terminal 執行以下語法，可以看到路徑預設在 &lt;code&gt;/Users/你的名稱/.ssh&lt;/code&gt; 下&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;ssh-keygen&lt;/span&gt;

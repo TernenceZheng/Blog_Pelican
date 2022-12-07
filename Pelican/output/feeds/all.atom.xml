@@ -1,5 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2022-01-13T14:42:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>英文快速學習祕技</title><link href="https://richardrobot.xyz/2022/01/how-learn-fast/" rel="alternate"></link><published>2022-01-13T14:42:00+08:00</published><updated>2022-01-13T14:42:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-01-13:/2022/01/how-learn-fast/</id><summary type="html">&lt;p&gt;如何快速學習任何語言的方法&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/all.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2022-12-07T21:45:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Nginx 在MacOS M1問題</title><link href="https://richardrobot.xyz/2022/12/nginx-macos-error/" rel="alternate"></link><published>2022-12-07T21:45:00+08:00</published><updated>2022-12-07T21:45:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-12-07:/2022/12/nginx-macos-error/</id><summary type="html">&lt;p&gt;Nginx 在MacOS&amp;nbsp;M1問題&lt;/p&gt;</summary><content type="html">&lt;p&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]
+設定修改nginx 然後需要reload 出現 &lt;code&gt;PID number "" in "/opt/homebrew/var/run/nginx.pid"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查看檔案是空的，刪掉又出現另外一個問題&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="nv"&gt;@zhengrungdeMini&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;reload&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nl"&gt;nginx&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;invalid&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PID&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;/opt/homebrew/var/run/nginx.pid&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;刪掉後出現：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="nv"&gt;@zhengrungdeMini&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stop&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="nl"&gt;nginx&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;open&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;/opt/homebrew/var/run/nginx.pid&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;failed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;No&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;such&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;file&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;or&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;directory&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;看起來這個檔案需要點東西。但是卻沒有東西需要重新產生&lt;/p&gt;
+&lt;p&gt;參考資料&amp;nbsp;https://ld246.com/article/1563147639170&lt;/p&gt;
+&lt;p&gt;後來執行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;sudo nginx -c /opt/homebrew/etc/nginx/nginx.conf&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面語法 要先找到原本nginx的設定的原始路徑 然後依照上面這個語法就會產生在/opt/homebrew/var/run/nginx.pid&amp;nbsp;產生完成就會出現內容有數字&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;sudo certbot --expand -d jupyter.richardrobot.xyz&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Saving&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nf"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;letsencrypt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;letsencrypt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;Could&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;not&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ssl_module&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;not&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;disabling&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;session&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tickets&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;running&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="nl"&gt;nginx&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;emerg&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;open&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;/usr/local/etc/nginx/nginx.conf&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;failed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;No&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;such&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;file&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;or&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;directory&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nl"&gt;nginx&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;configuration&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;file&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;failed&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;以上的問題是因為MacOS的M1安裝Nginx預設路徑已經是 /opt/homebrew/etc/nginx ，但是在設定certbot
+的時候會用預設以前的路徑/usr/local/etc/nginx/nginx.conf&amp;nbsp;，所以必須指定路徑&lt;/p&gt;
+&lt;p&gt;用以下語法自定義路徑&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;certbot --nginx --nginx-server-root=/opt/homebrew/etc/nginx/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="電腦問題"></category><category term="nginx"></category><category term="mac"></category></entry><entry><title>MacOS下的Terminal語法</title><link href="https://richardrobot.xyz/2022/12/macos-terminal-command/" rel="alternate"></link><published>2022-12-07T21:41:00+08:00</published><updated>2022-12-07T21:41:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-12-07:/2022/12/macos-terminal-command/</id><summary type="html">&lt;p&gt;記錄terminal語法以備不時之需&lt;/p&gt;</summary><content type="html">&lt;p&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&amp;nbsp;查看電腦的對外IP：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;curl ifconfig.me&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;查看TCP端口與查看監聽端口：把 $&lt;span class="caps"&gt;PORT&lt;/span&gt;&amp;nbsp;換成要查看的PORT&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;sudo lsof -i -P | grep LISTEN | grep :$PORT&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;使用SSH連線：本地端使用443轉出去再連線&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;ssh -p443 jarvis.zheng@remoteIP&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Netstat&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;
+&lt;span class="n"&gt;顯示傳輸協定統計和當前的&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;TCP&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;IP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;網路連接&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="n"&gt;該指令只有在安裝了&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;TCP&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;IP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;傳輸協定後才可以使用&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="n"&gt;netstat&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;-a&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;-e&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;-n&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;-s&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;-p protocol&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;-r&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;interval&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="n"&gt;參數&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;顯示所有連接和偵聽連接阜&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="n"&gt;伺服器連接通常不顯示&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;顯示乙太網統計&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="n"&gt;該參數可以與&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;選項結合使用&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;以數位格式顯示位址和連接阜號&lt;/span&gt;&lt;span class="err"&gt;（&lt;/span&gt;&lt;span class="n"&gt;而不是嘗試搜尋名稱&lt;/span&gt;&lt;span class="err"&gt;）。&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;顯示每個傳輸協定的統計&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="n"&gt;預設情況下&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="n"&gt;顯示&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;TCP&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;UDP&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;ICMP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;和&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;IP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;的統計&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;選項可以用來指定預設的子集&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;protocol&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;顯示由&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;protocol&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;指定的傳輸協定的連接&lt;/span&gt;&lt;span class="err"&gt;；&lt;/span&gt;&lt;span class="n"&gt;protocol&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;可以是&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tcp&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;或&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;udp&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="n"&gt;如果與&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;選項一同使用顯示每個傳輸協定的統計&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="n"&gt;protocol&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;可以是&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tcp&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;udp&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;icmp&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;或&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ip&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;顯示路由表的內容&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;interval&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;
+&lt;span class="n"&gt;重新顯示所選的統計&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="n"&gt;在每次顯示之間暫停&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;interval&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;秒&lt;/span&gt;&lt;span class="err"&gt;。&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="電腦問題"></category><category term="mac"></category><category term="terminal"></category></entry><entry><title>依賴注入的心得筆記</title><link href="https://richardrobot.xyz/2022/09/ioc-di/" rel="alternate"></link><published>2022-09-05T19:46:00+08:00</published><updated>2022-09-05T19:46:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-09-05:/2022/09/ioc-di/</id><summary type="html">&lt;p&gt;依賴注入的心得筆記&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="_1"&gt;依賴注入的入門階段&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;自從被打槍不會ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; Core 後，就不斷的學習新的NetCore技術，先後買了幾本書，&lt;/p&gt;
+&lt;p&gt;第一本：&lt;a href="https://www.tenlong.com.tw/products/9789865501402?list_name=srh"&gt;完全精通微軟Web架構: &lt;span class="caps"&gt;ASP&lt;/span&gt;.Net Core 3最新強實戰&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;說實在的，這本書似乎不太適合我看，首先對於兩岸的文字描述，對我來講實在有點障礙，在專有名詞上，我還是偏好非中國那邊的用語，另外這本的講解，讓我覺得文字說明不夠簡單扼要，常常看了一個段落，然後實在看不明白到底要表達什麼，看過另外一本的依賴注入後才發覺這本書文字的累贅，不過其實還是不錯的書，至少把NetCore的最根本原理與NetCore如何實現跨平台與各個Middleware說明的很徹底，還是值得的一本，只不過我要看很久。&lt;/p&gt;
+&lt;p&gt;第二本：&lt;a href="https://www.tenlong.com.tw/products/9789864344987?list_name=srh"&gt;依賴注入：原理、實作與設計模式 (Dependency Injection: Principles, Practices, Patterns, 2/e)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;這本在看了上面第一本ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; Core 3 後，發現依賴注入是ASP.&lt;span class="caps"&gt;NET&lt;/span&gt; Core 核心概念，並且第一本的依賴注入講解的內容我覺得實在不懂，後來又買了這本。 著實的認為這本真的是非常好的書，&lt;/p&gt;
+&lt;h2 id="_2"&gt;依賴注入的概念假想&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;說道依賴注入，書上用插座的範例來說明設計模式的譬喻，來讓讀者能夠深刻體會設計模式是如何實現的。不免俗的我自己也有自己一套譬喻假想，常常人家說到依賴注入就會說到 IoC (控制反轉)，然後就是依賴注入的 組合根，建構子注入，屬性注入，方法注入，DI容器，光是這麼多名詞，硬記也不知道在記什麼，但是讀到後面卻產生一個很相似的譬喻：{『武林的世界』&lt;/p&gt;
+&lt;p&gt;首先，要成為一個武林高手，必須內外兼修，內就是修煉內功心法，外就是修煉武學招式，
+對於依賴注入，IoC控制反轉就感覺是修煉內功心法，為何如此說法呢？先看看名詞定義，以下引用&lt;a href="https://www.tenlong.com.tw/products/9789865501402?list_name=srh"&gt;完全精通微軟Web架構: &lt;span class="caps"&gt;ASP&lt;/span&gt;.Net Core 3最新強實戰&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="inverse-of-control"&gt;控制反轉（Inverse of Control）&lt;a class="headerlink" href="#inverse-of-control" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;對於任何一項工作，不論大小，基本上都可以分解成對應的步驟，所以任何一項工作的實施都有固定的流程，而IoC的控制就是視作『&lt;strong&gt;&lt;em&gt;針對流程的控制&lt;/em&gt;&lt;/strong&gt;』。一般來講，設計模式是為了解決一個實際問題的方案，但是IoC沒有一個針對性的問題領域，本身也沒有提供一種可操作的解決方案，所以認為視為IoC是一種『&lt;strong&gt;&lt;em&gt;設計原則&lt;/em&gt;&lt;/strong&gt;』&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由以上的定義可以瞭解，控制反轉是一個概念，一個設計原則，當我們在定義介面的時候，對於功能的切割是由哪些類別來注入，實際的控制權是由外部注入的，所以『&lt;strong&gt;&lt;em&gt;針對流程的控制&lt;/em&gt;&lt;/strong&gt;』要如何定義的靈活與彈性就要靠日後的練習，完全就是一個心法的概念。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="_3"&gt;什麼是『組合根』&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;可以組合應用程式中使用的類別。 將需要實體物件的建立作業，全部集中化到一個地方，而這個負責處理作業的區塊就是『組合根』，通常是應用程式的啟動點，在NetCore就是Main方法中。&lt;/p&gt;
+&lt;h3 id="_4"&gt;建構子注入&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;必須在Public 修飾子的建構子中以建構子參數的形式，定義這份依賴需求，要求外部提供物件。 重要：建構子參數要增加必須在同一個建構子增加額外的參數，避免使用多載方式導致混淆。&lt;/p&gt;
+&lt;h3 id="_5"&gt;屬性注入&lt;a class="headerlink" href="#_5" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;接著讓我們來看看屬性注入，顧名思義就是&lt;strong&gt;從公開的屬性丟進去&lt;/strong&gt;，因此有時候也會被叫做設值注入。
+通常我們會在 &lt;strong&gt;「外部使用者要能夠隨時切換依賴對象」或是「類別已經有預設值了，但希望提供使用者可以覆寫掉預設值的彈性」時用到屬性注入&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="_6"&gt;方法注入&lt;a class="headerlink" href="#_6" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;當依賴對象可能會隨著每次呼叫的方法不同，又或者是依賴對象不變但每次的使用方都有可能變化時，就需要透過方法參數的形式來設定依賴關係。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上述這些定義就是依賴注入的方法，組合根就是在定義如何引用各個類別，組合起所有的類別，這些方式就是類似拳腳基本功，有了基本的拳腳功夫，接下來就是討論到DI容器，DI容器可以說是各個門派的獨有的技能。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr/&gt;
+&lt;h3 id="di"&gt;DI容器技術&lt;a class="headerlink" href="#di" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;所謂的DI容器技術指的就是一套軟體函式庫，協助我們將許多包括『物件關聯組合』，『管理物件生命週期』等作業自動化。&lt;/p&gt;
+&lt;p&gt;由上述的定義可瞭解到，使用依賴注入，會有許多相關的知識需要理解，在此不多講解，可參考
+&lt;a href="https://www.tenlong.com.tw/products/9789864344987?list_name=srh"&gt;依賴注入：原理、實作與設計模式 (Dependency Injection: Principles, Practices, Patterns, 2/e)&lt;/a&gt;&lt;br/&gt; 第七章到第九章的內容&lt;/p&gt;
+&lt;p&gt;然而DI容器其實是協助我們管理跟自動化，而提供許多的函式方法來協助我們，下面就會記錄與說明函式的方法。讓我們加入華山派的劍宗吧。&lt;/p&gt;
+&lt;h2 id="autofac"&gt;依賴注入的容器：Autofac的記錄&lt;a class="headerlink" href="#autofac" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://autofac.org/apidoc/html/62C594FF.htm"&gt;Autofac .&lt;span class="caps"&gt;NET&lt;/span&gt; Inversion of Control Container&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;ConfigureContainer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ContainerBuilder&lt;/span&gt; &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;Assembly&lt;/span&gt; &lt;span class="n"&gt;domainAssembly&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ITimeProvider&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;Assembly&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterType&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;DefaultTimeProvider&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;().&lt;/span&gt;&lt;span class="n"&gt;As&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;ITimeProvider&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;().&lt;/span&gt;&lt;span class="n"&gt;SingleInstance&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterInstance&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;IUserContext&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;AspNetUserContextAdapter&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;CommerceContext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Configuration&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ConnectionString&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;InstancePerLifetimeScope&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterAssemblyTypes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;domainAssembly&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;AsClosedTypesOf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ICommandService&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;));&lt;/span&gt;
+
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterGenericDecorator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AuditingCommandServiceDecorator&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;),&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ICommandService&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;));&lt;/span&gt;
+
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterGenericDecorator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SaveChangesCommandServiceDecorator&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;),&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ICommandService&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;));&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterGenericDecorator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SecureCommandServiceDecorator&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;),&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ICommandService&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;));&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// ---- Start code section 13.4.4 ----&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterAssemblyTypes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;domainAssembly&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;As&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt;
+            &lt;span class="k"&gt;from&lt;/span&gt; &lt;span class="n"&gt;interfaceType&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetInterfaces&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="k"&gt;where&lt;/span&gt; &lt;span class="n"&gt;interfaceType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsClosedTypeOf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IEventHandler&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;))&lt;/span&gt;
+            &lt;span class="k"&gt;select&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nf"&gt;KeyedService&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"handler"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;interfaceType&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterGeneric&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CompositeEventHandler&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;As&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IEventHandler&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&amp;gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WithParameter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ResolveNamed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"handler"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ParameterType&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+    &lt;span class="c1"&gt;// ---- End code section 13.4.4 ----&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// Register adapters to external systems&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterAssemblyTypes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;WcfBillingSystem&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;Assembly&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AsImplementedInterfaces&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// Register repositories&lt;/span&gt;
+    &lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RegisterAssemblyTypes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SqlProductRepository&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;Assembly&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;EndsWith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Repository"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AsImplementedInterfaces&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span class="caps"&gt;TODO&lt;/span&gt;：等待學習中….
+RegisterType
+RegisterInstance
+RegisterAssemblyTypes RegisterGenericDecorator&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ithelp.ithome.com.tw/users/20144614/ironman/5120"&gt;[Dot Net Core](圖解系列與常用套件)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://autofac.readthedocs.io/en/latest/index.html"&gt;官方文檔&lt;/a&gt;&lt;/p&gt;</content><category term="後端程式"></category><category term="Dependency Injection"></category></entry><entry><title>GIT錯誤：the remote end hung up unexpectedly</title><link href="https://richardrobot.xyz/2022/07/git-remote-hung-up-unexpectedly/" rel="alternate"></link><published>2022-07-28T17:20:00+08:00</published><updated>2022-07-28T17:20:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-07-28:/2022/07/git-remote-hung-up-unexpectedly/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;GIT&lt;/span&gt; error：the remote end hung up&amp;nbsp;unexpectedly&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;
+&lt;ul&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;最近修改專案，新增了許多packages，然後加入Git 清單內，但是當要PUSH時，就發生如下錯誤訊息，&amp;nbsp;git小烏龜報錯如標題&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Enumerating objects: 490, done.&lt;/span&gt;
+&lt;span class="err"&gt;Counting objects: 100% (381/381), done.&lt;/span&gt;
+&lt;span class="err"&gt;Delta compression using up to 12 threads&lt;/span&gt;
+&lt;span class="err"&gt;Compressing objects: 100% (288/288), done.&lt;/span&gt;
+&lt;span class="c"&gt;error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400&lt;/span&gt;
+&lt;span class="c"&gt;fatal: the remote end hung up unexpectedly&lt;/span&gt;
+&lt;span class="err"&gt;Writing objects: 100% (299/299), 7.85 MiB | 8.89 MiB/s, done.&lt;/span&gt;
+&lt;span class="err"&gt;Total 299 (delta 133), reused 16 (delta 1), pack-reused 0&lt;/span&gt;
+&lt;span class="c"&gt;fatal: the remote end hung up unexpectedly&lt;/span&gt;
+&lt;span class="err"&gt;Everything up-to-date&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;查詢google後，約略可能為如下原因所引發的，git上傳實際會將先檔案放入緩衝區，緩衝區如果設置的值比要上傳的內容小，那麼就會出現這個錯誤&lt;/p&gt;
+&lt;p&gt;修改提交緩存區大小為5GB，或者更大的數字，該方式全域生效，一勞永逸&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git config --global http.postBuffer 5242880000&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;參考資料：&lt;a href="https://www.cnblogs.com/rgqjson/p/13297526.html"&gt;git 推送出现 &amp;#8220;fatal: The remote end hung up unexpectedly&amp;#8221;&amp;nbsp;解决方案&lt;/a&gt;&lt;/p&gt;</content><category term="後端程式"></category><category term="git"></category></entry><entry><title>IIS問題-500.19</title><link href="https://richardrobot.xyz/2022/07/URLRewrite/" rel="alternate"></link><published>2022-07-19T13:53:00+08:00</published><updated>2022-07-19T13:53:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-07-19:/2022/07/URLRewrite/</id><summary type="html">&lt;p&gt;URLRewrite與IIS設定問題&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;本機發佈程式到IIS會出現 500.19錯誤，緣由是因為URLRewrite的在站臺的Web.Config設定錯誤，導致此問題發生。並且記錄當初處理的情況流程。&lt;/p&gt;
+&lt;p&gt;錯誤畫面：&lt;/p&gt;
+&lt;p&gt;看起來上面的錯誤是因為下面這兩個設定造成的，我只要把下面這兩個設定去除，IIS就可以用了，所以似乎是因為IIS原本的模組就已經有關於這兩個資料夾目錄隱藏的設定，但是現在又在Web.config裡面又在次設定了一次，所以可能出錯的原因是這個&lt;/p&gt;
+&lt;p&gt;把站臺的WebConfig設定的App_Data 、Bin 的那兩個東西拿掉就OK了，但是這似乎不是解決的真正，因為這樣修改，把IIS所有關於安全性隱藏資料夾的問題給顯現出來了，變成只有DevPCAdmin專案才回隱藏這兩個資料夾，其他反而凸顯出問題&lt;/p&gt;
+&lt;h3 id="url-rewrite-20"&gt;重點是站臺有裝 &lt;span class="caps"&gt;URL&lt;/span&gt; Rewrite 2.0：&lt;a class="headerlink" href="#url-rewrite-20" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;rewrite&gt; &lt;/rewrite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;outboundrules&gt; &lt;/outboundrules&gt;&lt;/p&gt;
+&lt;p&gt;&lt;rule name="Remove Server"&gt; &lt;/rule&gt;&lt;/p&gt;
+&lt;p&gt;&lt;match pattern=".+" servervariable="RESPONSE_SERVER"&gt;&lt;/match&gt; &lt;/p&gt;
+&lt;p&gt;&lt;action type="Rewrite" value="Apache/2.4.12 (Unix) OpenSSL/1.0.2a PHP/5.6.0"&gt;&lt;/action&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;rewrite&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;outboundRules&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;rule&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"Remove Server"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;match&lt;/span&gt; &lt;span class="na"&gt;serverVariable=&lt;/span&gt;&lt;span class="s"&gt;"RESPONSE_SERVER"&lt;/span&gt; &lt;span class="na"&gt;pattern=&lt;/span&gt;&lt;span class="s"&gt;".+"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;action&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;"Rewrite"&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;"Apache/2.4.12 (Unix) OpenSSL/1.0.2a PHP/5.6.0"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/rule&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/outboundRules&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/rewrite&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;拿掉這個的時候就好了，所以是IIS要新裝這個功能才可以&lt;/p&gt;
+&lt;p&gt;多年後又出現一樣的問題，在重新發佈之後出現一樣問題，但是在IIS上已經安裝此功能&lt;/p&gt;
+&lt;p&gt;解決：一開始就設定錯誤，預設的隱藏標籤本來就包含下列，所以必定會造成錯誤，查看PROD設定卻沒有這個設定，原來在一開始就在本機的設定是錯誤的了&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;hiddenSegments&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;segment=&lt;/span&gt;&lt;span class="s"&gt;"App_Data"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;segment=&lt;/span&gt;&lt;span class="s"&gt;"bin"&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/hiddenSegments&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="網路概論"></category><category term="URLRewrite"></category><category term="IIS"></category></entry><entry><title>反向代理</title><link href="https://richardrobot.xyz/2022/03/reverse-proxy/" rel="alternate"></link><published>2022-03-29T20:00:00+08:00</published><updated>2022-03-29T20:00:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-03-29:/2022/03/reverse-proxy/</id><summary type="html">&lt;p&gt;瞭解反向代理與正向代理&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;在瞭解反向代理之前，先瞭解正向代理，&lt;/p&gt;
+&lt;p&gt;正向代理（forward proxy）：是一個位於客戶端和目標伺服器之間的伺服器(代理伺服器)，為了從目標伺服器取得內容，客戶端向代理伺服器發送一個請求並指定目標，然後代理伺服器向目標伺服器轉交請求並將獲得的內容返回給客戶端。&lt;/p&gt;
+&lt;p&gt;正向代理伺服器用途：
+- 突破訪問限制
+- 提高訪問速度
+- 隱藏客戶端真實IP&lt;/p&gt;
+&lt;p&gt;反向代理（reverse proxy）：是指以代理伺服器來接受internet上的連接請求，然後將請求轉發給內部網絡上的伺服器，並將從伺服器上得到的結果返回給internet上請求連接的客戶端，此時代理伺服器對外就表現為一個反向代理伺服器。  &lt;/p&gt;
+&lt;p&gt;反向代理的用途：
+- 隱藏伺服器真實IP
+- 負載平衡
+- 提高訪問速度
+- 提供安全保障&lt;/p&gt;
+&lt;h4 id="_1"&gt;&lt;strong&gt;正向代理和反向代理的區別&lt;/strong&gt;&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;雖然正向代理伺服器和反向代理伺服器所處的位置都是客戶端和真實伺服器之間，所做的事情也都是把客戶端的請求轉發給伺服器，再把伺服器的響應轉發給客戶端，但是二者之間還是有一定的差異的。&lt;/p&gt;
+&lt;p&gt;1、&lt;em&gt;正向代理其實是客戶端的代理&lt;/em&gt;，幫助客戶端訪問其無法訪問的伺服器資源。&lt;em&gt;反向代理則是伺服器的代理&lt;/em&gt;，幫助伺服器做負載均衡，安全防護等。&lt;/p&gt;
+&lt;p&gt;2、&lt;em&gt;正向代理一般是客戶端架設的&lt;/em&gt;，比如在自己的機器上安裝一個代理軟體。而&lt;em&gt;反向代理一般是伺服器架設的&lt;/em&gt;，比如在自己的機器集群中部署一個反向代理伺服器。&lt;/p&gt;
+&lt;p&gt;3、&lt;em&gt;正向代理中，伺服器不知道真正的客戶端到底是誰&lt;/em&gt;，以為訪問自己的就是真實的客戶端。而在&lt;em&gt;反向代理中，客戶端不知道真正的伺服器是誰&lt;/em&gt;，以為自己訪問的就是真實的伺服器。&lt;/p&gt;
+&lt;p&gt;4、正向代理和反向代理的作用和目的不同。&lt;em&gt;正向代理主要是用來解決訪問限制問題。而反向代理則是提供負載均衡、安全防護等作用。二者均能提高訪問速度。&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;結論：簡單講，正向代理就是使用者這段的，相反的，反向代理就是伺服器這段的 代理不同，正向代理是使用者，反向代理是真實伺服器&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;參考資料：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://kknews.cc/zh-tw/tech/k66p2gb.html"&gt;終於有人把正向代理和反向代理解釋的明明白白了&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.oracle.com/cd/E19438-01/819-3163/agfltr.html"&gt;透過代理伺服器篩選內容&lt;/a&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="反向代理"></category></entry><entry><title>使用Automator定期執行Blog發佈</title><link href="https://richardrobot.xyz/2022/01/mac-automator-blog/" rel="alternate"></link><published>2022-01-14T17:40:00+08:00</published><updated>2022-01-14T17:40:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-01-14:/2022/01/mac-automator-blog/</id><summary type="html">&lt;p&gt;加強Blog發佈程式流程&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;之前寫的同步方式：&lt;a href="https://richardrobot.xyz/2021/10/obsidian-to-pelican/"&gt;Obsidian筆記同步到Blog排程&lt;/a&gt;，還是很多地方不完善，每次都需要手動點擊同步，然後在執行發佈程式，想說用Apple Script 配合定期執行python語法，就可以Obsidian完成筆記後，直接PUSH 筆記的GitHub，然後在Mac電腦那邊就可以一氣呵成。&lt;/p&gt;
+&lt;h2 id="_1"&gt;流程步驟&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;設定在電腦開啟時，一起啟動Obsidian軟體 &lt;/li&gt;
+&lt;li&gt;等待同步程式執行&lt;/li&gt;
+&lt;li&gt;加入 Automator 排程，讓 Mac 自動幫執行程式&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;執行內容程式順序：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;判斷 Blog_Pelican 的Git 異動清單若是有修改則開始執行&lt;/li&gt;
+&lt;li&gt;執行 pelican content 執行Blog建置，產生靜態Html檔&lt;/li&gt;
+&lt;li&gt;Blog_Pelican 的 Git 執行 Commit 與 &lt;span class="caps"&gt;PUSH&lt;/span&gt; &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;參考：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/%E7%82%BA%E4%BB%80%E9%BA%BC-mac-%E4%BD%BF%E7%94%A8%E8%80%85%E6%87%89%E8%A9%B2%E5%AD%B8%E7%BF%92-apple-script-13a599504362"&gt;為什麼 Mac 使用者應該學習 Apple Script？以 Evernote 舉例，自動建立每日反省筆記，自動化處理繁瑣流程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.minwt.com/mac/22625.html"&gt;&lt;span class="caps"&gt;MAC&lt;/span&gt; 設定 Shell Script(.sh) 檔，指定 終端機 將它開啟並自動執行&lt;/a&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="Automator"></category><category term="Mac"></category></entry><entry><title>英文快速學習祕技</title><link href="https://richardrobot.xyz/2022/01/how-learn-fast/" rel="alternate"></link><published>2022-01-13T14:42:00+08:00</published><updated>2022-01-13T14:42:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-01-13:/2022/01/how-learn-fast/</id><summary type="html">&lt;p&gt;如何快速學習任何語言的方法&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;如何快速學習任何語言的方法&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;在很久以前看到這個YOUTUBE的影片，教學如何在六個月學習任何語言，而且是所謂的母語等級的學習，看完整理一下心得與筆記。&lt;/p&gt;
 &lt;p&gt;影片原始路徑：&lt;/p&gt;
@@ -1221,9 +1478,9 @@ client_id ：&lt;span class="caps"&gt;LINE&lt;/span&gt; Login Channel 的 Channe
 &lt;blockquote&gt;
 &lt;p&gt;ssh-add 這個命令不是用來永久性的記住你所使用的私鑰的。實際上，它的作用只是把你指定的私鑰添加到 ssh-agent 所管理的一個 session 當中。而 ssh-agent 是一個用於存儲私鑰的臨時性的 session&amp;nbsp;服務，所以每次重啓都會失效，都需要再次執行命令。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;或是設定 &lt;a href="https://mednoter.com/ssh-add-automatically.html"&gt;Mac 重啟後自動ssh-add&amp;nbsp;私鑰&lt;/a&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="SSH"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>副檔名command無法執行</title><link href="https://richardrobot.xyz/2021/10/mac-command-permission/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/mac-command-permission/</id><summary type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;</summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
+&lt;p&gt;或是設定 &lt;a href="https://mednoter.com/ssh-add-automatically.html"&gt;Mac 重啟後自動ssh-add&amp;nbsp;私鑰&lt;/a&gt;&lt;/p&gt;</content><category term="電腦問題"></category><category term="SSH"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>副檔名command無法執行</title><link href="https://richardrobot.xyz/2021/10/mac-command-permission/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/mac-command-permission/</id><summary type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;</summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
 &lt;p&gt;&lt;img alt="副檔名command無法執行.png" src="https://richardrobot.xyz/images/副檔名command無法執行.png" /&gt;&lt;/p&gt;
-&lt;p&gt;需要另外給予權限：&lt;code&gt;chmod +x batch_notes_script.command&lt;/code&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="權限問題"></category><category term="Mac"></category></entry><entry><title>Obsidian筆記同步到Blog排程</title><link href="https://richardrobot.xyz/2021/10/obsidian-to-pelican/" rel="alternate"></link><published>2021-10-01T09:26:00+08:00</published><updated>2021-10-01T09:26:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/obsidian-to-pelican/</id><summary type="html">&lt;p&gt;這個記錄着我製作Obsidian筆記同步到blog的語法&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;需要另外給予權限：&lt;code&gt;chmod +x batch_notes_script.command&lt;/code&gt;&lt;/p&gt;</content><category term="電腦問題"></category><category term="權限問題"></category><category term="Mac"></category></entry><entry><title>Obsidian筆記同步到Blog排程</title><link href="https://richardrobot.xyz/2021/10/obsidian-to-pelican/" rel="alternate"></link><published>2021-10-01T09:26:00+08:00</published><updated>2021-10-01T09:26:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/obsidian-to-pelican/</id><summary type="html">&lt;p&gt;這個記錄着我製作Obsidian筆記同步到blog的語法&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="_1"&gt;緣起&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;自從發現&lt;a href="https://richardrobot.xyz/2021/09/obsidian/"&gt;Obsidian&lt;/a&gt;這個東西之後，寫作筆記感覺很方便，而且使用Markdown語法，也剛好想建置Blog網站，用Python的Pelican套件，一樣是用Markdown來產生文章，就覺得兩個東西可以合併，既可以做筆記，又可以寫Blog。&lt;/p&gt;
 &lt;hr/&gt;
@@ -1252,7 +1509,7 @@ client_id ：&lt;span class="caps"&gt;LINE&lt;/span&gt; Login Channel 的 Channe
 &lt;li&gt;複製圖檔&lt;/li&gt;
 &lt;li&gt;執行語法來生成頁面 &lt;code&gt;pelican content&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;git commit &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; push&lt;/li&gt;
-&lt;/ol&gt;</content><category term="網路概論"></category><category term="Obsidian"></category><category term="Pelican"></category><category term="Python"></category></entry><entry><title>Pelican說明Metadata</title><link href="https://richardrobot.xyz/2021/09/pelican-metadata/" rel="alternate"></link><published>2021-09-30T14:21:00+08:00</published><updated>2021-09-30T14:21:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-30:/2021/09/pelican-metadata/</id><summary type="html">&lt;p&gt;整理一個表格來方便查看Pelican的Metadata&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
+&lt;/ol&gt;</content><category term="Obsidian"></category><category term="Obsidian"></category><category term="Pelican"></category><category term="Python"></category></entry><entry><title>Pelican說明Metadata</title><link href="https://richardrobot.xyz/2021/09/pelican-metadata/" rel="alternate"></link><published>2021-09-30T14:21:00+08:00</published><updated>2021-09-30T14:21:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-30:/2021/09/pelican-metadata/</id><summary type="html">&lt;p&gt;整理一個表格來方便查看Pelican的Metadata&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
 &lt;p&gt;![[2021-10-01_PM4.46.58.png]]&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;您還可以在模板中使用自己的元數據鍵（只要它們不與保留的元數據關鍵字衝突）。下表包含保留的元數據關鍵字列表：&lt;/p&gt;
@@ -1615,8 +1872,7 @@ But let&amp;#39;s throw in a &lt;span class="nt"&gt;&amp;lt;b&amp;gt;&lt;/span&g
 &lt;li&gt;以及最重要的關掉 Disable Push（Disable Push: &lt;span class="caps"&gt;OFF&lt;/span&gt;)，才會自動把所有 Commit 推送到 Github&amp;nbsp;上，讓其他裝置可以同步。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;參考鏈接：&lt;a href="https://notes.desktopofsamuel.com/posts/Obsidian%E4%B8%8A%E6%89%8B%E5%8F%8A%E4%BD%BF%E7%94%A8Git%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%90%8C%E6%AD%A5/"&gt;Obsidian上手及使用Git跨平台同步&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;另外的手機版本同步參考：&lt;a href="https://forum.obsidian.md/t/mobile-setting-up-ios-git-based-syncing-with-mobile-app-using-working-copy/16499"&gt;[移動] 設置 iOS 與移動應用程序基於 git&amp;nbsp;的同步（使用工作副本）&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id="git"&gt;Git&lt;a class="headerlink" href="#git" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;</content><category term="後端程式"></category><category term="Obsidian"></category><category term="Git"></category></entry><entry><title>Mac 上改變 Git 認證模式</title><link href="https://richardrobot.xyz/2021/09/git-mac-add-token/" rel="alternate"></link><published>2021-09-16T17:53:00+08:00</published><updated>2021-09-16T17:53:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/git-mac-add-token/</id><summary type="html">&lt;p&gt;Mac 上改變 Git&amp;nbsp;認證模式&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
+&lt;p&gt;另外的手機版本同步參考：&lt;a href="https://forum.obsidian.md/t/mobile-setting-up-ios-git-based-syncing-with-mobile-app-using-working-copy/16499"&gt;[移動] 設置 iOS 與移動應用程序基於 git&amp;nbsp;的同步（使用工作副本）&lt;/a&gt;&lt;/p&gt;</content><category term="後端程式"></category><category term="Obsidian"></category><category term="Git"></category></entry><entry><title>Mac 上改變 Git 認證模式</title><link href="https://richardrobot.xyz/2021/09/git-mac-add-token/" rel="alternate"></link><published>2021-09-16T17:53:00+08:00</published><updated>2021-09-16T17:53:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/git-mac-add-token/</id><summary type="html">&lt;p&gt;Mac 上改變 Git&amp;nbsp;認證模式&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
 &lt;p&gt;2021/09/14 今天在mac 上面在 git clone&amp;nbsp;https://github.com/TernenceZheng/ObsidianNote.git&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;img alt="Mac上改變Git認證模式.png" src="https://richardrobot.xyz/images/Mac上改變Git認證模式.png" /&gt;&lt;/p&gt;
@@ -1639,13 +1895,13 @@ fatal: Authentication failed for 'https://github.com/TernenceZheng/ObsidianNote.
 &lt;p&gt;參考資料：&lt;a href="https://myctw.github.io/post/bd72.html"&gt;Mac 上改變 Git&amp;nbsp;認證模式&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;相關主題：
 &lt;a href="https://richardrobot.xyz/2021/09/git-obsidian/"&gt;Obsidian 使用 Git 跨平台同步&lt;/a&gt;
-&lt;a href="https://richardrobot.xyz/2021/09/git-sourcetree-permission/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="Git"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>Obsidian快捷鍵設定</title><link href="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/" rel="alternate"></link><published>2021-09-16T17:40:00+08:00</published><updated>2021-09-16T17:40:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/obsidiankuai-jie-jian-she-ding/</id><summary type="html">&lt;p&gt;Obsidian快捷鍵設定&lt;/p&gt;</summary><content type="html">&lt;h1 id="obsidian"&gt;&lt;a href="https://richardrobot.xyz/2021/09/obsidian/"&gt;Obsidian&lt;/a&gt; 快捷鍵設定&lt;a class="headerlink" href="#obsidian" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;a href="https://richardrobot.xyz/2021/09/git-sourcetree-permission/"&gt;SourceTree權限問題&lt;/a&gt;&lt;/p&gt;</content><category term="網路概論"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>Obsidian快捷鍵設定</title><link href="https://richardrobot.xyz/2021/09/obsidiankuai-jie-jian-she-ding/" rel="alternate"></link><published>2021-09-16T17:40:00+08:00</published><updated>2021-09-16T17:40:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/obsidiankuai-jie-jian-she-ding/</id><summary type="html">&lt;p&gt;Obsidian快捷鍵設定&lt;/p&gt;</summary><content type="html">&lt;h1 id="obsidian"&gt;&lt;a href="https://richardrobot.xyz/2021/09/obsidian/"&gt;Obsidian&lt;/a&gt; 快捷鍵設定&lt;a class="headerlink" href="#obsidian" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;參考網址：&lt;a href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/obsidian-%E4%BD%BF%E7%94%A8%E6%95%99%E5%AD%B8-%E7%AD%86%E8%A8%98%E7%AF%87-08-%E5%80%8D%E9%80%9F%E6%8F%90%E5%8D%87%E4%BD%A0%E7%9A%84%E6%93%8D%E4%BD%9C%E9%80%9F%E5%BA%A6-14-%E5%80%8B-obsidian-%E5%BF%AB%E6%8D%B7%E9%8D%B5%E8%A8%AD%E5%AE%9A%E5%BB%BA%E8%AD%B0-adc2d025c6d1"&gt;14個Obsidian快捷鍵設定建議&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;記錄目前最常使用的快捷鍵：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;功能：快速插入模板筆記  &lt;code&gt;cmd + L&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;功能：立即執行Git的PUSH更新 &lt;code&gt;cmd + Shift + P&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="網路概論"></category><category term="Obsidian"></category></entry><entry><title>Obsidian</title><link href="https://richardrobot.xyz/2021/09/obsidian/" rel="alternate"></link><published>2021-09-16T15:54:00+08:00</published><updated>2021-09-16T15:54:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/obsidian/</id><summary type="html">&lt;p&gt;直接引用Youtube影片說明&lt;/p&gt;</summary><content type="html">&lt;p&gt;參考網址：
+&lt;/ul&gt;</content><category term="Obsidian"></category><category term="Obsidian"></category></entry><entry><title>Obsidian</title><link href="https://richardrobot.xyz/2021/09/obsidian/" rel="alternate"></link><published>2021-09-16T15:54:00+08:00</published><updated>2021-09-16T15:54:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-09-16:/2021/09/obsidian/</id><summary type="html">&lt;p&gt;直接引用Youtube影片說明&lt;/p&gt;</summary><content type="html">&lt;p&gt;參考網址：
 筆記類別：#心得
 主題：&lt;a href="https://richardrobot.xyz/2021/09/obsidian/"&gt;Obsidian&lt;/a&gt;&lt;/p&gt;
 &lt;hr /&gt;

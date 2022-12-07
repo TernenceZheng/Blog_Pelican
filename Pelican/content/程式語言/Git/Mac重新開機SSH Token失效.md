@@ -2,7 +2,7 @@
 title: Mac重新開機SSH Token失效
 date: 2021-10-05 16:09
 tags: SSH,Git,Mac
-category: 網路概論
+category: 電腦問題
 slug: git-ssh-mac-token
 summary: Mac重新開機SSHToken失效問題
 image: /images/Sourcetree出現Permissiondenied.png

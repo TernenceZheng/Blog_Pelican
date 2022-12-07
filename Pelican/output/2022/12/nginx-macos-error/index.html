@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh_tw">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Richard" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="nginx, mac, 電腦問題, " />
+
+<meta property="og:title" content="Nginx 在MacOS M1問題 "/>
+<meta property="og:url" content="https://richardrobot.xyz/2022/12/nginx-macos-error/" />
+<meta property="og:description" content="Nginx 在MacOS M1問題" />
+<meta property="og:site_name" content="Richard隨手筆記" />
+<meta property="og:article:author" content="Richard" />
+<meta property="og:article:published_time" content="2022-12-07T21:45:00+08:00" />
+<meta property="og:article:modified_time" content="2022-12-07T21:45:00+08:00" />
+<meta name="twitter:title" content="Nginx 在MacOS M1問題 ">
+<meta name="twitter:description" content="Nginx 在MacOS M1問題">
+<meta property="og:image" content="/images/default_preview_image.jpg" />
+<meta name="twitter:image" content="/images/default_preview_image.jpg" >
+
+        <title>Nginx 在MacOS M1問題  · Richard隨手筆記
+</title>
+        <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://richardrobot.xyz/"><span class=site-name>Richard隨手筆記</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://richardrobot.xyz
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://richardrobot.xyz/categories.html">Categories</a></li>
+                                <li ><a href="https://richardrobot.xyz/tags.html">Tags</a></li>
+                                <li ><a href="https://richardrobot.xyz/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="https://richardrobot.xyz/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://richardrobot.xyz/2022/12/nginx-macos-error/">
+                Nginx 在MacOS&nbsp;M1問題
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <p>[<span class="caps">TOC</span>]
+設定修改nginx 然後需要reload 出現 <code>PID number "" in "/opt/homebrew/var/run/nginx.pid"</code></p>
+<p>查看檔案是空的，刪掉又出現另外一個問題</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">jarvis</span><span class="p">.</span><span class="n">zheng</span><span class="nv">@zhengrungdeMini</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">nginx</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n">reload</span><span class="w"></span>
+<span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">error</span><span class="o">]</span><span class="w"> </span><span class="n">invalid</span><span class="w"> </span><span class="n">PID</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="ss">&quot;/opt/homebrew/var/run/nginx.pid&quot;</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>刪掉後出現：</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">jarvis</span><span class="p">.</span><span class="n">zheng</span><span class="nv">@zhengrungdeMini</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">nginx</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n">stop</span><span class="w"></span>
+
+<span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">error</span><span class="o">]</span><span class="w"> </span><span class="k">open</span><span class="p">()</span><span class="w"> </span><span class="ss">&quot;/opt/homebrew/var/run/nginx.pid&quot;</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="err">:</span><span class="w"> </span><span class="k">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>看起來這個檔案需要點東西。但是卻沒有東西需要重新產生</p>
+<p>參考資料&nbsp;https://ld246.com/article/1563147639170</p>
+<p>後來執行：</p>
+<div class="highlight"><pre><span></span><code><span class="err">sudo nginx -c /opt/homebrew/etc/nginx/nginx.conf</span>
+</code></pre></div>
+
+
+<p>上面語法 要先找到原本nginx的設定的原始路徑 然後依照上面這個語法就會產生在/opt/homebrew/var/run/nginx.pid&nbsp;產生完成就會出現內容有數字</p>
+<div class="highlight"><pre><span></span><code><span class="err">sudo certbot --expand -d jupyter.richardrobot.xyz</span>
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">Saving</span><span class="w"> </span><span class="n">debug</span><span class="w"> </span><span class="nf">log</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="o">/</span><span class="nf">var</span><span class="o">/</span><span class="nf">log</span><span class="o">/</span><span class="n">letsencrypt</span><span class="o">/</span><span class="n">letsencrypt</span><span class="p">.</span><span class="nf">log</span><span class="w"></span>
+<span class="n">Could</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">ssl_module</span><span class="p">;</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">disabling</span><span class="w"> </span><span class="k">session</span><span class="w"> </span><span class="n">tickets</span><span class="p">.</span><span class="w"></span>
+<span class="n">Error</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="n">running</span><span class="w"> </span><span class="n">nginx</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">nginx</span><span class="p">.</span><span class="n">conf</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="p">.</span><span class="w"></span>
+
+<span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">emerg</span><span class="o">]</span><span class="w"> </span><span class="k">open</span><span class="p">()</span><span class="w"> </span><span class="ss">&quot;/usr/local/etc/nginx/nginx.conf&quot;</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="err">:</span><span class="w"> </span><span class="k">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span><span class="p">)</span><span class="w"></span>
+<span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">nginx</span><span class="p">.</span><span class="n">conf</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">failed</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>以上的問題是因為MacOS的M1安裝Nginx預設路徑已經是 /opt/homebrew/etc/nginx ，但是在設定certbot
+的時候會用預設以前的路徑/usr/local/etc/nginx/nginx.conf&nbsp;，所以必須指定路徑</p>
+<p>用以下語法自定義路徑</p>
+<div class="highlight"><pre><span></span><code><span class="err">certbot --nginx --nginx-server-root=/opt/homebrew/etc/nginx/</span>
+</code></pre></div>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://richardrobot.xyz/2022/12/nginx-macos-error/"
+                   href="https://richardrobot.xyz/2022/12/nginx-macos-error/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'jarvissui-shou-bi-ji';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://richardrobot.xyz/2022/12/nginx-macos-error/';
+    var disqus_url = 'https://richardrobot.xyz/2022/12/nginx-macos-error/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<style>
+iframe[sandbox*="allow-popups"]{
+    display: none;
+}
+</style>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Related Posts</h2>
+<ul class="related-posts-list">
+<li><a href="https://richardrobot.xyz/2021/09/git-mac-add-token/" title="Mac 上改變 Git 認證模式">Mac 上改變 Git 認證模式</a></li>
+<li><a href="https://richardrobot.xyz/2021/10/mac-supervisor/" title="Supervisor">Supervisor</a></li>
+<li><a href="https://richardrobot.xyz/2021/10/mac-lets-encrypt/" title="安裝Let’s Encrypt電子證書">安裝Let’s Encrypt電子證書</a></li>
+<li><a href="https://richardrobot.xyz/2021/10/mac-tensorflow/" title="MacM1執行Tensorflow錯誤問題">MacM1執行Tensorflow錯誤問題</a></li>
+<li><a href="https://richardrobot.xyz/2022/01/mac-automator-blog/" title="使用Automator定期執行Blog發佈">使用Automator定期執行Blog發佈</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://richardrobot.xyz/2022/12/macos-terminal-command/" title="Previous: MacOS下的Terminal語法">MacOS下的Terminal語法</a></li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2022-12-07T21:45:00+08:00">三 07 12月 2022</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#dian-nao-wen-ti-ref">電腦問題</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://richardrobot.xyz/tags.html#mac-ref">mac
+                    <span class="superscript">9</span>
+</a></li>
+                <li><a href="https://richardrobot.xyz/tags.html#nginx-ref">nginx
+                    <span class="superscript">2</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+    <a href="https://github.com/TernenceZheng" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="andy711023@gmail.com" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Gmail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff"/><rect width="362" height="272" x="75" y="120" fill="#f2f2f2" rx="8%"/><path fill="#d54c3f" d="M120 392H97c-12 0-22-10-22-23V143h45z"/><path fill="#b63524" d="M392 392h23c12 0 22-10 22-23V143h-45z"/><path fill-opacity=".05" d="M256 286L120 392V187z"/><path fill-opacity=".08" d="M82 159l235 233h75V159z"/><path stroke-linecap="round" fill="none" stroke="#de5145" stroke-width="45" d="M97 143l159 115 159-115"/><path fill="#f2f2f2" d="M415 120c-5 0-10 2-13 4L256 230 110 124c-3-2-8-4-13-4z"/></svg>
+    </a>
+    <a href="https://richardrobot.xyz/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Richard隨手筆記</span> - 紙上得來終覺淺，絕知此事要躬行
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://richardrobot.xyz/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
