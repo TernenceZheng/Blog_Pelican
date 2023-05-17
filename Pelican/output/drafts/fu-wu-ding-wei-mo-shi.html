@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="zh_tw">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Richard" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="標籤, 後端程式, " />
+
+<meta property="og:title" content="服務定位模式 "/>
+<meta property="og:url" content="https://richardrobot.xyz/drafts/fu-wu-ding-wei-mo-shi.html" />
+<meta property="og:description" content="預覽標題" />
+<meta property="og:site_name" content="Richard隨手筆記" />
+<meta property="og:article:author" content="Richard" />
+<meta property="og:article:published_time" content="2022-04-08T09:43:00+08:00" />
+<meta property="og:article:modified_time" content="2022-04-08T09:43:00+08:00" />
+<meta name="twitter:title" content="服務定位模式 ">
+<meta name="twitter:description" content="預覽標題">
+
+        <title>服務定位模式  · Richard隨手筆記
+</title>
+        <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://richardrobot.xyz/"><span class=site-name>Richard隨手筆記</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://richardrobot.xyz
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://richardrobot.xyz/categories.html">Categories</a></li>
+                                <li ><a href="https://richardrobot.xyz/tags.html">Tags</a></li>
+                                <li ><a href="https://richardrobot.xyz/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="https://richardrobot.xyz/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://richardrobot.xyz/drafts/fu-wu-ding-wei-mo-shi.html">
+                服務定位模式
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#service-locator-pattern">使用Service Locator Pattern 來達成以下目標：</a></li>
+<li><a href="#service-locator">使用Service Locator 模式之前，請考慮以下幾點：</a></li>
+<li><a href="#_1">相關模式</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h3 id="service-locator-pattern">使用Service Locator Pattern 來達成以下目標：<a class="headerlink" href="#service-locator-pattern" title="Permanent link">¶</a></h3>
+<ul>
+<li>把類與依賴項解耦，從而使這些依賴項可被替換或者更新。</li>
+<li>類在編譯時並不知道依賴項的具體實現。</li>
+<li>類的隔離性和可測試性非常好。</li>
+<li>類無需負責依賴項的創建、定位和管理邏輯。</li>
+<li>通過將應用程序分解為松耦合的模塊，達成模塊間的無依賴開發、測試、版本控制和部署。</li>
+</ul>
+<p>創建一個Service Locator，其包含各服務的引用，並且封裝了定位服務的邏輯。在類中使用Service Locator 來獲取所需服務的實例。</p>
+<p>Service Locator 模式並不描述如何實例化服務，其描述了一種註冊和定位服務的方式。通常情況下，Service Locator 模式與工廠模式（Factory Pattern）和依賴注入模式（Dependency Injection Pattern）等結合使用。</p>
+<p>服務定位器應該能夠在不知道抽像類的具體類型的情況下定位到服務。例如，它可能會使用字符串或服務接口類型來影射服務，這允許在無需修改類的條件下替換依賴項的具體實現。</p>
+<h3 id="service-locator">使用Service Locator 模式之前，請考慮以下幾點：<a class="headerlink" href="#service-locator" title="Permanent link">¶</a></h3>
+<ul>
+<li>有很多程序中的元素需要管理。</li>
+<li>在使用之前必須編寫額外的代碼將服務的引用添加到服務定位器。</li>
+<li>類將對服務定位器有依賴關係。</li>
+<li>源代碼變的更加複雜和難以理解。</li>
+<li>可以使用配置數據來定義運行時的關係。</li>
+<li>必須提供服務的實現。因為服務定位器模式將服務消費者與服務提供者解耦，它可能需要提供額外的邏輯。這種邏輯將保證在服務消費者嘗試定位服務之前，服務提供者已被安裝和註冊。</li>
+</ul>
+<h3 id="_1">相關模式<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<ul>
+<li>依賴注入（Dependency Injection）。這種模式解決了與Service Locator 模式相同的問題，但它使用不同的方法。</li>
+<li>控制反轉（Inversion of Control）。Service Locator 模式是這種模式的特殊版本。它將應用程序的傳統控制流程反轉。它用被調用對象來代替控製過程的調用方。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">using</span> <span class="nn">System.Globalization</span><span class="p">;</span>
+
+<span class="k">using</span> <span class="nn">System.Reflection</span><span class="p">;</span>
+
+
+
+<span class="k">namespace</span> <span class="nn">Infrastructure</span>
+
+<span class="p">{</span>
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 服务定位器</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">ServiceLocator</span>
+
+ <span class="p">{</span>
+
+ <span class="cp">#region Fields</span>
+
+
+
+ <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">Type</span><span class="p">,</span> <span class="n">Type</span><span class="p">&gt;</span> <span class="n">_mapping</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">Type</span><span class="p">,</span> <span class="n">Type</span><span class="p">&gt;();</span>
+
+ <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">Type</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="n">_resources</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">Type</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;();</span>
+
+ <span class="k">private</span> <span class="k">static</span> <span class="kt">object</span> <span class="n">_operationLock</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">object</span><span class="p">();</span>
+
+
+
+ <span class="cp">#endregion</span>
+
+
+
+ <span class="cp">#region Add</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 添加注册资源</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;typeparam name="TClass"&gt;资源类型&lt;/typeparam&gt;</span>
+
+ <span class="c1">/// &lt;param name="instance"&gt;资源实例&lt;/param&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Add</span><span class="p">&lt;</span><span class="n">TClass</span><span class="p">&gt;(</span><span class="kt">object</span> <span class="n">instance</span><span class="p">)</span>
+
+ <span class="k">where</span> <span class="n">TClass</span> <span class="p">:</span> <span class="k">class</span>
+
+ <span class="p">{</span>
+
+ <span class="n">Add</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">),</span> <span class="n">instance</span><span class="p">);</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 添加注册资源</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;param name="typeOfInstance"&gt;资源类型&lt;/param&gt;</span>
+
+ <span class="c1">/// &lt;param name="instance"&gt;资源实例&lt;/param&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Add</span><span class="p">(</span><span class="n">Type</span> <span class="n">typeOfInstance</span><span class="p">,</span> <span class="kt">object</span> <span class="n">instance</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="k">if</span> <span class="p">(</span><span class="n">typeOfInstance</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+
+ <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentNullException</span><span class="p">(</span><span class="s">"typeOfInstance"</span><span class="p">);</span>
+
+ <span class="k">if</span> <span class="p">(</span><span class="n">instance</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+
+ <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentNullException</span><span class="p">(</span><span class="s">"instance"</span><span class="p">);</span>
+
+
+
+ <span class="k">if</span> <span class="p">(!(</span><span class="n">typeOfInstance</span><span class="p">.</span><span class="n">IsInstanceOfType</span><span class="p">(</span><span class="n">instance</span><span class="p">)))</span>
+
+ <span class="p">{</span>
+
+ <span class="k">throw</span> <span class="k">new</span> <span class="nf">InvalidCastException</span><span class="p">(</span>
+
+ <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">,</span>
+
+ <span class="s">"Resource does not implement supplied interface: {0}"</span><span class="p">,</span> <span class="n">typeOfInstance</span><span class="p">.</span><span class="n">FullName</span><span class="p">));</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="k">lock</span> <span class="p">(</span><span class="n">_operationLock</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="k">if</span> <span class="p">(</span><span class="n">_resources</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="n">typeOfInstance</span><span class="p">))</span>
+
+ <span class="p">{</span>
+
+ <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentException</span><span class="p">(</span>
+
+ <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">,</span> <span class="s">"Resource is already existing : {0}"</span><span class="p">,</span> <span class="n">typeOfInstance</span><span class="p">.</span><span class="n">FullName</span><span class="p">));</span>
+
+ <span class="p">}</span>
+
+ <span class="n">_resources</span><span class="p">[</span><span class="n">typeOfInstance</span><span class="p">]</span> <span class="p">=</span> <span class="n">instance</span><span class="p">;</span>
+
+ <span class="p">}</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="cp">#endregion</span>
+
+
+
+ <span class="cp">#region Get</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 查找指定类型的资源实例</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;typeparam name="TClass"&gt;资源类型&lt;/typeparam&gt;</span>
+
+ <span class="c1">/// &lt;returns&gt;资源实例&lt;/returns&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="n">TClass</span> <span class="n">Get</span><span class="p">&lt;</span><span class="n">TClass</span><span class="p">&gt;()</span>
+
+ <span class="k">where</span> <span class="n">TClass</span> <span class="p">:</span> <span class="k">class</span>
+
+ <span class="p">{</span>
+
+ <span class="k">return</span> <span class="nf">Get</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">))</span> <span class="k">as</span> <span class="n">TClass</span><span class="p">;</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 查找指定类型的资源实例</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;param name="typeOfInstance"&gt;The type of instance.&lt;/param&gt;</span>
+
+ <span class="c1">/// &lt;returns&gt;资源实例&lt;/returns&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="kt">object</span> <span class="nf">Get</span><span class="p">(</span><span class="n">Type</span> <span class="n">typeOfInstance</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="k">if</span> <span class="p">(</span><span class="n">typeOfInstance</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+
+ <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentNullException</span><span class="p">(</span><span class="s">"typeOfInstance"</span><span class="p">);</span>
+
+
+
+ <span class="kt">object</span> <span class="n">resource</span><span class="p">;</span>
+
+
+
+ <span class="k">lock</span> <span class="p">(</span><span class="n">_operationLock</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="k">if</span> <span class="p">(!</span><span class="n">_resources</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="n">typeOfInstance</span><span class="p">,</span> <span class="k">out</span> <span class="n">resource</span><span class="p">))</span>
+
+ <span class="p">{</span>
+
+ <span class="k">throw</span> <span class="k">new</span> <span class="nf">ResourceNotFoundException</span><span class="p">(</span><span class="n">typeOfInstance</span><span class="p">.</span><span class="n">FullName</span><span class="p">);</span>
+
+ <span class="p">}</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="k">if</span> <span class="p">(</span><span class="n">resource</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="k">throw</span> <span class="k">new</span> <span class="nf">ResourceNotInstantiatedException</span><span class="p">(</span><span class="n">typeOfInstance</span><span class="p">.</span><span class="n">FullName</span><span class="p">);</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="k">return</span> <span class="n">resource</span><span class="p">;</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 尝试查找指定类型的资源实例</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;typeparam name="TClass"&gt;资源类型&lt;/typeparam&gt;</span>
+
+ <span class="c1">/// &lt;param name="resource"&gt;资源实例&lt;/param&gt;</span>
+
+ <span class="c1">/// &lt;returns&gt;是否存在指定资源类型的资源实例&lt;/returns&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">TryGet</span><span class="p">&lt;</span><span class="n">TClass</span><span class="p">&gt;(</span><span class="k">out</span> <span class="n">TClass</span> <span class="n">resource</span><span class="p">)</span>
+
+ <span class="k">where</span> <span class="n">TClass</span> <span class="p">:</span> <span class="k">class</span>
+
+ <span class="p">{</span>
+
+ <span class="kt">bool</span> <span class="n">isFound</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+
+
+
+ <span class="n">resource</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+
+ <span class="kt">object</span> <span class="n">target</span><span class="p">;</span>
+
+
+
+ <span class="k">lock</span> <span class="p">(</span><span class="n">_operationLock</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="k">if</span> <span class="p">(</span><span class="n">_resources</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">),</span> <span class="k">out</span> <span class="n">target</span><span class="p">))</span>
+
+ <span class="p">{</span>
+
+ <span class="n">resource</span> <span class="p">=</span> <span class="n">target</span> <span class="k">as</span> <span class="n">TClass</span><span class="p">;</span>
+
+ <span class="n">isFound</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+
+ <span class="p">}</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="k">return</span> <span class="n">isFound</span><span class="p">;</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="cp">#endregion</span>
+
+
+
+ <span class="cp">#region Register</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 注册类型</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;typeparam name="TClass"&gt;实体类型，类型限制为有公共无参构造函数&lt;/typeparam&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">RegisterType</span><span class="p">&lt;</span><span class="n">TClass</span><span class="p">&gt;()</span>
+
+ <span class="k">where</span> <span class="n">TClass</span> <span class="p">:</span> <span class="n">class</span><span class="p">,</span> <span class="k">new</span><span class="p">()</span>
+
+ <span class="p">{</span>
+
+ <span class="k">lock</span> <span class="p">(</span><span class="n">_operationLock</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="n">_mapping</span><span class="p">[</span><span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">)]</span> <span class="p">=</span> <span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">);</span>
+
+ <span class="p">}</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 注册类型</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;typeparam name="TFrom"&gt;资源类型&lt;/typeparam&gt;</span>
+
+ <span class="c1">/// &lt;typeparam name="TTo"&gt;实体类型，类型限制为有公共无参构造函数&lt;/typeparam&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">RegisterType</span><span class="p">&lt;</span><span class="n">TFrom</span><span class="p">,</span> <span class="n">TTo</span><span class="p">&gt;()</span>
+
+ <span class="k">where</span> <span class="n">TFrom</span> <span class="p">:</span> <span class="k">class</span>
+
+ <span class="nc">where</span> <span class="n">TTo</span> <span class="p">:</span> <span class="n">TFrom</span><span class="p">,</span> <span class="k">new</span><span class="p">()</span>
+
+ <span class="p">{</span>
+
+ <span class="k">lock</span> <span class="p">(</span><span class="n">_operationLock</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="n">_mapping</span><span class="p">[</span><span class="k">typeof</span><span class="p">(</span><span class="n">TFrom</span><span class="p">)]</span> <span class="p">=</span> <span class="k">typeof</span><span class="p">(</span><span class="n">TTo</span><span class="p">);</span>
+
+ <span class="n">_mapping</span><span class="p">[</span><span class="k">typeof</span><span class="p">(</span><span class="n">TTo</span><span class="p">)]</span> <span class="p">=</span> <span class="k">typeof</span><span class="p">(</span><span class="n">TTo</span><span class="p">);</span>
+
+ <span class="p">}</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 是否已注册此类型</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;typeparam name="TClass"&gt;资源类型&lt;/typeparam&gt;</span>
+
+ <span class="c1">/// &lt;returns&gt;是否已注册此类型&lt;/returns&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">IsRegistered</span><span class="p">&lt;</span><span class="n">TClass</span><span class="p">&gt;()</span>
+
+ <span class="p">{</span>
+
+ <span class="k">lock</span> <span class="p">(</span><span class="n">_operationLock</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="k">return</span> <span class="n">_mapping</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">));</span>
+
+ <span class="p">}</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="cp">#endregion</span>
+
+
+
+ <span class="cp">#region Resolve</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 获取类型实例</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;typeparam name="TClass"&gt;资源类型&lt;/typeparam&gt;</span>
+
+ <span class="c1">/// &lt;returns&gt;类型实例&lt;/returns&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="n">TClass</span> <span class="n">Resolve</span><span class="p">&lt;</span><span class="n">TClass</span><span class="p">&gt;()</span>
+
+ <span class="k">where</span> <span class="n">TClass</span> <span class="p">:</span> <span class="k">class</span>
+
+ <span class="p">{</span>
+
+ <span class="n">TClass</span> <span class="n">resource</span> <span class="p">=</span> <span class="k">default</span><span class="p">(</span><span class="n">TClass</span><span class="p">);</span>
+
+
+
+ <span class="kt">bool</span> <span class="n">existing</span> <span class="p">=</span> <span class="n">TryGet</span><span class="p">&lt;</span><span class="n">TClass</span><span class="p">&gt;(</span><span class="k">out</span> <span class="n">resource</span><span class="p">);</span>
+
+ <span class="k">if</span> <span class="p">(!</span><span class="n">existing</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="n">ConstructorInfo</span> <span class="n">constructor</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+
+
+
+ <span class="k">lock</span> <span class="p">(</span><span class="n">_operationLock</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="k">if</span> <span class="p">(!</span><span class="n">_mapping</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">)))</span>
+
+ <span class="p">{</span>
+
+ <span class="k">throw</span> <span class="k">new</span> <span class="nf">ResourceNotResolvedException</span><span class="p">(</span>
+
+ <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">,</span> <span class="s">"Cannot find the target type : {0}"</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">).</span><span class="n">FullName</span><span class="p">));</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="n">Type</span> <span class="n">concrete</span> <span class="p">=</span> <span class="n">_mapping</span><span class="p">[</span><span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">)];</span>
+
+ <span class="n">constructor</span> <span class="p">=</span> <span class="n">concrete</span><span class="p">.</span><span class="n">GetConstructor</span><span class="p">(</span><span class="n">BindingFlags</span><span class="p">.</span><span class="n">Instance</span> <span class="p">|</span> <span class="n">BindingFlags</span><span class="p">.</span><span class="n">Public</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">new</span> <span class="n">Type</span><span class="p">[</span><span class="m">0</span><span class="p">],</span> <span class="k">null</span><span class="p">);</span>
+
+ <span class="k">if</span> <span class="p">(</span><span class="n">constructor</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="k">throw</span> <span class="k">new</span> <span class="nf">ResourceNotResolvedException</span><span class="p">(</span>
+
+ <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">,</span> <span class="s">"Public constructor is missing for type : {0}"</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">).</span><span class="n">FullName</span><span class="p">));</span>
+
+ <span class="p">}</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="n">Add</span><span class="p">&lt;</span><span class="n">TClass</span><span class="p">&gt;((</span><span class="n">TClass</span><span class="p">)</span><span class="n">constructor</span><span class="p">.</span><span class="n">Invoke</span><span class="p">(</span><span class="k">null</span><span class="p">));</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="k">return</span> <span class="n">Get</span><span class="p">&lt;</span><span class="n">TClass</span><span class="p">&gt;();</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="cp">#endregion</span>
+
+
+
+ <span class="cp">#region Remove</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 移除指定类型的资源实例</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;typeparam name="TClass"&gt;资源类型&lt;/typeparam&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Remove</span><span class="p">&lt;</span><span class="n">TClass</span><span class="p">&gt;()</span>
+
+ <span class="p">{</span>
+
+ <span class="n">Teardown</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">));</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 移除指定类型的资源实例</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;param name="typeOfInstance"&gt;资源类型&lt;/param&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Remove</span><span class="p">(</span><span class="n">Type</span> <span class="n">typeOfInstance</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="k">if</span> <span class="p">(</span><span class="n">typeOfInstance</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+
+ <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentNullException</span><span class="p">(</span><span class="s">"typeOfInstance"</span><span class="p">);</span>
+
+
+
+ <span class="k">lock</span> <span class="p">(</span><span class="n">_operationLock</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="n">_resources</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">typeOfInstance</span><span class="p">);</span>
+
+ <span class="p">}</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="cp">#endregion</span>
+
+
+
+ <span class="cp">#region Teardown</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 拆除指定类型的资源实例及注册映射类型</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;typeparam name="TClass"&gt;资源类型&lt;/typeparam&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Teardown</span><span class="p">&lt;</span><span class="n">TClass</span><span class="p">&gt;()</span>
+
+ <span class="p">{</span>
+
+ <span class="n">Teardown</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TClass</span><span class="p">));</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 拆除指定类型的资源实例及注册映射类型</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="c1">/// &lt;param name="typeOfInstance"&gt;资源类型&lt;/param&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Teardown</span><span class="p">(</span><span class="n">Type</span> <span class="n">typeOfInstance</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="k">if</span> <span class="p">(</span><span class="n">typeOfInstance</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+
+ <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentNullException</span><span class="p">(</span><span class="s">"typeOfInstance"</span><span class="p">);</span>
+
+
+
+ <span class="k">lock</span> <span class="p">(</span><span class="n">_operationLock</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="n">_resources</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">typeOfInstance</span><span class="p">);</span>
+
+ <span class="n">_mapping</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">typeOfInstance</span><span class="p">);</span>
+
+ <span class="p">}</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="cp">#endregion</span>
+
+
+
+ <span class="cp">#region Clear</span>
+
+
+
+ <span class="c1">/// &lt;summary&gt;</span>
+
+ <span class="c1">/// 移除所有资源</span>
+
+ <span class="c1">/// &lt;/summary&gt;</span>
+
+ <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Clear</span><span class="p">()</span>
+
+ <span class="p">{</span>
+
+ <span class="k">lock</span> <span class="p">(</span><span class="n">_operationLock</span><span class="p">)</span>
+
+ <span class="p">{</span>
+
+ <span class="n">_resources</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+
+ <span class="n">_mapping</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+
+ <span class="p">}</span>
+
+ <span class="p">}</span>
+
+
+
+ <span class="cp">#endregion</span>
+
+ <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Infrastructure</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">ServiceLocatorTest</span>
+<span class="p">{</span>
+  <span class="k">class</span> <span class="nc">Program</span>
+  <span class="p">{</span>
+    <span class="k">interface</span> <span class="n">IServiceA</span>
+    <span class="p">{</span>
+      <span class="kt">string</span> <span class="nf">GetData</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">class</span> <span class="nc">ServiceA</span> <span class="p">:</span> <span class="n">IServiceA</span>
+    <span class="p">{</span>
+      <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetData</span><span class="p">()</span>
+      <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"This data is from ServiceA"</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">ServiceLocator</span><span class="p">.</span><span class="n">RegisterType</span><span class="p">&lt;</span><span class="n">IServiceA</span><span class="p">,</span> <span class="n">ServiceA</span><span class="p">&gt;();</span>
+      <span class="n">IServiceA</span> <span class="n">serviceA</span> <span class="p">=</span> <span class="n">ServiceLocator</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IServiceA</span><span class="p">&gt;();</span>
+      <span class="kt">string</span> <span class="n">data</span> <span class="p">=</span> <span class="n">serviceA</span><span class="p">.</span><span class="n">GetData</span><span class="p">();</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+      <span class="n">Console</span><span class="p">.</span><span class="n">ReadKey</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>參考：</p>
+<p><a href="https://www.cnblogs.com/gaochundong/archive/2013/04/12/service_locator_pattern.html">Service Locator 模式</a></p>
+<p><a href="https://www.twblogs.net/a/5f0388a2d33e2533b0151e6c">設計模式-服務定位器模式</a></p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+<section>
+    <h2>Related Posts</h2>
+<ul class="related-posts-list">
+<li><a href="https://richardrobot.xyz/2023/03/fen-xi-gong-ju-debugdiag-tools/" title="分析工具－DebugDiag Tools">分析工具－DebugDiag Tools</a></li>
+</ul>
+<hr />
+</section>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2022-04-08T09:43:00+08:00">五 08 4月 2022</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#hou-duan-cheng-shi-ref">後端程式</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://richardrobot.xyz/tags.html#biao-qian-ref">標籤
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+    <a href="https://github.com/TernenceZheng" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="andy711023@gmail.com" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Gmail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff"/><rect width="362" height="272" x="75" y="120" fill="#f2f2f2" rx="8%"/><path fill="#d54c3f" d="M120 392H97c-12 0-22-10-22-23V143h45z"/><path fill="#b63524" d="M392 392h23c12 0 22-10 22-23V143h-45z"/><path fill-opacity=".05" d="M256 286L120 392V187z"/><path fill-opacity=".08" d="M82 159l235 233h75V159z"/><path stroke-linecap="round" fill="none" stroke="#de5145" stroke-width="45" d="M97 143l159 115 159-115"/><path fill="#f2f2f2" d="M415 120c-5 0-10 2-13 4L256 230 110 124c-3-2-8-4-13-4z"/></svg>
+    </a>
+    <a href="https://richardrobot.xyz/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Richard隨手筆記</span> - 紙上得來終覺淺，絕知此事要躬行
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://richardrobot.xyz/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

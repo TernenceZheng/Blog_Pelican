@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh_tw">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Richard" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="標籤, 後端程式, " />
+
+<meta property="og:title" content="設計模式和反模式 "/>
+<meta property="og:url" content="https://richardrobot.xyz/drafts/she-ji-mo-shi-he-fan-mo-shi.html" />
+<meta property="og:description" content="預覽標題" />
+<meta property="og:site_name" content="Richard隨手筆記" />
+<meta property="og:article:author" content="Richard" />
+<meta property="og:article:published_time" content="2022-04-11T20:46:00+08:00" />
+<meta property="og:article:modified_time" content="2022-04-11T20:46:00+08:00" />
+<meta name="twitter:title" content="設計模式和反模式 ">
+<meta name="twitter:description" content="預覽標題">
+
+        <title>設計模式和反模式  · Richard隨手筆記
+</title>
+        <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://richardrobot.xyz/"><span class=site-name>Richard隨手筆記</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://richardrobot.xyz
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://richardrobot.xyz/categories.html">Categories</a></li>
+                                <li ><a href="https://richardrobot.xyz/tags.html">Tags</a></li>
+                                <li ><a href="https://richardrobot.xyz/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="https://richardrobot.xyz/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://richardrobot.xyz/drafts/she-ji-mo-shi-he-fan-mo-shi.html">
+                設計模式和反模式
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#_1">簡單的來說，反模式是指在對經常面對的問題經常使用的低效，不良，或者有待優化的設計模式/方法。甚至，反模式也可以是一種錯誤的開發思想/理念。</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<p>摘要：本文主要講的是反模式， 反模式（英文：Anti-patterns或pitfalls）, 是指用來解決問題的帶有共同性的不良方法。它們已經經過研究並分類，以防止日後重蹈覆轍，並能在研發尚未投產的系統時辨認出來。</p>
+<p>作為一個資深開發人員，大家都應該聽說過設計模式(design pattern)，但是不是所有的人都聽說過反模式(anti-pattern)。今天我們就來談談後者，何為反模式。</p>
+<p>談反模式之前當然先要談談何為設計模式，因為兩者是緊密聯絡在一起的。從我個人的理解認為，設計模式是一種在前人的設計經驗上總結出來的對於一些普遍存在的問題提供的通用的解決方案。這些設計模式已經經過了長時間的實際應用和驗證，被證實是有效可行的解決方案。通過使用設計模式，我們可以獲得以下優勢：</p>
+<ul>
+<li>開發小組不需要重新設計解決方案來解決已經被前人解決過的問題。如此可以節省很多設計開發時間。</li>
+<li>當開發小組討論設計的時候，使用設計模式可以使大家更好了理解問題所在和解決方案，而且對解決方案有一個比較統一的認知。</li>
+<li>設計模式本身已經通過了大量的實際運用和驗證，其設計質量和實用價值有很好的保證。</li>
+<li>設計模式本身有健全的文件，可以一定程度上簡化撰寫開發文件。</li>
+</ul>
+<p>在開發過程中，使用設計模式對系統/軟體開發有很多其他的優點，這裡就不一一列舉了。一些常用的設計模式包括：單列模式， 工廠模式， 修飾模式， 策略模式， 代理模式等等。有興趣的朋友可以看下 “四人幫” 的 設計模式這本書 “<em>Design Patterns: Elements of Reusable Object-Oriented Software__”</em>， 其他還有大量討論設計模式的書籍， 比如 <em>“Head First Design Pattern”,  “The Design Patterns Java Workbook”</em> 等等_。_</p>
+<p>簡單的談完了設計模式，我們來談一下重點，什麼是反模式。 很多人對反模式有一個理解誤區，有人認為反模式是由於將通常使用的設計模式用在了錯誤的地方，也有人認為反模式只是一種壞習慣。</p>
+<h5 id="_1">簡單的來說，反模式是指在對經常面對的問題經常使用的低效，不良，或者有待優化的設計模式/方法。甚至，反模式也可以是一種錯誤的開發思想/理念。<a class="headerlink" href="#_1" title="Permanent link">¶</a></h5>
+<p>在這裡我舉一個最簡單的例子：在面向物件設計/程式設計中，有一條很重要的原則， 單一責任原則(Single responsibility principle)。其中心思想就是對於一個模組，或者一個類來說，這個模組或者這個類應該只對系統/軟體的一個功能負責，而且該責任應該被該類完全封裝起來。當開發人員需要修改系統的某個功能，這個模組/類是最主要的修改地方。相對應的一個反模式就是上帝類(God Class)，通常來說，這個類裡面控制了很多其他的類，同時也依賴其他很多類。整個類不光負責自己的主要單一功能，而且還負責了其他很多功能，包括一些輔助功能。很多維護老程式的開發人員們可能都遇過這種類，一個類裡有幾千行的程式碼，有很多功能，但是責任不明確單一。單元測試程式也變複雜無比。維護/修改這個類的時間要遠遠超出其他類的時間。很多時候，形成這種情況並不是開發人員故意的。很多情況下主要是由於隨著系統的年限，需求的變化，專案的資源壓力，專案組人員流動，系統結構的變化而導致某些原先小型的，符合單一原則類慢慢的變的臃腫起來。最後當這個類變成了維護的噩夢(特別是原先熟悉的開發人員離職後)，重構該類就變成了一個不容易的工程。</p>
+<p>同設計模式一樣，也有不少的書籍討論反模式，比如 “AntiPatterns: Refactoring Software, Architectures, and Projects in Crisis”， “Antipatterns: Identification, Refactoring, and Management”， “<span class="caps">J2EE</span> AntiPatterns”，對設計模式和反模式感興趣的朋友們有空可以讀一下。</p>
+<p>舉例：</p>
+<p>軟體膨脹：隨著版本的升級，軟體越來越消耗系統資源。
+反抽象：需要的功能並不暴露給使用者，導致使用者要在較高層次重新實現一些功能。
+萬能類︰在一個類的設計中，聚集了太多的函式。
+硬編碼(Hard Code)：或稱寫死。在實現某系統用途上設死該系統的運作環境。
+超布林邏輯︰不必要的比較，或是過於抽象的布林<a href="https://www.aliyun.com/">計算</a>。
+剪貼程式設計(Copy-n-paste programming)：寧願拷貝(並修改)現存程式碼而非創造通用的解決方案。</p>
+<p>參考：</p>
+<p><a href="https://www.itread01.com/content/1546823731.html">設計模式和反模式簡單介紹</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%8F%8D%E9%9D%A2%E6%A8%A1%E5%BC%8F">反面模式</a></p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+<section>
+    <h2>Related Posts</h2>
+<ul class="related-posts-list">
+<li><a href="https://richardrobot.xyz/2023/03/fen-xi-gong-ju-debugdiag-tools/" title="分析工具－DebugDiag Tools">分析工具－DebugDiag Tools</a></li>
+</ul>
+<hr />
+</section>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2022-04-11T20:46:00+08:00">一 11 4月 2022</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#hou-duan-cheng-shi-ref">後端程式</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://richardrobot.xyz/tags.html#biao-qian-ref">標籤
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+    <a href="https://github.com/TernenceZheng" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="andy711023@gmail.com" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Gmail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff"/><rect width="362" height="272" x="75" y="120" fill="#f2f2f2" rx="8%"/><path fill="#d54c3f" d="M120 392H97c-12 0-22-10-22-23V143h45z"/><path fill="#b63524" d="M392 392h23c12 0 22-10 22-23V143h-45z"/><path fill-opacity=".05" d="M256 286L120 392V187z"/><path fill-opacity=".08" d="M82 159l235 233h75V159z"/><path stroke-linecap="round" fill="none" stroke="#de5145" stroke-width="45" d="M97 143l159 115 159-115"/><path fill="#f2f2f2" d="M415 120c-5 0-10 2-13 4L256 230 110 124c-3-2-8-4-13-4z"/></svg>
+    </a>
+    <a href="https://richardrobot.xyz/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Richard隨手筆記</span> - 紙上得來終覺淺，絕知此事要躬行
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://richardrobot.xyz/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

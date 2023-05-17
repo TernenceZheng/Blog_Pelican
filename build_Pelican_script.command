@@ -3,7 +3,7 @@
 cd /Users/jarvis.zheng/Blog_Pelican/Pelican
 
 /Users/jarvis.zheng/miniforge3/envs/Pelican/bin/pelican content
-git pull git@github.com:TernenceZheng/Blog_Pelican.git origin master
+git pull git@github.com:TernenceZheng/Blog_Pelican.git master
 
 git add .
 

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh_tw">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Richard" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="標籤, 後端程式, " />
+
+<meta property="og:title" content="鬆耦合架構 "/>
+<meta property="og:url" content="https://richardrobot.xyz/drafts/song-ou-he-jia-gou.html" />
+<meta property="og:description" content="預覽標題" />
+<meta property="og:site_name" content="Richard隨手筆記" />
+<meta property="og:article:author" content="Richard" />
+<meta property="og:article:published_time" content="2022-04-13T13:55:00+08:00" />
+<meta property="og:article:modified_time" content="2022-04-13T13:55:00+08:00" />
+<meta name="twitter:title" content="鬆耦合架構 ">
+<meta name="twitter:description" content="預覽標題">
+
+        <title>鬆耦合架構  · Richard隨手筆記
+</title>
+        <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://richardrobot.xyz/"><span class=site-name>Richard隨手筆記</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://richardrobot.xyz
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://richardrobot.xyz/categories.html">Categories</a></li>
+                                <li ><a href="https://richardrobot.xyz/tags.html">Tags</a></li>
+                                <li ><a href="https://richardrobot.xyz/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="https://richardrobot.xyz/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://richardrobot.xyz/drafts/song-ou-he-jia-gou.html">
+                鬆耦合架構
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#_1">重新打造：流程是應該『由外而內』，先修改展示層 業務層 最後再 資料層</a><ul>
+<li><a href="#_2">展示層修改：</a><ul>
+<li><a href="#viewpoco">View與POCO物件修改</a></li>
+<li><a href="#homecontroller">在HomeController 的修改：</a></li>
+<li><a href="#_3">什麼是『組合根』</a></li>
+</ul>
+</li>
+<li><a href="#_4">業務層的修改：</a><ul>
+<li><a href="#_5">什麼是『資料實體』</a></li>
+</ul>
+</li>
+<li><a href="#_6">資料層的修改：</a></li>
+<li><a href="#_7">分析新的依賴關係圖</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h1 id="_1">重新打造：流程是應該『由外而內』，先修改展示層 業務層 最後再 資料層<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<h2 id="_2">展示層修改：<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h4 id="viewpoco">View與POCO物件修改<a class="headerlink" href="#viewpoco" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="err">@</span><span class="n">model</span> <span class="n">Ploeh</span><span class="p">.</span><span class="n">Samples</span><span class="p">.</span><span class="n">Commerce</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">Models</span><span class="p">.</span><span class="n">FeaturedProductsViewModel</span>
+
+<span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="n">Featured</span> <span class="n">Products</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="err">@</span><span class="n">foreach</span> <span class="p">(</span><span class="n">var</span> <span class="n">product</span> <span class="n">in</span> <span class="n">this</span><span class="p">.</span><span class="n">Model</span><span class="p">.</span><span class="n">Products</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span><span class="err">@</span><span class="n">product</span><span class="p">.</span><span class="n">SummaryText</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+
+<span class="c1">//下面是物件</span>
+<span class="n">public</span> <span class="n">class</span> <span class="n">FeaturedProductsViewModel</span>
+    <span class="p">{</span>
+        <span class="n">public</span> <span class="n">FeaturedProductsViewModel</span><span class="p">(</span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">ProductViewModel</span><span class="o">&gt;</span> <span class="n">products</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">this</span><span class="p">.</span><span class="n">Products</span> <span class="o">=</span> <span class="n">products</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">public</span> <span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">ProductViewModel</span><span class="o">&gt;</span> <span class="n">Products</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="n">public</span> <span class="n">class</span> <span class="n">ProductViewModel</span>
+    <span class="p">{</span>
+        <span class="n">private</span> <span class="k">static</span> <span class="n">readonly</span> <span class="n">CultureInfo</span> <span class="n">PriceCulture</span> <span class="o">=</span> <span class="n">new</span> <span class="n">CultureInfo</span><span class="p">(</span><span class="s">"en-US"</span><span class="p">);</span>
+
+        <span class="n">public</span> <span class="nf">ProductViewModel</span><span class="p">(</span><span class="n">DiscountedProduct</span> <span class="n">product</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">this</span><span class="p">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">product</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
+            <span class="n">this</span><span class="p">.</span><span class="n">UnitPrice</span> <span class="o">=</span> <span class="n">product</span><span class="p">.</span><span class="n">UnitPrice</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">public</span> <span class="n">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="p">}</span>
+        <span class="n">public</span> <span class="n">decimal</span> <span class="n">UnitPrice</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="p">}</span>
+        <span class="n">public</span> <span class="n">string</span> <span class="n">SummaryText</span> <span class="o">=&gt;</span> <span class="n">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="n">PriceCulture</span><span class="p">,</span> <span class="s">"{0} ({1:C})"</span><span class="p">,</span> <span class="n">this</span><span class="p">.</span><span class="n">Name</span><span class="p">,</span> <span class="n">this</span><span class="p">.</span><span class="n">UnitPrice</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>把物件的Product，轉換成FeaturedProductsViewModel與 ProductViewModel</p>
+<p>重要：
+這種改良就是把MVC的功能發揮，把原始的型別轉換為『單純的舊式資料物件』（<span class="caps">POCO</span>），與其他外來框架無涉依賴關係的單純實體物件。
+從DI的架構觀點，不論是FeaturedProductsViewModel與 ProductViewModel 這類的POCO或DTO之類的視圖模型，都不是關注的焦點，因為這些視圖模型不會有攔截替換或是模擬的行為或程式邏輯，只是單純的放資料的物件，不會增加程式緊耦合的風險。</p>
+<h4 id="homecontroller">在HomeController 的修改：<a class="headerlink" href="#homecontroller" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>    <span class="n">public</span> <span class="n">class</span> <span class="nl">HomeController</span> <span class="p">:</span> <span class="n">Controller</span>
+    <span class="p">{</span>
+        <span class="n">private</span> <span class="n">readonly</span> <span class="n">IProductService</span> <span class="n">productService</span><span class="p">;</span>
+
+        <span class="n">public</span> <span class="nf">HomeController</span><span class="p">(</span><span class="n">IProductService</span> <span class="n">productService</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">productService</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span> <span class="n">throw</span> <span class="n">new</span> <span class="n">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">productService</span><span class="p">));</span>
+
+            <span class="n">this</span><span class="p">.</span><span class="n">productService</span> <span class="o">=</span> <span class="n">productService</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">public</span> <span class="n">ViewResult</span> <span class="nf">Index</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">DiscountedProduct</span><span class="o">&gt;</span> <span class="n">featuredProducts</span> <span class="o">=</span>
+                <span class="n">this</span><span class="p">.</span><span class="n">productService</span><span class="p">.</span><span class="n">GetFeaturedProducts</span><span class="p">();</span>
+
+            <span class="n">var</span> <span class="n">vm</span> <span class="o">=</span> <span class="n">new</span> <span class="n">FeaturedProductsViewModel</span><span class="p">(</span>
+                <span class="n">from</span> <span class="n">product</span> <span class="n">in</span> <span class="n">featuredProducts</span>
+                <span class="n">select</span> <span class="n">new</span> <span class="n">ProductViewModel</span><span class="p">(</span><span class="n">product</span><span class="p">));</span>
+
+            <span class="k">return</span> <span class="n">this</span><span class="p">.</span><span class="n">View</span><span class="p">(</span><span class="n">vm</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>建構子用IProductService介面來注入的依賴對象
+使用this.productService.GetFeaturedProducts(); 回傳一個DiscountedProduct依賴對象
+featuredProducts這個東西就是資料層來的(<em>其實也是POCO資料類別，只是是DB來的</em>)，透過實際資料層物件來注入POCO物件，而不是什麼字串或是數字到View來呈現。</p>
+<hr/>
+<h3 id="_3">什麼是『組合根』<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>可以組合應用程式中使用的類別。 將需要實體物件的建立作業，全部集中化到一個地方，而這個負責處理作業的區塊就是『組合根』，通常是應用程式的啟動點，在NetCore就是Main方法中。</p>
+<hr/>
+<h2 id="_4">業務層的修改：<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">public</span> <span class="n">interface</span> <span class="n">IProductService</span>
+    <span class="p">{</span>
+        <span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">DiscountedProduct</span><span class="o">&gt;</span> <span class="n">GetFeaturedProducts</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>IProductService 這個介面就是業務層的核心，扮演了將 展示層與資料層介接起來的角色，也就是把應用程式中每個模組黏合起來的強力膠</p>
+<div class="highlight"><pre><span></span><code><span class="n">public</span> <span class="n">interface</span> <span class="n">IProductRepository</span>
+    <span class="p">{</span>
+        <span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span> <span class="n">GetFeaturedProducts</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>IProductRepository 與上面IProductService 不同</p>
+<p>IProductRepository是通往資料層的介面，返回的Product是 『資料實體』，資料實體代表的就是一個不僅僅存在於記憶體中的資料物件。</p>
+<hr/>
+<h3 id="_5">什麼是『資料實體』<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p><em>所有.NET中的物件在記憶體都會有一個代表其存在的記憶體位址，但是資料實體的識別不是這種離開程式流程或方法便會消滅或變動的東西。
+通常在資料庫中資料表的主鍵值作為資料實體的存在識別，即時電腦重啟，這些鍵值也不會變動。因此之所以業務模型物件 Product 是一種資料實體，就是因為其資料是與程式流程生命週期無關</em></p>
+<hr/>
+<div class="highlight"><pre><span></span><code>    <span class="n">public</span> <span class="n">class</span> <span class="n">Product</span>
+    <span class="p">{</span>
+        <span class="n">public</span> <span class="n">Guid</span> <span class="n">Id</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="n">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="n">public</span> <span class="n">string</span> <span class="n">Description</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="n">set</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="c1">// ---- Start code Listing 3.8 ----</span>
+        <span class="n">public</span> <span class="n">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="n">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="n">public</span> <span class="n">decimal</span> <span class="n">UnitPrice</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="n">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="n">public</span> <span class="kt">bool</span> <span class="n">IsFeatured</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="n">set</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="n">public</span> <span class="n">DiscountedProduct</span> <span class="n">ApplyDiscountFor</span><span class="p">(</span><span class="n">IUserContext</span> <span class="n">user</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">bool</span> <span class="n">preferred</span> <span class="o">=</span> <span class="n">user</span><span class="p">.</span><span class="n">IsInRole</span><span class="p">(</span><span class="n">Role</span><span class="p">.</span><span class="n">PreferredCustomer</span><span class="p">);</span>
+
+            <span class="n">decimal</span> <span class="n">discount</span> <span class="o">=</span> <span class="n">preferred</span> <span class="o">?</span> <span class="mf">.95</span><span class="nl">m</span> <span class="p">:</span> <span class="mf">1.00</span><span class="n">m</span><span class="p">;</span>
+
+            <span class="k">return</span> <span class="n">new</span> <span class="nf">DiscountedProduct</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">this</span><span class="p">.</span><span class="n">Name</span><span class="p">,</span> <span class="nl">unitPrice</span><span class="p">:</span> <span class="n">this</span><span class="p">.</span><span class="n">UnitPrice</span> <span class="o">*</span> <span class="n">discount</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">// ---- End code Listing 3.8 ----</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>像是實體類別的這種有個方法ApplyDiscountFor 就有一個介面介入攔截使用者的資訊，就需要有介面去做依賴轉換。</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">public</span> <span class="n">class</span> <span class="nl">ProductService</span> <span class="p">:</span> <span class="n">IProductService</span>
+    <span class="p">{</span>
+        <span class="n">private</span> <span class="n">readonly</span> <span class="n">IProductRepository</span> <span class="n">repository</span><span class="p">;</span>
+        <span class="n">private</span> <span class="n">readonly</span> <span class="n">IUserContext</span> <span class="n">userContext</span><span class="p">;</span>
+
+        <span class="n">public</span> <span class="nf">ProductService</span><span class="p">(</span>
+            <span class="n">IProductRepository</span> <span class="n">repository</span><span class="p">,</span>
+            <span class="n">IUserContext</span> <span class="n">userContext</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">repository</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span>
+                <span class="n">throw</span> <span class="n">new</span> <span class="n">ArgumentNullException</span><span class="p">(</span><span class="s">"repository"</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">userContext</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span>
+                <span class="n">throw</span> <span class="n">new</span> <span class="n">ArgumentNullException</span><span class="p">(</span><span class="s">"userContext"</span><span class="p">);</span>
+
+            <span class="n">this</span><span class="p">.</span><span class="n">repository</span> <span class="o">=</span> <span class="n">repository</span><span class="p">;</span>
+            <span class="n">this</span><span class="p">.</span><span class="n">userContext</span> <span class="o">=</span> <span class="n">userContext</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">public</span> <span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">DiscountedProduct</span><span class="o">&gt;</span> <span class="n">GetFeaturedProducts</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span>
+                <span class="n">from</span> <span class="n">product</span> <span class="n">in</span> <span class="n">this</span><span class="p">.</span><span class="n">repository</span>
+                    <span class="p">.</span><span class="n">GetFeaturedProducts</span><span class="p">()</span>
+                <span class="n">select</span> <span class="n">product</span><span class="p">.</span><span class="n">ApplyDiscountFor</span><span class="p">(</span><span class="n">this</span><span class="p">.</span><span class="n">userContext</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>上面的分析步驟：首先有兩個東西透過建構子注入</p>
+<div class="highlight"><pre><span></span><code><span class="n">public</span> <span class="n">ProductService</span><span class="p">(</span>
+            <span class="n">IProductRepository</span> <span class="n">repository</span><span class="p">,</span>
+            <span class="n">IUserContext</span> <span class="n">userContext</span><span class="p">)</span>
+</code></pre></div>
+<p>藉由this.repository與this.userContext 變數所代表的依賴關係，獲取 商品清單，再依序加上折扣資訊，其中加上折扣資訊是透過方法注入(由this.userContext提供)</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span> <span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">DiscountedProduct</span><span class="o">&gt;</span> <span class="n">GetFeaturedProducts</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span>
+                <span class="n">from</span> <span class="n">product</span> <span class="n">in</span> <span class="k">this</span><span class="p">.</span><span class="n">repository</span>
+                    <span class="p">.</span><span class="n">GetFeaturedProducts</span><span class="p">()</span>
+                <span class="n">select</span> <span class="n">product</span><span class="p">.</span><span class="n">ApplyDiscountFor</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">userContext</span><span class="p">);</span>
+        <span class="p">}</span>
+</code></pre></div>
+<p>#### <em>高階模組不應該依賴於低階模組，兩者都應該依賴抽象</em>（<a href="https://richardrobot.xyz/drafts/yi-lai-zhu-ru-xi-lie.html">依賴注入系列</a>）</p>
+<p>ProductService 屬於高層的業務層</p>
+<p>IProductRepository介面的實作實體類別=&gt; SqlProductRepository 這個就是屬於低層的資料層</p>
+<p>至於DI架構與依賴反轉原則之間的關聯：</p>
+<blockquote>
+<p>簡言之就是依賴反轉說明了我們想要實現的內容，而DI架構則是說明了我們該如何去實現這些內容。
+在這份範例中的鬆耦合架構，指明了抽象介面應該屬於介面使用方所在的模組。前面『屬於』的意思是<em>抽象介面的定義是掌握在作為使用方的模組手中，而且也是定義在那份模組當中，而不是由實作的這份介面的模組來負責</em>。由下圖來說明關聯即可瞭解清楚</p>
+</blockquote>
+<h2 id="_6">資料層的修改：<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<p>透過Entity Framework核心來實作IProductRepository，其中 重點是Entity Framework的核心有個『無關於定型框架』原則的資料實體</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">public</span> <span class="n">class</span> <span class="nl">SqlProductRepository</span> <span class="p">:</span> <span class="n">IProductRepository</span>
+    <span class="p">{</span>
+        <span class="n">private</span> <span class="n">readonly</span> <span class="n">CommerceContext</span> <span class="n">context</span><span class="p">;</span>
+
+        <span class="n">public</span> <span class="nf">SqlProductRepository</span><span class="p">(</span><span class="n">CommerceContext</span> <span class="n">context</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">context</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span> <span class="n">throw</span> <span class="n">new</span> <span class="n">ArgumentNullException</span><span class="p">(</span><span class="s">"context"</span><span class="p">);</span>
+
+            <span class="n">this</span><span class="p">.</span><span class="n">context</span> <span class="o">=</span> <span class="n">context</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">public</span> <span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span> <span class="n">GetFeaturedProducts</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span>
+                <span class="n">from</span> <span class="n">product</span> <span class="n">in</span> <span class="n">this</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">Products</span>
+                <span class="n">where</span> <span class="n">product</span><span class="p">.</span><span class="n">IsFeatured</span>
+                <span class="n">select</span> <span class="n">product</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>其中CommerceContext實作讀取連線設定，用</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">public</span> <span class="n">class</span> <span class="nl">CommerceContext</span> <span class="p">:</span> <span class="n">DbContext</span>
+    <span class="p">{</span>
+        <span class="n">private</span> <span class="n">readonly</span> <span class="n">string</span> <span class="n">connectionString</span><span class="p">;</span>
+
+        <span class="n">public</span> <span class="nf">CommerceContext</span><span class="p">(</span><span class="n">string</span> <span class="n">connectionString</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">connectionString</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span> <span class="n">throw</span> <span class="n">new</span> <span class="n">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">connectionString</span><span class="p">));</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">IsNullOrWhiteSpace</span><span class="p">(</span><span class="n">connectionString</span><span class="p">))</span>
+                <span class="n">throw</span> <span class="n">new</span> <span class="n">ArgumentException</span><span class="p">(</span><span class="s">"Value should not be empty."</span><span class="p">,</span> <span class="n">nameof</span><span class="p">(</span><span class="n">connectionString</span><span class="p">));</span>
+
+            <span class="n">this</span><span class="p">.</span><span class="n">connectionString</span> <span class="o">=</span> <span class="n">connectionString</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">public</span> <span class="n">DbSet</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span> <span class="n">Products</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="n">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="n">public</span> <span class="n">DbSet</span><span class="o">&lt;</span><span class="n">ExchangeRate</span><span class="o">&gt;</span> <span class="n">ExchangeRates</span> <span class="p">{</span> <span class="n">get</span><span class="p">;</span> <span class="n">set</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="n">protected</span> <span class="n">override</span> <span class="kt">void</span> <span class="n">OnConfiguring</span><span class="p">(</span><span class="n">DbContextOptionsBuilder</span> <span class="n">optionsBuilder</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">optionsBuilder</span><span class="p">.</span><span class="n">UseSqlite</span><span class="p">(</span><span class="n">this</span><span class="p">.</span><span class="n">connectionString</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>另外書上有提起另外一個重點，IUserContext 說明參考<a href="https://richardrobot.xyz/drafts/zhuan-jie-qi-mo-shi.html">轉接器模式</a></p>
+<h2 id="_7">分析新的依賴關係圖<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
+<p>虛線箭頭：使用 實線箭頭：實作</p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+<section>
+    <h2>Related Posts</h2>
+<ul class="related-posts-list">
+<li><a href="https://richardrobot.xyz/2023/03/fen-xi-gong-ju-debugdiag-tools/" title="分析工具－DebugDiag Tools">分析工具－DebugDiag Tools</a></li>
+</ul>
+<hr />
+</section>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2022-04-13T13:55:00+08:00">三 13 4月 2022</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#hou-duan-cheng-shi-ref">後端程式</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://richardrobot.xyz/tags.html#biao-qian-ref">標籤
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+    <a href="https://github.com/TernenceZheng" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="andy711023@gmail.com" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Gmail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff"/><rect width="362" height="272" x="75" y="120" fill="#f2f2f2" rx="8%"/><path fill="#d54c3f" d="M120 392H97c-12 0-22-10-22-23V143h45z"/><path fill="#b63524" d="M392 392h23c12 0 22-10 22-23V143h-45z"/><path fill-opacity=".05" d="M256 286L120 392V187z"/><path fill-opacity=".08" d="M82 159l235 233h75V159z"/><path stroke-linecap="round" fill="none" stroke="#de5145" stroke-width="45" d="M97 143l159 115 159-115"/><path fill="#f2f2f2" d="M415 120c-5 0-10 2-13 4L256 230 110 124c-3-2-8-4-13-4z"/></svg>
+    </a>
+    <a href="https://richardrobot.xyz/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Richard隨手筆記</span> - 紙上得來終覺淺，絕知此事要躬行
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://richardrobot.xyz/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

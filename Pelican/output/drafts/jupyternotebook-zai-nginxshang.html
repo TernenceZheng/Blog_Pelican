@@ -86,7 +86,24 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            
+            <p>1.在網頁開啟Jupyter頁面登入後一片空白，F12看到錯誤</p>
+<div class="highlight"><pre><span></span><code><span class="err">ERR_CONTENT_LENGTH_MISMATCH</span>
+</code></pre></div>
+
+
+<p><a href="https://github.com/xhlwill/blog/issues/17">ERR_CONTENT_LENGTH_MISMATCH&nbsp;錯誤解法</a></p>
+<p>2.第一點問題處理後出現另外一個問題，F12看到錯誤</p>
+<div class="highlight"><pre><span></span><code><span class="err">Uncaught (in promise) ChunkLoadError: Loading chunk 3472 failed.</span>
+</code></pre></div>
+
+
+<p><img alt="Jupyter在Nginx上的問題.jpg" src="https://richardrobot.xyz/images/Jupyter在Nginx上的問題.jpg" /></p>
+<p>關於第二點的問題，是Jupyter站臺需要使用HTTPS的環境，因此在使用安裝如下語法，就可正常使用了</p>
+<div class="highlight"><pre><span></span><code><span class="err">sudo certbot --expand -d jupyter.richardrobot.xyz</span>
+</code></pre></div>
+
+
+<p>另外Router的PortForwding要記得設定443PORT要開</p>
 
 
              

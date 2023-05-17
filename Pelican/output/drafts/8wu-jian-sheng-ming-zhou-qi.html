@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh_tw">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Richard" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="標籤, 後端程式, " />
+
+<meta property="og:title" content="8.物件生命週期 "/>
+<meta property="og:url" content="https://richardrobot.xyz/drafts/8wu-jian-sheng-ming-zhou-qi.html" />
+<meta property="og:description" content="預覽標題" />
+<meta property="og:site_name" content="Richard隨手筆記" />
+<meta property="og:article:author" content="Richard" />
+<meta property="og:article:published_time" content="2022-04-13T14:00:00+08:00" />
+<meta property="og:article:modified_time" content="2022-04-13T14:00:00+08:00" />
+<meta name="twitter:title" content="8.物件生命週期 ">
+<meta name="twitter:description" content="預覽標題">
+
+        <title>8.物件生命週期  · Richard隨手筆記
+</title>
+        <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://richardrobot.xyz/"><span class=site-name>Richard隨手筆記</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://richardrobot.xyz
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://richardrobot.xyz/categories.html">Categories</a></li>
+                                <li ><a href="https://richardrobot.xyz/tags.html">Tags</a></li>
+                                <li ><a href="https://richardrobot.xyz/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="https://richardrobot.xyz/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://richardrobot.xyz/drafts/8wu-jian-sheng-ming-zhou-qi.html">
+                8.物件生命週期
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#_1">生命週期的管理</a></li>
+<li><a href="#di">單純DI架構管理生命週期</a></li>
+<li><a href="#_2">處理依賴的廢棄問題</a><ul>
+<li><a href="#httpcontextitems">先把需要廢棄的物件放在HttpContext.Items字典物件內</a></li>
+<li><a href="#_3">實做：</a></li>
+</ul>
+</li>
+<li><a href="#_4">生命週期型態彙整</a><ul>
+<li><a href="#_5">單例型態</a></li>
+<li><a href="#_6">一次性型態</a></li>
+<li><a href="#_7">作用域型態</a></li>
+</ul>
+</li>
+<li><a href="#_8">不良的生命週期</a><ul>
+<li><a href="#captive-dependences">被綁架的依賴(Captive Dependences)</a></li>
+<li><a href="#_9">抽象漏洞造成的生命週期型態資訊洩漏</a><ul>
+<li><a href="#systemlazyt">System.Lazy&lt;T&gt;類別</a></li>
+<li><a href="#ienumerablet">IEnumerable&lt;T&gt;抽象介面</a></li>
+</ul>
+</li>
+<li><a href="#_10">執行緒生命週期綁定的物件會造成並行上的問題</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<p>學習重點：</p>
+<ul>
+<li>管理依賴對象的生命週期</li>
+<li>處理依賴對象的廢棄問題，</li>
+<li>運用單例、一次性、與作用域等不同生命週期形態</li>
+<li>如何避免或修正不良的生命週期形態</li>
+</ul>
+<h3 id="_1">生命週期的管理<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<p>物件關聯中的所有物件並非都是在同一時間建立出來的。在物件離開屬於它的作用域後就會被視為垃圾回收的對象。因此反過來說，只要程式中還有某處繼續有對這份物件的參照，這份物件都會一直存在著。雖然使用方無法真正自行廢棄物件(因為這是垃圾回收機制的職責)，但卻能夠抓著那份參照不放，讓物件持續存在下去，而這正是我們會再建構子注入發生的情境，因為你把依賴對象都放入私有的private欄位中了:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">HomeController</span> <span class="p">:</span> <span class="n">Controller</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="n">IProductService</span> <span class="n">productService</span><span class="p">;</span>
+
+        <span class="k">public</span> <span class="nf">HomeController</span><span class="p">(</span><span class="n">IProductService</span> <span class="n">productService</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">productService</span> <span class="p">=</span> <span class="n">productService</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>如下圖：以同一份依賴對象注入到多個使用方，就會照成物件被其他參照抓著不放的可能</p>
+<h3 id="di">單純DI架構管理生命週期<a class="headerlink" href="#di" title="Permanent link">¶</a></h3>
+<p>在這個範例要如何管理生命週期。</p>
+<p>重複利用的物件（單例singleton）: <code>AspNetUserContextAdapter</code> <code>RouteCalculator</code>
+每次都要獨立建立的（一次性transient）: <code>ProductService</code> <code>SqlProductRepository</code></p>
+<p>程式範例在 P.306 的 程式碼範例8.3 重點的差異在：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Singletons</span>
+<span class="c1">//在內部宣告參數物件存放</span>
+<span class="k">private</span> <span class="k">readonly</span> <span class="n">IUserContext</span> <span class="n">userContext</span><span class="p">;</span>
+<span class="k">private</span> <span class="k">readonly</span> <span class="n">RouteCalculator</span> <span class="n">calculator</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">CommerceControllerActivator</span> <span class="p">:</span> <span class="n">IControllerActivator</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nf">CommerceControllerActivator</span><span class="p">(</span><span class="n">CommerceConfiguration</span> <span class="n">configuration</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//要重複利用的就是在這裡 new 出來後存放在內部參數物件</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">userContext</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AspNetUserContextAdapter</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">calculator</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RouteCalculator</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">CreateRouteController</span><span class="p">())</span> 
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">Controller</span> <span class="nf">Create</span><span class="p">(</span><span class="n">Type</span> <span class="n">type</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Create Scoped components</span>
+        <span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CommerceContext</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">configuration</span><span class="p">.</span><span class="n">ConnectionString</span><span class="p">);</span>
+
+        <span class="c1">//後面要實做廢棄方法在這裏先準備增加追蹤</span>
+        <span class="c1">//TrackDisposable(ControllerContext context,IDisposable disposable)</span>
+
+        <span class="c1">// Create Transient components</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">type</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">//要一次性的物件就在方法內部才new出物件實體，不存放在內部參數物件</span>
+            <span class="k">case</span> <span class="nf">nameof</span><span class="p">(</span><span class="n">HomeController</span><span class="p">):</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="nf">HomeController</span><span class="p">(</span>
+                    <span class="k">new</span> <span class="nf">ProductService</span><span class="p">(</span>
+                        <span class="k">new</span> <span class="nf">SqlProductRepository</span><span class="p">(</span><span class="n">context</span><span class="p">),</span><span class="k">this</span><span class="p">.</span><span class="n">userContext</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="_2">處理依賴的廢棄問題<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>由上面的範例可以知道，當一個物件被兩個使用方繫結，就會造成.NET的垃圾回收機制無法掌控，這類的情況就是『記憶體洩漏』，然而要如何管理可廢棄的(IDisposable)依賴對象，就要把責任落在組合器上了，就是上面的IControllerActivator</p>
+<p>爲了釋放這些依賴對象，組合器需要一一確認先前建立與提供過的可廢棄依賴對象物件，以及使用這些物件的使用方，而且還要確保廢棄物件的順序正確。</p>
+<p>流程：先把需要廢棄的物件放在HttpContext.Items字典物件內=&gt;實做廢棄方法=&gt;在Main方法最後呼叫</p>
+<h4 id="httpcontextitems">先把需要廢棄的物件放在HttpContext.Items字典物件內<a class="headerlink" href="#httpcontextitems" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">TrackDisposable</span><span class="p">(</span><span class="n">ControllerContext</span> <span class="n">context</span><span class="p">,</span><span class="n">IDisposable</span> <span class="n">disposable</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">object</span><span class="p">,</span><span class="kt">object</span><span class="p">&gt;</span> <span class="n">items</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">HttpContext</span><span class="p">.</span><span class="n">Items</span><span class="p">;</span>
+
+    <span class="kt">object</span> <span class="n">list</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(!</span><span class="n">items</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="s">"Disposables"</span><span class="p">,</span><span class="k">out</span> <span class="n">list</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="n">list</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">IDisposable</span><span class="p">&gt;();</span>
+        <span class="n">items</span><span class="p">[</span><span class="s">"Disposables"</span><span class="p">]</span> <span class="p">=</span> <span class="n">list</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="p">((</span><span class="n">List</span><span class="p">&lt;</span><span class="n">IDisposable</span><span class="p">&gt;)</span><span class="n">list</span><span class="p">).</span><span class="n">Add</span><span class="p">(</span><span class="n">disposable</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="_3">實做：<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">//CommerceControllerActivator裏面的廢棄方法</span>
+<span class="k">public</span> <span class="k">void</span> <span class="nf">Release</span><span class="p">(</span><span class="n">ControllerContext</span> <span class="n">context</span><span class="p">,</span> <span class="kt">object</span> <span class="n">controller</span><span class="p">)</span> <span class="p">=&gt;</span>
+            <span class="p">(</span><span class="n">controller</span> <span class="k">as</span> <span class="n">IDisposable</span><span class="p">)?.</span><span class="n">Dispose</span><span class="p">();</span>
+</code></pre></div>
+<p>改寫：</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span> <span class="k">void</span> <span class="nf">Release</span><span class="p">(</span><span class="n">ControllerContext</span> <span class="n">context</span><span class="p">,</span> <span class="kt">object</span> <span class="n">controller</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">disposables</span> <span class="p">=</span> <span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="n">IDisposable</span><span class="p">&gt;)</span><span class="n">context</span><span class="p">.</span><span class="n">HttpContext</span><span class="p">.</span><span class="n">Items</span><span class="p">[</span><span class="s">"Disposables"</span><span class="p">];</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">disposables</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">disposables</span><span class="p">.</span><span class="n">Reverse</span><span class="p">();</span> <span class="c1">//將物件循序翻轉就是建立物件的順序</span>
+        <span class="k">foreach</span><span class="p">(</span><span class="n">IDisposable</span> <span class="n">disposable</span> <span class="k">in</span> <span class="n">disposables</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">disposable</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Note:
+上面TrackDisposable與Release的機制，在ASP.<span class="caps">NET</span> MVC的框架下，用<code>HttpContext.Response.RegisterForDispose</code> 這樣的方法就可以跟上面的廢棄機制一樣。另外如果是在DI容器的技術下，就可用DI容器技術去管理廢棄問題，上面這些都是因爲用純DI機制所以要自行處理廢棄管理問題。</p>
+</blockquote>
+<h3 id="_4">生命週期型態彙整<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>單例型態</td>
+<td>單一份物件被重複利用</td>
+</tr>
+<tr>
+<td>一次性形態</td>
+<td>每次都會提供不同一份新建的物件</td>
+</tr>
+<tr>
+<td>作用域型態</td>
+<td>在規定的作用域中，每種型別的依賴對象都只存在單一份物件</td>
+</tr>
+</tbody>
+</table>
+<p>參考資料：  <a href="https://blog.johnwu.cc/article/asp-net-core-3-dependency-injection.html"><span class="caps">ASP</span>.<span class="caps">NET</span> Core 3 系列 - 依賴注入 (Dependency Injection)</a></p>
+<p>在純DI架構下的生命週期型態有上面三個型態，另外如果在ASP.<span class="caps">NET</span> Core框架下，有現成的使用方式可以使用就如同參考資料連結的文章。</p>
+<h4 id="_5">單例型態<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<p>在執行緒安全的存在下，使用單例型態的生命週期是最好的選擇。何謂執行緒安全：所有無狀態，無法被更動的型別，當然還有那些設計上符合執行緒安全定義的類別。
+<a href="https://www.delftstack.com/zh-tw/howto/csharp/csharp-thread-safe-list/">C# 中的執行緒安全列表</a></p>
+<h4 id="_6">一次性型態<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<p>重點是物件有實做IDisposable介面，組合器就需要追蹤物件生命週期，並且要確實執行廢棄。 注意：如果是在DI容器技術框架下，一次性型態物件的使用就會有所不同。有些DI容器技術不會去主動廢棄，需要自行廢棄。</p>
+<h4 id="_7">作用域型態<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
+<p>適合用於那種有著一定程度處理獨立作業類型，長時間運作的應用程式。 這邊所說的獨立作業，是會各自平行處理，又或是以獨立的狀態進行，就像是網頁應用程式會以平行的方式處理網路請求。</p>
+<p>用CurrencyMonitoring的範例來說明作用域型態</p>
+<h3 id="_8">不良的生命週期<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>造成問題</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>被綁架的依賴</td>
+<td>程式缺陷</td>
+<td>依賴對象的存續時間超過原本的預期</td>
+</tr>
+<tr>
+<td>抽象漏洞</td>
+<td>設計問題</td>
+<td>生命週期型態的規劃資訊透過抽象漏洞洩漏給使用方</td>
+</tr>
+<tr>
+<td>綁定執行緒的型態</td>
+<td>程式缺陷</td>
+<td>物件的生命週期與執行緒綁定造成並行上的程式缺陷</td>
+</tr>
+</tbody>
+</table>
+<h4 id="captive-dependences">被綁架的依賴(Captive Dependences)<a class="headerlink" href="#captive-dependences" title="Permanent link">¶</a></h4>
+<p>定義： 指的是有依賴對象物件，因爲物件使用方的緣故，導致物件的存續時間超過其原本所規劃的生命週期型態長度。最常見的就是把生命週期短暫的依賴對象物件，注入到一個單例型態的使用方中。</p>
+<p>當你採用DI容器技術時，被綁架的依賴是很常鍵的一項問題。由於DI容器技術的動態性質，所有很容易忘記自己開發出來的物件關聯圖架構樣貌，所有最好是具備有 被綁架依賴問題的偵測工具。</p>
+<h4 id="_9">抽象漏洞造成的生命週期型態資訊洩漏<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
+<p>使用情境：</p>
+<p>當有某種依賴對象的使用率不高，建立物件的成本又太高，可能會打算改爲在物件關聯都組合好之後，才建立這份物件，但是這樣做的話就會把 實做 組合根中的實做 等資訊透露給使用方知悉，於是這份依賴對象就會成爲抽象漏洞。</p>
+<p>用來延後建立物件的方式，範例提供說明下列物件包裝方式：</p>
+<h5 id="systemlazyt"><code>System.Lazy&lt;T&gt;</code>類別<a class="headerlink" href="#systemlazyt" title="Permanent link">¶</a></h5>
+<h5 id="ienumerablet"><code>IEnumerable&lt;T&gt;抽象介面</code><a class="headerlink" href="#ienumerablet" title="Permanent link">¶</a></h5>
+<p>負面案例：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//使用方ProductService直接用Lazy&lt;IUserContext&gt; 來做注入</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ProductService</span> <span class="p">:</span> <span class="n">IProductService</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IProductRepository</span> <span class="n">repository</span><span class="p">;</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">IUserContext</span><span class="p">&gt;</span> <span class="n">userContext</span><span class="p">;</span> <span class="c1">//&lt;==這裏用</span>
+
+    <span class="k">public</span> <span class="nf">ProductService</span><span class="p">(</span>
+        <span class="n">IProductRepository</span> <span class="n">repository</span><span class="p">,</span>
+        <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">IUserContext</span><span class="p">&gt;</span> <span class="n">userContext</span><span class="p">)</span> <span class="c1">//&lt;==注入用這樣的方式</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">repository</span> <span class="p">=</span> <span class="n">repository</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">userContext</span> <span class="p">=</span> <span class="n">userContext</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">DiscountedProduct</span><span class="p">&gt;</span> <span class="n">GetFeaturedProducts</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span>
+            <span class="k">from</span> <span class="n">product</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="n">repository</span>
+                <span class="p">.</span><span class="n">GetFeaturedProducts</span><span class="p">()</span>
+            <span class="k">select</span> <span class="n">product</span><span class="p">.</span><span class="n">ApplyDiscountFor</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">userContext</span><span class="p">.</span><span class="k">value</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Componet</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IEnumberalbe</span><span class="p">&lt;</span><span class="n">ILogger</span><span class="p">&gt;</span> <span class="n">loggers</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">Componet</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">ILogger</span><span class="p">&gt;</span> <span class="n">looggers</span><span class="p">)</span> <span class="p">&lt;=</span> <span class="err">使用這樣的建構子不好</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">looggers</span> <span class="p">=</span> <span class="n">loggers</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>通常解決抽象漏洞的解決方法：建立一個包裝用的類別</p>
+<p><code>Lazy&lt;T&gt;</code> 就使用虛擬代理隱藏
+<code>IEnumberabl&lt;T&gt;</code>用合成模式修改</p>
+<p>修改方式：參閱 P.344 P.347，主要就是用類別去包上面兩個方式，然後在去注入依賴對象</p>
+<h4 id="_10">執行緒生命週期綁定的物件會造成並行上的問題<a class="headerlink" href="#_10" title="Permanent link">¶</a></h4>
+<p>負面範例：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//重點就是這個定義爲執行緒，這個修飾子欄位可以保證物件不會跨執行緒被共用，這樣CommerceContext這個依賴注入的物件就跟執行緒綁定了</span>
+<span class="na">[ThreadStatic]</span>
+<span class="k">private</span> <span class="k">static</span> <span class="n">CommerceContext</span> <span class="n">context</span><span class="p">;</span>
+
+<span class="k">private</span> <span class="k">static</span> <span class="n">CurrencyParser</span> <span class="nf">CreateCurrencyParser</span><span class="p">(</span><span class="kt">string</span> <span class="n">connectionString</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">context</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CommerceContext</span><span class="p">(</span><span class="n">connectionString</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kt">var</span> <span class="n">provider</span> <span class="p">=</span>
+        <span class="k">new</span> <span class="nf">SqlExchangeRateProvider</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">CurrencyParser</span><span class="p">(</span><span class="n">provider</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>用書上的圖來說明並行上的問題：</p>
+<p>與其讓依賴對象與執行緒綁定，不如與請求的作用域生命週期綁定即可。</p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+<section>
+    <h2>Related Posts</h2>
+<ul class="related-posts-list">
+<li><a href="https://richardrobot.xyz/2023/03/fen-xi-gong-ju-debugdiag-tools/" title="分析工具－DebugDiag Tools">分析工具－DebugDiag Tools</a></li>
+</ul>
+<hr />
+</section>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2022-04-13T14:00:00+08:00">三 13 4月 2022</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#hou-duan-cheng-shi-ref">後端程式</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://richardrobot.xyz/tags.html#biao-qian-ref">標籤
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+    <a href="https://github.com/TernenceZheng" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="andy711023@gmail.com" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Gmail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff"/><rect width="362" height="272" x="75" y="120" fill="#f2f2f2" rx="8%"/><path fill="#d54c3f" d="M120 392H97c-12 0-22-10-22-23V143h45z"/><path fill="#b63524" d="M392 392h23c12 0 22-10 22-23V143h-45z"/><path fill-opacity=".05" d="M256 286L120 392V187z"/><path fill-opacity=".08" d="M82 159l235 233h75V159z"/><path stroke-linecap="round" fill="none" stroke="#de5145" stroke-width="45" d="M97 143l159 115 159-115"/><path fill="#f2f2f2" d="M415 120c-5 0-10 2-13 4L256 230 110 124c-3-2-8-4-13-4z"/></svg>
+    </a>
+    <a href="https://richardrobot.xyz/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Richard隨手筆記</span> - 紙上得來終覺淺，絕知此事要躬行
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://richardrobot.xyz/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

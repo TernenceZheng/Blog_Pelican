@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh_tw">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Richard" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="標籤, 後端程式, " />
+
+<meta property="og:title" content="目錄-依賴注入 "/>
+<meta property="og:url" content="https://richardrobot.xyz/drafts/mu-lu-yi-lai-zhu-ru.html" />
+<meta property="og:description" content="預覽標題" />
+<meta property="og:site_name" content="Richard隨手筆記" />
+<meta property="og:article:author" content="Richard" />
+<meta property="og:article:published_time" content="2022-04-12T20:20:00+08:00" />
+<meta property="og:article:modified_time" content="2022-04-12T20:20:00+08:00" />
+<meta name="twitter:title" content="目錄-依賴注入 ">
+<meta name="twitter:description" content="預覽標題">
+
+        <title>目錄-依賴注入  · Richard隨手筆記
+</title>
+        <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://richardrobot.xyz/"><span class=site-name>Richard隨手筆記</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://richardrobot.xyz
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://richardrobot.xyz/categories.html">Categories</a></li>
+                                <li ><a href="https://richardrobot.xyz/tags.html">Tags</a></li>
+                                <li ><a href="https://richardrobot.xyz/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="https://richardrobot.xyz/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://richardrobot.xyz/drafts/mu-lu-yi-lai-zhu-ru.html">
+                目錄-依賴注入
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#part-i"><span class="caps">PART</span> I 朝著依賴注入邁進</a></li>
+<li><a href="#part-ii"><span class="caps">PART</span> <span class="caps">II</span> 分門別類</a></li>
+<li><a href="#part-iii-di"><span class="caps">PART</span> <span class="caps">III</span> 單純 <span class="caps">DI</span> 架構</a></li>
+<li><a href="#part-iv-di"><span class="caps">PART</span> <span class="caps">IV</span> <span class="caps">DI</span> 容器技術</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h2 id="part-i"><span class="caps">PART</span> I 朝著依賴注入邁進<a class="headerlink" href="#part-i" title="Permanent link">¶</a></h2>
+<p><strong>Chapter 1 [[1.依賴注入的基礎：定義、理由與實作方法]]</strong><br/>
+1.1 編寫易於維護的程式碼<br/>
+1.1.1 對依賴注入的常見誤解<br/>
+1.1.2 為何需要依賴注入<br/>
+1.2 初步的範例：Hello <span class="caps">DI</span>!<br/>
+1.2.1 Hello <span class="caps">DI</span>!的程式碼<br/>
+1.2.2 依賴注入能帶來的好處<br/>
+1.3 適合與不適合注入的對象<br/>
+1.3.1 穩定依賴性<br/>
+1.3.2 不穩定依賴性<br/>
+1.4 依賴注入在軟體中牽涉的範疇<br/>
+1.4.1 物件的組合<br/>
+1.4.2 物件的生命週期<br/>
+1.4.3 物件的攔截<br/>
+1.4.4 三種不同面向上的 <span class="caps">DI</span><br/>
+1.5 小結<br/> 重點回顧  </p>
+<p><strong>Chapter 2 <a href="https://richardrobot.xyz/drafts/jin-ou-he-jia-gou.html">2.緊耦合架構</a></strong><br/>
+2.1 先寫一份緊耦合架構出來<br/>
+2.1.1 以 Mary Rowan 為例<br/>
+2.1.2 建立資料層<br/>
+2.1.3 建立業務層<br/>
+2.1.4 建立展示層<br/>
+2.2 評估緊耦合架構應用程式<br/>
+2.2.1 依賴關係圖<br/>
+2.2.2 對可組合性的評估<br/>
+2.3 缺乏可組合性的問題根源<br/>
+2.3.1 對依賴關係圖的剖析<br/>
+2.3.2 對資料層的剖析<br/>
+2.3.3 其他需要關注的問題<br/>
+2.4 小結<br/> 重點回顧  </p>
+<p><strong>Chapter 3 <a href="https://richardrobot.xyz/drafts/song-ou-he-jia-gou.html">3.鬆耦合架構</a></strong><br/>
+3.1 重新打造電商網站應用程式<br/>
+3.1.1 打造更具可維護性的展示層<br/>
+3.1.2 打造獨立於依賴的業務層<br/>
+3.1.3 打造新的資料層<br/>
+3.1.4 配合 <span class="caps">ASP</span>.<span class="caps">NET</span> 核心所實作的 IUserContext<br/>
+3.1.5 在「組合根」組裝你的應用程式<br/>
+3.2 分析鬆耦合架構應用程式<br/>
+3.2.1 元件之間的互動關係<br/>
+3.2.2 分析新的依賴關係圖<br/>
+3.3 小結<br/> 重點回顧  </p>
+<h2 id="part-ii"><span class="caps">PART</span> <span class="caps">II</span> 分門別類<a class="headerlink" href="#part-ii" title="Permanent link">¶</a></h2>
+<p><strong>Chapter 4 <a href="https://richardrobot.xyz/drafts/di-she-ji-mo-shi.html">4.<span class="caps">DI</span> 設計模式</a></strong><br/>
+4.1 組合根<br/>
+4.1.1 組合根的運作方式<br/>
+4.1.2 在組合根上運用 <span class="caps">DI</span> 容器<br/>
+4.1.3 範例：純 <span class="caps">DI</span> 架構的組合根<br/>
+4.1.4 依賴數量的爆增表象<br/>
+4.2 建構子注入<br/>
+4.2.1 建構子注入的運作方式<br/>
+4.2.2 建構子注入的使用時機<br/>
+4.2.3 建構子注入的使用實例<br/>
+4.2.4 範例：在主打商品清單加上貨幣轉換功能<br/>
+4.2.5 結論是…<br/>
+4.3 方法注入<br/>
+4.3.1 方法注入的運作方式<br/>
+4.3.2 方法注入的使用時機<br/>
+4.3.3 方法注入的使用實例<br/>
+4.3.4 範例：在 Product 資料實體加入貨幣轉換<br/>
+4.4 屬性注入<br/>
+4.4.1 屬性注入的運作方式<br/>
+4.4.2 屬性注入的使用時機<br/>
+4.4.3 屬性注入的使用實例<br/>
+4.4.4 範例：利用屬性注入來擴展可重複利用的函式庫<br/>
+4.5 如何選擇設計模式<br/>
+4.6 小結<br/> 重點回顧  </p>
+<p><strong>Chapter 5 <a href="https://richardrobot.xyz/drafts/di-fan-mo-shi.html">5.<span class="caps">DI</span> 反模式</a></strong><br/>
+5.1 控制狂<br/>
+5.1.1 範例：建立依賴關係時的控制狂<br/>
+5.1.2 範例：工廠模式下的控制狂<br/>
+5.1.3 範例：對建構子多載時的控制狂<br/>
+5.1.4 對控制狂反模式的反思<br/>
+5.2 服務定位<br/>
+5.2.1 範例：ProductService 中的服務定位<br/>
+5.2.2 對服務定位反模式的反思<br/>
+5.3 環境物件<br/>
+5.3.1 範例：查詢時間用的環境物件<br/>
+5.3.2 範例：紀錄時用的環境物件<br/>
+5.3.3 對環境物件反模式的反思<br/>
+5.4 限制性建構<br/>
+5.4.1 範例：ProductRepository 的晚期繫結<br/>
+5.4.2 對限制性建構反模式的反思<br/>
+5.5 小結<br/> 重點回顧  </p>
+<p><strong>Chapter 6 <a href="https://richardrobot.xyz/drafts/6cheng-shi-yi-yang.html">6.程式異樣</a></strong>
+6.1 建構子過度注入的程式異樣<br/>
+6.1.1 辨識建構子過度注入<br/>
+6.1.2 將建構子過度注入重構為前台模式<br/>
+6.1.3 將建構子過度注入重構為業務事件<br/>
+6.2 抽象工廠的濫用<br/>
+6.2.1 為了生命週期問題而濫用了抽象工廠<br/>
+6.2.2 為了在執行期決定依賴對象而濫用抽象工廠<br/>
+6.3 循環依賴<br/>
+6.3.1 範例：違反 <span class="caps">SRP</span> 原則造成的循環依賴<br/>
+6.3.2 分析 Mary 的依賴循環<br/>
+6.3.3 解決違反 <span class="caps">SRP</span> 問題以重構循環依賴<br/>
+6.3.4 打破依賴循環的策略<br/>
+6.3.5 最終手段：以屬性注入來打破依賴的循環<br/>
+6.4 小結<br/> 重點回顧  </p>
+<h2 id="part-iii-di"><span class="caps">PART</span> <span class="caps">III</span> 單純 <span class="caps">DI</span> 架構<a class="headerlink" href="#part-iii-di" title="Permanent link">¶</a></h2>
+<p><strong>Chapter 7 <a href="https://richardrobot.xyz/drafts/7ying-yong-cheng-shi-de-wu-jian-zu-he.html">7.應用程式的物件組合</a></strong><br/>
+7.1 指令列介面應用程式的物件組合<br/>
+7.1.1 範例：以 UpdateCurrency 程式來更新貨幣匯率<br/>
+7.1.2 建立 UpdateCurrency 程式的組合根<br/>
+7.1.3 在 CreateCurrencyParser 中組合物件關聯<br/>
+7.1.4 剖析 UpdateCurrency 的架構層<br/>
+7.2 通用 Windows 平台應用程式的物件組合<br/>
+7.2.1 <span class="caps">UWP</span> 應用程式的物件組合<br/>
+7.2.2 範例：建立一個商品管理 app<br/>
+7.2.3 在UWP 應用程式中實作組合根<br/>
+7.3 <span class="caps">ASP</span>.<span class="caps">NET</span> 核心 <span class="caps">MVC</span> 框架應用程式的物件組合<br/>
+7.3.1 自訂一個 Controller 啟動器<br/>
+7.3.2 在單純DI 架構建立自訂的中介層<br/>
+7.4 小結<br/> 重點回顧  </p>
+<p><strong>Chapter 8 <a href="https://richardrobot.xyz/drafts/8wu-jian-sheng-ming-zhou-qi.html">8.物件生命週期</a></strong><br/>
+8.1 管理依賴對象的生命週期<br/>
+8.1.1 生命週期的管理<br/>
+8.1.2 在單純 <span class="caps">DI</span> 架構下管理生命週期<br/>
+8.2 處理依賴的廢棄問題<br/>
+8.2.1 處理可廢棄依賴對象<br/>
+8.2.2 管理可廢棄的依賴對象<br/>
+8.3 生命週期型態彙整<br/>
+8.3.1 單例型態<br/>
+8.3.2 一次性型態<br/>
+8.3.3 作用域型態<br/>
+8.4 不良生命週期型態<br/>
+8.4.1 被綁架的依賴<br/>
+8.4.2 抽象漏洞造成的生命週期型態資訊洩漏<br/>
+8.4.3 與執行緒生命週期綁定的物件會造成並行上的問題<br/>
+8.5 小結<br/> 重點回顧  </p>
+<p><strong>Chapter 9 <a href="https://richardrobot.xyz/drafts/9jie-ru-lan-jie.html">9.介入攔截</a></strong><br/>
+9.1 關於攔截<br/>
+9.1.1 裝飾者設計模式<br/>
+9.1.2 範例：以裝飾者模式實作稽核機制<br/>
+9.2 實作橫切關切點<br/>
+9.2.1 以攔截實作斷路器設計模式<br/>
+9.2.2 在回報例外錯誤時利用裝飾者模式<br/>
+9.2.3 在保護機敏功能避免非法存取時利用裝飾者模式<br/>
+9.3 小結<br/> 重點回顧  </p>
+<p><strong>Chapter 10 <a href="https://richardrobot.xyz/drafts/10she-ji-mian-shang-de-pou-mian-dao-xiang-cheng-shi-she-ji.html">10.設計面上的剖面導向程式設計</a></strong><br/>
+10.1 何謂剖面導向程式設計<br/>
+10.2 關於 <span class="caps">SOLID</span> 五原則<br/>
+10.2.1 單一職責原則（<span class="caps">SRP</span>）<br/>
+10.2.2 開放封閉原則（<span class="caps">OCP</span>）<br/>
+10.2.3 里氏替換原則（<span class="caps">LSP</span>）<br/>
+10.2.4 介面切離原則（<span class="caps">ISP</span>）<br/>
+10.2.5 依賴反轉原則（<span class="caps">DIP</span>）<br/>
+10.2.6 攔截與 <span class="caps">SOLID</span> 五原則之間的關係<br/>
+10.3 透過 <span class="caps">SOLID</span> 五原則達成AOP<br/>
+10.3.1 範例：以 IProductService 實作商品相關功能項目<br/>
+10.3.2 以 <span class="caps">SOLID</span> 五原則的觀點分析 IProductService<br/>
+10.3.3 遵循 <span class="caps">SOLID</span> 五原則改善設計<br/>
+10.3.4 添加更多橫切關切點機制<br/>
+10.3.5 本章結語<br/>
+10.4 小結<br/> 重點回顧  </p>
+<p><strong>Chapter 11 <a href="https://richardrobot.xyz/drafts/11yi-gong-ju-shi-zuo-de-pou-mian-dao-xiang-cheng-shi-she-ji.html">11.以工具實作的剖面導向程式設計</a></strong><br/>
+11.1 動態攔截<br/>
+11.1.1 範例：以 Castle Dynamic Proxy 實作攔截<br/>
+11.1.2 對動態攔截的分析<br/>
+11.2 後編譯織入<br/>
+11.2.1 範例：利用後編譯織入實作交易階段剖面<br/>
+11.2.2 對後編譯織入的分析<br/>
+11.3 小結<br/> 重點回顧  </p>
+<h2 id="part-iv-di"><strong><span class="caps">PART</span> <span class="caps">IV</span> <span class="caps">DI</span> 容器技術</strong><a class="headerlink" href="#part-iv-di" title="Permanent link">¶</a></h2>
+<p><strong>Chapter 12 <a href="https://richardrobot.xyz/drafts/12di-rong-qi.html">12.<span class="caps">DI</span> 容器</a></strong><br/>
+12.1 關於 <span class="caps">DI</span> 容器技術<br/>
+12.1.1 關於容器技術的解析 <span class="caps">API</span><br/>
+12.1.2 自動裝配<br/>
+12.1.3 範例：實作自動裝配功能的簡易 <span class="caps">DI</span> 容器<br/>
+12.2 設定 <span class="caps">DI</span> 容器<br/>
+12.2.1 以設定檔來設定容器<br/>
+12.2.2 以程式化設定來設定容器<br/>
+12.2.3 以自動註冊功能達到規範先於設定的容器設定方式<br/>
+12.2.4 不同設定方式之間的搭配<br/>
+12.3 採用 <span class="caps">DI</span> 容器技術的時機<br/>
+12.3.1 引入第三方函式庫的成本與風險<br/>
+12.3.2 單純 <span class="caps">DI</span> 架構能有更快的回饋循環<br/>
+12.3.3 採用 <span class="caps">DI</span> 容器技術的確切時機<br/>
+12.4 小結<br/> 重點回顧  </p>
+<p><strong>Chapter 13 [[13.<span class="caps">DI</span> 容器介紹：Autofac]]</strong><br/>
+13.1 介紹 Autofac<br/>
+13.1.1 物件解析<br/>
+13.1.2 對 ContainerBuilder 的設定<br/>
+13.2 管理生命週期<br/>
+13.2.1 設定物件作用域<br/>
+13.2.2 釋放元件<br/>
+13.3 以進階 <span class="caps">API</span> 執行註冊<br/>
+13.3.1 設定基本型別的依賴關係<br/>
+13.3.2 指定物件產生來源的註冊方式<br/>
+13.4 多重註冊關係的處理方式<br/>
+13.4.1 多個對映選項下的抉擇方式<br/>
+13.4.2 對序列的裝配<br/>
+13.4.3 裝飾元件的裝配<br/>
+13.4.4 合成元件的裝配<br/>
+13.5 小結<br/> 重點回顧  </p>
+<p><strong>Chapter 14 [[14.<span class="caps">DI</span> 容器介紹：Simple Injector]]</strong><br/>
+14.1 介紹 Simple Injector<br/>
+14.1.1 物件解析<br/>
+14.1.2 對 Container 的設定<br/>
+14.2 管理生命週期<br/>
+14.2.1 設定生命週期型態<br/>
+14.2.2 釋放元件<br/>
+14.2.3 作用域的全域管理<br/>
+14.2.4 對常見生命週期議題的偵測分析<br/>
+14.3 以進階 <span class="caps">API</span> 執行註冊<br/>
+14.3.1 設定基本型別的依賴關係<br/>
+14.3.2 將基本型別依賴轉為參數物件<br/>
+14.3.3 指定物件產生來源的註冊方式<br/>
+14.4 多重註冊關係的處理方式<br/>
+14.4.1 多個對映選項下的抉擇方式<br/>
+14.4.2 對序列的裝配<br/>
+14.4.3 裝飾元件的裝配<br/>
+14.4.4 合成元件的裝配<br/>
+14.4.5 其實有著串流內在的序列<br/>
+14.5 小結<br/> 重點回顧  </p>
+<p><strong>Chapter 15[[15.<span class="caps">DI</span> 容器介紹：Microsoft.Extensions.DependencyInjection]]</strong><br/>
+15.1 介紹Microsoft.Extensions.DependencyInjection<br/>
+15.1.1 物件解析<br/>
+15.1.2 對 ServiceCollection 的設定<br/>
+15.2 管理生命週期<br/>
+15.2.1 設定生命週期型態<br/>
+15.2.2 釋放元件<br/>
+15.3 以進階 <span class="caps">API</span> 執行註冊<br/>
+15.3.1 設定基本型別的依賴關係<br/>
+15.3.2 將基本型別依賴轉為參數物件<br/>
+15.3.3 指定物件產生來源的註冊方式<br/>
+15.4 多重註冊關係的處理方式<br/>
+15.4.1 多個對映選項下的抉擇方式<br/>
+15.4.2 對序列的裝配<br/>
+15.4.3 裝飾元件的裝配<br/>
+15.4.4 合成元件的裝配<br/>
+15.5 小結<br/> 重點回顧</p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+<section>
+    <h2>Related Posts</h2>
+<ul class="related-posts-list">
+<li><a href="https://richardrobot.xyz/2023/03/fen-xi-gong-ju-debugdiag-tools/" title="分析工具－DebugDiag Tools">分析工具－DebugDiag Tools</a></li>
+</ul>
+<hr />
+</section>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2022-04-12T20:20:00+08:00">二 12 4月 2022</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#hou-duan-cheng-shi-ref">後端程式</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://richardrobot.xyz/tags.html#biao-qian-ref">標籤
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+    <a href="https://github.com/TernenceZheng" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="andy711023@gmail.com" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Gmail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff"/><rect width="362" height="272" x="75" y="120" fill="#f2f2f2" rx="8%"/><path fill="#d54c3f" d="M120 392H97c-12 0-22-10-22-23V143h45z"/><path fill="#b63524" d="M392 392h23c12 0 22-10 22-23V143h-45z"/><path fill-opacity=".05" d="M256 286L120 392V187z"/><path fill-opacity=".08" d="M82 159l235 233h75V159z"/><path stroke-linecap="round" fill="none" stroke="#de5145" stroke-width="45" d="M97 143l159 115 159-115"/><path fill="#f2f2f2" d="M415 120c-5 0-10 2-13 4L256 230 110 124c-3-2-8-4-13-4z"/></svg>
+    </a>
+    <a href="https://richardrobot.xyz/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Richard隨手筆記</span> - 紙上得來終覺淺，絕知此事要躬行
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://richardrobot.xyz/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

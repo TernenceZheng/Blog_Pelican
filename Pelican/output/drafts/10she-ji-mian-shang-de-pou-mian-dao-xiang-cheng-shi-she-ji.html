@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh_tw">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Richard" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="標籤, 後端程式, " />
+
+<meta property="og:title" content="10.設計面上的剖面導向程式設計 "/>
+<meta property="og:url" content="https://richardrobot.xyz/drafts/10she-ji-mian-shang-de-pou-mian-dao-xiang-cheng-shi-she-ji.html" />
+<meta property="og:description" content="預覽標題" />
+<meta property="og:site_name" content="Richard隨手筆記" />
+<meta property="og:article:author" content="Richard" />
+<meta property="og:article:published_time" content="2022-05-25T09:25:00+08:00" />
+<meta property="og:article:modified_time" content="2022-05-25T09:25:00+08:00" />
+<meta name="twitter:title" content="10.設計面上的剖面導向程式設計 ">
+<meta name="twitter:description" content="預覽標題">
+
+        <title>10.設計面上的剖面導向程式設計  · Richard隨手筆記
+</title>
+        <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://richardrobot.xyz/"><span class=site-name>Richard隨手筆記</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://richardrobot.xyz
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://richardrobot.xyz/categories.html">Categories</a></li>
+                                <li ><a href="https://richardrobot.xyz/tags.html">Tags</a></li>
+                                <li ><a href="https://richardrobot.xyz/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="https://richardrobot.xyz/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://richardrobot.xyz/drafts/10she-ji-mian-shang-de-pou-mian-dao-xiang-cheng-shi-she-ji.html">
+                10.設計面上的剖面導向程式設計
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#_1">剖面導向程式設計</a><ul>
+<li><a href="#aop">常見的AOP實作方法的說明與優缺點：</a></li>
+<li><a href="#solid"><span class="caps">SOLID</span></a><ul>
+<li><a href="#_2">優點：</a></li>
+<li><a href="#_3">缺點：不一定能試用於傳統架構系統</a></li>
+</ul>
+</li>
+<li><a href="#ch11">動態攔截(<span class="caps">CH11</span>)</a><ul>
+<li><a href="#_4">優點：</a></li>
+<li><a href="#_5">缺點：</a></li>
+</ul>
+</li>
+<li><a href="#ch11_1">後編譯織入(<span class="caps">CH11</span>)</a><ul>
+<li><a href="#_6">優點：就算應用程式並非以介面為中心的架構，也只需要非常少量的修改就能輕易套用在既有或傳統架構的應用程式上。</a></li>
+<li><a href="#_7">缺點：</a></li>
+</ul>
+</li>
+<li><a href="#solidaop">透過SOLID五原則達成AOP</a><ul>
+<li><a href="#_8">第一步：把讀取與寫入的動作分開</a></li>
+<li><a href="#ispsrp">第二步：遵循ISP與SRP原則分開介面與實作</a></li>
+<li><a href="#ocp">第三步：利用參數物件修正OCP問題</a></li>
+<li><a href="#lsp">第四步：利用泛型修正抽象介面的LSP問題</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h2 id="_1">剖面導向程式設計<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>定義：所謂『剖面導向程式設計』主要是為了解決在實作橫切關切點機制，以及其他設計模式時，會出現的程式碼重複編寫問題。為此，在AOP中會先在單一定點實作這份設計模式後，再以不需要修改其他既有程式碼的方式，將這份模式套用到code base中其他需要的地方，或是乾脆集中於此單點處理。</p>
+<h4 id="aop">常見的AOP實作方法的說明與優缺點：<a class="headerlink" href="#aop" title="Permanent link">¶</a></h4>
+<h3 id="solid"><span class="caps">SOLID</span><a class="headerlink" href="#solid" title="Permanent link">¶</a></h3>
+<p>根據需要，將剖面透過以抽象介面為中心的裝飾元件，套用在一群類別上</p>
+<h5 id="_2">優點：<a class="headerlink" href="#_2" title="Permanent link">¶</a></h5>
+<ul>
+<li>不需要工具輔助</li>
+<li>易於實作</li>
+<li>可讓心力專注於設計層面</li>
+<li>系統更具可維護性</li>
+</ul>
+<h5 id="_3">缺點：不一定能試用於傳統架構系統<a class="headerlink" href="#_3" title="Permanent link">¶</a></h5>
+<h3 id="ch11">動態攔截(<span class="caps">CH11</span>)<a class="headerlink" href="#ch11" title="Permanent link">¶</a></h3>
+<p>根據應用程式內部的抽象介面，於執行階段自動產生裝飾元件。這類裝飾元件會透過工具所提供的剖面切面注入進去，又稱之為『攔截器』</p>
+<h5 id="_4">優點：<a class="headerlink" href="#_4" title="Permanent link">¶</a></h5>
+<ul>
+<li>假設應用程式架構已是以介面為中心的前提下，只要稍作修改便能輕易套用在既有或傳統架構的應用程式上</li>
+<li>不需要擔心已編譯的應用程式會動態化的攔截函式庫產生緊耦合關係</li>
+<li>免費工具中也有不錯的選擇</li>
+</ul>
+<h5 id="_5">缺點：<a class="headerlink" href="#_5" title="Permanent link">¶</a></h5>
+<ul>
+<li>對剖面的實作會與使用的AOP工具無法分割</li>
+<li>無法獲得編譯期階段的各項好處</li>
+<li>容易造成不確定的行為與錯誤發生</li>
+</ul>
+<h3 id="ch11_1">後編譯織入(<span class="caps">CH11</span>)<a class="headerlink" href="#ch11_1" title="Permanent link">¶</a></h3>
+<p>在後期編譯階段流程中將剖面加入應用程式中。這通常是以通用中繼程式語言（Intermediate Language）連結的形式實現，透過一個外部工具讀取已編譯過的檔案，在其中修改並加上剖面的實作，把原先的內容替換為修改過的內容。</p>
+<h5 id="_6">優點：就算應用程式並非以介面為中心的架構，也只需要非常少量的修改就能輕易套用在既有或傳統架構的應用程式上。<a class="headerlink" href="#_6" title="Permanent link">¶</a></h5>
+<h5 id="_7">缺點：<a class="headerlink" href="#_7" title="Permanent link">¶</a></h5>
+<ul>
+<li>如果把不穩定依賴對象注入到剖面中，將有可能造成時序耦合或是測試耦合的問題</li>
+<li>由於是在後編譯期階段將剖面寫入進去，因此不可能再呼叫到沒有被套用到剖面的程式碼版本。這會提高測試的複雜度，並且降低彈性。</li>
+<li>而且後編譯期階段的連結其實與DI架構背道而馳。</li>
+</ul>
+<h3 id="solidaop">透過SOLID五原則達成AOP<a class="headerlink" href="#solidaop" title="Permanent link">¶</a></h3>
+<p>SOLID的說明另外獨立<a href="https://richardrobot.xyz/drafts/solidwu-yuan-ze.html">SOLID五原則</a> 連結，先分析違反那些原則，在透過SOLID五原則改善設計</p>
+<h4 id="_8">第一步：把讀取與寫入的動作分開<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
+<p>以範例<code>IProductService</code>介面包含的方法有更新，讀取，新增等等，先分割成<code>IProductQueryServices</code> 跟 <code>IProductCommandServices</code>。</p>
+<p>這種分離的好處在於介面比起之前能夠更加精實，減低了在依賴對象中有著冗餘方法的機率。</p>
+<p><span class="caps">NOET</span>：『命令與查詢分離』原則</p>
+<blockquote>
+<p>命令與查詢分離原則（Command-Query Separtion），CQS後來成爲在物件導向程式設計中一項影響深遠的原則，並主張任何方法都應該符合以下兩種之一：
+1.方法會回傳結果，但不改變系統的任何可見狀態 2.方法不會產生結果，但會改變系統的狀態</p>
+</blockquote>
+<h4 id="ispsrp">第二步：遵循ISP與SRP原則分開介面與實作<a class="headerlink" href="#ispsrp" title="Permanent link">¶</a></h4>
+<p>原本有七個方法成員的 <code>IProductCommandServices</code>　介面被重新分割爲一個方法成員的七個介面。而每個介面都有一個對應的實體類別。
+好處
+1.可以保證不會有使用方依賴於自己不需要的方法
+2.確保每種使用情境都對應一個類別，有單一職責原則 3.新增功能就等於要新編寫一組介面與實體類別</p>
+<h4 id="ocp">第三步：利用參數物件修正OCP問題<a class="headerlink" href="#ocp" title="Permanent link">¶</a></h4>
+<p>把所有參數都物件化，所謂的『參數物件』，就是把一整組參數全部放在一個實體物件當中。然後重新定義一個統整所有命令類別的介面『<code>ICommandService</code>』。</p>
+<h4 id="lsp">第四步：利用泛型修正抽象介面的LSP問題<a class="headerlink" href="#lsp" title="Permanent link">¶</a></h4>
+<p>範例流程修改分四步（若是用裝飾者模式可忽略）：
+1.改抽象介面爲泛型
+2.改實做業務層Service爲泛型
+3.改Controller的依賴注入的參數爲泛型
+4.改裝飾者模式物件爲泛型 5.看組合根結構</p>
+<p>1.改抽象介面爲泛型</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span> <span class="k">interface</span> <span class="n">ICommandService</span><span class="p">&lt;</span><span class="n">TCommand</span><span class="p">&gt;</span>
+<span class="p">{</span>
+    <span class="k">void</span> <span class="nf">Execute</span><span class="p">(</span><span class="n">TCommand</span> <span class="n">command</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>2.改實做業務層Service爲泛型</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span> <span class="k">class</span> <span class="nc">AdjustInventoryService</span> <span class="p">:</span> <span class="n">ICommandService</span><span class="p">&lt;</span><span class="n">AdjustInventory</span><span class="p">&gt;</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IInventoryRepository</span> <span class="n">repository</span><span class="p">;</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IEventHandler</span><span class="p">&lt;</span><span class="n">InventoryAdjusted</span><span class="p">&gt;</span> <span class="n">handler</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">AdjustInventoryService</span><span class="p">(</span>
+        <span class="n">IInventoryRepository</span> <span class="n">repository</span><span class="p">,</span> <span class="n">IEventHandler</span><span class="p">&lt;</span><span class="n">InventoryAdjusted</span><span class="p">&gt;</span> <span class="n">handler</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">repository</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">repository</span><span class="p">));</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">handler</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">handler</span><span class="p">));</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="n">repository</span> <span class="p">=</span> <span class="n">repository</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">handler</span> <span class="p">=</span> <span class="n">handler</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Execute</span><span class="p">(</span><span class="n">AdjustInventory</span> <span class="n">command</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">quantityAdjustment</span> <span class="p">=</span> <span class="n">command</span><span class="p">.</span><span class="n">Quantity</span> <span class="p">*</span> <span class="p">(</span><span class="n">command</span><span class="p">.</span><span class="n">Decrease</span> <span class="p">?</span> <span class="p">-</span><span class="m">1</span> <span class="p">:</span> <span class="m">1</span><span class="p">);</span>
+
+        <span class="kt">var</span> <span class="n">productInventory</span> <span class="p">=</span> <span class="k">this</span><span class="p">.</span><span class="n">repository</span><span class="p">.</span><span class="n">GetByIdOrNull</span><span class="p">(</span><span class="n">command</span><span class="p">.</span><span class="n">ProductId</span><span class="p">)</span>
+            <span class="p">??</span> <span class="k">new</span> <span class="n">ProductInventory</span> <span class="p">{</span> <span class="n">Id</span> <span class="p">=</span> <span class="n">command</span><span class="p">.</span><span class="n">ProductId</span> <span class="p">};</span>
+
+        <span class="n">productInventory</span><span class="p">.</span><span class="n">Quantity</span> <span class="p">+=</span> <span class="n">quantityAdjustment</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">productInventory</span><span class="p">.</span><span class="n">Quantity</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> 
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">InvalidOperationException</span><span class="p">(</span><span class="s">"Can't decrease below 0."</span><span class="p">);</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="n">repository</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="n">productInventory</span><span class="p">);</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="n">handler</span><span class="p">.</span><span class="n">Handle</span><span class="p">(</span>
+            <span class="k">new</span> <span class="nf">InventoryAdjusted</span><span class="p">(</span><span class="n">command</span><span class="p">.</span><span class="n">ProductId</span><span class="p">,</span> <span class="n">quantityAdjustment</span><span class="p">)</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>3.改Controller的依賴注入的參數爲泛型</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span> <span class="k">class</span> <span class="nc">InventoryController</span> <span class="p">:</span> <span class="n">Controller</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IProductRepository</span> <span class="n">repository</span><span class="p">;</span>
+    <span class="c1">//這裏內部參數在接的時候改成泛型</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ICommandService</span><span class="p">&lt;</span><span class="n">AdjustInventory</span><span class="p">&gt;</span> <span class="n">inventoryAdjuster</span><span class="p">;</span>
+
+    <span class="c1">//這個Controller在注入實做業務邏輯Service(就是AdjustInventoryService)，這裡看不出</span>
+    <span class="k">public</span> <span class="nf">InventoryController</span><span class="p">(</span>
+        <span class="n">IProductRepository</span> <span class="n">repository</span><span class="p">,</span> 
+        <span class="n">ICommandService</span><span class="p">&lt;</span><span class="n">AdjustInventory</span><span class="p">&gt;</span> <span class="n">inventoryAdjuster</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">repository</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> 
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">repository</span><span class="p">));</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">inventoryAdjuster</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> 
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentNullException</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">inventoryAdjuster</span><span class="p">));</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="n">repository</span> <span class="p">=</span> <span class="n">repository</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">inventoryAdjuster</span> <span class="p">=</span> <span class="n">inventoryAdjuster</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="na">    [Route("inventory/adjustinventory")]</span>
+    <span class="k">public</span> <span class="n">ActionResult</span> <span class="nf">AdjustInventory</span><span class="p">(</span><span class="n">AdjustInventoryViewModel</span> <span class="n">viewModel</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(!</span><span class="k">this</span><span class="p">.</span><span class="n">ModelState</span><span class="p">.</span><span class="n">IsValid</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="n">View</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">Index</span><span class="p">),</span> <span class="k">this</span><span class="p">.</span><span class="n">Populate</span><span class="p">(</span><span class="n">viewModel</span><span class="p">));</span>
+        <span class="p">}</span>
+
+        <span class="n">AdjustInventory</span> <span class="n">command</span> <span class="p">=</span> <span class="n">viewModel</span><span class="p">.</span><span class="n">Command</span><span class="p">;</span>
+        <span class="c1">//直接用抽象介面的方法Execute（實做是AdjustInventoryService）</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">inventoryAdjuster</span><span class="p">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">command</span><span class="p">);</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="n">TempData</span><span class="p">[</span><span class="s">"SuccessMessage"</span><span class="p">]</span> <span class="p">=</span> <span class="s">"Inventory successfully adjusted."</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="n">RedirectToAction</span><span class="p">(</span><span class="n">nameof</span><span class="p">(</span><span class="n">HomeController</span><span class="p">.</span><span class="n">Index</span><span class="p">),</span> <span class="s">"Home"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>4.改裝飾者模式物件爲泛型</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//這個裝飾者模式主要在TransactionScope的運用，參考P.412 頁</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">TransactionCommandServiceDecorator</span><span class="p">&lt;</span><span class="n">TCommand</span><span class="p">&gt;:</span><span class="n">ICommandService</span><span class="p">&lt;</span><span class="n">TCommand</span><span class="p">&gt;</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ICommandService</span><span class="p">&lt;</span><span class="n">TCommand</span><span class="p">&gt;</span> <span class="n">decorate</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">TransactionCommandServiceDecorator</span><span class="p">(</span><span class="n">ICommandService</span><span class="p">&lt;</span><span class="n">TCommand</span><span class="p">&gt;</span> <span class="n">decorate</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">decorate</span> <span class="p">=</span> <span class="n">decorate</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Execute</span><span class="p">(</span><span class="n">TCommand</span> <span class="n">command</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//用TransactionScope就可以把裏面所用的生命週期限制在同一交易作業階段</span>
+        <span class="n">using</span><span class="p">(</span><span class="kt">var</span> <span class="n">scope</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TransactionScope</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">decorate</span><span class="p">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+            <span class="n">scope</span><span class="p">.</span><span class="n">Complete</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>5.看組合根結構</p>
+<div class="highlight"><pre><span></span><code><span class="k">new</span> <span class="nf">InventoryController</span><span class="p">(</span>
+    <span class="k">new</span> <span class="n">TransactionCommandServiceDecorator</span><span class="p">&lt;</span><span class="n">AdjustInventory</span><span class="p">&gt;(</span>
+        <span class="k">new</span> <span class="nf">AdjustInventoryService</span><span class="p">(</span><span class="n">repository</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>後續書中實做了兩個AOP的機制：『實做稽核紀錄剖面 』『實做資安管控剖面』，這個說明移到</p>
+<p>『 <a href="https://richardrobot.xyz/drafts/decorator-pattern.html">裝飾模式</a> 』查看</p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+<section>
+    <h2>Related Posts</h2>
+<ul class="related-posts-list">
+<li><a href="https://richardrobot.xyz/2023/03/fen-xi-gong-ju-debugdiag-tools/" title="分析工具－DebugDiag Tools">分析工具－DebugDiag Tools</a></li>
+</ul>
+<hr />
+</section>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2022-05-25T09:25:00+08:00">三 25 5月 2022</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#hou-duan-cheng-shi-ref">後端程式</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://richardrobot.xyz/tags.html#biao-qian-ref">標籤
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+    <a href="https://github.com/TernenceZheng" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="andy711023@gmail.com" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Gmail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff"/><rect width="362" height="272" x="75" y="120" fill="#f2f2f2" rx="8%"/><path fill="#d54c3f" d="M120 392H97c-12 0-22-10-22-23V143h45z"/><path fill="#b63524" d="M392 392h23c12 0 22-10 22-23V143h-45z"/><path fill-opacity=".05" d="M256 286L120 392V187z"/><path fill-opacity=".08" d="M82 159l235 233h75V159z"/><path stroke-linecap="round" fill="none" stroke="#de5145" stroke-width="45" d="M97 143l159 115 159-115"/><path fill="#f2f2f2" d="M415 120c-5 0-10 2-13 4L256 230 110 124c-3-2-8-4-13-4z"/></svg>
+    </a>
+    <a href="https://richardrobot.xyz/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Richard隨手筆記</span> - 紙上得來終覺淺，絕知此事要躬行
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://richardrobot.xyz/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

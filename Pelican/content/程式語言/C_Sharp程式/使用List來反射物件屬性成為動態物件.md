@@ -4,7 +4,7 @@ date: 2022-01-06 14:14
 modified: 2022-01-06 14:14
 tags: Reflect,Emit,Dynamic
 category: 後端程式
-slug: 自定義URL標籤
+slug:
 summary: 使用List來反射物件屬性成為動態物件
 image: /images/default_preview_image.jpg
 status: draft

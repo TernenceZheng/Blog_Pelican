@@ -4,7 +4,7 @@ date: 2022-01-14 11:39
 modified: 2022-01-14 11:39
 tags: ContentType,HTTP
 category: 網路概論
-slug: 自定義URL標籤
+slug:
 related_posts: slug1, slug2, slug3, ... slugN
 summary: 預覽標題
 image: /images/default_preview_image.jpg

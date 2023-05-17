@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh_tw">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://richardrobot.xyz/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Richard" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="ASPNETCore, 後端程式, " />
+
+<meta property="og:title" content="認識AspNetCore "/>
+<meta property="og:url" content="https://richardrobot.xyz/drafts/know-asp-net-core.html" />
+<meta property="og:description" content="預覽標題" />
+<meta property="og:site_name" content="Richard隨手筆記" />
+<meta property="og:article:author" content="Richard" />
+<meta property="og:article:published_time" content="2022-01-26T09:55:00+08:00" />
+<meta property="og:article:modified_time" content="2022-01-26T09:55:00+08:00" />
+<meta name="twitter:title" content="認識AspNetCore ">
+<meta name="twitter:description" content="預覽標題">
+
+        <title>認識AspNetCore  · Richard隨手筆記
+</title>
+        <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q3D0B7D25R');
+</script>
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://richardrobot.xyz/"><span class=site-name>Richard隨手筆記</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://richardrobot.xyz
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://richardrobot.xyz/categories.html">Categories</a></li>
+                                <li ><a href="https://richardrobot.xyz/tags.html">Tags</a></li>
+                                <li ><a href="https://richardrobot.xyz/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="https://richardrobot.xyz/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://richardrobot.xyz/drafts/know-asp-net-core.html">
+                認識AspNetCore
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#aspnet-core"><span class="caps">ASP</span>.<span class="caps">NET</span> Core</a></li>
+<li><a href="#_1">伺服器與中介軟體</a></li>
+<li><a href="#launchsettingsjson">launchSettings.json</a></li>
+<li><a href="#aspnet-core-mvc"><span class="caps">ASP</span>.<span class="caps">NET</span> <span class="caps">CORE</span> <span class="caps">MVC</span></a></li>
+<li><a href="#_2">什麼是中介軟體</a></li>
+<li><a href="#startup">Startup類型</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h4 id="aspnet-core"><span class="caps">ASP</span>.<span class="caps">NET</span> Core<a class="headerlink" href="#aspnet-core" title="Permanent link">¶</a></h4>
+<p><span class="caps">ASP</span>.<span class="caps">NET</span> Core管線由一個
+伺服器(Server) 和許多 中介軟體(Middleware) 組成。當宿主(Host) 程式啟動之後。管線被建置出來，作為管線『龍頭』的伺服器就開始監聽來自用戶端的HTTP請求。</p>
+<h4 id="_1">伺服器與中介軟體<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
+<p>主要由一個 IHost/IHostBuilder為核心的服務承載系統</p>
+<ul>
+<li>IHost 物件可以視為所有承載服務的宿主 (在第 10章會詳細說明 <a href="https://richardrobot.xyz/drafts/10cheng-zai-xi-tong.html">10.承載系統</a>)</li>
+<li>IHostBuilder物件則是它的建置者</li>
+<li>IHostedService被定義任何需要長時間執行的操作系統服務</li>
+</ul>
+<p>其中 GenericWebHostService — 實現了IHostedServicer介面，並將它註冊在承載系統中 有一些原生的服務類型，KestrelServer和HTTP.sys </p>
+<p>KestrelServer是採用libuv建立的跨平臺Web伺服器，可以用在Mac，Linux，Windows。也可以結合傳統Web伺服器(<span class="caps">IIS</span> Apache Nginx)將他們作為<a href="https://richardrobot.xyz/2022/03/reverse-proxy/">反向代理</a>來使用。</p>
+<p>以下使用一個程式啟動的範例說明程式執行過程：</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Host</span><span class="p">.</span><span class="n">CreateDefaultBuilder</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">ConfigureWebHost</span><span class="p">(</span><span class="n">webHostBuilder</span> <span class="p">=&gt;</span> <span class="n">webHostBuilder</span>
+                    <span class="p">.</span><span class="n">UseKestrel</span><span class="p">()</span>
+                    <span class="p">.</span><span class="n">Configure</span><span class="p">(</span><span class="n">app</span> <span class="p">=&gt;</span> <span class="n">app</span><span class="p">.</span><span class="n">Run</span><span class="p">(</span><span class="n">context</span> <span class="p">=&gt;</span> 
+                        <span class="n">context</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">WriteAsync</span><span class="p">(</span><span class="s">"Hello World."</span><span class="p">))))</span>
+                <span class="p">.</span><span class="n">Build</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">Run</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>上述程式說明：定義在Program.cs 中的Main方法，</p>
+<p>呼叫靜態類型Host的<code>CreateDefaultBuilder</code>方法建立一個IHostBuilder物件，並在最後呼叫該物件Build方法建置作為服務宿主的IHost物件。當呼叫IHost物件的Run擴充方法時，<span class="caps">ASP</span>.<span class="caps">NET</span> Core應用程式將被啟動。</p>
+<p>在呼叫IHost的Build之前，可以呼叫IHostBuilder介面的<code>ConfigureWebHost</code>擴充方法，並利用指定的<code>Action&lt;IWebHostBuild&gt;</code>委派物件，來建置應用程式的請求處理管線。實際上是用<code>IWebHostBuild</code>介面的<code>UseKestrel</code>擴充方法將KestrelServer註冊為伺服器</p>
+<p>Configure擴充方法的輸入參數是<code>Action&lt;IApplicationBuilder&gt;</code>物件，所需的中介軟體註冊在<code>IApplicationBuilder</code>物件上，<code>IApplicationBuilder</code>介面的Run( app.Run )擴充方法，指定<code>Func&lt;HttpContext,Task&gt;</code>物件將回應的主體內容設定為”Hello World.”。</p>
+<hr/>
+<h4 id="launchsettingsjson">launchSettings.json<a class="headerlink" href="#launchsettingsjson" title="Permanent link">¶</a></h4>
+<p><code>launchSettings.json</code> 檔案中的所有設定僅針對開發環境，在產品環境下是不需要這個檔案，應用發佈後產生的檔案列表也不包含該檔案。會自動產生在”/Properties”目錄下，不想手動設定也有介面可以 </p>
+<ul>
+<li>只在本機開發電腦上使用。</li>
+<li>尚未部署。</li>
+<li>包含設定檔設定。</li>
+</ul>
+<p>下列 <span class="caps">JSON</span> 會顯示名為_EnvironmentsSample_的 <span class="caps">ASP</span>.<span class="caps">NET</span> Core Web 專案的檔案，該 <code>launchSettings.json</code> 檔案是以 Visual Studio 所建立，或是： <code>dotnet new</code></p>
+<p>詳細環境設定的名稱參數可參考官方網站：<a href="https://docs.microsoft.com/zh-tw/aspnet/core/fundamentals/environments?view=aspnetcore-6.0#lsj">在 <span class="caps">ASP</span>.<span class="caps">NET</span> Core 中使用多個環境</a></p>
+<h4 id="aspnet-core-mvc"><span class="caps">ASP</span>.<span class="caps">NET</span> <span class="caps">CORE</span> <span class="caps">MVC</span><a class="headerlink" href="#aspnet-core-mvc" title="Permanent link">¶</a></h4>
+<p>架構本質上就是由伺服器和中介軟體建置的訊息處理管線，實現路由的是 EndpointRoutingMiddleware中介軟體和EndpointMiddleware中介軟體上的。</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Builder</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Hosting</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.Extensions.DependencyInjection</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.Extensions.Hosting</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">helloworld</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Host</span><span class="p">.</span><span class="n">CreateDefaultBuilder</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">ConfigureWebHostDefaults</span><span class="p">(</span><span class="n">webHostBuilder</span> <span class="p">=&gt;</span> <span class="n">webHostBuilder</span>
+                    <span class="p">.</span><span class="n">ConfigureServices</span><span class="p">(</span><span class="n">servicecs</span> <span class="p">=&gt;</span> <span class="n">servicecs</span>
+                        <span class="p">.</span><span class="n">AddRouting</span><span class="p">()</span>
+                        <span class="p">.</span><span class="n">AddControllersWithViews</span><span class="p">())</span>
+                    <span class="p">.</span><span class="n">Configure</span><span class="p">(</span><span class="n">app</span> <span class="p">=&gt;</span> <span class="n">app</span>
+                        <span class="p">.</span><span class="n">UseRouting</span><span class="p">()</span>
+                        <span class="p">.</span><span class="n">UseEndpoints</span><span class="p">(</span><span class="n">endpoints</span> <span class="p">=&gt;</span> <span class="n">endpoints</span><span class="p">.</span><span class="n">MapControllers</span><span class="p">())))</span>
+                <span class="p">.</span><span class="n">Build</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">Run</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>上述程式說明：</p>
+<p>上面的程式片段先後呼叫<code>IApplicationBuilder</code>介面的<code>UseRouting</code>方法與<code>UseEndpoints</code>方法註冊了 <code>EndpointRoutingMiddleware</code>中介軟體和<code>EndpointMiddleware</code>中介軟體</p>
+<p>在呼叫<code>UseEndpoints</code>方法的時候，利用指定的<code>Action&lt;IEndpointRoutebuilder&gt;</code> 委派物件呼叫了MapControllers擴充方法，進一步完成了針對定義在Controller類型中所有Action方法的對。</p>
+<p>由於註冊的中介軟體具有對其他服務的依賴，所以需要預先將這些服務註冊到依賴注入架構中。依賴服務的註冊透過呼叫<code>IWebHostBuilder</code>介面的<code>ConfigureServices</code>方法完成的，該方法的參數類型為<code>Action&lt;IServiceCollection&gt;</code>，增加的服務註冊就儲存在IServiceCollection介面表示的集合中。</p>
+<p>上面的依賴的服務是透過呼叫 IServiceCollection介面的AddRouting方法和AddControllersWithViews方法進行註冊的。</p>
+<h4 id="_2">什麼是中介軟體<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<p>在ASP.<span class="caps">NET</span> 核心框架中，你可以輕易地就往處理請求的流程內，插入額外的處理行為邏輯，這類中介行為將可能影響到請求的處理，以及回覆的結果。在ASP.<span class="caps">NET</span> 核心中這種對處理請求流程的擴展功能稱之為『中介層』</p>
+<h4 id="startup">Startup類型<a class="headerlink" href="#startup" title="Permanent link">¶</a></h4>
+<p>應用程式在初始化的時候會根據請求處理註冊對應的中介軟體，一般我們會將中介軟體及依賴服務的註冊定義在一個單獨的類型中，按照約定，通常將這個類型命名為Startup。</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Builder</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.Extensions.DependencyInjection</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">helloworld</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Startup</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">services</span>
+            <span class="p">.</span><span class="n">AddRouting</span><span class="p">()</span>
+            <span class="p">.</span><span class="n">AddControllersWithViews</span><span class="p">();</span>
+
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Configure</span><span class="p">(</span><span class="n">IApplicationBuilder</span> <span class="n">app</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">app</span>
+            <span class="p">.</span><span class="n">UseRouting</span><span class="p">()</span>
+            <span class="p">.</span><span class="n">UseEndpoints</span><span class="p">(</span><span class="n">endpoints</span> <span class="p">=&gt;</span> <span class="n">endpoints</span><span class="p">.</span><span class="n">MapControllers</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>如上程式，不需要讓Startup類型實現某個預先定義的介面或繼承某個預先定義基礎類別，所採用的完全是一種以『約定』為基礎的定義方式。</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Builder</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.AspNetCore.Hosting</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.Extensions.Hosting</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">helloworld</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Host</span><span class="p">.</span><span class="n">CreateDefaultBuilder</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">ConfigureWebHostDefaults</span><span class="p">(</span><span class="n">webHostBuilder</span> <span class="p">=&gt;</span> 
+                    <span class="n">webHostBuilder</span><span class="p">.</span><span class="n">UseStartup</span><span class="p">&lt;</span><span class="n">Startup</span><span class="p">&gt;())</span>
+                <span class="p">.</span><span class="n">Build</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">Run</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Startup類型可以呼叫IWebHostBuilder介面的<code>UseStartup&lt;TStartup&gt;</code> 擴充方法進行註冊</p>
+<p>另外關聯兩篇  <a href="https://richardrobot.xyz/drafts/aspnetcoreshi-ru-he-kua-ping-tai.html">AspNetCore是如何跨平台</a></p>
+<p>兩篇範例程式：</p>
+<p>https://github.com/jasontaylordev/NorthwindTraders</p>
+<p>https://github.com/dotnet-architecture/eShopOnWeb</p>
+<p>參考： <a href="https://ithelp.ithome.com.tw/users/20129389/ironman/3185">我與 <span class="caps">ASP</span>.<span class="caps">NET</span> Core 的 30天 系列</a></p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2022-01-26T09:55:00+08:00">三 26 1月 2022</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#hou-duan-cheng-shi-ref">後端程式</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://richardrobot.xyz/tags.html#aspnetcore-ref">ASPNETCore
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/jarvis-zheng-13a2b990" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+    <a href="https://github.com/TernenceZheng" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="andy711023@gmail.com" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Gmail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff"/><rect width="362" height="272" x="75" y="120" fill="#f2f2f2" rx="8%"/><path fill="#d54c3f" d="M120 392H97c-12 0-22-10-22-23V143h45z"/><path fill="#b63524" d="M392 392h23c12 0 22-10 22-23V143h-45z"/><path fill-opacity=".05" d="M256 286L120 392V187z"/><path fill-opacity=".08" d="M82 159l235 233h75V159z"/><path stroke-linecap="round" fill="none" stroke="#de5145" stroke-width="45" d="M97 143l159 115 159-115"/><path fill="#f2f2f2" d="M415 120c-5 0-10 2-13 4L256 230 110 124c-3-2-8-4-13-4z"/></svg>
+    </a>
+    <a href="https://richardrobot.xyz/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Richard隨手筆記</span> - 紙上得來終覺淺，絕知此事要躬行
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://richardrobot.xyz/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
