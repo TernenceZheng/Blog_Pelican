@@ -17,10 +17,7 @@ ROBOTS = "index, follow"
 
 GOOGLE_ADSENSE = {
     'ca_id': 'ca-pub-4119678220307625',    # Your AdSense ID
-    'page_level_ads': True,          # Allow Page Level Ads (mobile)
-    'ads': {
-        'article_bottom': '1234566', # Banner after article content (article only)
-    }
+    'page_level_ads': True          # Allow Page Level Ads (mobile)
 }
 
 MODERN_GOOGLE_ANALYTICS = u'G-Q3D0B7D25R' # Your Google Analytics 4 Property ID
