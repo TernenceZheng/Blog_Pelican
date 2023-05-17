@@ -15,21 +15,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="nginx, mac, 電腦問題, " />
+<meta name="keywords" content="標籤, 工作, " />
 
-<meta property="og:title" content="Nginx 在MacOS M1問題 "/>
-<meta property="og:url" content="https://richardrobot.xyz/2022/12/nginx-macos-error/" />
-<meta property="og:description" content="Nginx 在MacOS M1問題" />
+<meta property="og:title" content="資料庫語法參考 "/>
+<meta property="og:url" content="https://richardrobot.xyz/2023/02/zi-liao-ku-yu-fa-can-kao/" />
+<meta property="og:description" content="記錄常用的執行語法或是用來複製貼上的" />
 <meta property="og:site_name" content="Richard隨手筆記" />
 <meta property="og:article:author" content="Richard" />
-<meta property="og:article:published_time" content="2022-12-07T21:45:00+08:00" />
-<meta property="og:article:modified_time" content="2022-12-07T21:45:00+08:00" />
-<meta name="twitter:title" content="Nginx 在MacOS M1問題 ">
-<meta name="twitter:description" content="Nginx 在MacOS M1問題">
-<meta property="og:image" content="/images/default_preview_image.jpg" />
-<meta name="twitter:image" content="/images/default_preview_image.jpg" >
+<meta property="og:article:published_time" content="2023-02-01T14:22:00+08:00" />
+<meta name="twitter:title" content="資料庫語法參考 ">
+<meta name="twitter:description" content="記錄常用的執行語法或是用來複製貼上的">
 
-        <title>Nginx 在MacOS M1問題  · Richard隨手筆記
+        <title>資料庫語法參考  · Richard隨手筆記
 </title>
         <link href="https://richardrobot.xyz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Richard隨手筆記 - Full Atom Feed" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3D0B7D25R"></script>
@@ -79,8 +76,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="https://richardrobot.xyz/2022/12/nginx-macos-error/">
-                Nginx 在MacOS&nbsp;M1問題
+            <a href="https://richardrobot.xyz/2023/02/zi-liao-ku-yu-fa-can-kao/">
+                資料庫語法參考
             </a>
         </h1>
     </header>
@@ -89,47 +86,18 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>[<span class="caps">TOC</span>]
-設定修改nginx 然後需要reload 出現 <code>PID number "" in "/opt/homebrew/var/run/nginx.pid"</code></p>
-<p>查看檔案是空的，刪掉又出現另外一個問題</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">jarvis</span><span class="p">.</span><span class="n">zheng</span><span class="nv">@zhengrungdeMini</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">nginx</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n">reload</span><span class="w"></span>
-<span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">error</span><span class="o">]</span><span class="w"> </span><span class="n">invalid</span><span class="w"> </span><span class="n">PID</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="ss">&quot;/opt/homebrew/var/run/nginx.pid&quot;</span><span class="w"></span>
+            <p>西元年轉民國年</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span>  <span class="n">GETDATE</span><span class="p">(),</span><span class="k">RIGHT</span><span class="p">(</span> <span class="k">CONVERT</span><span class="p">(</span><span class="nb">VARCHAR</span><span class="p">,</span><span class="n">DATEPART</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="n">GETDATE</span><span class="p">())</span><span class="o">-</span><span class="mi">1911</span><span class="p">),</span><span class="mi">4</span><span class="p">)</span>
 </code></pre></div>
 
 
-<p>刪掉後出現：</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="n">jarvis</span><span class="p">.</span><span class="n">zheng</span><span class="nv">@zhengrungdeMini</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">nginx</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n">stop</span><span class="w"></span>
-
-<span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">error</span><span class="o">]</span><span class="w"> </span><span class="k">open</span><span class="p">()</span><span class="w"> </span><span class="ss">&quot;/opt/homebrew/var/run/nginx.pid&quot;</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="err">:</span><span class="w"> </span><span class="k">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span><span class="p">)</span><span class="w"></span>
+<p><img alt="Pasted image 20230201142617.png" src="https://richardrobot.xyz/images/Pasted image 20230201142617.png" /></p>
+<p>複製：複製第一個參數，複製次數</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">REPLICATE</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> 
 </code></pre></div>
 
 
-<p>看起來這個檔案需要點東西。但是卻沒有東西需要重新產生</p>
-<p>參考資料&nbsp;https://ld246.com/article/1563147639170</p>
-<p>後來執行：</p>
-<div class="highlight"><pre><span></span><code><span class="err">sudo nginx -c /opt/homebrew/etc/nginx/nginx.conf</span>
-</code></pre></div>
-
-
-<p>上面語法 要先找到原本nginx的設定的原始路徑 然後依照上面這個語法就會產生在/opt/homebrew/var/run/nginx.pid&nbsp;產生完成就會出現內容有數字</p>
-<div class="highlight"><pre><span></span><code><span class="err">sudo certbot --expand -d jupyter.richardrobot.xyz</span>
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">Saving</span><span class="w"> </span><span class="n">debug</span><span class="w"> </span><span class="nf">log</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="o">/</span><span class="nf">var</span><span class="o">/</span><span class="nf">log</span><span class="o">/</span><span class="n">letsencrypt</span><span class="o">/</span><span class="n">letsencrypt</span><span class="p">.</span><span class="nf">log</span><span class="w"></span>
-<span class="n">Could</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">ssl_module</span><span class="p">;</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">disabling</span><span class="w"> </span><span class="k">session</span><span class="w"> </span><span class="n">tickets</span><span class="p">.</span><span class="w"></span>
-<span class="n">Error</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="n">running</span><span class="w"> </span><span class="n">nginx</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">nginx</span><span class="p">.</span><span class="n">conf</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="p">.</span><span class="w"></span>
-
-<span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">emerg</span><span class="o">]</span><span class="w"> </span><span class="k">open</span><span class="p">()</span><span class="w"> </span><span class="ss">&quot;/usr/local/etc/nginx/nginx.conf&quot;</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="err">:</span><span class="w"> </span><span class="k">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span><span class="p">)</span><span class="w"></span>
-<span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">nginx</span><span class="p">.</span><span class="n">conf</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">failed</span><span class="w"></span>
-</code></pre></div>
-
-
-<p>以上的問題是因為MacOS的M1安裝Nginx預設路徑已經是 /opt/homebrew/etc/nginx ，但是在設定certbot
-的時候會用預設以前的路徑/usr/local/etc/nginx/nginx.conf&nbsp;，所以必須指定路徑</p>
-<p>用以下語法自定義路徑</p>
-<div class="highlight"><pre><span></span><code><span class="err">certbot --nginx --nginx-server-root=/opt/homebrew/etc/nginx/</span>
-</code></pre></div>
+<p>上面是用在例如補0，複製0，複製五次</p>
 
 
              
@@ -154,8 +122,8 @@
                 <a class="accordion-toggle disqus-comment-count comment-count collapsed"
                    data-toggle="collapse"
                    data-parent="#accordion2"
-                   data-disqus-identifier="https://richardrobot.xyz/2022/12/nginx-macos-error/"
-                   href="https://richardrobot.xyz/2022/12/nginx-macos-error/#comment_thread"
+                   data-disqus-identifier="https://richardrobot.xyz/2023/02/zi-liao-ku-yu-fa-can-kao/"
+                   href="https://richardrobot.xyz/2023/02/zi-liao-ku-yu-fa-can-kao/#comment_thread"
                    id="comment-accordion-toggle">
                     Comments
                 </a>
@@ -173,8 +141,8 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 
-    var disqus_identifier = 'https://richardrobot.xyz/2022/12/nginx-macos-error/';
-    var disqus_url = 'https://richardrobot.xyz/2022/12/nginx-macos-error/';
+    var disqus_identifier = 'https://richardrobot.xyz/2023/02/zi-liao-ku-yu-fa-can-kao/';
+    var disqus_url = 'https://richardrobot.xyz/2023/02/zi-liao-ku-yu-fa-can-kao/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -202,39 +170,15 @@ iframe[sandbox*="allow-popups"]{
 </section>
 
             <hr/>
-<section>
-    <h2>Related Posts</h2>
-<ul class="related-posts-list">
-<li><a href="https://richardrobot.xyz/2021/09/git-mac-add-token/" title="Mac 上改變 Git 認證模式">Mac 上改變 Git 認證模式</a></li>
-<li><a href="https://richardrobot.xyz/2021/10/mac-supervisor/" title="Supervisor">Supervisor</a></li>
-<li><a href="https://richardrobot.xyz/2021/10/mac-lets-encrypt/" title="安裝Let’s Encrypt電子證書">安裝Let’s Encrypt電子證書</a></li>
-<li><a href="https://richardrobot.xyz/2021/10/mac-tensorflow/" title="MacM1執行Tensorflow錯誤問題">MacM1執行Tensorflow錯誤問題</a></li>
-<li><a href="https://richardrobot.xyz/2022/01/mac-automator-blog/" title="使用Automator定期執行Blog發佈">使用Automator定期執行Blog發佈</a></li>
-</ul>
-<hr />
-</section>
-            <aside>
-            <nav>
-            <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://richardrobot.xyz/2022/12/macos-terminal-command/" title="Previous: MacOS下的Terminal語法">MacOS下的Terminal語法</a></li>
-                <li class="next-article"><a href="https://richardrobot.xyz/2023/03/自定義URL標籤/" title="Next: 分析工具－DebugDiag Tools">分析工具－DebugDiag Tools</a> »</li>
-            </ul>
-            </nav>
-            </aside>
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2022-12-07T21:45:00+08:00">三 07 12月 2022</time>
-
+            <time itemprop="dateCreated" datetime="2023-02-01T14:22:00+08:00">三 01 2月 2023</time>
             <h4>Category</h4>
-            <a class="category-link" href="https://richardrobot.xyz/categories.html#dian-nao-wen-ti-ref">電腦問題</a>
+            <a class="category-link" href="https://richardrobot.xyz/categories.html#gong-zuo-ref">工作</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="https://richardrobot.xyz/tags.html#mac-ref">mac
-                    <span class="superscript">9</span>
-</a></li>
-                <li><a href="https://richardrobot.xyz/tags.html#nginx-ref">nginx
-                    <span class="superscript">2</span>
+                <li><a href="https://richardrobot.xyz/tags.html#biao-qian-ref">標籤
 </a></li>
             </ul>
 <h4>Contact</h4>

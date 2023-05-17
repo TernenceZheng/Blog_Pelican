@@ -33,6 +33,27 @@ status: draft
 指令說明
 dotnet ef dbcontext scaffold "<連線字串>" "<使用的資料庫提供者套件>" -o<是否要輸出在另外一個資料夾> -c<名稱Context> -f
 
+```c
+Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 35 - An internal exception was caught)
+
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate was rejected by the provided RemoteCertificateValidationCallback.
+
+   at System.Net.Security.SslStream.SendAuthResetSignal(ProtocolToken message, ExceptionDispatchInfo exception)
+```
+上面的錯誤不知爲何在之後重新再執行(產生資料實體的指令)就會出錯，後面要新增一句
+`TrustServerCertificate=True;`
+
+變成如下：
+`dotnet ef dbcontext scaffold "Server=localhost,1433\\Catalog=tutorial_database;Database=Blog;User=SA;Password=Te$t1234;TrustServerCertificate=True;" "Microsoft.EntityFrameworkCore.SqlServer" -o ./Models -c BlogContext -f`
+
+關於 dbcontext scaffold 用法可參考：[DB反向工程](https://learn.microsoft.com/zh-tw/ef/core/managing-schemas/scaffolding/?tabs=dotnet-core-cli)
+
+```sql 
+
+dotnet ef dbcontext scaffold "Server=localhost,1433\\Catalog=tutorial_database;Database=FinLab;User=sa;Password=2UauixdR;TrustServerCertificate=True;" "Microsoft.EntityFrameworkCore.SqlServer" --context-dir Data --output-dir Models -c FinLabContext --table columns_mapping --table News_List --table quotes_Temp --table 台股指數
+
+```
+
 
 建立好資料庫模型：Article User 就可以執行 Migration
 

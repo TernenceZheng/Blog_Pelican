@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 電腦問題</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/dian-nao-wen-ti.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2022-12-07T21:45:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Nginx 在MacOS M1問題</title><link href="https://richardrobot.xyz/2022/12/nginx-macos-error/" rel="alternate"></link><published>2022-12-07T21:45:00+08:00</published><updated>2022-12-07T21:45:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-12-07:/2022/12/nginx-macos-error/</id><summary type="html">&lt;p&gt;Nginx 在MacOS&amp;nbsp;M1問題&lt;/p&gt;</summary><content type="html">&lt;p&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Richard隨手筆記 - 電腦問題</title><link href="https://richardrobot.xyz/" rel="alternate"></link><link href="https://richardrobot.xyz/feeds/dian-nao-wen-ti.atom.xml" rel="self"></link><id>https://richardrobot.xyz/</id><updated>2023-05-15T12:07:00+08:00</updated><subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle><entry><title>Azure Data Studio 套件安裝</title><link href="https://richardrobot.xyz/2023/05/Azure-Data-Studio-Vsix/" rel="alternate"></link><published>2023-05-15T12:07:00+08:00</published><updated>2023-05-15T12:07:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2023-05-15:/2023/05/Azure-Data-Studio-Vsix/</id><summary type="html">&lt;p&gt;Azure-Data-Studio&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;Azure Data Studio 是一個GUI介面，可以在不同的平臺上執行，可在Mac，Window，Linux不同平臺安裝，以下在Mac環境安裝時，發生的問題：&lt;/p&gt;
+&lt;p&gt;在Mac安裝參考官方教學 ：&lt;a href="https://learn.microsoft.com/zh-tw/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16&amp;amp;tabs=redhat-install%2Credhat-uninstall"&gt;下載並安裝 Azure Data Studio&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;由於需要新增中文介面套件，在後來的擴充套件安裝時，發生了以下問題點&lt;/p&gt;
+&lt;h3 id="_1"&gt;無法點擊安裝&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Error&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;installing&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;Chinese&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Traditional&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;Language&lt;/span&gt; &lt;span class="n"&gt;Pack&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;Azure&lt;/span&gt; &lt;span class="n"&gt;Data&lt;/span&gt; &lt;span class="n"&gt;Studio&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt; &lt;span class="n"&gt;extension&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Please&lt;/span&gt; &lt;span class="n"&gt;check&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;workbench&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;showWindowLog&lt;/span&gt; &lt;span class="s"&gt;"Click to execute command 'workbench.action.showWindowLog'"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;more&lt;/span&gt; &lt;span class="n"&gt;details&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;上述的錯誤出現，想說查看原始 vsix檔案來安裝&lt;/p&gt;
+&lt;p&gt;找到 https://github.com/microsoft/azuredatastudio/wiki/List-of-Extensions 原始的Github路徑&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ADS原始中文安裝包路徑.png" src="https://richardrobot.xyz/images/ADS原始中文安裝包路徑.png"/&gt;&lt;/p&gt;
+&lt;p&gt;接下來如下圖方式安裝：下面截圖是已經安裝完成的情況才顯示中文
+&lt;img alt="使用vsix方式安裝.png" src="https://richardrobot.xyz/images/使用vsix方式安裝.png"/&gt;&lt;/p&gt;
+&lt;h3 id="128"&gt;無法安裝套件在1.28版本上&lt;a class="headerlink" href="#128" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;實際上又出現如下的錯誤訊息&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Unable&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;extension&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ads&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;language&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;zh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;hant&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;compatible&lt;/span&gt; &lt;span class="n"&gt;with&lt;/span&gt; &lt;span class="n"&gt;Azure&lt;/span&gt; &lt;span class="n"&gt;Data&lt;/span&gt; &lt;span class="n"&gt;Studio&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="mf"&gt;1.28.0&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;由於當初安裝的Azure Data Studio版本已經過時，所以才造成上面的這些問題，再次從GitHub https://github.com/Microsoft/azuredatastudio  下載Mac M1 版本的檔案，如下圖，點擊 Apple Silicon 版本安裝&lt;/p&gt;
+&lt;p&gt;&lt;img alt="下載MacM1版本的檔案ADS.png" src="https://richardrobot.xyz/images/下載MacM1版本的檔案ADS.png"/&gt;&lt;/p&gt;
+&lt;p&gt;最後正確安裝顯示，並且版本顯示 1.43，上面的套件安裝問題就沒問題了
+&lt;img alt="AzureDataStudio2畫面.png" src="https://richardrobot.xyz/images/AzureDataStudio2畫面.png"/&gt;&lt;/p&gt;</content><category term="電腦問題"></category><category term="Azure Data Studio"></category><category term="Language Packs"></category></entry><entry><title>分析工具－DebugDiag Tools</title><link href="https://richardrobot.xyz/2023/03/%E8%87%AA%E5%AE%9A%E7%BE%A9URL%E6%A8%99%E7%B1%A4/" rel="alternate"></link><published>2023-03-14T16:41:00+08:00</published><updated>2023-03-14T16:41:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2023-03-14:/2023/03/自定義URL標籤/</id><summary type="html">&lt;p&gt;預覽標題&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="debugdiag-tools"&gt;此次針對專案的記憶體不足做優化，在此次的記憶體檢測使用DebugDiag Tools&lt;a class="headerlink" href="#debugdiag-tools" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;DebugDiag Tools（Debug Diagnostic Tool）是一款由 Microsoft 提供的免費工具，用於幫助開發人員和 &lt;span class="caps"&gt;IT&lt;/span&gt; 專業人員在 Windows 系統上診斷和解決應用程式問題。該工具集提供了一組分析工具，可幫助您捕捉、分析和解決各種應用程式問題，例如記憶體洩漏、當機和性能問題等。&lt;/p&gt;
+&lt;p&gt;DebugDiag 可以輕鬆捕捉和記錄應用程式當機時的詳細資訊，包括當機的位置和原因。它還提供了一組分析工具，可幫助您檢查記憶體使用情況，找出記憶體洩漏的原因。此外，DebugDiag 工具還可以監視應用程式的性能，並提供了一組分析工具，可幫助您找出應用程式性能問題的根本原因。&lt;/p&gt;
+&lt;h3 id="_1"&gt;下載與安裝&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;下載點：&lt;a href="https://www.microsoft.com/en-us/download/details.aspx?id=58210"&gt;Debug Diagnostic Tool v2 Update 3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安裝完成如下會主要有兩個功能：
+DebugDiag 2 Analysis   &amp;lt;- 這是用來分析的
+DebugDiag 2 Collection &amp;lt;- 這是用來收集資料的&lt;/p&gt;
+&lt;p&gt;&lt;img alt="DebugDiagnosticsTool2.jpg" src="https://richardrobot.xyz/images/DebugDiagnosticsTool2.jpg"/&gt;&lt;/p&gt;
+&lt;h3 id="_2"&gt;針對記憶體的使用&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;因為主要需要探究記憶體不足，需要確認哪些程式佔用了大部分的記憶體使用先選擇Native(non-.Net)Memory and Handle Leak&lt;/p&gt;
+&lt;p&gt;&lt;img alt="NativeMemoryandHandleLeak.jpg" src="https://richardrobot.xyz/images/NativeMemoryandHandleLeak.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;接下來切換視窗頁籤的Processes 查看要觀察的對象，在此次範例中，已經將程式建立在IIS上，在IIS的ProcessName是 w3wp.exe 後面的有個欄位Process Identiy 是設定在IIS上的名稱
+&lt;img alt="分析工具查看IIS上的記憶體使用進程.jpg" src="https://richardrobot.xyz/images/分析工具查看IIS上的記憶體使用進程.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;接下來就可以狂打這個站臺來模擬使用大量呼叫時記憶體會衝多高，再針對此Process，按右鍵出現選單選擇 Create Full Userdump&lt;/p&gt;
+&lt;p&gt;&lt;img alt="把觀察的進程資料Dump出來.jpg" src="https://richardrobot.xyz/images/把觀察的進程資料Dump出來.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;在Windows系統，此Dump出來的資料，會在預設路徑 C:\Program Files\DebugDiag\Logs\Misc&lt;/p&gt;
+&lt;p&gt;在這個路徑會有副檔名是  .dmp  的檔案類型，接下來針對這個檔案，右鍵選擇DebugDiag 2 Analysis 來開啟分析，就會產生報告，報告路徑可以自定義，副檔名為 mht ，似乎只能使用舊IE來開啟才能看
+&lt;img alt="把dump出來的檔案右鍵使用分析工具開啟.jpg" src="https://richardrobot.xyz/images/把dump出來的檔案右鍵使用分析工具開啟.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="佔用的記憶體前幾大項目.png" src="https://richardrobot.xyz/images/佔用的記憶體前幾大項目.png"/&gt;&lt;/p&gt;
+&lt;p&gt;在 C# 中，由於 String 物件是不可變的，因此在進行字串操作時，每當需要更改 String 物件時，都會建立新的 String 物件。這種方式可能會導致大量的記憶體使用，特別是當處理大量文字時。&lt;/p&gt;
+&lt;p&gt;以下是一些優化 C# 程式時使用 String 物件的方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用 StringBuilder：StringBuilder 是可變的字串類別，它提供了可變長度的字串，因此在字串操作時使用 StringBuilder 可以避免建立大量的 String 物件，以減少記憶體使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用 String.Concat：在需要連接多個字串時，使用 String.Concat 方法可以將多個字串連接為一個字串，而不必建立中間字串物件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用格式化字串：在需要產生複雜字串時，使用格式化字串可以更容易地產生複雜字串。在格式化字串中，可以使用佔位符來代表變數，然後在執行時將變數插入到字串中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;避免使用 + 運算子連接字串：在使用 + 運算子連接字串時，每次操作都會建立新的 String 物件，這樣可能會導致大量的記憶體使用。因此，在需要連接多個字串時，應該使用 StringBuilder 或 String.Concat 方法來連接字串。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;避免在迴圈中連接字串：在迴圈中連接字串可能會導致大量的記憶體使用。因此，在需要在迴圈中連接字串時，應該使用 StringBuilder 或類似的方法來減少記憶體使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;了解字串比較的運作方式：當進行字串比較時，可以使用 StringComparison 列舉來指定比較的方式。例如，使用 StringComparison.Ordinal 可以比較字串的 &lt;span class="caps"&gt;ASCII&lt;/span&gt; 編碼值，這種比較方式比使用預設的比較方式更快。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;綜上所述，使用 StringBuilder 和 String.Concat 可以有效地減少記憶體使用，並在需要產生複雜字串時使用格式化字串，避免在迴圈中連接字串。另外，了解字串比較的運作方式也可以幫助優化程式。&lt;/p&gt;
+&lt;p&gt;參考資料:
+https://blog.darkthread.net/blog/windbg-to-find-aspnet-cpu-high/
+https://blog.darkthread.net/blog/analyze-cpu-high-with-debugdiag-tools
+&lt;a href="https://support.microsoft.com/zh-tw/topic/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-debug-diagnostics-tool-%E5%9C%A8-iis-%E4%B8%AD%E7%82%BA-cpu-%E4%BD%BF%E7%94%A8%E7%8E%87%E9%81%8E%E9%AB%98%E7%9A%84%E8%99%95%E7%90%86%E5%BA%8F%E9%80%B2%E8%A1%8C%E7%96%91%E9%9B%A3%E6%8E%92%E8%A7%A3-636559d3-2f31-71eb-d2ba-75da26ece9d7"&gt;如何使用 Debug Diagnostics Tool，在 &lt;span class="caps"&gt;IIS&lt;/span&gt; 中為 &lt;span class="caps"&gt;CPU&lt;/span&gt; 使用率過高的處理序進行疑難排解&lt;/a&gt;&lt;/p&gt;</content><category term="電腦問題"></category><category term="標籤"></category></entry><entry><title>Nginx 在MacOS M1問題</title><link href="https://richardrobot.xyz/2022/12/nginx-macos-error/" rel="alternate"></link><published>2022-12-07T21:45:00+08:00</published><updated>2022-12-07T21:45:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2022-12-07:/2022/12/nginx-macos-error/</id><summary type="html">&lt;p&gt;Nginx 在MacOS&amp;nbsp;M1問題&lt;/p&gt;</summary><content type="html">&lt;p&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]
 設定修改nginx 然後需要reload 出現 &lt;code&gt;PID number "" in "/opt/homebrew/var/run/nginx.pid"&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;查看檔案是空的，刪掉又出現另外一個問題&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;jarvis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zheng&lt;/span&gt;&lt;span class="nv"&gt;@zhengrungdeMini&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;reload&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
@@ -88,6 +154,10 @@
 &lt;blockquote&gt;
 &lt;p&gt;ssh-add 這個命令不是用來永久性的記住你所使用的私鑰的。實際上，它的作用只是把你指定的私鑰添加到 ssh-agent 所管理的一個 session 當中。而 ssh-agent 是一個用於存儲私鑰的臨時性的 session&amp;nbsp;服務，所以每次重啓都會失效，都需要再次執行命令。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;或是設定 &lt;a href="https://mednoter.com/ssh-add-automatically.html"&gt;Mac 重啟後自動ssh-add&amp;nbsp;私鑰&lt;/a&gt;&lt;/p&gt;</content><category term="電腦問題"></category><category term="SSH"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>副檔名command無法執行</title><link href="https://richardrobot.xyz/2021/10/mac-command-permission/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/mac-command-permission/</id><summary type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;</summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
+&lt;p&gt;或是設定 &lt;a href="https://mednoter.com/ssh-add-automatically.html"&gt;Mac 重啟後自動ssh-add&amp;nbsp;私鑰&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;後記：如同部落格的文章，重新開機設定自動使用ssh-add會有個問題，當私鑰需要輸入密碼，就會中斷，後續參考&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://segmentfault.com/a/1190000039994119"&gt;【踩坑笔记】mac每次重启都需要重新ssh-add&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用Automator來執行Terminal語法：然後設定在開機執行&lt;/p&gt;
+&lt;p&gt;&lt;img alt="開機啓用sshadd的語法.png" src="https://richardrobot.xyz/images/開機啓用sshadd的語法.png" /&gt;&lt;/p&gt;</content><category term="電腦問題"></category><category term="SSH"></category><category term="Git"></category><category term="Mac"></category></entry><entry><title>副檔名command無法執行</title><link href="https://richardrobot.xyz/2021/10/mac-command-permission/" rel="alternate"></link><published>2021-10-01T11:47:00+08:00</published><updated>2021-10-01T11:47:00+08:00</updated><author><name>Richard</name></author><id>tag:richardrobot.xyz,2021-10-01:/2021/10/mac-command-permission/</id><summary type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;</summary><content type="html">&lt;p&gt;寫好了可以執行的發佈語法，點擊執行卻出現這個&lt;/p&gt;
 &lt;p&gt;&lt;img alt="副檔名command無法執行.png" src="https://richardrobot.xyz/images/副檔名command無法執行.png" /&gt;&lt;/p&gt;
 &lt;p&gt;需要另外給予權限：&lt;code&gt;chmod +x batch_notes_script.command&lt;/code&gt;&lt;/p&gt;</content><category term="電腦問題"></category><category term="權限問題"></category><category term="Mac"></category></entry></feed>
